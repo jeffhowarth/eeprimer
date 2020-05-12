@@ -1,5 +1,5 @@
 /*
-001 Tutorial
+02 Tutorial
 
 Mean annual land surface temperature
 
@@ -12,7 +12,7 @@ Jeff Howarth
 */
 
 var lst = // create a container called lst for
-  ee.ImageCollection('MODIS/006/MOD11A2') // an image collection from MODIS 
+  ee.ImageCollection('MODIS/006/MOD11A2') // an image collection from MODIS
   .filterDate('2018-01-01', '2018-05-01') // just keep records between these dates
   .select('LST_Day_1km'); // just keep this band
 
@@ -20,7 +20,7 @@ print(lst,'LST'); //print out this dataset in the console and label it LST
 
 /*
 =======================================================
-02 Reduce Image Collection to Image and convert units 
+02 Reduce Image Collection to Image and convert units
 =======================================================
 */
 
@@ -31,7 +31,7 @@ var lstCelsius = lst // create a container
 
 /*
 =======================================================
-03 Define symbology for the image 
+03 Define symbology for the image
 =======================================================
 */
 
@@ -51,7 +51,7 @@ var lstPalette = [
 
 var lstDisplayRamp = {
   min: 50, // the data value we want to display with the first color in our palette
-  max: -50, // the data value we want to display with the last color in our palette 
+  max: -50, // the data value we want to display with the last color in our palette
   palette: lstPalette // the list of colors we defined above
 };
 
