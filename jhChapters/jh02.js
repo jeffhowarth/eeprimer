@@ -1,6 +1,7 @@
 /*
 02 Tutorial
 
+Very rough DRAFT
 Mean annual land surface temperature
 
 Jeff Howarth
