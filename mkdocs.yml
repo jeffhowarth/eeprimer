@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: A Primer for Google Earth Engine
+site_name: A Primer for Earth Engine
 site_url: https://github.com/jeffhowarth/eeprimer
 site_author: Jeff Howarth
 site_description: >-
@@ -87,6 +87,7 @@ markdown_extensions:
   - markdown.extensions.meta
   - markdown.extensions.toc:
       permalink: true
+      title: 'Task List'
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -118,52 +119,39 @@ markdown_extensions:
 nav:
   - How I organized this primer:
     - Introduction: index.md
-    - Audience: projects/intro/02-audience.md
-    - Chapters: projects/intro/03-chapters.md
-    - Worked-out problems: projects/intro/04-worked-out-problems.md
-    - Independent problems: projects/intro/05-independent-problems.md
-  - Getting Started:
-    - Get an account: projects/getting-started/01-sign-up.md
-    - Start Code Editor: projects/getting-started/02-start-code-editor.md
-    - Navigate Code Editor: projects/getting-started/03-navigate-code-editor.md
-    - Set up home repo: projects/getting-started/04-create-repo.md
-  - Cartographic Foundations:
-    - Introduction: projects/cart/01-overview/01-introduction.md
-    - Hello, Base Map!:
-      - Objectives: projects/cart/02-base-map/01-objectives.md
-      - Change the base map: projects/cart/02-base-map/02-change-base-map.md
-      - Inspect properties of a location: projects/cart/02-base-map/03-inspect-location.md
-      - Understand coordinate reference systems: projects/cart/02-base-map/04-crs.md
-      - Understand zoom level: projects/cart/02-base-map/05-zoom.md
-      - Understand scale: projects/cart/02-base-map/06-scale.md
-      - Change map center: projects/cart/02-base-map/07-map-center.md
-    - Geometry and Features:
-      - Objectives: projects/jhLessons/jh0102.md
-      - Draw a point: projects/cart/03-geometry-features/01-draw-point.md
-      - Make a feature: projects/cart/03-geometry-features/02-make-feature.md
-      - Add a property: projects/cart/03-geometry-features/03-add-property.md
-      - Get a property: projects/cart/03-geometry-features/04-get-property.md
-    - Feature Collections:
-      - Objectives: projects/jhLessons/jh0103.md
-      - Feature Collections: projects/cart/04-feature-collections/01-feature-collections.md
-      - Print geometry: projects/cart/04-feature-collections/02-print-geometries.md
-      - Create a feature collection: projects/cart/04-feature-collections/03-create-feature-collection.md
-      - Create a line feature: projects/cart/04-feature-collections/04-create-line-feature.md
-      - Add feature layer to map: projects/cart/04-feature-collections/05-add-feature-layer-to-map.md
-    - Applying Methods:
-      - Objectives: projects/jhLessons/jh0104.md
-      - Buffer a feature: projects/cart/05-apply-methods/01-buffer-feature.md
-      - Buffer a feature collection problem: projects/cart/05-apply-methods/02-feature-collection-buffer-problem.md
-      - Create a function: projects/cart/05-apply-methods/03-create-a-function.md
-      - Map function over collection: projects/cart/05-apply-methods/04-map-function-over-collection.md
-  - Raster Foundations:
-    - Outline: projects/raster/01-outline.md
-  - Remote Sensing Foundations:
-    - Outline: projects/rs/01-intro.md
-  - Independent Problems:
-    - Cartographic: projects/ip/cart/outline.md
-    - Raster: projects/ip/raster/outline.md
-    - Remote Sensing: projects/ip/rs/outline.md
+    - Audience: intro/02-audience.md
+    - Problem Based Lessons: intro/03-problem-based-lessons.md
+    - Conceptual Foundations: intro/04-conceptual-foundations.md
+    - Learning Assessments: intro/05-learning-assessments.md
+  - Getting started:
+    - Introduction: start/intro.md
+    - Google Earth Engine:
+      - Get an account: start/gee/01-sign-up.md
+      - Start Code Editor: start/gee/02-start-code-editor.md
+      - Navigate Code Editor: start/gee/03-navigate-code-editor.md
+      - Set up home repo: start/gee/04-create-repo.md
+  - Problem-Based Lessons:
+    - Contents: pbl/index.md
+    - Lesson 1:
+      - Hello, Base Map!: pbl/01/intro.md
+      - Problem and plan: pbl/01/problem.md
+      - Implement plan with code: pbl/01/implement.md
+      - Foundational concepts: pbl/01/foundations.md
+      - Test your understanding: pbl/01/learning.md
+    - Lesson 2:
+      - Outline: pbl/02/01-outline.md
+  - Conceptual Foundations:
+    - Index: concepts/index.md
+    - Coordinate Reference System: concepts/crs.md
+    - Map Center: concepts/mapCenter.md
+    - Map Scale: concepts/mapScale.md
+    - Zoom Level: concepts/zoomLevel.md
+  - Learning Assessments:
+    - Outline: assessments/index.md
+
+
+
+
 
 
 

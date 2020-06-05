@@ -1,143 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://github.com/jeffhowarth/eeprimer/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/intro/02-audience/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/intro/02-audience/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/intro/03-chapters/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/intro/03-problem-based-lessons/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/intro/04-worked-out-problems/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/intro/04-conceptual-foundations/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/intro/05-independent-problems/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/intro/05-learning-assessments/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/getting-started/01-sign-up/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/start/intro/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/getting-started/02-start-code-editor/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/01-sign-up/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/getting-started/03-navigate-code-editor/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/02-start-code-editor/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/getting-started/04-create-repo/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/03-navigate-code-editor/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/01-overview/01-introduction/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/04-create-repo/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/02-base-map/01-objectives/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/pbl/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/02-base-map/02-change-base-map/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/pbl/01/intro/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/02-base-map/03-inspect-location/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/pbl/01/problem/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/02-base-map/04-crs/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/pbl/01/implement/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/02-base-map/05-zoom/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/pbl/01/foundations/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/02-base-map/06-scale/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/pbl/01/learning/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/02-base-map/07-map-center/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/pbl/02/01-outline/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/03-geometry-features/01-draw-point/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/concepts/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/03-geometry-features/02-make-feature/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/concepts/crs/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/03-geometry-features/03-add-property/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/concepts/mapCenter/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/03-geometry-features/04-get-property/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/concepts/mapScale/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/04-feature-collections/01-feature-collections/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/concepts/zoomLevel/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/04-feature-collections/02-print-geometries/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/04-feature-collections/03-create-feature-collection/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/04-feature-collections/04-create-line-feature/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/04-feature-collections/05-add-feature-layer-to-map/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/05-apply-methods/01-buffer-feature/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/05-apply-methods/02-feature-collection-buffer-problem/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/05-apply-methods/03-create-a-function/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/cart/05-apply-methods/04-map-function-over-collection/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/raster/01-outline/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/rs/01-intro/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/ip/cart/outline/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/ip/raster/outline/</loc>
-     <lastmod>2020-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/projects/ip/rs/outline/</loc>
-     <lastmod>2020-05-28</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/assessments/</loc>
+     <lastmod>2020-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
