@@ -119,10 +119,12 @@ markdown_extensions:
 nav:
   - How I organized this primer:
     - Introduction: index.md
-    - Audience: intro/02-audience.md
-    - Problem Based Lessons: intro/03-problem-based-lessons.md
-    - Conceptual Foundations: intro/04-conceptual-foundations.md
-    - Learning Assessments: intro/05-learning-assessments.md
+    - Audience: intro/audience.md
+    - Lessons: intro/lessons.md
+    - Topics: intro/topics.md
+    - Concept Catalog: intro/concepts.md
+    - Task Catalog: intro/tasks.md
+    - Activity Catalog: intro/activities.md
   - Getting started:
     - Introduction: start/intro.md
     - Google Earth Engine:
@@ -130,28 +132,38 @@ nav:
       - Start Code Editor: start/gee/02-start-code-editor.md
       - Navigate Code Editor: start/gee/03-navigate-code-editor.md
       - Set up home repo: start/gee/04-create-repo.md
-  - Problem-Based Lessons:
-    - Contents: pbl/index.md
-    - Lesson 1:
-      - Hello, Base Map!: pbl/01/intro.md
-      - Problem and plan: pbl/01/problem.md
-      - Implement plan with code: pbl/01/implement.md
-      - Foundational concepts: pbl/01/foundations.md
-      - Test your understanding: pbl/01/learning.md
-    - Lesson 2:
-      - Outline: pbl/02/01-outline.md
-  - Conceptual Foundations:
-    - Index: concepts/index.md
-    - Coordinate Reference System: concepts/crs.md
-    - Map Center: concepts/mapCenter.md
-    - Map Scale: concepts/mapScale.md
-    - Zoom Level: concepts/zoomLevel.md
-  - Learning Assessments:
-    - Outline: assessments/index.md
-
-
-
-
+  - Lesson Collections:
+    - Contents: lessons/intro.md
+    - 01 Begin with a base map:
+      - Introduction: lessons/01/01intro.md
+      - Problem and plan: lessons/01/problem.md
+      - Implement plan with code: lessons/01/implement.md
+      - Foundational concepts: lessons/01/foundations.md
+      - Test your understanding: lessons/01/learning.md
+    - 02 Raster Foundations:
+      - A beginning workflow:
+        - Introduction: lessons/02/0201/02intro.md
+      - Compute a histogram:
+        - Introduction: lessons/02/0202/intro.md
+      - Reclassify images:
+        - Introduction: lessons/02/0203/intro.md
+      - Compare two images:
+        - Introduction: lessons/02/0204/intro.md
+      - Compute distance:
+        - Introduction: lessons/02/0205/intro.md
+  - Topic Catalog:
+    - Introduction: topics/intro.md
+    - Lights at Night: topics/lights.md
+  - Concept Catalog:
+    - Index: concepts/intro.md
+  - Task Catalog:
+    - Introduction: tasks/taskCatalog.md
+    - Gather Data: tasks/gatherData.md
+    - Filter Data: tasks/gatherData.md
+    - Reduce Data: tasks/gatherData.md
+    - Display Data: tasks/gatherData.md
+  - Activity Catalog:
+    - Introduction: activity/intro.md
 
 
 
