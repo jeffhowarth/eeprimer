@@ -23,8 +23,7 @@ site_name: A Primer for Earth Engine
 site_url: https://github.com/jeffhowarth/eeprimer
 site_author: Jeff Howarth
 site_description: >-
-  A lesson collection for raster GIS and image processing
-  with Google Earth Engine. Introductory, undergraduate level.
+  A lesson for asking spatial questions, solving spatial problems, and sharing findings.
 
 # Repository
 repo_name: jeffhowarth/eeprimer
@@ -117,55 +116,36 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - How I organized this primer:
-    - Introduction: index.md
-    - Audience: intro/audience.md
-    - Lessons: intro/lessons.md
-    - Topics: intro/topics.md
-    - Concept Catalog: intro/concepts.md
-    - Task Catalog: intro/tasks.md
-    - Activity Catalog: intro/activities.md
-  - Getting started:
-    - Introduction: start/intro.md
-    - Google Earth Engine:
-      - Get an account: start/gee/01-sign-up.md
-      - Start Code Editor: start/gee/02-start-code-editor.md
-      - Navigate Code Editor: start/gee/03-navigate-code-editor.md
-      - Set up home repo: start/gee/04-create-repo.md
-  - Lesson Collections:
-    - Contents: lessons/intro.md
-    - 01 Begin with a base map:
-      - Introduction: lessons/01/01intro.md
-      - Problem and plan: lessons/01/problem.md
-      - Implement plan with code: lessons/01/implement.md
-      - Foundational concepts: lessons/01/foundations.md
-      - Test your understanding: lessons/01/learning.md
-    - 02 Raster Foundations:
-      - A beginning workflow:
-        - Introduction: lessons/02/0201/02intro.md
-      - Compute a histogram:
-        - Introduction: lessons/02/0202/intro.md
-      - Reclassify images:
-        - Introduction: lessons/02/0203/intro.md
-      - Compare two images:
-        - Introduction: lessons/02/0204/intro.md
-      - Compute distance:
-        - Introduction: lessons/02/0205/intro.md
-  - Topic Catalog:
-    - Introduction: topics/intro.md
-    - Lights at Night: topics/lights.md
-  - Concept Catalog:
-    - Index: concepts/intro.md
-  - Task Catalog:
-    - Introduction: tasks/taskCatalog.md
-    - Gather Data: tasks/gatherData.md
-    - Filter Data: tasks/gatherData.md
-    - Reduce Data: tasks/gatherData.md
-    - Display Data: tasks/gatherData.md
-  - Activity Catalog:
-    - Introduction: activity/intro.md
-
-
+  - Home:
+    - Welcome: README.md
+    - Organization: scheme.md
+    - Authors: authors.md
+    - Contact: contact.md
+  - Ask questions:
+    - Lights at night:
+      - What are lights at night?: lights/questions/what.md
+      - How much light is at this location?: lights/questions/howMuchHere.md
+      - How has light changed at a location over time?: lights/questions/changeHereTime.md
+      - How do values of lights vary across spatial observation scales?: lights/questions/variationVicinity.md
+      - How do changes in lights over time compare across spatial observation scales?: lights/questions/changeScaleTime.md
+      - Where are dark skies?: lights/questions/distance.md
+    - Air quality:
+      - How do satellites measure air quality?: air/questions/what.md
+      - What affects data quality?: air/questions/dataQuality.md
+      - How did COVID-19 pandemic affect air quality?: air/questions/pandemic.md
+  - Implement methods:
+    - Get started with GEE: start/getGEE.md
+    - Lights at night methods:
+      - Code Editor: lights/methods/codeEditor.md
+      - A basic workflow: lights/methods/workflow.md
+      - Compute a histogram: lights/methods/histogram.md
+      - Display values: lights/methods/displayValues.md
+      - Thresholds: lights/methods/thresholds.md
+      - Image math: lights/methods/imageMath.md
+      - Remap data values: lights/methods/remap.md
+      - Compute distance: lights/methods/distance.md
+  - Share work:
+    - Introduction: share/intro.md
 
 #  - Contributing: contributing.md
 #  - License: license.md

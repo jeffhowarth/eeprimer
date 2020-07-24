@@ -1,131 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://github.com/jeffhowarth/eeprimer/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/intro/audience/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/scheme/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/intro/lessons/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/authors/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/intro/topics/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/contact/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/intro/concepts/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/questions/what/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/intro/tasks/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/questions/howMuchHere/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/intro/activities/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/questions/changeHereTime/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/start/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/questions/variationVicinity/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/01-sign-up/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/questions/changeScaleTime/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/02-start-code-editor/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/questions/distance/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/03-navigate-code-editor/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/air/questions/what/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/start/gee/04-create-repo/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/air/questions/dataQuality/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/air/questions/pandemic/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/01/01intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/start/getGEE/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/01/problem/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/codeEditor/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/01/implement/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/workflow/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/01/foundations/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/histogram/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/01/learning/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/displayValues/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/02/0201/02intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/thresholds/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/02/0202/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/imageMath/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/02/0203/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/remap/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/02/0204/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/lights/methods/distance/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/lessons/02/0205/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/topics/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/topics/lights/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/concepts/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/tasks/taskCatalog/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/tasks/gatherData/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/tasks/gatherData/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/tasks/gatherData/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/tasks/gatherData/</loc>
-     <lastmod>2020-07-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/jeffhowarth/eeprimer/activity/intro/</loc>
-     <lastmod>2020-07-17</lastmod>
+     <loc>https://github.com/jeffhowarth/eeprimer/share/intro/</loc>
+     <lastmod>2020-07-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
