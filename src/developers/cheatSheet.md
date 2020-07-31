@@ -1,6 +1,6 @@
 ## Image
 
-![initialMap](/lights/methods/images/01/01hello.png)
+![initialMap](../lights/methods/images/01/01hello.png)
 
 ## Code block
 
