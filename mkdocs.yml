@@ -146,6 +146,8 @@ nav:
       - Compute distance: lights/methods/distance.md
   - Share work:
     - Introduction: share/intro.md
+  - Developers:
+    - Cheat Sheet: developers/cheatSheet.md
 
 #  - Contributing: contributing.md
 #  - License: license.md
