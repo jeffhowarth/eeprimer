@@ -1,8 +1,5 @@
 # Introduction to the Code Editor
 
-**NOTE: This lesson needs to be updated to fit with lights at night problem.  
-I wrote this before developing the lights at night apps as the worked-out examples.**  
-
 ## Objectives
 
 By the end of this lesson, you should be able to:
@@ -17,11 +14,11 @@ By the end of this lesson, you should be able to:
 
 Our first problem is relatively simple. When we first start the Code Editor, the Map UI looks like this (I've expanded the windows a bit so that the map takes up the whole display):
 
-![initialMap](images/01/01hello.png)
+![initialMap](images/01hello.png)
 
 We'd like the map to look like this:
 
-![finalMap](images/01/04hello.png)
+![finalMap](images/04hello.png)
 
 To solve this problem, we just need to find a way to change the first map so that it looks like the second one.
 
@@ -63,25 +60,25 @@ Now let's think about how these differences represent transitions between states
 
 We start with this map:
 
-![Start](images/01/01hello.png)
+![Start](images/01hello.png)
 
 If we just change the map center, we make this map:
 
-![NewCenter](images/01/02hello.png)
+![NewCenter](images/02hello.png)
 
 Then if we take this map and just change the zoom level, we make this map:
 
-![NewZoom](images/01/03hello.png)
+![NewZoom](images/03hello.png)
 
 And if we take this map and just change the basemap from Map to Satellite, then we'll end up with this map:
 
-![GoalMap](images/01/04hello.png)
+![GoalMap](images/04hello.png)
 
 Problem solved!
 
 Planning a solution like this is similar to creating a storyboard. The key is to focus on the transitions, on the spaces between each picture on the board. We want to identify what changes from one picture into the next, as shown in this flow diagram:
 
-![storyboard](images/01/01-storyboard.png)
+![storyboard](images/01-storyboard.png)
 
 This gives us a rough plan. Now we just need to identify methods in Google Earth Engine that will allow us to implement this plan.
 
@@ -95,7 +92,7 @@ Map.setCenter(151.215293, -33.856737);
 
 That should change the map so that it now looks like this.
 
-![NewCenter](images/01/02hello.png)
+![NewCenter](images/02hello.png)
 
 ## How geographic coordinates works
 
@@ -140,7 +137,7 @@ Map.setCenter(151.215293, -33.856737,20);
 
 This should make your map look like the one below.
 
-![NewZoom](images/01/03hello.png)  
+![NewZoom](images/03hello.png)  
 
 ## How zoom and scale work
 
@@ -164,7 +161,7 @@ Map.setOptions('SATELLITE');
 
 Now your map should look like the one below.
 
-![GoalMap](images/01/04hello.png)
+![GoalMap](images/04hello.png)
 
 ## Save your script  
 

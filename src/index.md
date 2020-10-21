@@ -1,4 +1,4 @@
-This is a work in progress. The goal is to provide an open textbook to help get people started using Google Earth Engine.
+This is a work in progress. The goal is to provide an open textbook to help get people started using Google Earth Engine. I hope to have the first draft complete by September 2021.  
 
 This project emerged from work by the GEE Curriculum group that formed during the 2019 Geo for Good Summit. The group includes the following participants:
 
@@ -9,5 +9,3 @@ This project emerged from work by the GEE Curriculum group that formed during th
 * **Samapriya Roy**, Planet
 * **David Saah**, University of San Francisco
 * **Erin Trochim**, University of Alaska, Fairbanks
-
-*last update: 07.30.2020*

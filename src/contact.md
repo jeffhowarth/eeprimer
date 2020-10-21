@@ -1,5 +1,9 @@
-For questions or comments about the primer, please contact:
+For questions or comments, please contact:  
 
-| **Name** | **Email** |
-| --- | --- |
-| Jeff Howarth | jhowarth@middlebury.edu |
+**Jeff Howarth**  
+Associate Professor  
+Geography Department  
+Middlebury College  
+
+**email:** jhowarth@middlebury.edu  
+**twitter:** @jeffgeographer  

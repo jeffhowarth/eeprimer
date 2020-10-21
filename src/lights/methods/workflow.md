@@ -1,5 +1,7 @@
 # A basic workflow
 
+*Please note: this is just an outline of a work in progress*  
+
 ## Objectives  
 
 By the end of this lesson, you should be able to:  
