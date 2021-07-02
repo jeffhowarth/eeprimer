@@ -19,11 +19,11 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: A Primer for Earth Engine
+site_name: Earth Engine Primer
 site_url: https://github.com/jeffhowarth/eeprimer
 site_author: Jeff Howarth
 site_description: >-
-  A lesson for asking spatial questions, solving spatial problems, and sharing findings.
+  Introduction to geospatial analysis with Google Earth Engine.
 
 # Repository
 repo_name: jeffhowarth/eeprimer
@@ -31,12 +31,14 @@ repo_url: https://github.com/jeffhowarth/eeprimer
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2020 Jeff Howarth
+copyright: Copyright &copy; 2021 Jeff Howarth
 
 # Configuration
 theme:
+  logo: assets/eePrimericon-01.png
+  favicon: assets/eePrimericon-01.png
   name: material
-  #custom_dir: material
+  # custom_dir: mkdocs-material/material
 
   # 404 page
   static_templates:
@@ -48,19 +50,19 @@ theme:
 
   # Default values, taken from mkdocs_theme.yml
   language: en
+
   features:
-    - tabs
-    #- instant
+    # - tabs
+    - instant
+
   palette:
-    scheme: default
-    primary: indigo
-    accent: indigo
+    scheme: white
+    primary: white
+    accent: red
   font:
-    text: Roboto
+    text: Libre Baskerville
+    # text: Didact Gothic
     code: Roboto Mono
-  icon:
-    logo: logo
-  favicon: assets/favicon.png
 
 # Plugins
 plugins:
@@ -74,6 +76,8 @@ extra:
       link: https://github.com/jeffhowarth
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/jeffgeographer
+  extra_css:
+    - stylesheets/extra.css
 
 # Extensions
 markdown_extensions:
@@ -85,8 +89,8 @@ markdown_extensions:
   - markdown.extensions.footnotes
   - markdown.extensions.meta
   - markdown.extensions.toc:
-      permalink: true
-      title: 'Task List'
+      permalink: false
+      toc_depth: 3
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -96,8 +100,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  # - pymdownx.highlight:
-  #     linenums_style: pymdownx-inline
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
@@ -116,28 +120,13 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home:
-    - Welcome: index.md
-    - Primer Organization: scheme.md
-    - Contact: contact.md
-  - Ask questions:
-    - Lights at night:
-      - How do conditions change across scale and time?: lights/questions/changeScaleTime.md
-  - Implement methods:
-    - Get started with GEE: start/getGEE.md
-    - Intro to Code Editor: start/codeEditor.md
-    - Lights at Night:
-      - A simple workflow: lights/methods/workflow.md  
-  - Share work:
-    - Introduction: share/intro.md
-
-  - Developers:
-    - Cheat Sheet: developers/cheatSheet.md
+  - Introduction: index.md
+  - Raster Foundations: 01/rasterFoundations.md
 
 #  - Contributing: contributing.md
 #  - License: license.md
 
 # Google Analytics
 google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - G-G4GWH4RPQ1
   - auto
