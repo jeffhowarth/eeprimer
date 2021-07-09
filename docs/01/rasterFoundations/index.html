@@ -20,7 +20,7 @@
     
     
       
-        <title>Raster Data Model - Earth Engine Primer</title>
+        <title>Raster Foundations - Earth Engine Primer</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raster Data Model
+              Raster Foundations
             
           </span>
         </div>
@@ -239,12 +239,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Raster Data Model
+          Raster Foundations
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Raster Data Model
+        Raster Foundations
       </a>
       
         
@@ -362,8 +362,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reusable-visual-elements" class="md-nav__link">
-    Reusable visual elements
+  <a href="#reusability-strategies" class="md-nav__link">
+    Reusability strategies
   </a>
   
 </li>
@@ -373,25 +373,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reduce-an-image-collections" class="md-nav__link">
+    Reduce an image collections
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02/rasterAnalysis/" class="md-nav__link">
-        Raster Analysis
-      </a>
     </li>
   
 
@@ -522,14 +514,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reusable-visual-elements" class="md-nav__link">
-    Reusable visual elements
+  <a href="#reusability-strategies" class="md-nav__link">
+    Reusability strategies
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reduce-an-image-collections" class="md-nav__link">
+    Reduce an image collections
+  </a>
   
 </li>
       
@@ -546,16 +545,21 @@
               
                 
                 
-                  <h1>Raster Data Model</h1>
+                  <h1>Raster Foundations</h1>
                 
                 <h2 id="introduction">Introduction</h2>
-<p>This chapter introduces foundations of raster datasets and how to visualize them as map layers in Earth Engine.  We will use the <a href="https://developers.google.com/earth-engine/guides/playground">Earth Engine Code Editor</a> to work with a global dataset of <a href="https://eogdata.mines.edu/products/dmsp/">Nighttime Lights</a> and make a new map layer (shown below) that visualizes nighttime lights in 1993.</p>
+<p>This chapter introduces foundations of raster datasets and how to visualize them as map layers in Earth Engine.  We will use the <a href="https://developers.google.com/earth-engine/guides/playground">Earth Engine Code Editor</a> to work with a global dataset of <a href="https://eogdata.mines.edu/products/dmsp/">Nighttime Lights</a> and make a new map layer (shown below) that visualizes how nighttime lights changed between 1993, 2003, and 2013.</p>
 <p><img alt="final result screenshot" src="../images/01goal.png" /></p>
 <p>By the end of the chapter, you should understand how to:  </p>
 <ol>
-<li>construct an image collection from an address in the Earth Engine data catalog  </li>
-<li>filter the image collection by time and band name  </li>
-<li>visualize an image collection as a layer  </li>
+<li>construct an image collection from an address in the Earth Engine data catalog</li>
+<li>filter collection by attribute and time   </li>
+<li>visualize images as map layers</li>
+<li>reduce an image collection into an image   </li>
+<li>threshold image by criteria</li>
+<li>reuse workflows with functions  </li>
+<li>compare images with logical expressions  </li>
+<li>visualize bands with RGB composites  </li>
 </ol>
 <h2 id="construct-image-collection">Construct image collection</h2>
 <p>To get started, use the Code Editor to construct an image collection from the Earth Engine <a href="https://developers.google.com/earth-engine/datasets">Data Catalog</a>. Copy or type the following code into the Code Editor and then run the script.</p>
@@ -584,30 +588,30 @@
 <li>Each band in an image represents a different category of attributes.</li>
 </ul>
 <h2 id="filter-image-collection">Filter image collection</h2>
-<p>Now that we have explored this basic architecture, we can recognize that our image collection suffers from a bit of excess.  We constructed "lights" from the entire dataset in the EE catalog, but we only need a subset for our analysis. So our next task is to make the stack of rasters much shorter and more efficient to work with.  </p>
+<p>Now that we have explored this basic architecture, we can recognize that our image collection suffers from a bit of excess.  We constructed "lights" from the entire dataset in the EE catalog, but we only need a subset for our analysis. So our next task is to shorten the stack of rasters.  </p>
 <p>To do this, we will <strong>filter</strong> the image collection in two ways:</p>
 <ul>
 <li>by time</li>
 <li>by attribute  </li>
 </ul>
 <p>This snippet <strong>filters by time</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights1993</span> <span class="o">=</span> <span class="nx">lights</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">1993</span><span class="p">,</span> <span class="mf">1993</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 1993&#39;</span><span class="p">,</span> <span class="nx">lights1993</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights2003</span> <span class="o">=</span> <span class="nx">lights</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">2003</span><span class="p">,</span> <span class="mf">2003</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">));</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 2003&#39;</span><span class="p">,</span> <span class="nx">lights2003</span><span class="p">);</span>
 </code></pre></div>
-<p>It calls an image collection's <em>filter</em> method and then uses the filter's <em>calendarRange</em> method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents one year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection only contains one image and it is for the year 1993.</p>
+<p>It calls an image collection's <em>filter</em> method and then uses the filter's <em>calendarRange</em> method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents an average for the calendar year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection contains two images and both are for the year 2003.</p>
 <p>This snippet <strong>filters by attribute</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights1993Select</span> <span class="o">=</span> <span class="nx">lights1993</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;stable_lights&#39;</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 1993 Select&#39;</span><span class="p">,</span> <span class="nx">lightsSelect</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights2003Select</span> <span class="o">=</span> <span class="nx">lights03</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;stable_lights&#39;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Nighttime lights 2003 Select&#39;</span><span class="p">,</span> <span class="nx">lights2003Select</span><span class="p">);</span>
 </code></pre></div>
 <p>It calls an image collection's <em>select</em> method, where the parameter states the band name. Inspect the metadata and note that this image collection only contains one band.</p>
-<p>This code did the job, but it could be more concise. You could substitute all the code you have written thus far with the following:  </p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lit1993</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NOAA/DMSP-OLS/NIGHTTIME_LIGHTS&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">1993</span><span class="p">,</span> <span class="mf">1993</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">))</span>
+<p>This code did the job, but it could be more concise. We could replicate all the code that we have written thus far with the following:  </p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights03</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NOAA/DMSP-OLS/NIGHTTIME_LIGHTS&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">2003</span><span class="p">,</span> <span class="mf">2003</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">))</span>
   <span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;stable_lights&#39;</span><span class="p">);</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 1993: concise method&#39;</span><span class="p">,</span> <span class="nx">lit1993</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 2003: concise method&#39;</span><span class="p">,</span> <span class="nx">lights03</span><span class="p">);</span>
 </code></pre></div>
-<p>If you inspect the metadata, you should see this image collection is identical to the "lights1993Select" collection. To help understand why, let's review how raster workflows work.  </p>
+<p>If you inspect the metadata, you should see this image collection is identical to the collection we made earlier. To help understand why, let's review how raster workflows work.  </p>
 <h3 id="raster-workflow-elements">Raster workflow elements</h3>
 <p>Take a raster, do something to it, get a result. This triad is the basic element of a workflow.</p>
 <p><em>Input &rarr; method &rarr; output</em>  </p>
@@ -619,16 +623,12 @@
 <p>When we first scripted the workflow, we declared a variable for each intermediate result and then used this variable as an input in the next step. In our more concise script, we didn't bother declaring intermediate outputs and simply wrote out the chain of action.</p>
 <p>They both work and the more verbose approach allowed us to inspect each intermediate output, which can be helpful when learning how methods work and for trouble-shooting if something goes wrong. As you become familiar with EE methods, however, you may find the concise style more efficient.  </p>
 <h2 id="working-with-the-map-ui">Working with the Map UI</h2>
-<p>So far, we have only inspected our image collections's metadata by printing to the Console. We haven't used the  Map User Interface (UI) in the lower half of the Code Editor to visualize the collection's spatial information. In this section, we will begin to explore methods that alter the appearance of the Map.</p>
-<p>To warm up, we can <strong>change the basemap</strong> that the Code Editor automatically displays on the Map. By default, the Map shows the familiar Google road map. You can change this manually with the buttons in the upper right corner of the map window, but it will revert to road map whenever you re-run your code. Alternatively, you can script a particular basemap to display on the Map.   </p>
-<p><div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">);</span>
+<p>So far, we have only investigated the image collection by printing the metadata to the Console. In this section, we will use the Code Editor's Map User Interface (UI) to visualize the collection's spatial information.</p>
+<p>To warm up, we can <strong>change the basemap</strong> that the Code Editor automatically displays on the Map. By default, the Map shows the familiar Google road map. You can change this manually with the buttons in the upper right corner of the map window, but it will revert to road map whenever you re-run your code. Alternatively, you can script a particular basemap to display on the Map. This snippet will display the satellite basemap with labels whenever we re-run the script:    </p>
+<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">);</span>
 </code></pre></div>
-Now whenever we re-run our script, the Map will display the hybrid basemap.
-By default, the Map centers on a point in eastern Kansas in the American Midwest at a zoom level of 4. Often, you will be interested in a scale and extent that differs from this. You can change the map extent manually by using the pan and zoom buttons in the upper left of the map window, or alternatively you can <strong>specify the map center and zoom level</strong> in your script. For example, the line below centers the Map near the Korean Peninsula with a zoom level that shows eastern China and southern Japan.</p>
+<p>By default, the Map centers on a point in eastern Kansas in the American Midwest at a zoom level of 4. Often, you will be interested in a scale and extent that differs from this. You can change the map extent manually by using the pan and zoom buttons in the upper left of the map window, or alternatively you can <strong>specify the map center and zoom level</strong> in your script. For example, the line below centers the Map near the Korean Peninsula with a zoom level that shows eastern China and southern Japan.</p>
 <div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="mf">125</span><span class="p">,</span> <span class="mf">35</span><span class="p">,</span> <span class="mf">6</span><span class="p">);</span>
-</code></pre></div>
-<p>Again, note that you can chain these operations in a single line to define a set of actions.  </p>
-<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;HYRBID&#39;</span><span class="p">).</span><span class="nx">setCenter</span><span class="p">(</span><span class="mf">125</span><span class="p">,</span> <span class="mf">35</span><span class="p">,</span> <span class="mf">6</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="cartographic-model">Cartographic model</h3>
 <p>If you are not certain what the three parameters in the <em>setCenter</em> method reference, then take a moment to try querying a location on the Map with this routine:   </p>
@@ -641,7 +641,7 @@ By default, the Map centers on a point in eastern Kansas in the American Midwest
 <p><strong>Zoom level</strong> describes map scale. Small zoom levels show small scale maps. When you increase the zoom level, you increase the map scale. Similarly, when you click on the + button (upper left corner of map window), you increase the zoom level. This has the illusion of bringing the map closer to you, or of zooming in. It may not seem intuitive to think that large scale maps show smaller extents than small scale maps. This confusion stems from associating scale with area rather than detail. Large scale maps show more detail than small scale maps. In the Inspector panel, the <strong>scale</strong> value reports the approximate distance on the ground (in meters) at the equator that is represented by a single pixel. Increasing the zoom level decreases this distance and this increases detail.  </p>
 <p><em>insert image</em></p>
 <h2 id="visualize-data-with-color">Visualize data with color</h2>
-<p>The Map UI enables you to visualize raster values with color schemes. As a first step, we will define a <strong>palette</strong> and <strong>visualization parameters</strong>:</p>
+<p>The Map UI enables you to visualize raster values with color schemes. As a first step, we will define <strong>visualization parameters</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lightsPalette</span> <span class="o">=</span>
   <span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;#000b4a&#39;</span><span class="p">,</span> <span class="s1">&#39;#5a2c49&#39;</span><span class="p">,</span><span class="s1">&#39;#94574e&#39;</span><span class="p">,</span> <span class="s1">&#39;#c9875e&#39;</span><span class="p">,</span> <span class="s1">&#39;#f4bf87&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">];</span>
 
@@ -653,7 +653,7 @@ By default, the Map centers on a point in eastern Kansas in the American Midwest
 
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;palette and viz&#39;</span><span class="p">,</span> <span class="nx">lightsPalette</span><span class="p">,</span> <span class="nx">lightsViz</span><span class="p">);</span>
 </code></pre></div>
-<p>Inspect the result in the Console. The palette is a list of colors. The visualization parameters is an object with three properties: min and max define the data range we want to display with colors, while palette references the list of colors to display.</p>
+<p>Inspect the result in the Console. The <strong>palette</strong> variable is a list of colors. The visualization parameters variable is an object with three properties: <strong>min</strong> and <strong>max</strong> define the data range we want to display with colors, while palette references the list of colors to display.</p>
 <p>The palette in this example illustrates two different methods to specify colors. For many standard colors, we can declare a color by name, as we did for 'black' and 'white'. Alternatively, we can construct colors from <strong>hexadecimal codes</strong>. These codes are a clever way of defining colors as combinations of red, green, and blue, which we will discuss in more detail a little later in this chapter.  </p>
 <p>Also note that we set the min and max values based on the range of values that populate the raster. For some bands, the min and max will be defined as properties of the image collection. Alternatively, you can also look in EE's Data Catalog for metadata about the collection. It is often listed under the <a href="https://developers.google.com/earth-engine/datasets/catalog/NOAA_DMSP-OLS_NIGHTTIME_LIGHTS#bands">Bands tab</a>.</p>
 <h3 id="stretch-enhancement">Stretch enhancement</h3>
@@ -663,9 +663,9 @@ By default, the Map centers on a point in eastern Kansas in the American Midwest
 <p>Now consider that the pixel depth will also control the number of colors available to visualize the raster values. In the illustration, the <strong>palette</strong> lists six discrete colors. These colors seed a <strong>color ramp</strong> that then represents all the potential values provided by the pixel depth. The first color represents 0, the last color represents 255. The other colors are distributed evenly across the middle and transitional colors are made up to fill in the gaps. The color ramp appears continuous, but it really just represents 256 steps between black and white that pass through the other five colors at equal intervals.   </p>
 <p>The <strong>raw display</strong> simply uses the color ramp to represent all the potential values in the raster as defined by the data type. The result has poor contrast, because we are only using a small part of our color ramp to display our raster values. The <strong>stretched display</strong> solves this by stretching our data range (defined by the minimum and maximum values, or 0 and 48 in this example) over the entire color ramp. This improves contrast dramatically, because we are now using our full range of color to represent our full range of populated values.  </p>
 <h2 id="add-map-layer">Add map layer</h2>
-<p>After we have defined how we want colors to represent data values, we can add the raster to the Map UI as a <strong>layer</strong> with this snippet:</p>
+<p>After we have defined how we want colors to represent data values, we can add a raster to the Map UI as a <strong>layer</strong> with this snippet:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">layerParams</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">eeObject</span><span class="o">:</span> <span class="nx">lit1993</span><span class="p">,</span>
+  <span class="nx">eeObject</span><span class="o">:</span> <span class="nx">lights03</span><span class="p">,</span>
   <span class="nx">visParams</span><span class="o">:</span> <span class="nx">lightsViz</span><span class="p">,</span>
   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Stable lights stretched&#39;</span><span class="p">,</span>
   <span class="nx">shown</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
@@ -674,19 +674,18 @@ By default, the Map centers on a point in eastern Kansas in the American Midwest
 
 <span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">layerParams</span><span class="p">);</span>
 </code></pre></div>
-<p>This uses the Map's <em>addLayer</em> method after constructing a JavaScript object to hold the method's five parameters. When you run the code, the Map UI displays the lit1993 raster with our visualization parameters. When you <em>click the layers button</em> on the top right of the map window, you will see the layer name ('Stable lights stretched') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it.    </p>
+<p>This uses the Map's <em>addLayer</em> method after first constructing a JavaScript object to hold the method's five parameters. When you run the code, the Map UI displays the lit1993 raster with our visualization parameters. When you <em>click the layers button</em> on the top right of the map window, you will see the layer name ('Stable lights stretched') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it.    </p>
 <p>As you become familiar with the Map's <em>addLayer</em> method, you may find it convenient to <strong>nest parameters</strong> within methods rather than declaring them as separate variables. For example, this snippet is functionally equivalent to the previous one:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">lit1993</span><span class="p">,</span> <span class="nx">lightsViz</span><span class="p">,</span> <span class="s1">&#39;Stable lights stretched: more concise&#39;</span><span class="p">,</span> <span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>    
+<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">lit1993</span><span class="p">,</span> <span class="nx">lightsViz</span><span class="p">,</span> <span class="s1">&#39;Stable lights stretched: nested params&#39;</span><span class="p">,</span> <span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>    
 </code></pre></div>
 <p>Similarly, you will likely encounter code that nests the visualization parameters like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">lit1993</span><span class="p">,</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span> <span class="mf">63</span><span class="p">,</span> <span class="nx">palette</span><span class="o">:</span> <span class="nx">lightsPalette</span><span class="p">},</span> <span class="s1">&#39;Stable lights stretched: common style&#39;</span><span class="p">,</span> <span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">lit1993</span><span class="p">,</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span> <span class="mf">63</span><span class="p">,</span> <span class="nx">palette</span><span class="o">:</span> <span class="nx">lightsPalette</span><span class="p">},</span> <span class="s1">&#39;Stable lights stretched: nested viz params&#39;</span><span class="p">,</span> <span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
 </code></pre></div>
-<p>Note that the curly brackets define the visualization parameters as an object within the method. Similarly, we could nest the palette list in the method parameters like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">lit1993</span><span class="p">,</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span><span class="mf">60</span><span class="p">,</span> <span class="nx">palette</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;#000b4a&#39;</span><span class="p">,</span> <span class="s1">&#39;#5a2c49&#39;</span><span class="p">,</span><span class="s1">&#39;#94574e&#39;</span><span class="p">,</span> <span class="s1">&#39;#c9875e&#39;</span><span class="p">,</span> <span class="s1">&#39;#f4bf87&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">]},</span> <span class="s1">&#39;Stable lights stretch: not recommended&#39;</span><span class="p">,</span> <span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
-</code></pre></div>
-<p>This will work, even if it might be more cumbersome for people to interpret, but it limits the <strong>reusability</strong> of visualization elements, which we will investigate further below.  </p>
-<h3 id="reusable-visual-elements">Reusable visual elements</h3>
-<p><em>TO BE CONTINUED</em></p>
+<p>Note that the curly brackets define the visualization parameters as an object within the method.  </p>
+<h3 id="reusability-strategies">Reusability strategies</h3>
+<h2 id="reduce-an-image-collections">Reduce an image collections</h2>
+<p>Remember that our image collection contained two images for the year 2003. How then were we able to add the image collection to the Map as a single layer?  </p>
+<p>```</p>
                 
               
               
@@ -720,21 +719,6 @@ By default, the Map centers on a point in eastern Kansas in the American Midwest
           </div>
         </a>
       
-      
-        
-        <a href="../../02/rasterAnalysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Raster Analysis" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Raster Analysis
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

@@ -121,8 +121,7 @@ markdown_extensions:
 # Page tree
 nav:
   - Introduction: index.md
-  - Raster Data Model: 01/rasterFoundations.md
-  - Raster Analysis: 02/rasterAnalysis.md
+  - Raster Foundations: 01/rasterFoundations.md
 
 #  - Contributing: contributing.md
 #  - License: license.md

@@ -1,14 +1,19 @@
 ## Introduction  
 
-This chapter introduces foundations of raster datasets and how to visualize them as map layers in Earth Engine.  We will use the [Earth Engine Code Editor](https://developers.google.com/earth-engine/guides/playground) to work with a global dataset of [Nighttime Lights](https://eogdata.mines.edu/products/dmsp/) and make a new map layer (shown below) that visualizes nighttime lights in 1993.
+This chapter introduces foundations of raster datasets and how to visualize them as map layers in Earth Engine.  We will use the [Earth Engine Code Editor](https://developers.google.com/earth-engine/guides/playground) to work with a global dataset of [Nighttime Lights](https://eogdata.mines.edu/products/dmsp/) and make a new map layer (shown below) that visualizes how nighttime lights changed between 1993, 2003, and 2013.
 
 ![final result screenshot](images/01goal.png)
 
  By the end of the chapter, you should understand how to:  
 
- 1. construct an image collection from an address in the Earth Engine data catalog  
- 2. filter the image collection by time and band name  
- 3. visualize an image collection as a layer  
+ 1. construct an image collection from an address in the Earth Engine data catalog
+ 2. filter collection by attribute and time   
+ 3. visualize images as map layers
+ 4. reduce an image collection into an image   
+ 5. threshold image by criteria
+ 6. reuse workflows with functions  
+ 7. compare images with logical expressions  
+ 8. visualize bands with RGB composites  
 
 ## Construct image collection    
 
@@ -51,7 +56,7 @@ The figure above illustrates EE's raster system that we glimpsed earlier in the 
 
 ## Filter image collection   
 
-Now that we have explored this basic architecture, we can recognize that our image collection suffers from a bit of excess.  We constructed "lights" from the entire dataset in the EE catalog, but we only need a subset for our analysis. So our next task is to make the stack of rasters much shorter and more efficient to work with.  
+Now that we have explored this basic architecture, we can recognize that our image collection suffers from a bit of excess.  We constructed "lights" from the entire dataset in the EE catalog, but we only need a subset for our analysis. So our next task is to shorten the stack of rasters.  
 
 To do this, we will **filter** the image collection in two ways:
 
@@ -61,32 +66,32 @@ To do this, we will **filter** the image collection in two ways:
 This snippet **filters by time**:
 
 ```js
-var lights1993 = lights.filter(ee.Filter.calendarRange(1993, 1993, 'year'));
-print('Lights 1993', lights1993);
+var lights2003 = lights.filter(ee.Filter.calendarRange(2003, 2003, 'year'));
+print('Lights 2003', lights2003);
 ```
 
-It calls an image collection's *filter* method and then uses the filter's *calendarRange* method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents one year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection only contains one image and it is for the year 1993.
+It calls an image collection's *filter* method and then uses the filter's *calendarRange* method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents an average for the calendar year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection contains two images and both are for the year 2003.
 
 This snippet **filters by attribute**:
 
 ```js
-var lights1993Select = lights1993.select('stable_lights');
-print('Lights 1993 Select', lightsSelect);
+var lights2003Select = lights03.select('stable_lights');
+print('Nighttime lights 2003 Select', lights2003Select);
 ```
 
 It calls an image collection's *select* method, where the parameter states the band name. Inspect the metadata and note that this image collection only contains one band.
 
-This code did the job, but it could be more concise. You could substitute all the code you have written thus far with the following:  
+This code did the job, but it could be more concise. We could replicate all the code that we have written thus far with the following:  
 
 ```js
-var lit1993 = ee.ImageCollection("NOAA/DMSP-OLS/NIGHTTIME_LIGHTS")
-  .filter(ee.Filter.calendarRange(1993, 1993, 'year'))
+var lights03 = ee.ImageCollection("NOAA/DMSP-OLS/NIGHTTIME_LIGHTS")
+  .filter(ee.Filter.calendarRange(2003, 2003, 'year'))
   .select('stable_lights');
 
-print('Lights 1993: concise method', lit1993);
+print('Lights 2003: concise method', lights03);
 ```
 
-If you inspect the metadata, you should see this image collection is identical to the "lights1993Select" collection. To help understand why, let's review how raster workflows work.  
+If you inspect the metadata, you should see this image collection is identical to the collection we made earlier. To help understand why, let's review how raster workflows work.  
 
 ### Raster workflow elements       
 
@@ -110,24 +115,18 @@ They both work and the more verbose approach allowed us to inspect each intermed
 
 ## Working with the Map UI   
 
-So far, we have only inspected our image collections's metadata by printing to the Console. We haven't used the  Map User Interface (UI) in the lower half of the Code Editor to visualize the collection's spatial information. In this section, we will begin to explore methods that alter the appearance of the Map.
+So far, we have only investigated the image collection by printing the metadata to the Console. In this section, we will use the Code Editor's Map User Interface (UI) to visualize the collection's spatial information.
 
-To warm up, we can **change the basemap** that the Code Editor automatically displays on the Map. By default, the Map shows the familiar Google road map. You can change this manually with the buttons in the upper right corner of the map window, but it will revert to road map whenever you re-run your code. Alternatively, you can script a particular basemap to display on the Map.   
+To warm up, we can **change the basemap** that the Code Editor automatically displays on the Map. By default, the Map shows the familiar Google road map. You can change this manually with the buttons in the upper right corner of the map window, but it will revert to road map whenever you re-run your code. Alternatively, you can script a particular basemap to display on the Map. This snippet will display the satellite basemap with labels whenever we re-run the script:    
 
 ```js
 Map.setOptions('HYBRID');
 ```
-Now whenever we re-run our script, the Map will display the hybrid basemap.
+
 By default, the Map centers on a point in eastern Kansas in the American Midwest at a zoom level of 4. Often, you will be interested in a scale and extent that differs from this. You can change the map extent manually by using the pan and zoom buttons in the upper left of the map window, or alternatively you can **specify the map center and zoom level** in your script. For example, the line below centers the Map near the Korean Peninsula with a zoom level that shows eastern China and southern Japan.
 
 ```js
 Map.setCenter(125, 35, 6);
-```
-
-Again, note that you can chain these operations in a single line to define a set of actions.  
-
-```js
-Map.setOptions('HYRBID').setCenter(125, 35, 6);
 ```
 
 ### Cartographic model     
@@ -147,7 +146,7 @@ If you are used to thinking about **latitude** and **longitude** in that order, 
 
 ## Visualize data with color  
 
-The Map UI enables you to visualize raster values with color schemes. As a first step, we will define a **palette** and **visualization parameters**:
+The Map UI enables you to visualize raster values with color schemes. As a first step, we will define **visualization parameters**:
 
 ```js
 var lightsPalette =
@@ -162,7 +161,7 @@ var lightsViz = {
 print('palette and viz', lightsPalette, lightsViz);
 ```
 
-Inspect the result in the Console. The palette is a list of colors. The visualization parameters is an object with three properties: min and max define the data range we want to display with colors, while palette references the list of colors to display.
+Inspect the result in the Console. The **palette** variable is a list of colors. The visualization parameters variable is an object with three properties: **min** and **max** define the data range we want to display with colors, while palette references the list of colors to display.
 
 The palette in this example illustrates two different methods to specify colors. For many standard colors, we can declare a color by name, as we did for 'black' and 'white'. Alternatively, we can construct colors from **hexadecimal codes**. These codes are a clever way of defining colors as combinations of red, green, and blue, which we will discuss in more detail a little later in this chapter.  
 
@@ -182,11 +181,11 @@ The **raw display** simply uses the color ramp to represent all the potential va
 
 ## Add map layer  
 
-After we have defined how we want colors to represent data values, we can add the raster to the Map UI as a **layer** with this snippet:
+After we have defined how we want colors to represent data values, we can add a raster to the Map UI as a **layer** with this snippet:
 
 ```js
 var layerParams = {
-  eeObject: lit1993,
+  eeObject: lights03,
   visParams: lightsViz,
   name: 'Stable lights stretched',
   shown: 1,
@@ -196,28 +195,34 @@ var layerParams = {
 Map.addLayer(layerParams);
 ```
 
-This uses the Map's *addLayer* method after constructing a JavaScript object to hold the method's five parameters. When you run the code, the Map UI displays the lit1993 raster with our visualization parameters. When you *click the layers button* on the top right of the map window, you will see the layer name ('Stable lights stretched') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it.    
+This uses the Map's *addLayer* method after first constructing a JavaScript object to hold the method's five parameters. When you run the code, the Map UI displays the lit1993 raster with our visualization parameters. When you *click the layers button* on the top right of the map window, you will see the layer name ('Stable lights stretched') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it.    
 
 As you become familiar with the Map's *addLayer* method, you may find it convenient to **nest parameters** within methods rather than declaring them as separate variables. For example, this snippet is functionally equivalent to the previous one:
 
 ```js
-Map.addLayer(lit1993, lightsViz, 'Stable lights stretched: more concise', 1, 1);    
+Map.addLayer(lit1993, lightsViz, 'Stable lights stretched: nested params', 1, 1);    
 ```
 
 Similarly, you will likely encounter code that nests the visualization parameters like this:
 
 ```js
-Map.addLayer(lit1993, {min:0, max: 63, palette: lightsPalette}, 'Stable lights stretched: common style', 1, 1);
+Map.addLayer(lit1993, {min:0, max: 63, palette: lightsPalette}, 'Stable lights stretched: nested viz params', 1, 1);
 ```
 
-Note that the curly brackets define the visualization parameters as an object within the method. Similarly, we could nest the palette list in the method parameters like this:
+Note that the curly brackets define the visualization parameters as an object within the method.  
 
-```js
-Map.addLayer(lit1993, {min: 0, max:60, palette: ['black', '#000b4a', '#5a2c49','#94574e', '#c9875e', '#f4bf87', 'white']}, 'Stable lights stretch: not recommended', 1, 1);
+### Reusability strategies     
+
+## Reduce an image collections
+
+Remember that our image collection contained two images for the year 2003. How then were we able to add the image collection to the Map as a single layer?  
+
+
+
+
+
+
+
+
+
 ```
-
-This will work, even if it might be more cumbersome for people to interpret, but it limits the **reusability** of visualization elements, which we will investigate further below.  
-
-### Reusable visual elements       
-
-*TO BE CONTINUED*
