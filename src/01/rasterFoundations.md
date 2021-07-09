@@ -1,31 +1,25 @@
 ## Introduction  
 
-This chapter introduces raster datasets and how to work with them in Earth Engine.  We will use the [Earth Engine Code Editor](https://developers.google.com/earth-engine/guides/playground) to work with a global dataset of [Nighttime Lights](https://eogdata.mines.edu/products/dmsp/) and make a new map layer (shown below) that symbolizes changes in nighttime lights between 1993, 2003, and 2013.
+This chapter introduces foundations of raster datasets and how to visualize them as map layers in Earth Engine.  We will use the [Earth Engine Code Editor](https://developers.google.com/earth-engine/guides/playground) to work with a global dataset of [Nighttime Lights](https://eogdata.mines.edu/products/dmsp/) and make a new map layer (shown below) that visualizes nighttime lights in 1993.
 
-![final result screenshot](images/jh0101.png)
+![final result screenshot](images/01goal.png)
 
  By the end of the chapter, you should understand how to:  
 
  1. construct an image collection from an address in the Earth Engine data catalog  
  2. filter the image collection by time and band name  
  3. visualize an image collection as a layer  
- 4. reduce an image collection into an image  
- 5. threshold image by criteria  
- 6. compare images with logical expressions  
- 7. visualize bands with RGB composites  
 
 ## Construct image collection    
 
-To get started, use the Code Editor to construct an image collection from the EE [data catalog](https://developers.google.com/earth-engine/datasets) and then print the result to the Console panel. You can give the image collection any name you would like. Below, I call it 'lights'.  
-
-Copy or type the following code into the Code Editor and then run the script.
+To get started, use the Code Editor to construct an image collection from the Earth Engine [Data Catalog](https://developers.google.com/earth-engine/datasets). Copy or type the following code into the Code Editor and then run the script.
 
 ```js
 var lights = ee.ImageCollection("NOAA/DMSP-OLS/NIGHTTIME_LIGHTS");
 print("Lights at night dataset", lights);
 ```
 
-In the Console panel, explore the **metadata** (data about data) for the image collection and take note of the following:
+The first line uses Earth Engine's *ImageCollection* method, where the parameter defines the asset ID of the dataset in the Data Catalog. You can give the result any name you would like. Above, I call it 'lights'. The second line prints two things: a label and the collection's **metadata** (data about data). Inspect the metadata and note the following:
 
 * The image collection consists of a set of **images** (listed as features of the image collection).  
 * The image collection and each image have **properties** (some of which are human readable and some of which seem intended for a computer).
@@ -52,8 +46,8 @@ The solution is two-part: use more than one raster and use a hierarchy to organi
 The figure above illustrates EE's raster system that we glimpsed earlier in the nighttime lights metadata:  
 
 * The image collection consists of a set of images.
-* Each image in the image collection represents conditions for a different time observation.
-* Each band in an image represents a different type of condition.
+* Each image in the image collection represents a different time observation.
+* Each band in an image represents a different category of attributes.
 
 ## Filter image collection   
 
@@ -61,24 +55,32 @@ Now that we have explored this basic architecture, we can recognize that our ima
 
 To do this, we will **filter** the image collection in two ways:
 
-* by a **time window** defined by a start and end date  
-* by a **band name**   
+* by time
+* by attribute  
+
+This snippet **filters by time**:
 
 ```js
-var lights1993 = lights.filterDate('1993-01-01', '1994-01-01');
+var lights1993 = lights.filter(ee.Filter.calendarRange(1993, 1993, 'year'));
 print('Lights 1993', lights1993);
+```
 
+It calls an image collection's *filter* method and then uses the filter's *calendarRange* method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents one year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection only contains one image and it is for the year 1993.
+
+This snippet **filters by attribute**:
+
+```js
 var lights1993Select = lights1993.select('stable_lights');
 print('Lights 1993 Select', lightsSelect);
 ```
 
-Inspect the metadata under 'Lights 1993'. Notice that now your image collection only contains one image and it is for the year 1993. Then inspect the metadata under 'Lights 1993 Select' and notice that this image collection only contains one band.
+It calls an image collection's *select* method, where the parameter states the band name. Inspect the metadata and note that this image collection only contains one band.
 
 This code did the job, but it could be more concise. You could substitute all the code you have written thus far with the following:  
 
 ```js
 var lit1993 = ee.ImageCollection("NOAA/DMSP-OLS/NIGHTTIME_LIGHTS")
-  .filterDate('1993-01-01', '1994-01-01')
+  .filter(ee.Filter.calendarRange(1993, 1993, 'year'))
   .select('stable_lights');
 
 print('Lights 1993: concise method', lit1993);
@@ -92,7 +94,7 @@ Take a raster, do something to it, get a result. This triad is the basic element
 
 *Input --> method --> output*  
 
-In javascript, you declare ends before means. The syntax is this:
+In javascript, you declare ends before means and methods are properties of the input class. The syntax is this:
 
 ```js
 var output = input.method();
@@ -106,33 +108,17 @@ When we first scripted the workflow, we declared a variable for each intermediat
 
 They both work and the more verbose approach allowed us to inspect each intermediate output, which can be helpful when learning how methods work and for trouble-shooting if something goes wrong. As you become familiar with EE methods, however, you may find the concise style more efficient.  
 
-## Visualize as map layer  
+## Working with the Map UI   
 
-So far, we have only inspected our image collections's metadata by printing to the console panel. In this step, we will visualize raster data in the collection on a map. This involves working with methods that affect the appearance of the Map user interface (UI).   
+So far, we have only inspected our image collections's metadata by printing to the Console. We haven't used the  Map User Interface (UI) in the lower half of the Code Editor to visualize the collection's spatial information. In this section, we will begin to explore methods that alter the appearance of the Map.
 
-### Customize Map    
-
-To warm up, we can change the basemap. By default, the Map shows the familiar Google road map. You can change this manually with the buttons in the upper right corner of the map window, but it will revert to road map whenever you rerun your code. Alternatively, you can script a particular basemap to display on the Map.   
+To warm up, we can **change the basemap** that the Code Editor automatically displays on the Map. By default, the Map shows the familiar Google road map. You can change this manually with the buttons in the upper right corner of the map window, but it will revert to road map whenever you re-run your code. Alternatively, you can script a particular basemap to display on the Map.   
 
 ```js
 Map.setOptions('HYBRID');
 ```
 Now whenever we re-run our script, the Map will display the hybrid basemap.
-
-Next, we can become familiar with the Map's geographic framework. Try querying a location with this routine:   
-
-1. Click on the "Inspector" tab (top-right) --> *cursor becomes a crosshair*  
-2. Click anywhere on the map** --> *prints lon, lat, zoom, and scale to inspector panel*
-
-If you are used to thinking about latitude and longitude in that order, you should note that the order shown in the inspector panel is opposite of this, following the "x,y" convention of coordinates. As a geographic coordinate, longitude is plotted along the x-axis and latitude on the y-axis, which is counter intuitive for many people. Also note that positive longitudes are east of Greenwich, England and negative are west. Positive latitudes are north of the equator and negatives are south.
-
-*insert image*  
-
-Zoom level describes the scale of the map. Small zoom levels show small scale maps. When you increase the zoom level, you increase the map scale. Similarly, when you click on the + button, you increase the zoom level. This has the illusion of bringing the map closer to you, or of zooming in. It is sometimes not intuitive to think that large scale maps show smaller regions than small scale maps. It may be helpful to equate scale with detail rather than area. In the Inspector panel, the scale value reports the approximate distance on the ground at the equator that is represented by a single pixel. Increasing the zoom level decreases this distance and this increases detail.  
-
-*insert image*
-
-By default, the Map centers on a point in eastern Kansas in the American Midwest at a zoom level of 4. Often, you will be interested in a scale and extent that differs from this. You can change the map extent manually by using the pan and zoom buttons in the upper left of the map window, but again the Map will return to the default extent whenever you re-run your code. Alternatively, your script can customize the map extent. For example, the line below centers the Map on the Korean Peninsula with a zoom level that shows eastern China and southern Japan.
+By default, the Map centers on a point in eastern Kansas in the American Midwest at a zoom level of 4. Often, you will be interested in a scale and extent that differs from this. You can change the map extent manually by using the pan and zoom buttons in the upper left of the map window, or alternatively you can **specify the map center and zoom level** in your script. For example, the line below centers the Map near the Korean Peninsula with a zoom level that shows eastern China and southern Japan.
 
 ```js
 Map.setCenter(125, 35, 6);
@@ -144,10 +130,94 @@ Again, note that you can chain these operations in a single line to define a set
 Map.setOptions('HYRBID').setCenter(125, 35, 6);
 ```
 
-### Add a layer  
+### Cartographic model     
 
-You can display raster values from an image collection as a **layer** on the Map. For the most part, EE handles how the raster pixels get plotted to geographic locations, so we don't need to be too concerned about how that works for now. However, we will need to define how **visual variables** map to raster values.  
+If you are not certain what the three parameters in the *setCenter* method reference, then take a moment to try querying a location on the Map with this routine:   
+
+1. Click on the "Inspector" tab (top-right) --> *cursor becomes a crosshair*  
+2. Click anywhere on the map --> *prints lon, lat, zoom, and scale to inspector panel*
+
+If you are used to thinking about **latitude** and **longitude** in that order, you should note that the order shown in the inspector panel is opposite of this, following the "x,y" convention of coordinates. As a geographic coordinate, longitude is plotted along the x-axis and latitude on the y-axis, which is counter-intuitive for many people, because we tend to equate longitude with vertical lines and latitude with horizontal lines. Also note that positive longitudes are east of Greenwich, England and negative are west. Positive latitudes are north of the equator and negatives are south.
+
+*insert image*  
+
+**Zoom level** describes map scale. Small zoom levels show small scale maps. When you increase the zoom level, you increase the map scale. Similarly, when you click on the + button (upper left corner of map window), you increase the zoom level. This has the illusion of bringing the map closer to you, or of zooming in. It may not seem intuitive to think that large scale maps show smaller extents than small scale maps. This confusion stems from associating scale with area rather than detail. Large scale maps show more detail than small scale maps. In the Inspector panel, the **scale** value reports the approximate distance on the ground (in meters) at the equator that is represented by a single pixel. Increasing the zoom level decreases this distance and this increases detail.  
 
 *insert image*
 
-*TO BE CONTINUED...*
+## Visualize data with color  
+
+The Map UI enables you to visualize raster values with color schemes. As a first step, we will define a **palette** and **visualization parameters**:
+
+```js
+var lightsPalette =
+  ['black', '#000b4a', '#5a2c49','#94574e', '#c9875e', '#f4bf87', 'white'];
+
+var lightsViz = {
+  min: 0,
+  max: 63,
+  palette: lightsPalette
+};
+
+print('palette and viz', lightsPalette, lightsViz);
+```
+
+Inspect the result in the Console. The palette is a list of colors. The visualization parameters is an object with three properties: min and max define the data range we want to display with colors, while palette references the list of colors to display.
+
+The palette in this example illustrates two different methods to specify colors. For many standard colors, we can declare a color by name, as we did for 'black' and 'white'. Alternatively, we can construct colors from **hexadecimal codes**. These codes are a clever way of defining colors as combinations of red, green, and blue, which we will discuss in more detail a little later in this chapter.  
+
+Also note that we set the min and max values based on the range of values that populate the raster. For some bands, the min and max will be defined as properties of the image collection. Alternatively, you can also look in EE's Data Catalog for metadata about the collection. It is often listed under the [Bands tab](https://developers.google.com/earth-engine/datasets/catalog/NOAA_DMSP-OLS_NIGHTTIME_LIGHTS#bands).
+
+### Stretch enhancement     
+
+Visualization parameters help resolve a common mismatch between the range of values that a raster can store (defined by the data type) and the range of values that populate the raster. Often, the raster uses much less than the data type provides and this affects our ability to see differences in our data with color. **Stretch enhancement** matches the range of display colors to the range of populated data values in order to improve visual contrast.   
+
+![visual variables](images/vizVariables-01.png)  
+
+The **frequency distribution** above illustrates this for our simple 20 pixel example introduced previously. It shows the number of pixels (y-axis) that populate the raster for each value provided by the data type (x-axis). The eight bit unsigned integer data type can represent all integers between 0 and 255, but our raster contains values over a much smaller range (0 - 48).  
+
+Now consider that the pixel depth will also control the number of colors available to visualize the raster values. In the illustration, the **palette** lists six discrete colors. These colors seed a **color ramp** that then represents all the potential values provided by the pixel depth. The first color represents 0, the last color represents 255. The other colors are distributed evenly across the middle and transitional colors are made up to fill in the gaps. The color ramp appears continuous, but it really just represents 256 steps between black and white that pass through the other five colors at equal intervals.   
+
+The **raw display** simply uses the color ramp to represent all the potential values in the raster as defined by the data type. The result has poor contrast, because we are only using a small part of our color ramp to display our raster values. The **stretched display** solves this by stretching our data range (defined by the minimum and maximum values, or 0 and 48 in this example) over the entire color ramp. This improves contrast dramatically, because we are now using our full range of color to represent our full range of populated values.  
+
+## Add map layer  
+
+After we have defined how we want colors to represent data values, we can add the raster to the Map UI as a **layer** with this snippet:
+
+```js
+var layerParams = {
+  eeObject: lit1993,
+  visParams: lightsViz,
+  name: 'Stable lights stretched',
+  shown: 1,
+  opacity: 1
+};
+
+Map.addLayer(layerParams);
+```
+
+This uses the Map's *addLayer* method after constructing a JavaScript object to hold the method's five parameters. When you run the code, the Map UI displays the lit1993 raster with our visualization parameters. When you *click the layers button* on the top right of the map window, you will see the layer name ('Stable lights stretched') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it.    
+
+As you become familiar with the Map's *addLayer* method, you may find it convenient to **nest parameters** within methods rather than declaring them as separate variables. For example, this snippet is functionally equivalent to the previous one:
+
+```js
+Map.addLayer(lit1993, lightsViz, 'Stable lights stretched: more concise', 1, 1);    
+```
+
+Similarly, you will likely encounter code that nests the visualization parameters like this:
+
+```js
+Map.addLayer(lit1993, {min:0, max: 63, palette: lightsPalette}, 'Stable lights stretched: common style', 1, 1);
+```
+
+Note that the curly brackets define the visualization parameters as an object within the method. Similarly, we could nest the palette list in the method parameters like this:
+
+```js
+Map.addLayer(lit1993, {min: 0, max:60, palette: ['black', '#000b4a', '#5a2c49','#94574e', '#c9875e', '#f4bf87', 'white']}, 'Stable lights stretch: not recommended', 1, 1);
+```
+
+This will work, even if it might be more cumbersome for people to interpret, but it limits the **reusability** of visualization elements, which we will investigate further below.  
+
+### Reusable visual elements       
+
+*TO BE CONTINUED*

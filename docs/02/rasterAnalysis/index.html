@@ -13,21 +13,21 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eeprimer/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eeprimer/02/rasterAnalysis/">
       
-      <link rel="icon" href="assets/eePrimericon-01.png">
+      <link rel="icon" href="../../assets/eePrimericon-01.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Earth Engine Primer</title>
+        <title>Raster Analysis - Earth Engine Primer</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -74,12 +74,17 @@
     <body dir="ltr" data-md-color-scheme="white" data-md-color-primary="white" data-md-color-accent="red">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#reduce-image-collection" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -88,9 +93,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Earth Engine Primer" class="md-header__button md-logo" aria-label="Earth Engine Primer" data-md-component="logo">
+    <a href="../.." title="Earth Engine Primer" class="md-header__button md-logo" aria-label="Earth Engine Primer" data-md-component="logo">
       
-  <img src="assets/eePrimericon-01.png" alt="logo">
+  <img src="../../assets/eePrimericon-01.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Raster Analysis
             
           </span>
         </div>
@@ -180,9 +185,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Earth Engine Primer" class="md-nav__button md-logo" aria-label="Earth Engine Primer" data-md-component="logo">
+    <a href="../.." title="Earth Engine Primer" class="md-nav__button md-logo" aria-label="Earth Engine Primer" data-md-component="logo">
       
-  <img src="assets/eePrimericon-01.png" alt="logo">
+  <img src="../../assets/eePrimericon-01.png" alt="logo">
 
     </a>
     Earth Engine Primer
@@ -209,19 +214,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Introduction
       </a>
-      
     </li>
   
 
@@ -234,7 +231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01/rasterFoundations/" class="md-nav__link">
+      <a href="../../01/rasterFoundations/" class="md-nav__link">
         Raster Data Model
       </a>
     </li>
@@ -247,11 +244,47 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="02/rasterAnalysis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Raster Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Raster Analysis
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reduce-image-collection" class="md-nav__link">
+    Reduce image collection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -263,23 +296,54 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reduce-image-collection" class="md-nav__link">
+    Reduce image collection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Introduction</h1>
+                  <h1>Raster Analysis</h1>
                 
-                <p>This Primer aims to help you understand foundations of geospatial analysis and visualization with Google Earth Engine. It is intended for people who are unfamiliar with geospatial or Earth Engine concepts and methods.    </p>
-<p>This is a work in progress. I hope to have the first draft complete by January 2022.</p>
-<p>For questions or comments, please contact:  </p>
-<p><strong>Jeff Howarth</strong><br />
-Associate Professor<br />
-Geography Department<br />
-Middlebury College, Vermont, USA    </p>
-<p><strong>email:</strong> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#104;&#111;&#119;&#97;&#114;&#116;&#104;&#64;&#109;&#105;&#100;&#100;&#108;&#101;&#98;&#117;&#114;&#121;&#46;&#101;&#100;&#117;">&#106;&#104;&#111;&#119;&#97;&#114;&#116;&#104;&#64;&#109;&#105;&#100;&#100;&#108;&#101;&#98;&#117;&#114;&#121;&#46;&#101;&#100;&#117;</a><br />
-<strong>twitter:</strong> <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/jeffgeographer" title="GitHub User: jeffgeographer">@jeffgeographer</a>  </p>
+                <p>This chapter introduces foundations of raster analysis with Earth Engine. We will use the <a href="https://developers.google.com/earth-engine/guides/playground">Earth Engine Code Editor</a> to work with a global dataset of <a href="https://eogdata.mines.edu/products/dmsp/">Nighttime Lights</a> and make a new map layer (shown below) that visualizes changes nighttime lights between 1993, 2003, and 2013.</p>
+<p><img alt="final result screenshot" src="../images/02goal.png" /></p>
+<p>By the end of the chapter, you should understand how to:  </p>
+<ol>
+<li>reduce an image collection into an image  </li>
+<li>threshold image by criteria  </li>
+<li>compare images with logical expressions  </li>
+<li>visualize bands with RGB composites  </li>
+</ol>
+<h2 id="reduce-image-collection">Reduce image collection</h2>
                 
               
               
@@ -298,21 +362,21 @@ Middlebury College, Vermont, USA    </p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-      
         
-        <a href="01/rasterFoundations/" class="md-footer__link md-footer__link--next" aria-label="Next: Raster Data Model" rel="next">
+        <a href="../../01/rasterFoundations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Raster Data Model" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                Previous
               </span>
               Raster Data Model
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
@@ -361,10 +425,10 @@ Middlebury College, Vermont, USA    </p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
