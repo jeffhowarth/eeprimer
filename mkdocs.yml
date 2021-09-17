@@ -58,7 +58,7 @@ theme:
   palette:
     scheme: white
     primary: white
-    accent: red
+    accent: orange
   font:
     text: Libre Baskerville
     # text: Didact Gothic
@@ -68,6 +68,10 @@ theme:
 plugins:
   - search
   - minify
+
+# src and site directories
+docs_dir: 'src'
+site_dir: 'docs'
 
 # Customization
 extra:
@@ -117,11 +121,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - attr_list
 
 # Page tree
 nav:
-  - Introduction: index.md
-  - Raster Foundations: 01/rasterFoundations.md
+  - Preface: index.md
+  - Intro to web maps: 00/mapFoundations.md
+  - Raster data model: 01/rasterFoundations.md
+  - Raster workflow: 02/rasterWorkflow.md
 
 #  - Contributing: contributing.md
 #  - License: license.md

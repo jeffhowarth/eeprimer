@@ -1,175 +1,113 @@
 ## Introduction  
 
-This chapter introduces foundations of raster datasets and how to visualize them as map layers in Earth Engine.  We will use the [Earth Engine Code Editor](https://developers.google.com/earth-engine/guides/playground) to work with a global dataset of [Nighttime Lights](https://eogdata.mines.edu/products/dmsp/) and make a new map layer (shown below) that visualizes how nighttime lights changed between 1993, 2003, and 2013.
+This chapter introduces core concepts for representing geographic information with a raster data model. We will use Google Earth Engine to work with a dataset of nighttime lights and make the map layer shown below.  
 
-![final result screenshot](images/01goal.png)
+![Raster Foundations Goal](images/01goal.png)
 
- By the end of the chapter, you should understand how to:  
+By the end, you should be able to answer these questions:  
 
- 1. construct an image collection from an address in the Earth Engine data catalog
- 2. filter collection by attribute and time   
- 3. visualize images as map layers
- 4. reduce an image collection into an image   
- 5. threshold image by criteria
- 6. reuse workflows with functions  
- 7. compare images with logical expressions  
- 8. visualize bands with RGB composites  
+1. How does a raster data model represent **attributes of spatial locations**?
+2. What is a raster's **spatial resolution and extent**?
+3. What is a raster's **temporal resolution and extent**?  
+4. How can a raster represent **multiple attributes** for spatial locations at **multiple times**?
+5. What is a **data type** versus a **data value**?  
+6. What is a **display palette**?  
+7. What is **stretch enhancement** and why does it help display data values with colors?
+
+Practically, you will learn how to use the [Earth Engine Code Editor](https://developers.google.com/earth-engine/guides/playground){target=_blank} to:
+
+1. construct an image collection from an address in the Earth Engine data catalog   
+2. visualize an image band with a color scheme    
+
+## Case study: Nighttime lights  
+
+We will work with a dataset of nighttime lights available through the **Earth Engine Data Catalog**. Your first task is to locate the dataset in the catalog.  
+
+To get started, [open the Data Catalog](https://developers.google.com/earth-engine/datasets){target=_blank}, click on the **Browse by tags** tab, and then search for **"nighttime"**. You will find that the catalog contains more than one dataset with this tag. In this chapter, we will work with the Defense Meteorological Program (DMSP) Operational Line-Scan System (OLS) Time Series Version 4. There are two versions of this dataset. We will start working with the one that is **not** calibrated and spans the years 1992 to 2014. To check the data range, open the catalog page for a dataset and look under **Data Availability**.  
 
 ## Construct image collection    
-
-To get started, use the Code Editor to construct an image collection from the Earth Engine [Data Catalog](https://developers.google.com/earth-engine/datasets). Copy or type the following code into the Code Editor and then run the script.
+After you have found the DMSP OLS dataset, your next task is to create your own copy of the dataset from the data catalog and give it a name. You will need to open the Code Editor if you have not already done so. Then copy or type the following code into the Code Editor and run the script.
 
 ```js
-var lights = ee.ImageCollection("NOAA/DMSP-OLS/NIGHTTIME_LIGHTS");
-print("Lights at night dataset", lights);
+var dataset = ee.ImageCollection('NOAA/DMSP-OLS/NIGHTTIME_LIGHTS');
+print("Lights at night dataset", dataset);
 ```
 
-The first line uses Earth Engine's *ImageCollection* method, where the parameter defines the asset ID of the dataset in the Data Catalog. You can give the result any name you would like. Above, I call it 'lights'. The second line prints two things: a label and the collection's **metadata** (data about data). Inspect the metadata and note the following:
+The first line creates an instance of the dataset with Earth Engine's *ImageCollection* method. The **variable** (var) provides a name for our copy of the dataset and the method's **argument** (in parenthesis) defines the asset ID of the dataset in the Data Catalog. The second line prints two things to the **Console panel**: a label and the collection's **metadata** (data about data).  
+
+Go ahead and inspect the metadata and note the following:
 
 * The image collection consists of a set of **images** (listed as features of the image collection).  
-* The image collection and each image have **properties** (some of which are human readable and some of which seem intended for a computer).
-* Each image consists of a set of **bands** (the names of which are a little cryptic, but you can follow the **provider_url** in the image collection properties to find descriptions of them).
+* The image collection and each image has a set of **properties** (some of which are human readable and some of which seem intended for a computer).
+* Each image consists of a set of **bands** (the names of which are a little cryptic, but you can follow the **provider_url** in the image collection properties to find descriptions of them).  
+* Each band has a name, a **crs**, a **data_type**, and **dimensions**.  
 
-If this architecture is new to you, the next section reviews how the **raster data model** works as a general template for storing spatial information.   
+If this architecture and vocabulary are new to you, the next section reviews how the **raster data model** works as a general template for storing spatial information.   
 
 ### Raster data model         
 
-The raster data model represents spatial information as an array of values. The position of a value in the array represents location. Each value represents an attribute of the location.  
+The raster data model represents spatial information as a grid of values. The position of a value in the grid represents location. Each value represents an attribute of the location.  
 
 ![raster scheme](images/rasterScheme-01.png)
 
-The illustration above shows two versions of a raster for a small portion of the nighttimes lights dataset near Belem, Brasil. The left-side shows how the computer encodes the data and the right-side shows a scheme that is a bit more readable. On the left, the array holds 8 bit unsigned integers. This **data type** uses eight binary numbers to represent integers between 0 and 255. The  scheme on the right shows a grid with four columns and five rows. Each cell in the grid is called a **pixel** (short for "picture element").   
+The illustration above shows two versions of a raster for a small portion of the nighttime lights dataset near Belem, Brasil. *Add screenshot of region to graphic*. The left-side shows how the computer encodes the data and the right-side shows a scheme that is a bit more readable. On the left, the array holds 8 bit unsigned integers. This **data type** uses eight binary numbers to represent integer **data values** between 0 and 255. The scheme on the right shows a grid with four columns and five rows. Each cell in the grid is called a **pixel** (short for "picture element").    
 
-As you can see, the raster template stores one value for each location. How then does the nighttime lights dataset store multiple values for each location? For example, it contains both the brightness of nighttime lights and the cloudiness of the nighttime sky for every location. Similarly, how does the dataset store values for more than one observation in time, making it possible to investigate change over time?
+As you can see, the raster data model stores one value for each location.  *INSERT A BRIDGE HERE: go back to data provider -- note that there are more than one band and more than one time. So how does that work?..*
+
+How then does the nighttime lights dataset store multiple values for each location?  
 
 The solution is two-part: use more than one raster and use a hierarchy to organize them. This is where bands and image collections come in.
 
-###  Earth Engine's raster system
+###  Earth Engine's raster model  
 
 *insert image*
 
-The figure above illustrates EE's raster system that we glimpsed earlier in the nighttime lights metadata:  
+The figure above illustrates EE's raster system that we glimpsed earlier in the nighttime lights metadata.   
 
 * The image collection consists of a set of images.
-* Each image in the image collection represents a different time observation.
-* Each band in an image represents a different category of attributes.
+* Each image in the image collection represents a **different time observation**.
+* Each band in an image represents a **different category of attributes**.  
 
-## Filter image collection   
+Now take a moment to look back at the catalog page for the dataset and acquaint yourself with the dataset descriptions.  
 
-Now that we have explored this basic architecture, we can recognize that our image collection suffers from a bit of excess.  We constructed "lights" from the entire dataset in the EE catalog, but we only need a subset for our analysis. So our next task is to shorten the stack of rasters.  
-
-To do this, we will **filter** the image collection in two ways:
-
-* by time
-* by attribute  
-
-This snippet **filters by time**:
-
-```js
-var lights2003 = lights.filter(ee.Filter.calendarRange(2003, 2003, 'year'));
-print('Lights 2003', lights2003);
-```
-
-It calls an image collection's *filter* method and then uses the filter's *calendarRange* method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents an average for the calendar year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection contains two images and both are for the year 2003.
-
-This snippet **filters by attribute**:
-
-```js
-var lights2003Select = lights03.select('stable_lights');
-print('Nighttime lights 2003 Select', lights2003Select);
-```
-
-It calls an image collection's *select* method, where the parameter states the band name. Inspect the metadata and note that this image collection only contains one band.
-
-This code did the job, but it could be more concise. We could replicate all the code that we have written thus far with the following:  
-
-```js
-var lights03 = ee.ImageCollection("NOAA/DMSP-OLS/NIGHTTIME_LIGHTS")
-  .filter(ee.Filter.calendarRange(2003, 2003, 'year'))
-  .select('stable_lights');
-
-print('Lights 2003: concise method', lights03);
-```
-
-If you inspect the metadata, you should see this image collection is identical to the collection we made earlier. To help understand why, let's review how raster workflows work.  
-
-### Raster workflow elements       
-
-Take a raster, do something to it, get a result. This triad is the basic element of a workflow.
-
-*Input --> method --> output*  
-
-In javascript, you declare ends before means and methods are properties of the input class. The syntax is this:
-
-```js
-var output = input.method();
-```
-
-Most raster workflows consist of a chain or sequence of these actions. For example, our workflow thus far consists of a sequence of three.
-
-*insert image*
-
-When we first scripted the workflow, we declared a variable for each intermediate result and then used this variable as an input in the next step. In our more concise script, we didn't bother declaring intermediate outputs and simply wrote out the chain of action.
-
-They both work and the more verbose approach allowed us to inspect each intermediate output, which can be helpful when learning how methods work and for trouble-shooting if something goes wrong. As you become familiar with EE methods, however, you may find the concise style more efficient.  
-
-## Working with the Map UI   
-
-So far, we have only investigated the image collection by printing the metadata to the Console. In this section, we will use the Code Editor's Map User Interface (UI) to visualize the collection's spatial information.
-
-To warm up, we can **change the basemap** that the Code Editor automatically displays on the Map. By default, the Map shows the familiar Google road map. You can change this manually with the buttons in the upper right corner of the map window, but it will revert to road map whenever you re-run your code. Alternatively, you can script a particular basemap to display on the Map. This snippet will display the satellite basemap with labels whenever we re-run the script:    
-
-```js
-Map.setOptions('HYBRID');
-```
-
-By default, the Map centers on a point in eastern Kansas in the American Midwest at a zoom level of 4. Often, you will be interested in a scale and extent that differs from this. You can change the map extent manually by using the pan and zoom buttons in the upper left of the map window, or alternatively you can **specify the map center and zoom level** in your script. For example, the line below centers the Map near the Korean Peninsula with a zoom level that shows eastern China and southern Japan.
-
-```js
-Map.setCenter(125, 35, 6);
-```
-
-### Cartographic model     
-
-If you are not certain what the three parameters in the *setCenter* method reference, then take a moment to try querying a location on the Map with this routine:   
-
-1. Click on the "Inspector" tab (top-right) --> *cursor becomes a crosshair*  
-2. Click anywhere on the map --> *prints lon, lat, zoom, and scale to inspector panel*
-
-If you are used to thinking about **latitude** and **longitude** in that order, you should note that the order shown in the inspector panel is opposite of this, following the "x,y" convention of coordinates. As a geographic coordinate, longitude is plotted along the x-axis and latitude on the y-axis, which is counter-intuitive for many people, because we tend to equate longitude with vertical lines and latitude with horizontal lines. Also note that positive longitudes are east of Greenwich, England and negative are west. Positive latitudes are north of the equator and negatives are south.
-
-*insert image*  
-
-**Zoom level** describes map scale. Small zoom levels show small scale maps. When you increase the zoom level, you increase the map scale. Similarly, when you click on the + button (upper left corner of map window), you increase the zoom level. This has the illusion of bringing the map closer to you, or of zooming in. It may not seem intuitive to think that large scale maps show smaller extents than small scale maps. This confusion stems from associating scale with area rather than detail. Large scale maps show more detail than small scale maps. In the Inspector panel, the **scale** value reports the approximate distance on the ground (in meters) at the equator that is represented by a single pixel. Increasing the zoom level decreases this distance and this increases detail.  
-
-*insert image*
+* **Dataset availability**: temporal extent, defined by the timestamp of the first and last observation  
+* **Dataset provider**: data source, links to more information about the data's biography (who made the data, for what purpose, with what instruments, etc.)  
+* **Earth Engine Snippet**: code snippet with dataset's address to help you construct an image collection    
+* **Description**: a data abstract, or Google's short description of the dataset  
+* **Bands**: attribute categories of the dataset, or the kinds of Earth surface properties described by the dataset, along with the minimum and maximum data values for each attribute.  
+* **Resolution**: spatial resolution, defined as the ground distance of a pixel as measured at the equator.  
+* **Terms of Use**: copyright or other potential restrictions for working with the dataset.  
+* **Earth Engine script**: a starter script that you can copy into the Earth Engine Code Editor to load, filter, and visualize the dataset.  
 
 ## Visualize data with color  
 
-The Map UI enables you to visualize raster values with color schemes. As a first step, we will define **visualization parameters**:
+Our next task is to visualize the data as a map layer. This involves two steps:  
+
+1. Define a color scheme for data values  
+2. Apply color theme to data as a map layer  
+
+The code below defines a **visualization scheme** that connects a set of colors to a set of data values.
 
 ```js
-var lightsPalette =
-  ['black', '#000b4a', '#5a2c49','#94574e', '#c9875e', '#f4bf87', 'white'];
+var palette = ['Black', '#000b4a', '#5a2c49','#94574e', '#c9875e', '#f4bf87', 'White'];
 
-var lightsViz = {
-  min: 0,
+var viz = {
+  min:0,
   max: 63,
-  palette: lightsPalette
+  bands: 'avg_vis',
+  palette: palette
 };
 
-print('palette and viz', lightsPalette, lightsViz);
+print('palette and viz', palette, viz);
 ```
 
-Inspect the result in the Console. The **palette** variable is a list of colors. The visualization parameters variable is an object with three properties: **min** and **max** define the data range we want to display with colors, while palette references the list of colors to display.
+The first variable defines a **palette** as a *list* (in brackets) of HTML colors as *strings* (in quotes). Our list illustrates two different ways that you can specify colors. First, you can use **HTML color names**, like 'Black' and 'White'. There are 140 different HTML color names that will be recognized by all modern browsers and are safe to use in Earth Engine. Alternatively, you can also define colors with **hexadecimal codes**, which consist of six characters following a pound sign. These allow you to create custom colors as combinations of red, green, and blue, which we will discuss in more detail in the next chapter.  
 
-The palette in this example illustrates two different methods to specify colors. For many standard colors, we can declare a color by name, as we did for 'black' and 'white'. Alternatively, we can construct colors from **hexadecimal codes**. These codes are a clever way of defining colors as combinations of red, green, and blue, which we will discuss in more detail a little later in this chapter.  
-
-Also note that we set the min and max values based on the range of values that populate the raster. For some bands, the min and max will be defined as properties of the image collection. Alternatively, you can also look in EE's Data Catalog for metadata about the collection. It is often listed under the [Bands tab](https://developers.google.com/earth-engine/datasets/catalog/NOAA_DMSP-OLS_NIGHTTIME_LIGHTS#bands).
+The second variable defines **visualization parameters** as an *object* (in curly brackets). **Min** and **max** define the data range that we want to display with colors, while **palette** references the list of colors we made previously. In this example, we are defining the data range based on the minimum and maximum values that populate the raster. Often, these will be documented as properties of the image collection, but not necessarily for all bands. Alternatively, you can also look in EE's Data Catalog for metadata about the collection. It is often listed under the [Bands tab](https://developers.google.com/earth-engine/datasets/catalog/NOAA_DMSP-OLS_NIGHTTIME_LIGHTS#bands){target=_blank}.
 
 ### Stretch enhancement     
 
-Visualization parameters help resolve a common mismatch between the range of values that a raster can store (defined by the data type) and the range of values that populate the raster. Often, the raster uses much less than the data type provides and this affects our ability to see differences in our data with color. **Stretch enhancement** matches the range of display colors to the range of populated data values in order to improve visual contrast.   
+Visualization parameters help resolve a common mismatch between the range of values that a raster can store (defined by the raster's **data type**) and the range of values that populate the raster. Often, the range of values that populate a raster is much smaller than the range of values that the data type can represent. This affects our ability to see differences in our data with color. **Stretch enhancement** is a method to tune the range of display colors to the range of populated data values in order to improve visual contrast.   
 
 ![visual variables](images/vizVariables-01.png)  
 
@@ -181,13 +119,17 @@ The **raw display** simply uses the color ramp to represent all the potential va
 
 ## Add map layer  
 
+We can use this color scheme to represent raster values as a **layer** on the map.
+
+*BELOW STILL ROUGH AND IN PIECES*  
+
 After we have defined how we want colors to represent data values, we can add a raster to the Map UI as a **layer** with this snippet:
 
 ```js
 var layerParams = {
-  eeObject: lights03,
-  visParams: lightsViz,
-  name: 'Stable lights stretched',
+  eeObject: dataset,
+  visParams: viz,
+  name: 'Nighttime lights',
   shown: 1,
   opacity: 1
 };
@@ -195,34 +137,6 @@ var layerParams = {
 Map.addLayer(layerParams);
 ```
 
-This uses the Map's *addLayer* method after first constructing a JavaScript object to hold the method's five parameters. When you run the code, the Map UI displays the lit1993 raster with our visualization parameters. When you *click the layers button* on the top right of the map window, you will see the layer name ('Stable lights stretched') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it.    
+This uses the Map's *addLayer* method after first constructing an object to hold the method's five parameters. When you run the code, the Map UI displays the lit1993 raster with our visualization parameters. When you *click the layers button* on the top right of the map window, you will see the layer name ('Stable lights stretched') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it.    
 
-As you become familiar with the Map's *addLayer* method, you may find it convenient to **nest parameters** within methods rather than declaring them as separate variables. For example, this snippet is functionally equivalent to the previous one:
-
-```js
-Map.addLayer(lit1993, lightsViz, 'Stable lights stretched: nested params', 1, 1);    
-```
-
-Similarly, you will likely encounter code that nests the visualization parameters like this:
-
-```js
-Map.addLayer(lit1993, {min:0, max: 63, palette: lightsPalette}, 'Stable lights stretched: nested viz params', 1, 1);
-```
-
-Note that the curly brackets define the visualization parameters as an object within the method.  
-
-### Reusability strategies     
-
-## Reduce an image collections
-
-Remember that our image collection contained two images for the year 2003. How then were we able to add the image collection to the Map as a single layer?  
-
-
-
-
-
-
-
-
-
-```
+*SET OF PRACTICE ACTIVITIES HERE BEFORE MOVING TO NEXT SECTION (PART 2 OF LESSON)*  

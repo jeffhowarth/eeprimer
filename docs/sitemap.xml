@@ -2,12 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/jeffhowarth/eeprimer/</loc>
-         <lastmod>2021-07-09</lastmod>
+         <lastmod>2021-09-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/jeffhowarth/eeprimer/00/mapFoundations/</loc>
+         <lastmod>2021-09-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eeprimer/01/rasterFoundations/</loc>
-         <lastmod>2021-07-09</lastmod>
+         <lastmod>2021-09-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/jeffhowarth/eeprimer/02/rasterWorkflow/</loc>
+         <lastmod>2021-09-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
