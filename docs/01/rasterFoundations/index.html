@@ -345,43 +345,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-inspect-image-collection" class="md-nav__link">
-    4. Inspect image collection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-image-collection-as-a-layer" class="md-nav__link">
-    5. Image collection as a layer
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-reduce-image-collection" class="md-nav__link">
-    6. Reduce image collection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-drawing-map-layers" class="md-nav__link">
-    7. Drawing map layers
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter-by-time-and-band" class="md-nav__link">
-    Filter by time and band
-  </a>
   
 </li>
       
@@ -487,43 +452,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-inspect-image-collection" class="md-nav__link">
-    4. Inspect image collection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-image-collection-as-a-layer" class="md-nav__link">
-    5. Image collection as a layer
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-reduce-image-collection" class="md-nav__link">
-    6. Reduce image collection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-drawing-map-layers" class="md-nav__link">
-    7. Drawing map layers
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter-by-time-and-band" class="md-nav__link">
-    Filter by time and band
-  </a>
   
 </li>
       
@@ -544,7 +474,7 @@
                 
                 <h2 id="introduction">Introduction</h2>
 <p>This chapter introduces core concepts for representing geographic information with a raster data model. We will use Google Earth Engine to work with a dataset of nighttime lights and make the map layer shown below.  </p>
-<p><img alt="Raster Foundations Goal" src="../images/goal.png" /></p>
+<p><img alt="Raster Foundations Goal" src="../images/01goal.png" /></p>
 <p>By the end, you should be able to answer these questions:  </p>
 <ol>
 <li>How does a raster data model represent <strong>attributes of spatial locations</strong>?</li>
@@ -632,7 +562,7 @@
 </code></pre></div>
 <p>This uses the Map's <em>addLayer</em> method and takes five arguments (each described with comments).  When you run the code, the Map UI will apply the 'lightsViz' visualization scheme to the 'lights' image collection. Try <em>clicking the layers button</em> on the top right of the map window. You should see the layer name ('Lights at night') and a check mark signifying that the layer is being shown. We made the layer opaque, so we can not see the base map underneath it, but you can use the slider to the right of the label to reduce the opacity (making the layer appear more transparent).      </p>
 <h2 id="practice-problems">Practice problems</h2>
-<p>This is a good place to pause and reflect on some of the concepts we have touched on thus far. In this section, we will make small changes to the code we have written in an effort to better understand how raster methods work.    </p>
+<p>Let's review some of the concepts we have touched on thus far. In this section, we will make small changes to the code we have written in an effort to better understand how raster methods work.    </p>
 <h3 id="1-color-palette">1. Color palette</h3>
 <p>Please alter the <em>visualization scheme</em> by making the <em>palette</em> key and value pair a comment, as shown below. This will tell Earth Engine to ignore this line when you run the script.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lightsViz</span> <span class="o">=</span> <span class="p">{</span>                       <span class="c1">//  Name of Viz object  </span>
@@ -665,82 +595,7 @@
 <li>Change opacity to true and run the script.</li>
 </ol>
 <p>Finally, why do you think the visibility and opacity parameters behave differently?  </p>
-<p>Before moving on, please be sure to return the script to the original form described in the <em>Add map layer</em> section above.  </p>
-<h3 id="4-inspect-image-collection">4. Inspect image collection</h3>
-<p>Now let's inspect the set of values stored in an image collection at a location. Please do the following:  </p>
-<ol>
-<li>In the right-hand panel, click on the <em>Inspector</em> tab. Your cursor should now appear like a crosshair.  </li>
-<li>On the map, click a location on the map. You should see <em>Point</em>, <em>Pixels</em>, and <em>Object</em> information appear in the <em>Inspector</em> panel.  </li>
-<li>In the <em>Inspector</em> panel, click the carrot (the little arrowhead) next to <em>Pixels</em>. This should expand the information. Then click the carrots to expand information for <em>Lights at night</em> and then <em>Series</em>.  </li>
-</ol>
-<p>You should now see a chart. The chart reports the raster value at the location you clicked for every image and band in the image collection. If you want to make the chart bigger, you can click the icon in the upper right corner of the chart panel. This should open the chart in a new browser tab. Please note that if you hover the cursor above any point on a line in the chart, you will retrieve the data value and time-stamp for that point.     </p>
-<p>Please try to answer these questions:  </p>
-<ol>
-<li>What does each colored line in the chart represent?  </li>
-<li>What does the y-axis represent?  </li>
-<li>What does the x-axis represent?  </li>
-<li>What is the <em>temporal resolution</em> of each image in the collection (what length of time does each image represent)?  </li>
-<li>What is the <em>temporal extent</em> of the image collection (what is the first and last dates in the image collection)?  </li>
-<li>Why do you think that the plotted lines occasionally form steep vertical segments perpendicular to the x-axis?      </li>
-</ol>
-<h3 id="5-image-collection-as-a-layer">5. Image collection as a layer</h3>
-<p>Now that we have inspected the image collection, we can see that it consists of a set of images over time, where each image is composed of four different bands. We should pause here for a moment and ask: which image and which band are we then displaying on the map?  </p>
-<p>We told Earth Engine which band to display in our visualization scheme (we defined it with the <em>band</em> key). But we never told Earth Engine which image we should display from the collection. It made this decision for us.    </p>
-<p>You should be able to figure out which image Earth Engine displays from an Image Collection by looking at the information in the <em>Inspector</em> panel. Expand the carrot next to <em>Mosaic</em> and look at the data values for each band. Then expand the carrot next to <em>Series</em> and hover your cursor over  points in each plotted line.</p>
-<ol>
-<li>What image from the collection does the map display as a layer?  </li>
-<li>How would you describe the position of this image in the stack of images of the collection?  </li>
-</ol>
-<h3 id="6-reduce-image-collection">6. Reduce image collection</h3>
-<p>Now let's look at how you can ask Earth Engine to display a different layer from the stack. Add the code below to your script and run the script.  </p>
-<div class="highlight"><pre><span></span><code><span class="c1">//  Add first image in collection as map layer</span>
-<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span>
-  <span class="nx">lights</span><span class="p">.</span><span class="nx">first</span><span class="p">(),</span>                   <span class="c1">//  Draw first image in the &#39;lights&#39; collection       </span>
-  <span class="nx">lightsViz</span><span class="p">,</span>                        <span class="c1">//  Name of object with viz parameters</span>
-  <span class="s1">&#39;Lights at night: first image&#39;</span><span class="p">,</span>   <span class="c1">//  Name for layer as a string  </span>
-  <span class="mf">1</span><span class="p">,</span>                                <span class="c1">//  Visibility of layer</span>
-  <span class="mf">1</span><span class="p">);</span>                               <span class="c1">//  Opacity of layer</span>
-</code></pre></div>
-<p>This should add a second layer to your map. Notice that in the arguments for <em>.addLayer</em>, we modified the image collection with the <em>.first()</em> method. This tells Earth Engine to <em>reduce</em> the image collection to the first image in the collection.    </p>
-<p>Use the <em>Inspector</em> to explore this a little further. With the crosshair cursor, click on a location on the map and look at the information in the Inspector panel and then look at the information under <em>Pixels</em>.  </p>
-<ol>
-<li>How do <em>Lights at night</em> and <em>Lights at night: first image</em> differ as raster datasets?  </li>
-<li>Why does <em>Lights at night</em> have a <em>Series</em> option but <em>Lights at night: first image</em> does not?  </li>
-<li>Under <em>Series</em> for <em>Lights at night</em>, what point in the chart matches the data values for the <em>Lights at night: first image</em>?    </li>
-</ol>
-<h3 id="7-drawing-map-layers">7. Drawing map layers</h3>
-<p>Now let's take a moment to explore how Earth Engine draws layers on the map. Try to answer these questions:   </p>
-<ol>
-<li>Which layer appears to be drawn on the top of the map?   </li>
-<li>How does the order of the <em>Map.addLayer</em> commands in our script correspond to the order of layers in our map?  </li>
-</ol>
-<p>To help answer these questions, trying clicking the <em>Layers</em> button (near top right corner of the map). Look at the sequence of the two layers and turn the visibility of each layer on and off. Note that you can also compare the two layers by changing the opacity with the sliders to the right of each layer name.     </p>
-<p>By comparing these two layers, you should notice differences in the appearance of nighttime lights across the world. Some places stay lit, some places stay dark, some places become lit, and some places go dark. Let's work on making a single layer from the image collection that helps us see these kinds of changes over time.        </p>
-<h2 id="filter-by-time-and-band">Filter by time and band</h2>
-<p>Now let's get back to writing more code. At this point, you may sense that our image collection suffers from a bit of excess. We constructed "lights" from the entire dataset in the EE catalog. As a result, it is a tall stack of rasters, containing every   but for our analysis, we will only need a subset of the dataset. So our next task is to shorten the stack of rasters.  </p>
-<p>To do this, we can <strong>filter</strong> the image collection in two ways:</p>
-<ul>
-<li>by time</li>
-<li>by band name  </li>
-</ul>
-<p>This snippet <strong>filters by time</strong> and prints the result to the console:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights03</span> <span class="o">=</span> <span class="nx">lights</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">2003</span><span class="p">,</span> <span class="mf">2003</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 2003&#39;</span><span class="p">,</span> <span class="nx">lights03</span><span class="p">);</span>
-</code></pre></div>
-<p>This calls an image collection's <em>filter</em> method and then uses the filter's <em>calendarRange</em> method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents an average for the calendar year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection contains two images and both are for the year 2003.</p>
-<p>This snippet <strong>filters by band name</strong> and prints the result to the console:  </p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights03Select</span> <span class="o">=</span> <span class="nx">lights03</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;stable_lights&#39;</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Nighttime lights 2003 Select&#39;</span><span class="p">,</span> <span class="nx">lights03Select</span><span class="p">);</span>
-</code></pre></div>
-<p>It calls an image collection's <em>select</em> method, where the parameter states the band name. Inspect the metadata and note that this image collection only contains one band.</p>
-<p>This code did the job, but it could be more concise. We could replicate all the code that we have written thus far with the following:  </p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights03_stable_first</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NOAA/DMSP-OLS/NIGHTTIME_LIGHTS&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">2003</span><span class="p">,</span> <span class="mf">2003</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">))</span>
-  <span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;stable_lights&#39;</span><span class="p">);</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 2003: concise method&#39;</span><span class="p">,</span> <span class="nx">lights03_stable_first</span><span class="p">);</span>
-</code></pre></div>
-<p>If you inspect the metadata, you should see this image collection is identical to the collection we made earlier. To help understand why, let's review how raster workflows work.</p>
+<p>Before moving on, please be sure to return the script to the original form described in the <em>Add map layer</em> section above.    </p>
                 
               
               

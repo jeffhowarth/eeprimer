@@ -1,0 +1,457 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introduction to geospatial analysis with Google Earth Engine.">
+      
+      
+      
+        <meta name="author" content="Jeff Howarth">
+      
+      
+        <link rel="canonical" href="https://github.com/jeffhowarth/eeprimer/01/01cuts/">
+      
+      <link rel="icon" href="../../assets/eePrimericon-01.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>01cuts - Earth Engine Primer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Libre Baskerville";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+  
+
+
+
+  
+  
+
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-G4GWH4RPQ1"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-G4GWH4RPQ1",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4GWH4RPQ1"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="white" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-inspect-image-collection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Earth Engine Primer" class="md-header__button md-logo" aria-label="Earth Engine Primer" data-md-component="logo">
+      
+  <img src="../../assets/eePrimericon-01.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Earth Engine Primer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              01cuts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/jeffhowarth/eeprimer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jeffhowarth/eeprimer
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Earth Engine Primer" class="md-nav__button md-logo" aria-label="Earth Engine Primer" data-md-component="logo">
+      
+  <img src="../../assets/eePrimericon-01.png" alt="logo">
+
+    </a>
+    Earth Engine Primer
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/jeffhowarth/eeprimer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jeffhowarth/eeprimer
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Preface
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00/mapFoundations/" class="md-nav__link">
+        Intro to web maps
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rasterFoundations/" class="md-nav__link">
+        Raster data model
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4-inspect-image-collection" class="md-nav__link">
+    4. Inspect image collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-image-collection-as-a-layer" class="md-nav__link">
+    5. Image collection as a layer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reduce-image-collection" class="md-nav__link">
+    6. Reduce image collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-by-time-and-band" class="md-nav__link">
+    Filter by time and band
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>01cuts</h1>
+                
+                <h3 id="4-inspect-image-collection">4. Inspect image collection</h3>
+<p>Now let's inspect the set of values stored in an image collection at a location. Please do the following:  </p>
+<ol>
+<li>In the right-hand panel, click on the <em>Inspector</em> tab. Your cursor should now appear like a crosshair.  </li>
+<li>On the map, click a location on the map. You should see <em>Point</em>, <em>Pixels</em>, and <em>Object</em> information appear in the <em>Inspector</em> panel.  </li>
+<li>In the <em>Inspector</em> panel, click the carrot (the little arrowhead) next to <em>Pixels</em>. This should expand the information. Then click the carrots to expand information for <em>Lights at night</em> and then <em>Series</em>.  </li>
+</ol>
+<p>You should now see a chart. The chart reports the raster value at the location you clicked for every image and band in the image collection. If you want to make the chart bigger, you can click the icon in the upper right corner of the chart panel. This should open the chart in a new browser tab. Please note that if you hover the cursor above any point on a line in the chart, you will retrieve the data value and time-stamp for that point.     </p>
+<p>Please try to answer these questions:  </p>
+<ol>
+<li>What does each colored line in the chart represent?  </li>
+<li>What does the y-axis represent?  </li>
+<li>What does the x-axis represent?  </li>
+<li>What is the <em>temporal resolution</em> of each image in the collection (what length of time does each image represent)?  </li>
+<li>What is the <em>temporal extent</em> of the image collection (what is the first and last dates in the image collection)?  </li>
+<li>Why do you think that the plotted lines occasionally form steep vertical segments perpendicular to the x-axis?      </li>
+</ol>
+<h3 id="5-image-collection-as-a-layer">5. Image collection as a layer</h3>
+<p>Now that we have inspected the image collection, we can see that it consists of a set of images over time, where each image is composed of four different bands. We should pause here for a moment and ask: which image and which band are we then displaying on the map?  </p>
+<p>We told Earth Engine which band to display in our visualization scheme (we defined it with the <em>band</em> key). But we never told Earth Engine which image we should display from the collection. It made this decision for us.    </p>
+<p>You should be able to figure out which image Earth Engine displays from an Image Collection by looking at the information in the <em>Inspector</em> panel. Expand the carrot next to <em>Mosaic</em> and look at the data values for each band. Then expand the carrot next to <em>Series</em> and hover your cursor over  points in each plotted line.</p>
+<ol>
+<li>What image from the collection does the map display as a layer?  </li>
+<li>How would you describe the position of this image in the stack of images of the collection?  </li>
+</ol>
+<h3 id="6-reduce-image-collection">6. Reduce image collection</h3>
+<p>Now let's look at how you can ask Earth Engine to display a different layer from the stack. Add the code below to your script and run the script.  </p>
+<div class="highlight"><pre><span></span><code><span class="c1">//  Add first image in collection as map layer</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span>
+  <span class="nx">lights</span><span class="p">.</span><span class="nx">first</span><span class="p">(),</span>                   <span class="c1">//  Draw first image in the &#39;lights&#39; collection       </span>
+  <span class="nx">lightsViz</span><span class="p">,</span>                        <span class="c1">//  Name of object with viz parameters</span>
+  <span class="s1">&#39;Lights at night: first image&#39;</span><span class="p">,</span>   <span class="c1">//  Name for layer as a string  </span>
+  <span class="mf">1</span><span class="p">,</span>                                <span class="c1">//  Visibility of layer</span>
+  <span class="mf">1</span><span class="p">);</span>                               <span class="c1">//  Opacity of layer</span>
+</code></pre></div>
+<p>This should add a second layer to your map. Notice that in the arguments for <em>.addLayer</em>, we modified the image collection with the <em>.first()</em> method. This tells Earth Engine to <em>reduce</em> the image collection to the first image in the collection.    </p>
+<p>Use the <em>Inspector</em> to explore this a little further. With the crosshair cursor, click on a location on the map and look at the information in the Inspector panel and then look at the information under <em>Pixels</em>.  </p>
+<ol>
+<li>How do <em>Lights at night</em> and <em>Lights at night: first image</em> differ as raster datasets?  </li>
+<li>Why does <em>Lights at night</em> have a <em>Series</em> option but <em>Lights at night: first image</em> does not?  </li>
+<li>Under <em>Series</em> for <em>Lights at night</em>, what point in the chart matches the data values for the <em>Lights at night: first image</em>?  </li>
+</ol>
+<h2 id="filter-by-time-and-band">Filter by time and band</h2>
+<p>Now let's get back to writing more code. At this point, you may sense that our image collection suffers from a bit of excess. We constructed "lights" from the entire dataset in the EE catalog. As a result, it is a tall stack of rasters, containing every   but for our analysis, we will only need a subset of the dataset. So our next task is to shorten the stack of rasters.  </p>
+<p>To do this, we can <strong>filter</strong> the image collection in two ways:</p>
+<ul>
+<li>by time</li>
+<li>by band name  </li>
+</ul>
+<p>This snippet <strong>filters by time</strong> and prints the result to the console:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights03</span> <span class="o">=</span> <span class="nx">lights</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">2003</span><span class="p">,</span> <span class="mf">2003</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">));</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 2003&#39;</span><span class="p">,</span> <span class="nx">lights03</span><span class="p">);</span>
+</code></pre></div>
+<p>This calls an image collection's <em>filter</em> method and then uses the filter's <em>calendarRange</em> method, where the parameters define the range's start, end, and calendar field. In this example, we use the 'year' calendar field because each image in the nighttime lights collection represents an average for the calendar year so there is no reason to define a filter smaller than this. The second line prints a label and metadata to the Console. Inspect the metadata and note that now your image collection contains two images and both are for the year 2003.</p>
+<p>This snippet <strong>filters by band name</strong> and prints the result to the console:  </p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights03Select</span> <span class="o">=</span> <span class="nx">lights03</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;stable_lights&#39;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Nighttime lights 2003 Select&#39;</span><span class="p">,</span> <span class="nx">lights03Select</span><span class="p">);</span>
+</code></pre></div>
+<p>It calls an image collection's <em>select</em> method, where the parameter states the band name. Inspect the metadata and note that this image collection only contains one band.</p>
+<p>This code did the job, but it could be more concise. We could replicate all the code that we have written thus far with the following:  </p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">lights03_stable_first</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;NOAA/DMSP-OLS/NIGHTTIME_LIGHTS&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">2003</span><span class="p">,</span> <span class="mf">2003</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">))</span>
+  <span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;stable_lights&#39;</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Lights 2003: concise method&#39;</span><span class="p">,</span> <span class="nx">lights03_stable_first</span><span class="p">);</span>
+</code></pre></div>
+<p>If you inspect the metadata, you should see this image collection is identical to the collection we made earlier. To help understand why, let's review how raster workflows work.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Jeff Howarth
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/jeffhowarth" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/jeffgeographer" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>
