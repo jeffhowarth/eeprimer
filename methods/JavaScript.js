@@ -1,6 +1,8 @@
+//  ------------------------------------------------------------------------------
 //  TITLE: JavaScript.js
 //  AUTHOR: Dave Thau
 //  SOURCE: https://code.earthengine.google.com/?accept_repo=users/davethau/EE101
+//  ------------------------------------------------------------------------------
 
 // Line comments start with two forward slashes. Like this line.
 
