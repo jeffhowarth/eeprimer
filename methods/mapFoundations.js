@@ -1,30 +1,22 @@
-// ===========================
-// PRIMER FOR EARTH ENGINE
-//
-// Map Foundations
-//
-// Jeff Howarth
-//
-// ===========================
+//  ----------------------------------------------------
+//  Title:  mapFoundations.js
+//  Author: Jeff Howarth
+//  ----------------------------------------------------
 
-// -------
-// Part 1
-// -------
+//  -----------------
+//  Base map options
+//  -----------------
 
 Map.setOptions('HYBRID');
 Map.setCenter(140, 35, 3);
 
-// -----------
-// Import data
-// -----------
+//  -----------------
+//  Geographic Circles
+//  -----------------
 
-var table = ee.FeatureCollection("users/jhowarth/eePrimer/grid20degrees"),
-    geometry = /* color: #00ffff */ee.Geometry.Point([139.77926249628308, 35.545853491820665]),
-    geometry2 = /* color: #bf04c2 */ee.Geometry.Point([-74.17068033088691, 40.689334262788805]);
+//  Place point on Haneda Airport
 
-// -------
-// Part 2
-// -------
+var geometry = /* color: #00ffff */ee.Geometry.Point([139.77926249628308, 35.545853491820665]);
 
 // Haneda Airport
 
@@ -42,27 +34,23 @@ var circleVis = {
 Map.addLayer(circleVis);
 Map.addLayer(circle2, {color: 'yellow'}, '10,000 km', 0, 1);
 
-// -------
-// Part 3
-// -------
+//  -----------------
+//  Geographic Lines
+//  -----------------
+
+//  Place point on JRK airport
+var geometry2 = /* color: #bf04c2 */ee.Geometry.Point([-74.17068033088691, 40.689334262788805]);
 
 var line = ee.Geometry.LineString([geometry, geometry2]);
 print('Rhumb line', line);
 
 Map.addLayer(line, {color: 'blue'}, "Rhumb line", 0);
 
-// --------
-// Part 4
-// ---------
+//  --------------------
+//  Mercator distortion
+//  --------------------
 
-print('grid points', table);
-Map.addLayer(table, {color: 'red'}, 'Points',0);
+var tissot = require('users/jhowarth/eePrimer:modules/tissot.js');
 
-var makeIndicatrix = function(feature) {
-  return feature.buffer(600000);
-}
-;
-
-var tissotIndicatrix = table.map(makeIndicatrix);
-
-Map.addLayer(tissotIndicatrix, {color: 'gold'}, 'Indicatrix',0);
+Map.addLayer(tissot.grid, {color: 'white'}, 'Points', 0);
+Map.addLayer(tissot.indicatrix, {color: 'gold'}, 'Indicatrix',0);
