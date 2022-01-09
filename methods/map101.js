@@ -1,5 +1,5 @@
 //  ----------------------------------------------------
-//  Title:  mapFoundations.js
+//  Title:  map101.js
 //  Author: Jeff Howarth
 //  ----------------------------------------------------
 
@@ -10,13 +10,13 @@
 Map.setOptions('HYBRID');
 Map.setCenter(140, 35, 3);
 
-//  -----------------
+//  -------------------
 //  Geographic Circles
-//  -----------------
+//  -------------------
 
 //  Place point on Haneda Airport
 
-var geometry = /* color: #00ffff */ee.Geometry.Point([139.77926249628308, 35.545853491820665]);
+var geometry = ee.Geometry.Point([139.77926249628308, 35.545853491820665]);
 
 // Haneda Airport
 
@@ -39,7 +39,7 @@ Map.addLayer(circle2, {color: 'yellow'}, '10,000 km', 0, 1);
 //  -----------------
 
 //  Place point on JRK airport
-var geometry2 = /* color: #bf04c2 */ee.Geometry.Point([-74.17068033088691, 40.689334262788805]);
+var geometry2 = ee.Geometry.Point([-74.17068033088691, 40.689334262788805]);
 
 var line = ee.Geometry.LineString([geometry, geometry2]);
 print('Rhumb line', line);

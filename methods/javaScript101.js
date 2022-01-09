@@ -1,5 +1,5 @@
 //  ------------------------------------------------------------------------------
-//  TITLE: JavaScript.js
+//  TITLE: javaScript101.js
 //  AUTHOR: Dave Thau
 //  SOURCE: https://code.earthengine.google.com/?accept_repo=users/davethau/EE101
 //  ------------------------------------------------------------------------------
