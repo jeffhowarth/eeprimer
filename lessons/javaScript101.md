@@ -97,7 +97,7 @@ print(my_hello_function('world'));
 // Modules can contain functions and variables that can be used by multiple different scripts.  
 
 // To access a module, first call the module as a variable
-var tool = require('users/jhowarth/GG150:modules/js101.js');
+var tool = require('users/jhowarth/eePrimer:modules/js101.js');
 
 // Then you call functions as methods of this object.
 
