@@ -2,6 +2,8 @@
 
 _Adapted from Dave Thau's [Earth Engine 101](https://docs.google.com/presentation/d/1F3Sdk_IbupHhIwB8JrWdlLud9bP9JQ4qqPMjUJ42uzc/pub?start=false&loop=false&delayms=3000)._
 
+This lesson briefly introduces how to write JavaScript with the Code Editor.   
+
 ### Comment  
 
 ```js
