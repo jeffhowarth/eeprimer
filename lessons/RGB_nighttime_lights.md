@@ -42,6 +42,8 @@ In addition, examine the data provider information.
 
 ### Explore image with histogram  
 
+_Please note: for the script to run, you will need to change XXXXXXX placeholders with their correct arguments._
+
 ```js
 // Import module for image processing.
 var image_tools = require('users/jhowarth/eePrimer:modules/image_tools.js');

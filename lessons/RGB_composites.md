@@ -32,12 +32,14 @@ _Figure 3. RGB composites. Red, green, and blue combine to make magenta, cyan, y
 //          
 /* In this lesson, we explore additive color as a method to visualize three
   different bands in a single composite layer. We then compare different kinds
-  of composites for satellite bands that measure visible and non-visible portions
-  of the electromagnetic spectrum. */  
+  of composites for satellite bands that measure visible and non-visible portions of the electromagnetic spectrum. */  
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Load an image from its Earth Engine ID.
 var first_image = ee.Image('LANDSAT/LT05/C02/T1_L2/LT05_118038_20000606');
+
+// Center the Map on the image prior to adding layers to the Map.
+Map.centerObject(first_image, 10);
 ```
 
 ### Natural color composite  
