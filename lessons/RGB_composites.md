@@ -22,6 +22,20 @@ _Figure 2. In the Earth Engine data catalog, the USGS Landsat 5 Level 2, Collect
 
 _Figure 3. RGB composites. Red, green, and blue combine to make magenta, cyan, yellow, white, or black. The sequence of bands passed to composite assigns primary colors (first, second, third = Red, Green, Blue). Pixel values in each band determine color tint and intensity._
 
+### Begin a new script  
+
+```js
+//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  Title:        RGB composites
+//  Author:       Jeff Howarth
+//  Last edited:  1/10/2022   
+//          
+/* In this lesson, we explore additive color as a method to visualize three
+  different bands in a single composite layer. We then compare different kinds
+  of composites for satellite bands that measure visible and non-visible portions
+  of the electromagnetic spectrum. */  
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ### Natural color composite  
 
@@ -65,14 +79,15 @@ Map.addLayer(
 ### SWIR false-color composite  
 
 ```js
-// Add a NIR false-color layer using NIR, red, green sensor bands for RGB.
+// Add a SWIR false-color layer using SWIR, NIR, green sensor bands for RGB.
 Map.addLayer(
-    first_image.select('SR_B4', 'SR_B3', 'SR_B2'),
+    first_image,
     {
+      bands: ['SR_B5', 'SR_B4', 'SR_B2'],
       min: 8000,
       max: 17000
     },
-    'NIR false-color');
+    'Short wave false color');
 ```
 
 <details>
