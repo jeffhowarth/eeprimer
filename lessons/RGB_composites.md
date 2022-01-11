@@ -35,6 +35,9 @@ _Figure 3. RGB composites. Red, green, and blue combine to make magenta, cyan, y
   of composites for satellite bands that measure visible and non-visible portions
   of the electromagnetic spectrum. */  
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Load an image from its Earth Engine ID.
+var first_image = ee.Image('LANDSAT/LT05/C02/T1_L2/LT05_118038_20000606');
 ```
 
 ### Natural color composite  
