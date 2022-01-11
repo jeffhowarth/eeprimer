@@ -157,3 +157,9 @@ Map.addLayer(
 ```
 
 [Explore changes in nighttime lights](../articles/rgbLights/lights.md)
+
+<details>
+<summary><b>Check your understanding.</b></summary>
+<br>
+<li>Did you find any patterns that I did not describe in the above link?</li>
+</details>
