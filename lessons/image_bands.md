@@ -154,3 +154,7 @@ Map.addLayer(
 <li>What additional arguments did we pass to the <b>Map.addLayer()</b> function and what did they do?</li><br>
 <li>How does the order of <b>Map.addLayer()</b> functions in your script correspond to the order of <b>layers</b> on the map? Why is this so?</li>
 </details>
+
+### Further reading  
+
+[Landsat missions: Landsat 5](https://www.usgs.gov/landsat-missions/landsat-5)

@@ -8,12 +8,20 @@ In this lesson, we explore additive color as a method to visualize three differe
 <br>
 _Figure 1. SWIR false-color composite._
 
+### Electromagnetic magnetic spectrum  
+<br>
+
+![Electromagnetic spectrum](https://upload.wikimedia.org/wikipedia/commons/3/3c/Electromagnetic_spectrum_-eng.svg)
+
+_Figure 2. Human eyes can only perceive light with wavelengths between 380 to 750 nanometers, but cameras and other optical sensors can measure reflectance over a much broader range of the electromagnetic spectrum (Image source: https://commons.wikimedia.org/wiki/File:Electromagnetic_spectrum_-eng.svg)_.
+
 ### Landsat 5 TM bands
 <br>
 
 ![landsat 5 bands](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/MSS-thru-L9-wavelengths.jpg)
 
-_Figure 2. In the Earth Engine data catalog, the USGS Landsat 5 Level 2, Collection 2, Tier 1 collection was collected by the Thematic Mapper (TM) instrument._
+
+_Figure 2. In the Earth Engine data catalog, the USGS Landsat 5 Level 2, Collection 2, Tier 1 collection was collected by the Thematic Mapper (TM) instrument [(image source)](https://www.usgs.gov/media/images/bandpass-wavelengths-all-landsat-sensors)._
 
 ### Additive color
 <br>
