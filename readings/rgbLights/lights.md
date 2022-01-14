@@ -42,7 +42,7 @@ Similar to the holiday lights pattern, some lights were were stable for a year b
 
 ## Red Giants  
 
-In some places, giant red patches of light appear, marking places that have became bright in 2013 that had been dark in 2003 and 1993. These often mark large-scale fossil fuel extraction activities. The picture below shows examples of red giants in North Dakota and Texas.    
+In some places, giant red patches of light appear, marking places that became bright in 2013 that had been dark in 2003 and 1993. These often mark large-scale fossil fuel extraction activities. The picture below shows examples of red giants in North Dakota and Texas.    
 
 ![Willison, ND](examples/williston.png)
 

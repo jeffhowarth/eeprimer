@@ -1,8 +1,12 @@
 ## Great circles  
 
+In this lesson, we learn how to construct point and lineString objects with the Code Editor and discuss geometric distortions that are caused by the Map UI's projection.
+
 ![Great circle](images/greatCircle.png)
 
-In this lesson, we will use geometry tools to draw a __great circle route__ between two geographic points. A great circle route represents the shortest path across the globe between two locations. The shape of a great circle route on a map helps reveal distortions generated from a map's __projection__, or the cartographic method used to display the Earth on a flat surface.  
+### Background  
+
+A great circle route represents the shortest path across the globe between two locations. The shape of a great circle route on a map helps reveal distortions generated from a map's __projection__, or the cartographic method used to display the Earth on a flat surface.  
 
 Like many web maps, the Google Map UI users a __Web Mercator__ projection. This projection preserves angles. On maps with Mercator projections, a straight line represents a line of constant bearing. This helps people navigate with magnetic compasses. In contrast, a great circle arc will not appear straight, but will instead bend poleward.     
 
