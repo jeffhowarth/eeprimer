@@ -3,7 +3,7 @@
 
 ### Week two reading and reflection task   
 
-#### Part 1   
+_Due Jan 19 in class_
 
 Please read __at least ten (10) stories__ in [NASA's Earth Observatory](https://earthobservatory.nasa.gov/) that pique your interest.   
 
@@ -41,3 +41,10 @@ __Processing history__
 Does the collection contain single images or mosaics?  
 Are the data raw or processed?  
 If processed, what were the criteria?  
+
+#### Deliverable  
+
+Google doc or markdown file (no microsoft word please) with:
+
+1. a list of EO stories you read (with their links);
+2. a list of characteristics for Earth Engine datasets from three stories.  
