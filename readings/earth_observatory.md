@@ -1,54 +1,19 @@
 ![nasa](https://earthobservatory.nasa.gov/img/logo-meatball2-2x.png)![earth observatory](https://earthobservatory.nasa.gov/img/logoWhite.png)
 
 
-### Week two reading and reflection task   
+### Earth Observatory readings   
 
-_Due Jan 19 in class_
+Please read __at least five (5) stories__ in [NASA's Earth Observatory](https://earthobservatory.nasa.gov/) that pique your interest.   
 
-Please read __at least ten (10) stories__ in [NASA's Earth Observatory](https://earthobservatory.nasa.gov/) that pique your interest.   
+For each story, please complete this [short Google form](https://docs.google.com/forms/d/e/1FAIpQLSddE2-GTBltnP10nH-r7OAaUaHW6sSpHSx6DujPDoeUFj46jQ/viewform?usp=sf_link) to record:  
 
-Please make a list of the lot that you read with links to each story.   
+1. a url to the story,
+2. a short description about why you selected the story to read (so that I can better understand your personal interests in geography and the environment),
+3. a description of the study style used in the story, based on the table below (copied from the syllabus).  
 
-From this list, please select __three (3) stories__ that:  
 
-1. especially interest you because of their topical subject, methodology, or regional subject;  
-
-2. __AND__ use a dataset that is available in the [Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets).
-
-For each story, please describe:  
-
-1. the research framework (what comparisons are made with the data)?  
-
-2. the dataset's characteristics (focus on the list below, ignore the listed characteristics that are not relevant to your dataset).  
-
-_Please refer to descriptions of research story **study types** on [syllabus](https://geog0150.github.io/w22/researchStory/)_.
-
-_Please only use the descriptions in the data catalog, including the links, to try to answer the prompts below. If you can not find the info with the sources in the data catalog, please just make a note of that._  
-
-__Spatial__  
-- What are the bands' pixel scale/resolution?  
-- What is the regional extent of the collection?  
-
-__Temporal__  
-- When did the mission start and end (temporal extent)?  
-- How often do you get a picture of a place (recurrence interval)?  
-- What time of day is the picture?  
-- How long does it take for the picture to get into the earth engine data catalog (latency)?  
-
-__Attributes__  
-- How many bands does the image contain?  
-- If the bands are spectral, how do they parse the spectrum?  
-- If the bands are not spectral, what earth attributes do they describe and how are these descriptions produced?    
-
-__Processing history__  
-- Does the collection contain single images or mosaics?  
-- Are the data raw or processed?  
-- If processed, what were the criteria?  
-
-### Deliverable  
-
-Google doc or markdown file (no microsoft word please) with:
-
-1. a list of EO stories you read (with their links),
-2. a list or concise description of research frameworks,
-2. a list of characteristics for Earth Engine datasets from three stories.  
+| STUDY TYPE | Region | Time period | Thematic layer |  
+| :--- | :---: | :---: | :---:
+| Compare same theme at same time period across two or more different regions | &ne; | = | = |
+| Compare same region and same theme at two or more different time periods | = | &ne; | = |
+| Compare two or more different themes at same region and same time period | = | = | &ne; |
