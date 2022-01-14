@@ -11,36 +11,44 @@ Please make a list of the lot that you read with links to each story.
 
 From this list, please select __three (3) stories__ that:  
 
-1. especially interest you because of their topical subject, methodology, or regional subject;
+1. especially interest you because of their topical subject, methodology, or regional subject;  
+
 2. __AND__ use a dataset that is available in the [Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets).
 
-Then try to describe the dataset in the Earth Engine data catalog for all relevant characteristics listed below.  
+For each story, please describe:  
 
-_Please just use the descriptions in the data catalog, including the links, to try to answer the prompts below. If you can not find the info with the sources in the data catalog, please just make a note of that._  
+1. the research framework (what comparisons are made with the data)?  
+
+2. the dataset's characteristics (focus on the list below, ignore the listed characteristics that are not relevant to your dataset).  
+
+_Please refer to descriptions of research story **study types** on [syllabus](https://geog0150.github.io/w22/researchStory/)_.
+
+_Please only use the descriptions in the data catalog, including the links, to try to answer the prompts below. If you can not find the info with the sources in the data catalog, please just make a note of that._  
 
 __Spatial__  
-What are the bands' pixel scale/resolution?  
-What is the regional extent of the collection?  
+- What are the bands' pixel scale/resolution?  
+- What is the regional extent of the collection?  
 
 __Temporal__  
-When did the mission start and end (temporal extent)?  
-How often do you get a picture of a place (recurrence interval)?  
-What time of day is the picture?  
-How long does it take for the picture to get into the earth engine data catalog (latency)?  
+- When did the mission start and end (temporal extent)?  
+- How often do you get a picture of a place (recurrence interval)?  
+- What time of day is the picture?  
+- How long does it take for the picture to get into the earth engine data catalog (latency)?  
 
 __Attributes__  
-How many bands does the image contain?  
-If the bands are spectral, how do they parse the spectrum?  
-If the bands are not spectral, what earth attributes do they describe and how are these descriptions produced?    
+- How many bands does the image contain?  
+- If the bands are spectral, how do they parse the spectrum?  
+- If the bands are not spectral, what earth attributes do they describe and how are these descriptions produced?    
 
 __Processing history__  
-Does the collection contain single images or mosaics?  
-Are the data raw or processed?  
-If processed, what were the criteria?  
+- Does the collection contain single images or mosaics?  
+- Are the data raw or processed?  
+- If processed, what were the criteria?  
 
 ### Deliverable  
 
 Google doc or markdown file (no microsoft word please) with:
 
-1. a list of EO stories you read (with their links);
+1. a list of EO stories you read (with their links),
+2. a list or concise description of research frameworks,
 2. a list of characteristics for Earth Engine datasets from three stories.  
