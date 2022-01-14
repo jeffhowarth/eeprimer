@@ -38,7 +38,7 @@ Does the collection contain single images or mosaics?
 Are the data raw or processed?  
 If processed, what were the criteria?  
 
-#### Deliverable  
+### Deliverable  
 
 Google doc or markdown file (no microsoft word please) with:
 
