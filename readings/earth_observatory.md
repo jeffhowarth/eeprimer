@@ -11,12 +11,8 @@ Please make a list of the lot that you read with links to each story.
 
 From this list, please select __three (3) stories__ that:  
 
-1. especially interest you because of their topical subject, methodology, or regional subject:  
-<br>
-
+1. especially interest you because of their topical subject, methodology, or regional subject;
 2. __AND__ use a dataset that is available in the [Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets).
-
-
 
 Then try to describe the dataset in the Earth Engine data catalog for all relevant characteristics listed below.  
 
