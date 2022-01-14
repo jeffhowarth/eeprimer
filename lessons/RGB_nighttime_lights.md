@@ -158,7 +158,7 @@ Map.addLayer(
 
 ```
 
-[Explore changes in nighttime lights](../articles/rgbLights/lights.md)
+[Explore changes in nighttime lights](../readings/rgbLights/lights.md)
 
 <details>
 <summary><b>Check your understanding.</b></summary>
