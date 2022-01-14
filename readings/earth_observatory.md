@@ -17,7 +17,7 @@ For each story, please complete this [short Google form](https://docs.google.com
 
 1. a url to the story,
 2. a short description about why you selected the story to read (so that I can better understand your personal interests in geography and the environment),
-3. a description of the study style used in the story, based on the table below (copied from the syllabus).  
+3. a description of the study type used in the story, based on the table below (copied from the syllabus).  
 
 
 | STUDY TYPE | Region | Time period | Thematic layer |  
@@ -26,4 +26,4 @@ For each story, please complete this [short Google form](https://docs.google.com
 | Compare same region and same theme at two or more different time periods | = | &ne; | = |
 | Compare two or more different themes at same region and same time period | = | = | &ne; |  
 
-_Thank you. Please email me if you have any questions._ 
+_Thank you. Please email me if you have any questions._
