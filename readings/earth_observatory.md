@@ -11,12 +11,12 @@ Please explore [NASA's Earth Observatory](https://earthobservatory.nasa.gov/), a
 
 A good place to start is the [Articles](https://earthobservatory.nasa.gov/features) page. Notice that the stories have __tags__ that categorize them by topic.  
 
-After you have explored this collection of stories a little, please read __at least five (5) stories__ that especially pique your interest.   
+After you have explored this collection of stories a little, please read __at least five (5) stories__ that especially stimulate your interest.   
 
 For each story, please complete this [short Google form](https://docs.google.com/forms/d/e/1FAIpQLSddE2-GTBltnP10nH-r7OAaUaHW6sSpHSx6DujPDoeUFj46jQ/viewform?usp=sf_link) to record:  
 
 1. a url to the story,
-2. a short description about why you selected the story to read (so that I can better understand your personal interests in geography and the environment),
+2. a short description (50 - 150 words) about why you selected the story to read (so that I can better understand your personal interests in geography and the environment),
 3. a description of the study type used in the story, based on the table below (copied from the syllabus).  
 
 
