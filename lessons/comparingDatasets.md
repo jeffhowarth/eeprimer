@@ -48,7 +48,9 @@ __Processing history__
 
 ### Image processing workflow in earth engine
 
-Now we will begin to write a script that draws images from Sentinel-2, Landsat 8, and MODIS-Terra like the app you just explored.
+Now we will begin to write a script that draws images from Sentinel-2, Landsat 8, and MODIS-Terra like the app you just explored.  
+
+_Please note: the CODE CHECKPOINT below will allow you to check you work after adding the S2 and L8 collections._  
 
 #### Start with a header
 
@@ -152,6 +154,9 @@ var scaled_L8 = image_L8                                  // Construct new objec
 <br>
 <li>How can you avoid defining the same parameters more than once?</li>
 </details>
+<br>
+
+[**CODE CHECKPOINT**](../scripts/data_comparison.js)
 
 ### Make layer from MODIS Terra    
 
