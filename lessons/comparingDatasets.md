@@ -50,7 +50,7 @@ __Processing history__
 
 Now we will begin to write a script that draws images from Sentinel-2, Landsat 8, and MODIS-Terra like the app you just explored.  
 
-_Please note: the CODE CHECKPOINT below will allow you to check you work after adding the S2 and L8 collections._  
+_Please note: the CODE CHECKPOINT below will allow you to check your work after adding the S2 and L8 collections._  
 
 #### Start with a header
 
