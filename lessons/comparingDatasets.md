@@ -108,7 +108,7 @@ _Please note: the CODE CHECKPOINT below will allow you to check you work after a
 #### Scale the data values  
 
 ```js
-// For Sentinel 2 product, divide every pixel value by 1000.
+// For Sentinel 2 product, divide every pixel value by 10000.
 ```
 
 #### Visualize image on map  
