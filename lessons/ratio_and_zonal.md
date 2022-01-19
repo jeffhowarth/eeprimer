@@ -1,4 +1,4 @@
-## Band ratios and zonal operations  
+## Geographies of green blocks      
 
 In this lesson, you first learn how to compute a BAND RATIO as the normalized difference of two image bands. You use a Sentinel 2 image to compute NDVI and display the results as a map layer with a PALETTE. You then learn how to summarize this continuous data within discrete regions to derive a ZONAL STATISTIC. In order to display the summarized data as a choropleth map (using color to symbolize values of regions), you CONVERT VECTOR TO RASTER and then display the rasterized image. Finally, you construct and place a GRADIENT LEGEND on the map.   
 
