@@ -2,9 +2,9 @@
 
 Please try to make this map:
 
-![ENSO 2011](images/ENSO_2011.jpg)  
-
 ![ENSO 2016](images/ENSO_2016.jpg)
+
+![ENSO 2011](images/ENSO_2011.jpg)  
 
 The map shows two layers: one layer shows El Nino conditions, the other shows La Nina conditions.  
 
