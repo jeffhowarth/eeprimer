@@ -88,9 +88,9 @@ var convert_k2f = function() {
 
 
 **References**  
-: [Color advice](https://www.kennethmoreland.com/color-advice/BadColorMaps.pdf)  
 : [Community palettes](https://github.com/gee-community/ee-palettes)  
-: [Principles for scientific color maps](https://www.fabiocrameri.ch/colourmaps/)
+: [Color advice](https://www.kennethmoreland.com/color-advice/BadColorMaps.pdf)  
+: [Principles for scientific color maps](https://www.fabiocrameri.ch/colourmaps/)  
 : [Color oracle](https://colororacle.org/)  
 
 ```js
