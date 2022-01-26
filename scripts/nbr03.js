@@ -217,12 +217,14 @@ config.dNBRlabels = [
 
 var cart = require('users/jhowarth/eePrimer:modules/cart.js');
 
+// To call: cart.makeLegend(label name, palette, label, position)
 config.legend = cart                                      // module
-      .makeGradientLegend(                                // function
-        config.dNBRvis_classes,                           // viz parameters
-        'Burn severity index',                            // legend title
-        'bottom-left'                                     // position on map
-      );
+      .makeLegend(
+        'Burn Severity Index',
+        config.dNBRvis_classes.palette,
+        config.dNBRlabels,
+        'bottom-left')                                    // position on map
+      ;
 
 Map.add(config.legend);
 
