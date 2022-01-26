@@ -42,9 +42,15 @@ NBR is similar to NDVI: it is a **normalized ratio** so we are dividing the diff
 
 ![NBR](https://un-spider.org/sites/default/files/Spectral_responses.jpg)
 
+[Here is a script](../scripts/firms.js) so that you can check your work.
+
 ##### Task 2  
 
 Please write a script to compute the normalized burn ratio for the fire near Davenport, CA in August 2020 with Sentinel 2.
+
+![Task 2](images/dnbr01.jpg)
+
+[Here is a script](../scripts/nbr01.js) so that you can check your work.
 
 #### Burn severity index    
 
@@ -54,4 +60,16 @@ The Burn Severity Index is based on the change in NBR before and after a fire. T
 
 ##### Task 3  
 
-Building off the script in Task 3, please write a script to compute the burn severity index for the fire. 
+Building off the script in Task 3, please write a script to compute the burn severity index for the fire.
+
+![Task 3](images/dnbr02.jpg)
+
+[Here is a script](../scripts/nbr02.js) so that you can check your work.
+
+##### Task 4  
+
+As a last step, please mask out all pixels in the ocean.  
+
+![Task 4](images/dnbr03.jpg)
+
+[Here is a script](../scripts/nbr03.js) so that you can check your work.
