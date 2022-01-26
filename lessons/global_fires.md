@@ -22,10 +22,24 @@ _Figure 2. [Global fire explorer app](https://jhowarth.users.earthengine.app/vie
 
 Some key concepts:  
 
-**Normalized Burn Ratio**
+#### FIRMS product
+
+![FIRMS](https://cdn.earthdata.nasa.gov/conduit/upload/17937/Screen_Shot_2021-09-20_at_2.41.29_PM.png)
+
+The FIRMS dataset (like [VIIRS](https://lpdaac.usgs.gov/documents/427/VNP14_User_Guide_V1.pdf) and [GOES](https://www.goes-r.gov/products/baseline-fire-hot-spot.html)) provides relatively fast information about active fires across the planet. FIRMS also provides a historical record of fire intensities over the last 20 years.  
+
+##### Task 1  
+
+Please try to load and stylize the FIRMS dataset as shown in the figure below.  
+
+![FIRMS example](images/firms.jpg)
+
+[Here is a script](../scripts/firms.js) so that you can check your work.
+
+#### Normalized Burn Ratio  
 
 ![NBR](https://un-spider.org/sites/default/files/Spectral_responses.jpg)
 
-**Burn severity index**  
+#### Burn severity index    
 
 ![Burn severity](https://un-spider.org/sites/default/files/table+legend.PNG)  
