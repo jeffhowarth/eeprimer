@@ -26,3 +26,7 @@ Image credit: [NOAA](https://www.climate.gov/enso)
 ![ONI 1990 - present](https://ggweather.com/enso/oni1990.png)
 
 Image credit: [Jan Null](https://ggweather.com/enso/oni.htm)  
+
+### Answers  
+
+Here is [a script](../scripts/sst_anomalies.js) with a solution.
