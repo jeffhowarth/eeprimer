@@ -42,8 +42,16 @@ NBR is similar to NDVI: it is a **normalized ratio** so we are dividing the diff
 
 ![NBR](https://un-spider.org/sites/default/files/Spectral_responses.jpg)
 
+##### Task 2  
+
+Please write a script to compute the normalized burn ratio for the fire near Davenport, CA in August 2020 with Sentinel 2.
+
 #### Burn severity index    
 
 The Burn Severity Index is based on the change in NBR before and after a fire. The thresholds listed below are standards proposed by the USGS. See [Jon Keeley (2007)](https://pubs.er.usgs.gov/publication/70032718) for a discussion of burn severity versus intensity and their ecological functions.
 
 ![Burn severity](https://un-spider.org/sites/default/files/table+legend.PNG)  
+
+##### Task 3  
+
+Building off the script in Task 3, please write a script to compute the burn severity index for the fire. 
