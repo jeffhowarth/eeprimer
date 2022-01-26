@@ -18,7 +18,7 @@ My goal here is to get closer to building something that helps people examine fi
 
 ![Global fires](images/global_fires.jpg)  
 
-_Figure 2. [Global fire explorer app](https://jhowarth.users.earthengine.app/view/eeprimer-global-fire-explorer)_
+_Figure 2. [Draft global fire explorer app](https://jhowarth.users.earthengine.app/view/eeprimer-global-fire-explorer)_
 
 Some key concepts:  
 
@@ -26,7 +26,7 @@ Some key concepts:
 
 ![FIRMS](https://cdn.earthdata.nasa.gov/conduit/upload/17937/Screen_Shot_2021-09-20_at_2.41.29_PM.png)
 
-The FIRMS dataset (like [VIIRS](https://lpdaac.usgs.gov/documents/427/VNP14_User_Guide_V1.pdf) and [GOES](https://www.goes-r.gov/products/baseline-fire-hot-spot.html)) provides relatively fast information about active fires across the planet. FIRMS also provides a historical record of fire intensities over the last 20 years.  
+The [FIRMS](https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms) dataset (like [VIIRS](https://lpdaac.usgs.gov/documents/427/VNP14_User_Guide_V1.pdf) and [GOES](https://www.goes-r.gov/products/baseline-fire-hot-spot.html)) provides relatively fast information about active fires across the planet. FIRMS also provides a historical record of fire intensities over the last 20 years.  
 
 ##### Task 1  
 
@@ -38,8 +38,12 @@ Please try to load and stylize the FIRMS dataset as shown in the figure below.
 
 #### Normalized Burn Ratio  
 
+NBR is similar to NDVI: it is a **normalized ratio** so we are dividing the difference of two bands by their sum. NBR uses the shortwave and Near Infrared bands. Notice how the reflectance at these two wavelengths differ within and between the spectral signatures of both burned areas and healthy vegetation.  
+
 ![NBR](https://un-spider.org/sites/default/files/Spectral_responses.jpg)
 
 #### Burn severity index    
+
+The Burn Severity Index is based on the change in NBR before and after a fire. The thresholds listed below are standards proposed by the USGS. See [Jon Keeley (2007)](https://pubs.er.usgs.gov/publication/70032718) for a discussion of burn severity versus intensity and their ecological functions.
 
 ![Burn severity](https://un-spider.org/sites/default/files/table+legend.PNG)  
