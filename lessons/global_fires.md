@@ -42,8 +42,6 @@ NBR is similar to NDVI: it is a **normalized ratio** so we are dividing the diff
 
 ![NBR](https://un-spider.org/sites/default/files/Spectral_responses.jpg)
 
-[Here is a script](../scripts/firms.js) so that you can check your work.
-
 ##### Task 2  
 
 Please write a script to compute the normalized burn ratio for the fire near Davenport, CA in August 2020 with Sentinel 2.
