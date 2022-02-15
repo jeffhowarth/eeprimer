@@ -25,4 +25,4 @@ For each article, please complete this [short Google form](https://forms.gle/BWh
 | Compare same region and same theme at two or more different time periods | = | &ne; | = |
 | Compare two or more different themes at same region and same time period | = | = | &ne; |  
 
-_Thank you. After you click the submit button, you should receive a copy of your entry via email. Please contact me if you have any questions. You must complete this assignment before our next lecture meeting._
+_Thank you. After you click the submit button, you should receive a copy of your entry via email. Please contact me if you have any questions._
