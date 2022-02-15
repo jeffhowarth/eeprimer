@@ -1,8 +1,8 @@
 ## JavaScript 101  
 
-_Adapted from Dave Thau's [Earth Engine 101](https://docs.google.com/presentation/d/1F3Sdk_IbupHhIwB8JrWdlLud9bP9JQ4qqPMjUJ42uzc/pub?start=false&loop=false&delayms=3000)._
+_Adapted from [Earth Engine 101](https://docs.google.com/presentation/d/1F3Sdk_IbupHhIwB8JrWdlLud9bP9JQ4qqPMjUJ42uzc/pub?start=false&loop=false&delayms=3000) by [Dave Thau](https://www.worldwildlife.org/experts/dave-thau)._
 
-This lesson briefly introduces how to write JavaScript with the Code Editor.   
+This lesson provides a brief introduction to key terms, syntax, and methods for writing JavaScript with the Earth Engine Code Editor.   
 
 ### Comment  
 
@@ -63,7 +63,8 @@ var my_list = ['eggplant', 'apple', 'wheat'];
 // The zero index refers to the first item in the list.
 print(my_list[0]);
 
-// Use periods to call an object's methods.
+// Use a period and parentheses to call an object's method (or a function associated with the object).  
+
 var my_list_reversed = my_list.reverse()
 print(my_list_reverse);
 
@@ -86,7 +87,8 @@ print(my_dict.color);
 ### Custom functions  
 
 ```js
-// Functions can be defined as a way to reuse code and make it easier to read.
+// Functions can be defined as a way to reuse code and make it easier to read.  
+
 var my_hello_function = function(string) {
   return 'Hello ' + string + '!';
 };

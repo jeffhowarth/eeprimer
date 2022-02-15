@@ -66,7 +66,7 @@ Map.addLayer(grid_points, {color: 'red'}, 'Grid points');
 
 Our goal here is to buffer every point in the grid, but without having to write 162 lines of code.  
 
-In general, when we need to perform the same method to every object in a collection, we can write a function and then __map the function__ over the collection.
+In general, when we need to perform the same method to every instance in a collection, we can write a function and then __map the function__ over the collection.
 
 The first step is to write a function to buffer features:     
 
