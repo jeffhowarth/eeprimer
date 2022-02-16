@@ -2,11 +2,11 @@
 
 These are materials that I have developed for teaching with Google Earth Engine at a small, undergraduate, liberal arts college in Vermont, USA.  
 
-The TOC shows the sequence that I use in an introductory geography course (Geography 150: Mapping global environmental change).
+The [TOC](#table-of-contents) shows the sequence that I use in an introductory geography course (Geography 150: Mapping global environmental change). The [Glossary](###glossary) defines and illustrates key terms (a work in progress).  
 
 _Please note: I keep test problems in private repositories. Please contact me if you are an instructor who would like access to them._    
 
-### Table of contents  
+### Table of contents
 
 | Title | Lesson Type | Description |
 | :--- | :--- | :--- |
@@ -23,3 +23,5 @@ _Please note: I keep test problems in private repositories. Please contact me if
 | [Image collection](lessons/image_collections_L8.md) | Tutorial | In this lesson, we investigate how to work with image collections in Earth Engine. You learn how to load an image collection, select the first image in the stack, and filter the collection by time and location. We use the Landsat 8 collection to demonstrate these methods. You see how many days it takes the satellite to image our planet's entire surface and how many times the same location has been imaged over the satellite's mission. We also learn how to reduce an image collection to an image with local operations. |
 | [Data comparisons](lessons/comparingDatasets.md) | Tutorial | In this lesson, we begin by exploring an earth engine app to visually compare sensors mounted on three different satellites (Terra, Landsat 8, and Sentinel 2). This helps us see differences in pixel resolution, geographic extent, and the ability to filter a collection by attributes (like how cloudy the image appears). We then write a script to compose a map with layers from each satellite demonstrated by the app. This establishes a basic workflow for working with earth engine datasets: load, inspect, filter, reduce, scale, and visualize. By implementing this workflow for three different datasets in the same script, you learn strategies for making your code more efficient, less redundant, and easier to update.  |
 | [Geographies of green blocks](lessons/ratio_and_zonal.md) | Tutorial | In this lesson, you first learn how to compute a BAND RATIO as the normalized difference of two image bands. You use a Sentinel 2 image to compute NDVI and display the results as a map layer with a PALETTE. You then learn how to summarize this continuous data within discrete regions to derive a ZONAL STATISTIC. In order to display the summarized data as a choropleth map (using color to symbolize values of regions), you CONVERT VECTOR TO RASTER and then display the rasterized image. Finally, you construct and place a GRADIENT LEGEND on the map. |
+
+### Glossary

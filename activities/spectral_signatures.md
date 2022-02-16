@@ -2,60 +2,62 @@
 
 This activity introduces you to remote sensing, EMR, and spectral signatures.
 
-## Background
-
-#### Remote sensing systems  
-<br>
-
-![remote sensing system](https://upload.wikimedia.org/wikipedia/commons/6/61/Remote_Sensing_Illustration.jpg)
-_source: [Arkarjun (2013)](https://commons.wikimedia.org/wiki/User:Arkarjun1)_
-
-#### Reflectance  
-
-The ratio of the amount of light leaving a target to the amount of light striking the target.  
-
-#### Electromagnetic radiation (EMR)    
-
-Energy transfer mechanism between two points. Can be described as waves.
-
-#### Wavelength
-
-![wavelength](https://upload.wikimedia.org/wikipedia/commons/8/84/Sine_wave_amplitude.svg)
-_source: [Kraaiennest 2008](https://upload.wikimedia.org/wikipedia/commons/8/84/Sine_wave_amplitude.svg)_
-
-### Electromagnetic spectrum  
-
-![emr spectrum](https://d32ogoqmya1dw8.cloudfront.net/images/integrate/teaching_materials/energy_sustain/student_materials/1401300513.jpg)  
-_source:_ [_serc.carleton.edu_](https://serc.carleton.edu/integrate/teaching_materials/energy_sustain/student_materials/thermal_energy_.html)
-
-### Spectral signatures
-
-![Spectral signature](https://www.researchgate.net/profile/Hartley-Bulcock/publication/228781235/figure/fig1/AS:300782042796038@1448723435559/Reflectance-spectra-of-different-types-of-green-vegetation-compared-to-a-spectral.png)  
-_source:_ [_Hartley Bulcock_](https://www.researchgate.net/figure/Reflectance-spectra-of-different-types-of-green-vegetation-compared-to-a-spectral_fig1_228781235)
-
-## Spectral signature app   
+### Spectral signature app   
 
 I wrote [this earth engine app](https://jhowarth.users.earthengine.app/view/spectral-signatures) to help you explore spectral signatures with Sentinel 2 images.  
 
 You can use the app to:   
 
-1. Pan map to a place you would like to explore.   
-2. Add a S2 image to the map.    
-3. Change the date range filter for the image.     
+1. Pan map to a place you would like to explore.  
+
+  - Click, hold, and drag map to pan.  
+  - Click + or - to zoom in or out.  
+
+
+2. Add a S2 image to the map.
+
+  - Click DRAW S2 scene at map center.  
+
+
+3. Change the date range filter for the image.  
+
+  - This will let you change the season or year of the image that you add to the map.  
+  - Check the _Define start and end dates_ box.  
+  - Enter a start and end date to define a time window.   
+  - You must use YYYY-MM-DD format.
+  - Try to use two month windows.  
+  - Click the _DRAW S2 scene at map center_ button to apply your date filter.
+  - If the layer panel on the map turns red, try changing the date window and click the _DRAW_ button again.  
+
+
 4. Plot spectral signature at one or more sample points for each land cover type.  
+
+  - Check the _Explore spectral signatures_ box.  
+  - Click a location on the map to chart the spectral signature of that location based on date in the S2 image.  
+  - You can click more than one location to add multiple signatures to the chart.  
+  - Click _Clear chart and samples_ to, well, to do that.  
+  - If you get a chart error, clear the chart and try again.  
+
+
 5. Download the spectral signature chart as a .png.        
 
-#### Sentinel 2 background  
+  - Click the little gray icon in the upper right corner to open the chart in a new browser tab.  
+  - Click the _Download PNG_ to download the chart as an image to your Google drive.  
 
-[Copernicus Sentinel 2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) is a mission by the European Space Agency (ESA). The MultiSpectral Instrument aboard these two satellites measures reflectance with 13 bands.
 
-![Sentinel bands](https://landsat.gsfc.nasa.gov/wp-content/uploads/2015/06/Landsat.v.Sentinel-2.png)  
-_Source:_ [_USGS_](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-sentinel-2-comparison-sentinel-2-and-landsat)
+### Key terms
 
-![Sentinel wavelengths](https://www.researchgate.net/profile/Kyriacos-Themistocleous/publication/343719643/figure/tbl1/AS:925869363183626@1597755866617/Wavelengths-of-Sentinel-2-bands.png)
-_source: [Kyriacos Themistocleous](https://www.researchgate.net/figure/Wavelengths-of-Sentinel-2-bands_tbl1_343719643)  
+Here are some concepts that should help you understand what the app helps you see.   
 
-## Spectral signature scavenger hunt      
+- [Remote sensing systems](../glossary/glossary.md#remote-sensing-systems)    
+- [Reflectance](../glossary/glossary.md#reflectance)   
+- [Electromagnetic radiation](../glossary/glossary.md#electromagnetic-radiation-EMR)    
+- [Wavelength](../glossary/glossary.md#wavelength)
+- [Electromagnetic spectrum](../glossary/glossary.md#electromagnetic-spectrum)  
+- [Spectral signatures](../glossary/glossary.md#spectral-signatures)
+- [Sentinel 2](../glossary/glossary.md#sentinel-2)  
+
+### Spectral signature scavenger hunt      
 
 Please use the app to create charts that compare the spectral signatures of the following pairs of land cover types:  
 
