@@ -49,13 +49,13 @@ You can use the app to:
 
 Here are some concepts that should help you understand what the app helps you see.   
 
-- [Remote sensing systems](../glossary/glossary.md#remote-sensing-systems)    
-- [Reflectance](../glossary/glossary.md#reflectance)   
-- [Electromagnetic radiation](../glossary/glossary.md#electromagnetic-radiation-EMR)    
-- [Wavelength](../glossary/glossary.md#wavelength)
-- [Electromagnetic spectrum](../glossary/glossary.md#electromagnetic-spectrum)  
-- [Spectral signatures](../glossary/glossary.md#spectral-signatures)
-- [Sentinel 2](../glossary/glossary.md#sentinel-2)  
+- [Remote sensing systems](../glossary.md#remote-sensing-systems)    
+- [Reflectance](../glossary.md#reflectance)   
+- [Electromagnetic radiation](../glossary.md#electromagnetic-radiation-EMR)    
+- [Wavelength](../glossary.md#wavelength)
+- [Electromagnetic spectrum](../glossary.md#electromagnetic-spectrum)  
+- [Spectral signatures](../glossary.md#spectral-signatures)
+- [Sentinel 2](../glossary.md#sentinel-2)  
 
 ### Spectral signature scavenger hunt      
 
