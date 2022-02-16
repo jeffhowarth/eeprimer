@@ -2,7 +2,7 @@
 
 These are materials that I have developed for teaching with Google Earth Engine at a small, undergraduate, liberal arts college in Vermont, USA.  
 
-The [TOC](#table-of-contents) shows the sequence that I use in an introductory geography course (Geography 150: Mapping global environmental change). The [Glossary](###glossary) defines and illustrates key terms (a work in progress).  
+The [TOC](#table-of-contents) shows the sequence that I use in an introductory geography course (Geography 150: Mapping global environmental change). The [Glossary](#glossary) defines and illustrates key terms (a work in progress).  
 
 _Please note: I keep test problems in private repositories. Please contact me if you are an instructor who would like access to them._    
 
