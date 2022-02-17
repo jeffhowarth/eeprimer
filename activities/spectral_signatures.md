@@ -1,10 +1,10 @@
 ## Spectral signature scavenger hunt    
 
-This activity introduces you to remote sensing, EMR, and spectral signatures.
+This activity introduces you to remote sensing, EMR, and spectral signatures.  
 
 ### Spectral signature app   
 
-I wrote [this earth engine app](https://jhowarth.users.earthengine.app/view/spectral-signatures) to help you explore spectral signatures with Sentinel 2 images.  
+I wrote [this earth engine app](https://jhowarth.users.earthengine.app/view/spectral-signatures) to help you explore spectral signatures with Sentinel 2 images.    
 
 You can use the app to:   
 
@@ -43,6 +43,8 @@ You can use the app to:
 
     - Click the little gray icon in the upper right corner to open the chart in a new browser tab.  
     - Click the _Download PNG_ to download the chart as an image to your Google drive.  
+
+_Thank you to Valerie Pasquarella (@valpasq) for her inspiring [Spectral Encounter](https://medium.com/geospatial-processing-at-scale/exploring-optical-imagery-a-spectral-encounter-996cd3f0b591) app._
 
 
 ### Key terms
