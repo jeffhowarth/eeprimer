@@ -1,8 +1,8 @@
-## Image bands  
+## Displaying image bands  
 
 _Adapted from: 'Exploring images' by J. Howarth in 'Cloud-based Remote Sensing with Google Earth Engine'. Edited by J. Cardille, N. Clinton, M. Crowley, D. Saah. Springer. Summer 2022._
 
-In this lesson, we explore how to inspect and visualize data stored in image bands.  
+In this lesson, we explore how to inspect and visualize data stored in image bands. You will learn how to load an image with an Earth Engine ID, select bands, display histograms, and add bands as layers to the Map UI. You will also learn how to apply information in the histogram to improve the visual contrast of the map layer through stretch enhancement.      
 
 ![image_bands](images/image_bands.png)
 <br>_Figure 1. Band 1 visualized as a map layer._
@@ -12,11 +12,11 @@ In this lesson, we explore how to inspect and visualize data stored in image ban
 
 ```js
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//  Title:        Image bands
+//  Title:        Displaying image bands
 //  Author:       Jeff Howarth
-//  Last edited:  1/10/2022   
+//  Last edited:  2/21/2022   
 //          
-/* In this lesson, we explore how to inspect and visualize data stored in image bands.  */  
+/* In this lesson, we explore how to inspect and visualize data stored in image bands. You will learn how to construct an image with an Earth Engine ID, select bands, display histograms, and add bands as layers to the Map UI. You will also learn how to apply information in the histogram to improve the visual contrast of the map layer through stretch enhancement. */  
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
@@ -66,7 +66,7 @@ print('Band 1', first_image.select('SR_B1'));
 <details>
 <summary><b>Check your understanding.</b></summary>
 <br>
-How does this data description differ from the information that you printed to the <b>Console</b> in the previous step?
+What information can you find in the catalog description that was not provided when you printed the image to the <b>Console</b> in the previous step?
 </details>    
 
 ### Chart histogram of image data  
@@ -79,7 +79,7 @@ var image_tools = require('users/jhowarth/eePrimer:modules/image_tools.js');
 var histogram_b1 = image_tools.makeHistogram(
   first_image,  //  use data from this image
   'SR_B1',      //  select this band
-  30,           //  use this scale (same as image)
+  30,           //  use this scale (same as image band)
   0,            //  min value of x-axis
   20000);       //  max value of x-axis
 
@@ -90,10 +90,10 @@ print(histogram_b1);
 <details>
 <summary><b>Check your understanding.</b></summary>
 <br>
-<li>What does the histogram show you about the image data?</li>
+<li>Using the words 'data value' and 'count', explain what the histogram shows you about the image?</li>
 </details>
 
-### Display band as map layer  
+### Display band 1 as map layer  
 
 ```js
 // Center the Map on the image prior to adding layers to the Map.
@@ -105,9 +105,9 @@ Map.addLayer(
     {
       bands: ['SR_B1'],     //  band to display
       min: 8000,            //  display range  
-      max: 17000           
+      max: 14000           
     },
-    'Layer 1'               //  name to show in Layer Manager
+    'Band 1'               //  name to show in Layer Manager
 );    
 ```
 <details>
@@ -115,35 +115,79 @@ Map.addLayer(
 <br>
 <li>Using the <b>Inspector</b>, click on a location, and look under the <b>Pixels</b> carrot. Click the blue icon to toggle between chart and dictionary views of the data. What does this data tell you about the location that you clicked?</li>
 <br>
-<li>Comment out the <b>min</b> and <b>max</b> display range values of the <b>visualization parameters</b>, then run the code again. Why does your image look so different? What do the min and max keys of the visualization parameters do?
+<li>Comment out the <b>min</b> and <b>max</b> display range values of the <b>visualization parameters</b>, then run the code again. Why does your image look so different? What do the min and max keys of the visualization parameters do?</li>
 </details>
 
-### Display bands 2 and 3 as layers  
+### Inspect and display band 2  
+
+Please copy and paste these code snippets, replace each XXXX parameter with the correct value, and run the code.    
+
+```js
+// Construct histogram chart for band 2.
+var histogram_b2 = image_tools.makeHistogram(
+  XXXX,         //  use data from this image
+  XXXX,         //  select this band
+  30,           //  use this scale (same as image band)
+  0,            //  min value of x-axis
+  20000);       //  max value of x-axis
+
+// Inspect the chart object in the Console.
+print(histogram_b2);
+```
+
+Please inspect the chart and write down the data range. Then copy and paste the code below, replace each XXXX parameter with a good value, and run the code.  
 
 ```js
 // Display band 2 as the second map layer.
 Map.addLayer(
     first_image,
     {
-      bands: ['SR_B2'],
-      min: 8000,
-      max: 17000
+      bands: XXXX,
+      min: XXXX,
+      max: XXXX
     },
-    'Layer 2',
-    0,                      //  shown
-    1                       //  opacity
+    'Band 2'
 );
+```
 
+<details>
+<summary><b>Check your understanding.</b></summary>
+<br>
+<li>How does your choice of min and max display values affect the layer's visual contrast?</li>
+<br>
+<li>Please define <b>stretch enhancement</b>.</li>
+</details>
+
+### Inspect and display band 3
+
+Please copy and paste this code into the Code Editor, replace each XXXX parameter with the correct value, and run the script.    
+
+```js
+// Construct histogram chart for band 2.
+var histogram_b2 = image_tools.makeHistogram(
+  XXXX,         //  use data from this image
+  XXXX,         //  select this band
+  XXXX,         //  use this scale (same as image band)
+  0,            //  min value of x-axis
+  20000);       //  max value of x-axis
+
+// Inspect the chart object in the Console.
+print(histogram_b2);
+```
+
+Same drill with the code below: replace XXXX paramters with good values and run the script.  
+
+```js
 // Display band 3 as the third map layer.
 Map.addLayer(
     first_image,
     {
-      bands: ['SR_B3'],
-      min: 8000,
-      max: 17000
+      bands: XXXX,
+      min: XXXX,
+      max: XXXX
     },
-    'Layer 3',
-    1,                      //  shown
+    'Band 3',
+    0,                      //  shown
     0                       //  opacity
 );
 ```
@@ -154,6 +198,14 @@ Map.addLayer(
 <li>What additional arguments did we pass to the <b>Map.addLayer()</b> function and what did they do?</li><br>
 <li>How does the order of <b>Map.addLayer()</b> functions in your script correspond to the order of <b>layers</b> on the map? Why is this so?</li>
 </details>
+
+### Inspect and display band 4  
+
+Work with a partner and write out a script from scratch that displays band 4 with good contrast. Your result should look similar to Figure 3.  
+
+![band 4 display](images/band4_layer.png)
+<br>_Figure 3. Band 4 visualized as a map layer._
+
 
 ### Further reading  
 
