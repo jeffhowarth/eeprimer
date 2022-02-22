@@ -182,7 +182,7 @@ _Holiday lights pattern. Noyabrsk, Russia_
 ![Korea](../readings/rgbLights/examples/koreaStrait.png)
 _Aurora pattern. Korea Strait._   
 
-![USA](../readings/rgbLights/examples/koreaStrait.png)
+![USA](../readings/rgbLights/examples/williston.png)
 _Red giants pattern. North America._
 
 ![Pakistan-India](../readings/rgbLights/examples/Pakistan-India.png)
