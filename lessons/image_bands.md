@@ -16,7 +16,11 @@ In this lesson, we explore how to inspect and visualize data stored in image ban
 //  Author:       Jeff Howarth
 //  Last edited:  2/21/2022   
 //          
-/* In this lesson, we explore how to inspect and visualize data stored in image bands. You will learn how to construct an image with an Earth Engine ID, select bands, display histograms, and add bands as layers to the Map UI. You will also learn how to apply information in the histogram to improve the visual contrast of the map layer through stretch enhancement. */  
+/* In this lesson, we explore how to inspect and visualize data stored in
+  image bands. You will learn how to construct an image with an Earth Engine ID,
+  select bands, display histograms, and add bands as layers to the Map UI. You
+  will also learn how to apply information in the histogram to improve the visual
+  contrast of the map layer through stretch enhancement. */  
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
@@ -163,16 +167,16 @@ Map.addLayer(
 Please copy and paste this code into the Code Editor, replace each XXXX parameter with the correct value, and run the script.    
 
 ```js
-// Construct histogram chart for band 2.
-var histogram_b2 = image_tools.makeHistogram(
+// Construct histogram chart for band 3.
+var histogram_b3 = image_tools.makeHistogram(
   XXXX,         //  use data from this image
   XXXX,         //  select this band
   XXXX,         //  use this scale (same as image band)
-  0,            //  min value of x-axis
-  20000);       //  max value of x-axis
+  XXXX,            //  min value of x-axis
+  XXXX);       //  max value of x-axis
 
 // Inspect the chart object in the Console.
-print(histogram_b2);
+print(histogram_b3);
 ```
 
 Same drill with the code below: replace XXXX paramters with good values and run the script.  
@@ -180,13 +184,13 @@ Same drill with the code below: replace XXXX paramters with good values and run 
 ```js
 // Display band 3 as the third map layer.
 Map.addLayer(
-    first_image,
+    XXXX,
     {
       bands: XXXX,
       min: XXXX,
       max: XXXX
     },
-    'Band 3',
+    XXXX,
     0,                      //  shown
     0                       //  opacity
 );
@@ -201,7 +205,7 @@ Map.addLayer(
 
 ### Inspect and display band 4  
 
-Work with a partner and write out a script from scratch that displays band 4 with good contrast. Your result should look similar to Figure 3.  
+Write out a script from scratch that displays band 4 with good contrast. Show your results to the person sitting next to you. Both of you should have images that look similar to Figure 3.  
 
 ![band 4 display](images/band4_layer.png)
 <br>_Figure 3. Band 4 visualized as a map layer._
