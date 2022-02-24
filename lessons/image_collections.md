@@ -28,9 +28,13 @@ _Figure 1. Landsat 8 scenes collected between June 9 - 25, 2014 for equatorial A
 ### Import Landsat 8 image collection  
 
 ```js
-// Import the Landsat 8 collection
-// (Level 2, Collection 2, Tier 1 and Real-Time data Raw Scenes).
-var L8 = ee.ImageCollection("LANDSAT/LC08/C01/T1_RT");
+var L8 = ee.ImageCollection("LANDSAT/LC08/C01/T1_RT")
+  // .filterBounds(geometry)                             // filter by location  
+  // .filterDate('2014-06-09','2014-06-10')     // filter by date range
+  // .filter(ee.Filter.lt('CLOUD_COVER', 20))
+  // .select('B4','B3','B2')                    // select bands
+  // .min()                                     // reduce pixel values [also try .median(), .max(), .mode()]
+  ;
 
 // Print the size of the L8 dataset.
 // print('The size of L8 is: ', L8.size());
@@ -38,10 +42,11 @@ var L8 = ee.ImageCollection("LANDSAT/LC08/C01/T1_RT");
 <details>
 <summary><b>Check your understanding.</b></summary>
 <br>
-What is the <b>date range</b> of this image collection?
+What are the range of dates available for this image collection in the Earth Engine catalog?
 </details>  
 
 ### Select first image in stack  
+
 ```js
 // Print the first image in the collection.
 print('First image in collection:', L8.first());
@@ -49,40 +54,34 @@ print('First image in collection:', L8.first());
 <details>
 <summary><b>Check your understanding.</b></summary>
 <br>
-How do the <b>band numbers</b> of the L8 images differ from the band numbers of the L5 image we worked with a previous lesson?
+Is the first image the earliest image in the collection, or the most recent image, or is the order of images random?
 </details>
 
 ### Filter by date range  
 
-```js
-// Filter collection by a date range.
-var L8_filtered = L8.filterDate('2014-06-09','2014-06-10');
-
-// Print size of filtered collection.
-print('Size of filtered collection:', L8_filtered.size());
-```
+Please uncomment the line above that filters the image collection by date range. Please also uncomment the line above that selects bands. Then run the code again.  
 
 <details>
 <summary><b>Check your understanding.</b></summary>
 <br>
-How many images does the Landsat 8 satellite capture in a single day?
+<li>Did our date range select images for one day or two days?</li>
+<br>
+<li>How many images did the Landsat 8 satellite capture in our date range?</li>
 </details>
 
 ### Add layer to map  
 
-```js
-// Center map on equatorial Africa.
-Map.setCenter(25,0,5);
+Use the geometry tools to add a point on Mount Kilimanjaro, Tanzania.  
 
-// Add the L8 dataset to the map
-Map.addLayer(
-  L8_filtered,
-    {
-    bands: ['B4','B3','B2'],
-    min: 5000,
-    max: 15000
-    },
-  'Landsat 8 Image Collection');
+Please write the appropriate code for each prompt below.  
+
+```js
+// Center map on Mount Kilimanjaro, Tanzania and a zoom level of 4.
+
+// Set base layer to 'TERRAIN'.
+
+// Add the L8 dataset to the map with display range of 5000 - 15000. Label the layer 'L8 image collection'.
+
 ```
 
 <details>
@@ -90,36 +89,53 @@ Map.addLayer(
 <br>
 <li>How many days does it take for the Landsat 8 satellite to capture images for every location on the planet's surface?</li>
 <br>
-<li>Why do you think some images are missing from this collection?</li>
+<li>Why do you think some images are missing from the L8 collection?</li>
 </details>
 
 ### Filter by location  
 
-_Please note: insert this code block after the **Filter by date block** and before the **Add layer block**_.
+Please do the following:  
 
-```js
-// Construct a point object.  
-var point = ee.Geometry.Point([29.590382,-1.387945]);
-
-// Filter collection by a location
-var L8_filtered = L8
-  .filterBounds(point)
-  // .select('B4','B3','B2')
-  // .min()                   // reduce pixel values [also try .median(), .max(), .mode()]
-  ;
-
-```
+1. Uncomment the filter by location line in the image collection import chain.    
+2. Change the date range so that you filter for the entire year of 2014.  
+3. Please run the script.  
 
 <details>
 <summary><b>Check your understanding.</b></summary>
 <br>
-<b>Before you reduce the image,</b> please use the <b>Inspector panel</b>, click on a location and inspect the chart under the <b>Pixels - Series</b> carrot.
+<li>How many images does the collection contain for this location?</li>  
+<br>
+Please use the <b>Inspector panel</b> to click on a location and inspect the chart under the <b>Pixels - Series</b> carrot.
 <br><br>
 <li>What does the chart show?</li>
 <br>
 <li>What do you think causes the peaks and valleys in the lines?</li>
 <br>
-<b>After you reduce the image:</b><br>
+</details>
+
+### Filter by image property  
+
+Please uncomment the line that filters by 'CLOUD_COVER' and run the script.
+
+<details>
+<summary><b>Check your understanding.</b></summary>
+<br>
+<li>How many images does the collection contain for this location now? </li>  
+<br>
+Please use the <b>Inspector panel</b> to click on a location.
+<br><br>
+<li>Can you still make a chart? How does it differ from the one you made in the last step?</li>
+<br>
+</details>  
+
+### Reduce collection to an image  
+
+Please uncomment the last line in the first code block, or the .min() line, and then run the script.  
+
+Try replacing .min() with these other reducers: .max(), .median(), .mean(), .mode().  
+
+<details>
+<summary><b>Check your understanding.</b></summary>
 <br>
 <li>Why does <b>.max()</b> make the scene appear all white?</li>
 <br>
@@ -128,6 +144,13 @@ var L8_filtered = L8
 <li>Why are .min(), .max(), .median(), and .mode() called <b>local operations</b>?</li>
 </details>
 
+### Practice problem  
+
+You can do this individually or with a partner.  
+
+Please start a new script and load the 'LANDSAT/LT05/C02/T1_L2' image collection.  
+
+Please filter the collection so that you have the same image that we used earlier this week. Add the layer to the map as a 321 composite.  
 
 ### Further reading
 <br>
