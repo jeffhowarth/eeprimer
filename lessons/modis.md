@@ -47,12 +47,69 @@ __Processing history__
 
 ## MODIS Image Collections in Earth Engine  
 
-To start, please write a script that loads data from the two image collections listed below. Please filter the data for September 2020 and center the map on California. Please use a SWIR, NIR, Green RGB composite and compare how the two data collections show the extent of wildfire in the state.      
+To start, please write a script that loads data from the two image collections listed below. Please filter the data for October 2020 and center the map on California. Please use a SWIR, NIR, Green RGB composite and compare how the two data collections show the extent of wildfire in the state.      
 
 [Terra Surface Reflectance Daily Global 1km and 500m](https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD09GA)  
 
 
 [Terra Surface Relectance 8-Day Global 500m](https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD09A1)   
+
+_This is as far as we got on 2/28. Please find the lecture script below._
+
+```js
+
+// Import table of states
+var states = ee.FeatureCollection("TIGER/2018/States");
+
+// To inspect the state vector data that we imported.
+print(states.first());
+
+// To filter the state table for just California.
+var california = states.filter(ee.Filter.eq('NAME','California'));
+print(california);
+
+// Define start and end dates as variables for both image collections.
+var start = '2020-10-01';
+var end = '2020-11-01';
+
+// Load and filter the daily MODIS dataset.
+var dataset = ee.ImageCollection('MODIS/006/MOD09GA')
+  .filter(ee.Filter.date(start, end))
+  .select(['sur_refl_b07', 'sur_refl_b02', 'sur_refl_b04']) // For SWIR, NIR, G RGB composite
+  .mean()
+  ;
+
+print('DATASET CHECK', dataset);  
+
+// Load and filter the 8-day average.
+
+var dataset2 = ee.ImageCollection('MODIS/006/MOD09A1')
+  .filter(ee.Filter.date(start, end))
+  .select(['sur_refl_b07', 'sur_refl_b02', 'sur_refl_b04'])
+  .mean()
+  ;
+
+print('DATASET 2 CHECK', dataset2);
+
+// Define min and max diplay range.  
+
+var imageViz = {
+  min: -100.0,
+  max: 3000.0,
+};
+
+// Center map on CA before adding layers.
+
+Map.centerObject(california, 6);
+
+// Add layers.
+Map.addLayer(dataset, imageViz, 'Daily',0);
+Map.addLayer(dataset2, imageViz, '8 day');
+Map.addLayer(california, {color:'gold'}, 'California',0);
+```
+
+_To be continued..._
+
 
 Next, please write a new script that loads data from the image collection listed below. Please create two map layers that show mean surface reflectance in January 2016 and July 2016. Please add the two layers as natural color RGB composites.    
 
