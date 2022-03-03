@@ -51,13 +51,17 @@ Please alter the starter script as follows:
 
 1. Change the date filter so that you can quickly filter the collection by month and/or year (without defining a 'yyyy-mm-dd' start and end range).  
 
-2. Add a spatial filter so that you can quickly filter the location with a geometry point.  
+2. Add a spatial filter so that you can quickly filter the location with a poi (using Geometry tool).
 
-3. Add a line of code that prints the number of images in the collection returned from a query, along with a label and a list of images.
+3. Center the map on the poi at zoom level 8.
+
+4. Add a line of code that prints the number of images in the collection returned from a query, along with a label and a list of images.
+
+Please save your script as 'sentinel2_starter.js', or something equivalent.  
 
 ### Practice problem  
 
-Please open the script we wrote on Monday that used MODIS to make a map of fire scars in California in summer 2020. Please make a copy of the script and save as 'Sentinel_MODIS_Fire_viewer.js' in the lessons folder.    
+Please find the script that we wrote on Monday that used MODIS to make a map of fire scars in California in summer 2020. Copy this script, paste it into the sentinel2_starter script, and then save as 'Sentinel_MODIS_Fire_viewer.js' in the lessons folder.    
 
 Please alter the script as follows:  
 
@@ -65,11 +69,9 @@ Please alter the script as follows:
 
 2. Enable yourself to filter the two MODIS collections (daiily and 8-day) and the Sentinel collections with the same month and year criteria.  
 
-3. Allow yourself to filter the Sentinel collection with a Geometry point.  
+3. Display both MODIS collections and the Sentinel collection as map layers with the same RGB composite (SWIR2, NIR, and green),  
 
-4. Display both MODIS collections and the Sentinel collection as map layers with the same RGB composite (SWIR2, NIR, and green),  
-
-5. Change the base layer to 'TERRAIN' and center the map on the Geometry point.  
+4. Change the base layer to 'TERRAIN'.  
 
 When you are set, use the MODIS 8-day layer to show the fire scars that are visible in California for October 2020. Then create a point in the middle of a scar and rerun the script to draw the Sentinel layer.   
 
@@ -77,4 +79,8 @@ _What kinds of things can you see with the Sentinel layer that are difficult to 
 
 Please repeat this for a couple more fire scars in California.  
 
-Finally, please explore elsewhere. Change the date filter to March 2020 and look at Australia. Where do you see fire scars in the MODIS layers? Pick a scar and draw a layer with the Sentinel layer. Discuss what you see with a partner. How do the two images complement each other as evidence for describing environmental change?  
+Finally, please explore elsewhere. For example, change the date filter to March 2020 and look at Australia. Where do you see fire scars in the MODIS layers? Pick a scar and draw a layer with the Sentinel collection for that poi. Discuss what you see with a partner. How do the two images complement each other as evidence for describing environmental change?  
+
+### Code check  
+
+Here is [a script](../scripts/simple_modis_s2_fire_explorer.js) that you can use to check your own work.  
