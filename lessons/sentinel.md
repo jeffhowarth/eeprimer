@@ -83,4 +83,6 @@ Finally, please explore elsewhere. For example, change the date filter to March 
 
 ### Code check  
 
-Here is [a script](../scripts/simple_modis_s2_fire_explorer.js) that you can use to check your own work.  
+To compare with your work:  
+
+ * [simple_modis_s2_fire_explorer.js](../scripts/simple_modis_s2_fire_explorer.js)  
