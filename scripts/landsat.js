@@ -25,9 +25,14 @@ function applyScaleFactors(image) {
               .addBands(thermalBand, null, true);
 }
 
+// Create poi for Aral Sea.
+
+var poi = ee.Geometry.Point([59.50328480546582, 44.43588474484646]);
+
+// Load, filter, and reduce the L4 image collection.
 
 var L4 = ee.ImageCollection('LANDSAT/LT04/C02/T1_L2')
-    .filterBounds(geometry.buffer(200 * 1000))
+    .filterBounds(poi.buffer(200 * 1000))
     .filter(ee.Filter.calendarRange(1989, 1989, 'year'))
     .filter(ee.Filter.calendarRange(8, 10, 'month'))
     .filter(ee.Filter.lt('CLOUD_COVER', 30))
@@ -35,9 +40,18 @@ var L4 = ee.ImageCollection('LANDSAT/LT04/C02/T1_L2')
     .mean()
     ;
 
+// Print to console.
+
+print(
+  'L4',
+  // L4.size(),
+  L4);
+
+// Write a function to load, filter, and reduce an image collection.
+
 var makeLandsatImage = function(ic, year) {
   var collection = ee.ImageCollection(ic)
-    .filterBounds(geometry.buffer(200 * 1000))
+    .filterBounds(poi.buffer(200 * 1000))
     .filter(ee.Filter.calendarRange(year, year, 'year'))
     .filter(ee.Filter.calendarRange(6, 9, 'month'))
     .filter(ee.Filter.lt('CLOUD_COVER', 20));
@@ -47,6 +61,8 @@ var makeLandsatImage = function(ic, year) {
     .median()
     ;
 };
+
+// Apply function to make a series of snapshots.
 
 var L4_1989 = makeLandsatImage('LANDSAT/LT04/C02/T1_L2', 1989);
 
@@ -64,10 +80,7 @@ var L8_2014 = makeLandsatImage('LANDSAT/LC08/C02/T1_L2', 2014);
 
 var L8_2019 = makeLandsatImage('LANDSAT/LC08/C02/T1_L2', 2019);
 
-print(
-  'L4',
-  // L4.size(),
-  L4);
+// Define viz parameters for Landsat collections.
 
 var viz = {
   bands: ['SR_B3', 'SR_B2', 'SR_B1'],
@@ -81,8 +94,13 @@ var viz_L8 = {
   max: 0.3,
 };
 
-Map.centerObject(geometry, 7);
+// Set up map display.
+
+Map.centerObject(poi, 7);
 Map.setOptions('HYBRID');
+
+
+// Add layers.
 
 Map.addLayer(L4_1989, viz, 'L4_1989',0);
 Map.addLayer(L5_1989, viz, 'L5_1989',0);
