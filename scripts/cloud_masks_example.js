@@ -1,6 +1,6 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    TITLE:        cloud_masks.js
+    TITLE:        cloud_mask_examples.js
     AUTHOR:       Jeff Howarth
     LAST EDITED:  3/15/2022
 
@@ -46,7 +46,7 @@ var viz_L4 = {
   max: 0.3,
 };
 
-Map.addLayer(L4, viz_L4, 'L4', 0);
+Map.addLayer(L4, viz_L4, 'L4', 1);
 
 // ----------------------------------------------------------------------
 // Sample application for L5.
@@ -100,6 +100,7 @@ var L8 = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
   .filterBounds(poi)
   .filter(ee.Filter.calendarRange(2015, 2015, 'year'))
   .filter(ee.Filter.calendarRange(startMonth, endMonth, 'month'))
+  .filter(ee.Filter.lt('CLOUD_COVER',20))
   .map(tools.scale_L89)
   .map(tools.cloudMask_L89)
   .median()
@@ -121,6 +122,7 @@ var L9 = ee.ImageCollection("LANDSAT/LC09/C02/T1_L2")
   .filterBounds(poi)
   .filter(ee.Filter.calendarRange(2022, 2022, 'year'))
   .filter(ee.Filter.calendarRange(startMonth, endMonth, 'month'))
+  .filter(ee.Filter.lt('CLOUD_COVER',20))
   .map(tools.scale_L89)
   .map(tools.cloudMask_L89)
   .median()
@@ -134,6 +136,29 @@ var viz_L9 = {
 
 Map.addLayer(L9, viz_L9, 'L9',0);
 
+
+
+// ----------------------------------------------------------------------
+// Sample application for Sentinel 2.
+// ----------------------------------------------------------------------
+
+var S2 = ee.ImageCollection("COPERNICUS/S2_SR")
+  .filterBounds(poi)
+  .filter(ee.Filter.calendarRange(2020, 2020, 'year'))
+  .filter(ee.Filter.calendarRange(startMonth, endMonth, 'month'))
+  .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',20))
+  .map(tools.cloudMask_S2)
+  .median()
+  .multiply(0.0001)
+;
+
+var viz_S2 = {
+  bands: ['B4', 'B3', 'B2'],
+  min: 0.0,
+  max: 0.3,
+};
+
+Map.addLayer(S2, viz_S2, 'S2', 0);
 
 // ----------------------------------------------------------------------
 // Sample application for MODIS.

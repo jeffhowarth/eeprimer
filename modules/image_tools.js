@@ -1,9 +1,9 @@
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//  Title:        Image tools
-//  Author:       Jeff Howarth
-//  Last edited:  03/15/2022
+//  TITLE:        Image tools
+//  AUTHOR:       Jeff Howarth
+//  LAST EDITED:  03/15/2022
 //
-//  Tools for processing images with Google Earth Engine.
+//  PURPOSE:      Tools for processing images with Google Earth Engine.
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
