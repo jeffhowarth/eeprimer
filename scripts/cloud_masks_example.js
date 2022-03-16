@@ -4,9 +4,11 @@
     AUTHOR:       Jeff Howarth
     LAST EDITED:  3/15/2022
 
-    PURPOSE:      Provides examples for cloud masks from module for
-                  Landsat 4,5,7,8,9 and MODIS Terra Surface Reflectance
-                  Daily Global 1km and 500m.
+    PURPOSE:      Examples for filtering with cloud masks from module for:
+
+                  Landsat 4,5,7,8,9
+                  Sentinel 2
+                  MODIS (Terra Surface Reflectance Daily Global 1km and 500m)
 
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
