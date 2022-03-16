@@ -1,23 +1,14 @@
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//  TITLE:        Image tools
-//  AUTHOR:       Jeff Howarth
-//  LAST EDITED:  03/15/2022
+//  Title:        Image tools
+//  Author:       Jeff Howarth
+//  Last edited:  03/15/2022
 //
-//  PURPOSE:      Tools for processing images with Google Earth Engine.
+//  Tools for processing images with Google Earth Engine.
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-// ------------------------------------------------------------
+// ------------------------------------------------------------------------
 // Landsat scaling functions.
-// ------------------------------------------------------------
-
-exports.applyScaleFactors_L8 = function(image) {
-  var opticalBands = image.select('SR_B.').multiply(0.0000275).add(-0.2);
-  var thermalBands = image.select('ST_B.*').multiply(0.00341802).add(149.0);
-  return image.addBands(opticalBands, null, true)
-              .addBands(thermalBands, null, true);
-};
-
+// ------------------------------------------------------------------------
 
 // L8 & L9
 // -------
@@ -110,6 +101,36 @@ exports.cloudMask_L4 = function(image) {
 
 
 // ----------------------------------------------------------------------
+// Function to mask clouds based on the QA60 band for Sentinel 2.
+// ----------------------------------------------------------------------
+
+exports.cloudMask_S2 = function(image) {
+  var qa = image.select('QA60');
+
+  var cloudBitMask = 1 << 10;
+  var cirrusBitMask = 1 << 11;
+
+  var SCL = image.select('SCL')
+    .remap(
+      [1,2,3,4,5,6,7,8,9,10,11],
+      [0,1,0,1,1,1,1,0,0, 0, 1]
+    );
+
+
+  // Both flags shoudl be set to zero, indicating clear conditions.
+
+  var mask = qa.bitwiseAnd(cloudBitMask).eq(0)
+      .and(qa.bitwiseAnd(cirrusBitMask).eq(0))
+      ;
+
+  return image
+    .updateMask(mask)
+    .updateMask(SCL);
+
+};
+
+
+// ----------------------------------------------------------------------
 // Function to mask clouds based on the STATE_1KM band for MODIS:
 // "MODIS/006/MOD09GA"
 // ----------------------------------------------------------------------
@@ -131,9 +152,12 @@ exports.cloudMask_MODIS = function(image) {
 
 };
 
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+// ----------------------------------------------------------------------
 // Make histogram from image.
+// ----------------------------------------------------------------------
 
 exports.makeHistogram_help = 'tools.makeHistogram(image, band, scale, min, max)';
 
@@ -161,8 +185,8 @@ exports.makeHistogram = function(image, band, scale, min, max) {
 };
 
 // ------------------------------------------------------------
-
 // Make histogram for entire image.
+// ----------------------------------------------------------------------
 
 exports.makeBoundedHistogram_help = 'tools.makeBoundedHistogram (region, image, band, scale, xMin, xMax, yMin, yMax)';
 
@@ -190,19 +214,4 @@ exports.makeBoundedHistogram = function(region, image, band, scale, xMin, xMax, 
   var chart = ui.Chart.image.histogram(params);
   chart.setOptions(chartStyle);
   return chart;
-};
-
-
-
-
-// ------------------------------------------------------------
-// Convert features to raster
-// ------------------------------------------------------------
-
-
-exports.makeImageFromFeatures = function(fc, p) {
-  return ee.Image().byte().paint({
-    featureCollection: fc,
-    color: p
-  });
 };
