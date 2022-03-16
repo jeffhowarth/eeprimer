@@ -40,8 +40,6 @@ var L4 = ee.ImageCollection('LANDSAT/LT04/C02/T1_L2')
   .median()
 ;
 
-print(L4);
-
 var viz_L4 = {
   bands: ['SR_B3', 'SR_B2', 'SR_B1'],
   min: 0.0,
