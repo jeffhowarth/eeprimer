@@ -4,11 +4,9 @@
     AUTHOR:       Jeff Howarth
     LAST EDITED:  3/15/2022
 
-    PURPOSE:      Examples for filtering with cloud masks from module for:
-
-                  Landsat 4,5,7,8,9
-                  Sentinel 2
-                  MODIS (Terra Surface Reflectance Daily Global 1km and 500m)
+    PURPOSE:      Provides examples for cloud masks from module for
+                  Landsat 4,5,7,8,9 and MODIS Terra Surface Reflectance
+                  Daily Global 1km and 500m.
 
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -17,11 +15,11 @@ var tools = require('users/jhowarth/eePrimer:modules/image_tools.js');
 
 // Set POI.
 
-var poi = ee.Geometry.Point([-73.181545, 44.013323]);
+var poi = ee.Geometry.Point([-73.3165, 44.6908]);
 
 // Center map on POI.
 
-Map.centerObject(poi,12);
+Map.centerObject(poi,8);
 
 // Set key variables.
 
