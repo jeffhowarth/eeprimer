@@ -10,12 +10,12 @@ We start with the inset map of ocean depths. To make this, we need to:
 2. apply a _nominal palette_ to distinguish deep and shallow seas,  
 3. add a _map key_ for nominal classes.    
 
-After making the inset map, we then explore datasets that underlie the main map and produce a multi-year average of chlorophyl-a concentrations and sea surface temperatures. To do this, we work through a couple of new methods:  
+After making the inset map, we then explore datasets that underlie the main map and produce a multi-year average of chlorophyll-a concentrations and sea surface temperatures. To do this, we work through a couple of new methods:  
 
 1. display the images with a _community palette_,
 2. add a _quantitative legend_.  
 
-Finally, we will write and apply a function to generate seasonal images of chlorophyl-a concentrations and sea surface temperatures. Then we will aim to connect these mapped patterns to global [ocean circulation](https://ugc.berkeley.edu/background-content/ocean-circulation/) and [atmospheric circulation](https://ugc.berkeley.edu/background-content/atmospheric-circulation/) processes.  
+Finally, we will write and apply a function to generate seasonal images of chlorophyll-a concentrations and sea surface temperatures. Then we will aim to connect these mapped patterns to global [ocean circulation](https://ugc.berkeley.edu/background-content/ocean-circulation/) and [atmospheric circulation](https://ugc.berkeley.edu/background-content/atmospheric-circulation/) processes.  
 
 ### Header  
 
@@ -34,9 +34,9 @@ Finally, we will write and apply a function to generate seasonal images of chlor
 
     We reclassify a bathymetry dataset, apply a palette,
     and add a nominal map key to distinguish deep and shallow seas. We then generate
-    a multi-year average of chlorophyl-a concentrations and sea surface
+    a multi-year average of chlorophyll-a concentrations and sea surface
     temperatures, display the images with a community palette a quantitative legend.
-    Finally, we write a function to generate seasonal images of chlorophyl-a concentrations
+    Finally, we write a function to generate seasonal images of chlorophyll-a concentrations
     and sea surface temperatures to visualize annual changes in these two patterns.  
 
     Conceptually, we interpret the images to explore subdivision of the global oceans and
@@ -135,7 +135,7 @@ var cPalette = palettes.niccoli.linearl[7].slice(0,5);
 
 var tPalette = palettes.kovesi.rainbow_bgyr_35_85_c72[7];
 
-// Config viz parameters for chlorophyl-a (0 - 2) and sst layers (0 - 35).
+// Config viz parameters for chlorophyll-a (0 - 2) and sst layers (0 - 35).
 
 
 
@@ -160,7 +160,7 @@ var cKey = cart.makeGradientLegend(viz, title, position);
 
 
 // Apply function to make images for fall, summer, spring, winter  
-// for both chlorophyl-a and sea surface temperatures.      
+// for both chlorophyll-a and sea surface temperatures.      
 
 
 
