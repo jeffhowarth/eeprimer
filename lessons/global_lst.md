@@ -1,4 +1,4 @@
-## Global Land Surface Temperatures (LST)  
+## Daily and seasonal changes of global land surface temperatures (LST)  
 
 Please complete the workflow sketched below. Your script should produce a map that looks like [this app](https://jhowarth.users.earthengine.app/view/globallst).  
 
