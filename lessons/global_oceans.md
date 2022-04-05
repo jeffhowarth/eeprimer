@@ -15,7 +15,11 @@ After making the inset map, we then explore datasets that underlie the main map 
 1. display the images with a _community palette_,
 2. add a _quantitative legend_.  
 
-Finally, we will write and apply a function to generate seasonal images of chlorophyll-a concentrations and sea surface temperatures. Then we will aim to connect these mapped patterns to global [ocean circulation](https://ugc.berkeley.edu/background-content/ocean-circulation/) and [atmospheric circulation](https://ugc.berkeley.edu/background-content/atmospheric-circulation/) processes.  
+We then write and apply a function to generate seasonal images of chlorophyll-a concentrations and sea surface temperatures.
+
+Finally, we will compute difference maps between seasonal chlorophyll-a concentrations.  
+
+Over the weekend, we will aim to connect these mapped patterns to global [ocean circulation](https://ugc.berkeley.edu/background-content/ocean-circulation/) and [atmospheric circulation](https://ugc.berkeley.edu/background-content/atmospheric-circulation/) processes.  
 
 ### Header  
 
@@ -167,6 +171,59 @@ var cKey = cart.makeGradientLegend(viz, title, position);
 
 
 // Compose map.  
+
+
+// ------------------------------------------------------------------------
+// COMPOSE DIFFERENCE MAPS   
+// ------------------------------------------------------------------------
+
+// Compose difference layer between spring and winter seasons for chlorophyll-a.
+
+
+
+// Create palette for seasonal difference layer.
+
+var diff_chlor_palette = palettes.colorbrewer.PiYG[11];
+
+// Create viz parameters for seasonal difference in Chlorophyll.
+
+var diff_chlor_viz = {
+  min: -2,
+  max: 2,
+  palette: diff_chlor_palette
+};
+
+// Make a map key for chlor-a difference.  
+
+
+// Add difference layer to map.
+
+
+// Write a function to compute difference layers between seasonal chlor-a concentrations.
+
+
+// Compose difference layers for three other seasonal transitions.
+
+
+// Add different layers to map (with LST viz parameters).  
+
+
+// ------------------------------------------------------------------------
+// ADD GEOGRAPHIC REFERENCE LINES   
+// ------------------------------------------------------------------------
+
+// Load graticule (lines of lat and long).
+
+var graticule_10d = ee.FeatureCollection('projects/ee-primer/assets/reference_lines/graticule_10d');
+
+// Load geographic lines (equator, circles, tropics).
+
+var geographic_lines = ee.FeatureCollection('projects/ee-primer/assets/reference_lines/geographic_lines');
+
+// Add graticule and geographic lines as reference lines.
+
+Map.addLayer(graticule_10d, {color: 'Honeydew'}, 'Graticule 10 degrees',0);
+Map.addLayer(geographic_lines, {color: 'Gainsboro'}, 'Geographic lines',0);
 
 
 ```
