@@ -82,7 +82,7 @@ Map.setCenter(-100, 20, 2);
 
 
 
-// Select 'LST_Day_1km' band, reduce to mean, convert to Celsius.
+// Select 'LST_Day_1km' band, reduce to mean, scale, and convert to Celsius.
 
 
 
