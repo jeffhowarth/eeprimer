@@ -172,7 +172,10 @@ var cKey = cart.makeGradientLegend(viz, title, position);
 
 // Compose map.  
 
+```
+### Compose difference maps  
 
+```js
 // ------------------------------------------------------------------------
 // COMPOSE DIFFERENCE MAPS   
 // ------------------------------------------------------------------------
@@ -207,7 +210,10 @@ var diff_chlor_viz = {
 
 // Add different layers to map (with LST viz parameters).  
 
+```
+### Add geographic reference lines    
 
+```js
 // ------------------------------------------------------------------------
 // ADD GEOGRAPHIC REFERENCE LINES   
 // ------------------------------------------------------------------------
