@@ -16,7 +16,7 @@ Please see starter script below.
   PURPOSE:  (1) Write a function to compute anomalies (differences between a short-term
             and long-term average).
 
-            (2) Guess which year represents El Nino, La Nina, and 'normal'.
+            (2) Infer which year represents El Nino, La Nina, and 'normal'.
 */
 
 
