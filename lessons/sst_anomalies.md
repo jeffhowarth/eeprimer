@@ -1,31 +1,105 @@
-## El Nino Southern Oscillation  
+## SST anomalies  
 
-Please try to make this map:
+Please write a script to produce the three layers and legend (key) shown [in this app](https://jhowarth.users.earthengine.app/view/sstanomaly).
 
-![ENSO 2016](images/ENSO_2016.jpg)
+Please see starter script below.
 
-![ENSO 2011](images/ENSO_2011.jpg)  
+### Starter script  
 
-The map shows two layers: one layer shows El Nino conditions, the other shows La Nina conditions.  
+```js
+/*
 
-Both layers average sea surface temperature data from MODIS-Aqua ("NASA/OCEANDATA/MODIS-Aqua/L3SMI") for the months January and February. One layer compares the average for these months in 2011 to the long-term average. The other compares the average for the same months in 2016 to the long-term average.  
+  TITLE:   Sea surface temperature anomalies
+  AUTHOR:  
+  DATE:    4/5/2022
 
-The map is centered on:  
-- Latitude = 0
-- Longitude = -180
-- Zoom level = 3  
+  PURPOSE:  (1) Write a function to compute anomalies (differences between a short-term
+            and long-term average).
 
-The base layer is set as 'HYBRID'.  
+            (2) Guess which year represents El Nino, La Nina, and 'normal'.
+*/
 
-### Background info on ENSO
+
+// Set up global variables  
+
+var month_start = 1;
+var month_end = 2;
+var t1 = 2011;
+var t2 = 2014;
+var t3 = 2016;
+
+// A function to compute anomalies.  
+
+var makeAnomaly = function(t) {
+
+  // Compute long-term average from "NASA/OCEANDATA/MODIS-Aqua/L3SMI"
+  // filter by month_start and month_end
+  // select 'sst' band
+
+
+
+  // Compute short-term average from long-term average
+  // by filtering for t year.  
+
+
+
+  // Return anomaly as the mean long-term average
+  // subtracted from the mean short-term average.   
+
+
+};
+
+// Apply function to compute anomaly for each year.
+
+
+
+// ----------------------
+// Configure viz.
+// ----------------------
+
+// Load community palettes.
+
+var palettes = require('users/gena/packages:palettes');
+
+// Configure viz parameters.
+
+var sst_viz = {
+  min: -5,
+  max: 5,
+  palette: palettes.cmocean.Balance[7]
+};
+
+// Load cart module.
+
+var cart = require('users/jhowarth/eePrimer:modules/cart.js');
+
+// Make a map key.  
+
+
+// ----------------------
+// Compose map  
+// ----------------------
+
+// Set base map to 'HYBRID'.
+
+
+
+// Center map on -180, 0 at zoom 3.
+
+
+// Add key and three layers.
+
+
+
+```  
+
+### Background info
 
 ![ENSO](https://www.climate.gov/sites/default/files/2021-04/ENSOPageWhatisElNinoTest_0.png)  
 
 Image credit: [NOAA](https://www.climate.gov/enso)
 
-![ONI 1990 - present](https://ggweather.com/enso/oni1990.png)
 
-Image credit: [Jan Null](https://ggweather.com/enso/oni.htm)  
 
 ### Answers  
 
