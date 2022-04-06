@@ -4,13 +4,19 @@ Please write a script to produce the three layers and legend (key) shown [in thi
 
 Please see starter script below.
 
+When you have completed the script, please discuss the results with a partner. Which year presents El Ni&ntilde;o, La Ni&ntilde;a, and 'normal'?  
+
+[Here is some background information on ENSO.](https://www.climate.gov/enso)  
+
+When you have agreed on the answers, please fill out [this form](https://forms.gle/Lg4xBGG31iptscqj6).  
+
 ### Starter script  
 
 ```js
 /*
 
   TITLE:   Sea surface temperature anomalies
-  AUTHOR:  
+  AUTHOR:  Jeff Howarth  
   DATE:    4/5/2022
 
   PURPOSE:  (1) Write a function to compute anomalies (differences between a short-term
@@ -32,13 +38,13 @@ var t3 = 2016;
 
 var makeAnomaly = function(t) {
 
-  // Compute long-term average from "NASA/OCEANDATA/MODIS-Aqua/L3SMI"
+  // Compute long-term record from "NASA/OCEANDATA/MODIS-Aqua/L3SMI"
   // filter by month_start and month_end
   // select 'sst' band
 
 
 
-  // Compute short-term average from long-term average
+  // Compute short-term record from long-term average
   // by filtering for t year.  
 
 
