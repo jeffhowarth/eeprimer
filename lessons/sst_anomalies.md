@@ -98,15 +98,3 @@ var cart = require('users/jhowarth/eePrimer:modules/cart.js');
 
 
 ```  
-
-### Background info
-
-![ENSO](https://www.climate.gov/sites/default/files/2021-04/ENSOPageWhatisElNinoTest_0.png)  
-
-Image credit: [NOAA](https://www.climate.gov/enso)
-
-
-
-### Answers  
-
-Here is [a script](../scripts/sst_anomalies.js) with a solution.
