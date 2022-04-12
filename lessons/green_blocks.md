@@ -318,6 +318,13 @@ var legend = cart                                                     // module
 
 Map.add(legend);
 
+// Use a new  base map to improve legibility Import base map module.
+
+// Set base map.
+
+var customBase = require('users/jhowarth/eePrimer:modules/darkBase.js');
+
+Map.setOptions('darkBase', {'darkBase': customBase.darkBase});
 
 
 ```
