@@ -1,6 +1,6 @@
 ## Spatial anomalies of LST    
 
-In this lesson, we compare how the mean LST within a census block differ from the mean LST of the region, or the concept of mapping _spatial anomalies_. You will write a script that generates the map shown in Figure 1. Again, you will write the script so that you can by reapply the analysis to any city in the USA simply by changing the point of interest.  
+In this lesson, we compare how the mean LST within census blocks differ from the mean LST of the region, or the concept of mapping _spatial anomalies_. You will write a script that generates the map shown in Figure 1. You will again write the script so that you can by reapply the analysis to any city in the USA simply by changing the point of interest.  
 
 ![Tutorial goal](images/lst_blocks_diff.png)   
 _Figure 1. Difference between block mean and regional map for Brooklyn, NY._
