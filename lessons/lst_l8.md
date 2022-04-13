@@ -1,57 +1,70 @@
-## Land surface temperature at local scales  
+## Spatial anomalies of LST    
 
-In this lesson, we explore high-resolution maps of land surface temperature (LST). You first interpret LST patterns around Middlebury, Vermont and then compare to analogous places in your home town. In a practicum, you then learn how to estimate LST from Landsat 8 images using modules developed by [Sophia Ermida](https://github.com/sofiaermida) and how to convert the temperature units. To visualize and communicate results, you learn how to access [Earth Engine community palettes](https://github.com/gee-community/ee-palettes) and how to configure and compose a panel for the map title, legend, histogram, and credits.       
+In this lesson, we compare how the mean LST within a census block differ from the mean LST of the region, or the concept of mapping _spatial anomalies_. You will write a script that generates the map shown in Figure 1. Again, you will write the script so that you can by reapply the analysis to any city in the USA simply by changing the point of interest.  
 
-#### Explore LST in Middlebury  
+![Tutorial goal](images/lst_blocks_diff.png)   
+_Figure 1. Difference between block mean and regional map for Brooklyn, NY._
 
-To start, please open [this earth engine app](https://jhowarth.users.earthengine.app/view/eeprimer-lst-landsat8).  
+This workflow involves several new methods:  
 
->_Discuss LST in Middlebury._
+1. A method to create high-resolution land surface temperature (LST) images from Landsat image collections. To do this, we will use a module developed and kindly shared by [Sophia Ermida](https://github.com/sofiaermida).  
 
-![land surface temp from L8](images/lst_l8_app.jpg)  
+2. A method to select features based on their spatial relationship to attributes in an image, or what is generally called _select by location_.  
 
-_Figure 1. App to explore LST with L8._
+3. Merging multiple features into a single feature, or what is generally called a _dissolve_ or _union_.   
 
-#### Explore LST in your home town  
+### Concepts
 
-Now use the app to explore LST in your home town.  
+#### Spatial anomaly  
 
-> _What patterns in Middlebury are analogous to patterns in your home town?_  
+> Review general concept
 
-> _How does your home town differ from Middlebury?_
+#### High-resolution LST images    
 
-## Practicum    
+Please open [this earth engine app](https://jhowarth.users.earthengine.app/view/eeprimer-lst-landsat8).  
 
-In this practicum, you learn how to produce the map shown in Figure 2.   
+>_Discuss LST in Middlebury and stretch enhancement._
 
-![Tutorial goal](images/lst_l8_lesson.jpg)  
+#### Select by location  
 
-_Figure 2. Mapped geography with panel for map marginalia._   
+> Review general concept.  
 
-### Header  
+#### Dissolve or union  
+
+> Review general concept  
+
+### Workflow      
+
+Please work with a partner to complete this script. Your final result should produce the map shown in Figure 1. When you have completed the script, please show your work to either Jeff or Derrick. You should be able to reapply your analysis to another city in the USA simply by changing the point of interest. You are excused from lecture after we have approved your work.  
+
+In prep for our meeting on Monday, please read [this article](https://www.nytimes.com/interactive/2020/08/24/climate/racism-redlining-cities-global-warming.html?searchResultPosition=1) from the New York Times.
 
 ```js
 /*
 
-  TITLE:   Land surface temperature from Landsat 8
-  AUTHOR:  Jeff Howarth
-  DATE:    1/23/2022
+  TITLE:    Spatial anomalies of land surface in census blocks
+  AUTHOR:   Jeff Howarth
+  DATE:     4/13/2022
 
-  Purpose: To make and display high resolution maps of land surface
-    temperature from Landsat 9 with modules from Sophia Ermida and
-    Gennadii Donchyts.
+  Purpose:
+
+            To show show census blocks that are anomalously hot or
+            cool in a region.
 
 */
-```
 
-### Estimate land surface temperature from landsat 8  
+// --------------------------------------------------------------------
+// CONFIGURE MAP.
+// --------------------------------------------------------------------
 
-Source: [Sophia Ermida et al (2020)](https://www.mdpi.com/2072-4292/12/9/1471/htm)  
-Repo: [Landsat_SMW_LST](https://github.com/sofiaermida/Landsat_SMW_LST)
+// Center map on point geometry at zoom level 12.
 
-```js
+
+// Set base layer to 'HYBRID'.
+
+
 // -------------------------------------------------------------------
-// Load image collection.
+// MAKE LST LAYER FROM LANDSAT.
 // -------------------------------------------------------------------
 
 // Import module for LST computation from L8.
@@ -66,34 +79,51 @@ var image = LandsatLST
       'L8',                               // landsat collection
       '2019-07-01',                       // start date  
       '2019-09-01',                       // end date
-      Map.getCenter()                     // poi to filter collection
+      XXXX                            // poi to filter collection
     )
 ;
-```
-### Reduce collection and scale image  
 
-```js
 // -------------------------------------------------------------------
-// Reduce image collection to image and scale.   
+// Function to convert Kelvin to Fahrenheit    
 // -------------------------------------------------------------------
+
+// Write function.
 
 var convert_k2f = function() {
   return  image                                       // image collection input
+  .select('LST')                                      // Select LST band
   .median()                                           // reduce image collection to image
   .subtract(273.15).multiply(9).divide(5).add(32)     // convert K to F
   ;
 };
-```
-### Configure vis parameters  
+
+// Apply function to make DOUGH layer.
+
+// -------------------------------------------------------------------
+// Chart histogram to determine min and max display range.      
+// -------------------------------------------------------------------
+
+var image_tools = require('users/jhowarth/eePrimer:modules/image_tools.js');
+
+// Add histogram to Map.
+
+var histogram = image_tools
+  .makeBoundedHistogram
+    (
+      geometry.buffer(5000),            //  region (because image is unbounded)
+      XXXX,                             //  use data from this image
+      'LST',                            //  select this band
+      30,                               //  use this scale (same as image)
+      70,                               //  min value of x-axis
+      130,                              //  max value of x-axis
+      0,                                //  min value of y-axis
+      5000                              //  max value of y-axis
+    )
+;
+
+// Print histogram to module.
 
 
-**References**  
-: [Community palettes](https://github.com/gee-community/ee-palettes)  
-: [Color advice](https://www.kennethmoreland.com/color-advice/BadColorMaps.pdf)  
-: [Principles for scientific color maps](https://www.fabiocrameri.ch/colourmaps/)  
-: [Color oracle](https://colororacle.org/)  
-
-```js
 // -------------------------------------------------------------------
 // Define viz parameters.  
 // -------------------------------------------------------------------
@@ -105,149 +135,149 @@ var palettes = require('users/gena/packages:palettes');
 // Define visualization parameters.
 
 var lst_viz = {
-  min: 60,                                // min display value.
-  max: 100,                               // max display value.
-  bands: 'LST',                           // band to display.
-  palette: palettes.matplotlib.inferno[7] // palette to stretch.
+  min: XXXX,                                          // min display value.
+  max: YYYY,                                         // max display value.
+  palette: palettes.kovesi.linear_bmy_10_95_c78[7]  // palette to stretch.
 };
 
-```
-### Compose map  
-
-```js
-
-// -------------------------------------------------------------------
-// Compose map.   
-// -------------------------------------------------------------------
-
-Map.setOptions('HYBRID');
+// Add layer to map. Do not show layer by default.
 
 Map.addLayer(
-    convert_k2f(image),                   // image
-    lst_viz,                              // viz parameters  
+    XXXX,                                 // image to draw
+    YYYY,                                 // viz parameters  
     'LST',                                // Layer name  
-    true                                  // Make visible
+    ZZZZ                                  // Do not show by default
     )
   ;
 
-```
-### Configure and compose labels
 
-```js
-// -------------------------------------------------------------------
-// Compose labels.   
-// -------------------------------------------------------------------
+// --------------------------------------------------------------------
+// MAKE COOKIE CUTTERS
+// --------------------------------------------------------------------
 
-// style dictionary for labels
+// Import county polygons.
 
-var styles = {                            // Style dictionary for all lettering
-  title: {                                // Title style
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: lst_viz.palette[4]             // Color for lettering from palette
-    },
-  credits: {                              // Credits style
-    fontSize: '10px',   
-    whiteSpace: 'pre',                    // This allows newline breaks.
-    color: '#999999',                     // Color lettering (font color).                    
-    margin: '1px 8px 1px 8px'             // Margin (clockwise from top)
-  }
-};
+var counties = ee.FeatureCollection("TIGER/2018/Counties")
+  .filterBounds(geometry);              // Filter by point geometry.
 
-// Create labels
 
-var title = ui.Label( {                       // Initialize new label.       
-  value: 'Land surface temperature from L8',  // Lettering to display.
-  style: styles.title,                        // Apply style dictionary.
-  targetUrl: {},                              // Place holder for url link
-});
+// Import block polygons.
 
-var credits = ui.Label( {
-  value: 'CREDITS:\nLST from L8 module by Sophia Ermida',
-  style: styles.credit,
-  targetUrl: 'https://github.com/sofiaermida/Landsat_SMW_LST'
-});
+var blocks = ee.FeatureCollection("TIGER/2010/Blocks")
+  .filterBounds(counties)               // Filter by selected county.
+  ;
 
-```
+// Create a land mask from 'USGS/NLCD_RELEASES/2019_REL/NLCD'.
+// Filter for 2019 year.
+// Select 'landcover' band.
+// Select first image in collection.
+// Reclassify image so that value 11 = 0 and everything else = 1.   
 
-### Chart histogram
 
-```js
+// Print the land mask to Console.
 
-// -------------------------------------------------------------------
-// Chart histogram.     
-// -------------------------------------------------------------------
 
-var image_tools = require('users/jhowarth/eePrimer:modules/image_tools.js');
+// Compute the mode of the land_mask within each census block.    
 
-// Add histogram to Map.
 
-var histogram = image_tools
-  .makeBoundedHistogram
-    (
-      ee.Geometry.Rectangle(
-        Map.getBounds()),                 //  region (because image is unbounded)
-      convert_k2f(image),                 //  use data from this image
-      'LST',                              //  select this band
-      30,                                 //  use this scale (same as image)
-      lst_viz.min,                        //  min value of x-axis
-      lst_viz.max,                        //  max value of x-axis
-      0,                                  //  min value of y-axis
-      200000                              //  max value of y-axis
-    )
+// Print the first feature in the output of above step to Console.  
+
+
+// Filter blocks for only those blocks on land (or where the mode equals 1).
+
+
+// Check your work visually.
+// Display all block features in selected county as a map layer with white color (and make not shown by default).  
+
+
+// Display all land block features with black color and again make not shown by default.  
+
+
+
+// Merge all land blocks into a single region.
+
+
+// Display the merged block layer with red color and again make not shown by default.
+
+
+// --------------------------------------------------------------------
+// CUT THE DOUGH.
+// --------------------------------------------------------------------
+
+// Derive mean LST within each land census block.
+
+
+// Derive mean LST within union of land census blocks.
+
+
+// --------------------------------------------------------------------
+// CONVERT VECTOR TO RASTER
+// --------------------------------------------------------------------
+
+// Import image tools module
+
+var imageTools = require('users/jhowarth/eePrimer:modules/image_tools.js');
+
+// Convert census block feature collection with mean LST into an image.
+// Use the property that reports mean LST to populate the image pixel values.
+
+var mean_lst_block_image = imageTools       // module
+  .makeImageFromFeatures(                   // function
+    XXXX,                                   // feature collection  
+    YYYY                                    // property of fc to use as pixel values
+  )
 ;
 
-```
-### Compose legend
+// Display mean LST in blocks with LST viz parameters.
+// Make not shown by default.
 
-```js
+
+// Convert union census block feature collection with mean LST into an image.
+// Use the property that reports mean LST to populate the image pixel values.
+
+var mean_lst_block_union_image = imageTools   // module
+  .makeImageFromFeatures(                     // function
+    XXXX,                     // feature collection  
+    YYYY                                    // property of fc to use as pixel values
+  )
+;
+
+// Compute difference of block mean LST from union mean LST.
+
+
+// Create viz paramters
+
+var lst_diff_viz = {
+  min: -10,
+  max: 10,
+  palette: palettes.colorbrewer.RdBu[11].reverse()
+};
+
+// Add difference layer to map. Show by default.
+
+
 
 // -------------------------------------------------------------------
-// Compose legend.  
+// Composte legend.  
 // -------------------------------------------------------------------
+
+// Import module.
 
 var cart = require('users/jhowarth/eePrimer:modules/cart.js');
 
-var legend = cart                         // module
+// Create legend and place in bottom-left.
+
+var difference_key = cart                         // module
   .makeGradientLegend                     // function
     (                
-      lst_viz,                            // viz parameters
-      'MEAN SURFACE TEMP (F)',            // legend title
-      'bottom-left'                       // position on map
+      XXXX,                               // viz parameters
+      YYYY,                               // legend title
+      ZZZZ                                // position on map
     )
 ;
-```
 
-### Configure panel  
+// Add legend to map.
 
-```js
-// -------------------------------------------------------------------
-// Initialize and place side panel.
-// -------------------------------------------------------------------
-
-// Initialize side panel.  
-
-var panel = ui.Panel                      // Initialize panel widget.
-  (
-    {
-      widgets:                            // List widgets to add to panel.
-        [
-          title,
-          legend,
-          histogram,
-          credits
-        ],
-      layout:
-        ui.Panel.Layout.flow('vertical'), // Widgets flow in vertical direction.
-      style:    
-        {
-          width: '250px',                 // Width of panel
-          height: '400px',                // Height of panel
-          position: 'top-left'            // Position of panel on screen.
-        }
-    }
-);
-
-Map.add(panel);                           // Add panel to the Map UI.
+Map.add(difference_key);
 
 ```
