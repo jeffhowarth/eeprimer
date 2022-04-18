@@ -18,17 +18,17 @@ Researchers at the University of Richmond have made a helpful interactive map to
 
 In part 1, you goal is to convert a feature collection of HOLC neighborhoods into an image that displays the neighborhood grades with their original color scheme for Boston, MA. This will allow you tom compare the HOLC neighborhoods to environmental conditions in part 2.
 
-In part 2, you will explore the legacies of the HOLC grades that are measurable in the environmental conditions of many US cities today. Conceptually, you will use zonal statistics to estimate the mean summer temperature (July and August) in each HOLC zone in a study region. You will then use zonal statistics to estimate the mean summer temperature in all of the HOLC zones combined (ie. the union) in the study region.  
+In part 2, you will explore the legacies of the HOLC grades that are measurable in the environmental conditions of many US cities today. Technically, you will use zonal statistics to estimate the mean summer temperature (July and August) in each HOLC zone in a study region. You will then use zonal statistics to estimate the mean summer temperature in all of the HOLC zones combined (ie. the union) in the study region.  
 
 You will then make a layer that estimates the difference in the average summer temperature of each individual HOLC zone from the average summer temperature of all the HOLC zones combined.  
 
-The resulting map should help the map reader explore these kinds of questions:    
+The resulting maps should help the map reader explore these kinds of questions:    
 
 * Are the average summer temperatures in 'hazardous' (red) and 'definitely declining' (yellow) zones considerably higher than the average summer temperature of all the HOLC zones together?  
 
 * Are the average summer temperatures in the 'best' (green) and 'still desirable' (blue) zones considerable lower than the average summer temperature of all the HOLC zones together?  
 
-The underlying idea is that land surface temperature in the hottest part of the year is an indicator of the environmental quality of a neighborhood and an indicator of the environmental resilience of places to climate change. Neighborhoods with more tree canopy and water features tend to be cooler during heat spells compared to neighborhoods without these natural amenities. When these environmental amenities are unevenly distributed, it may illustrate a case of distributive injustice.  
+The underlying idea is that land surface temperature in the hottest part of the year is an indicator of the environmental quality of a neighborhood and an indicator of the environmental resilience of places to climate change. Neighborhoods with more tree canopy and water features tend to be cooler during heat spells compared to neighborhoods without these natural amenities. When these environmental amenities are unevenly distributed, it illustrates a case of distributive injustice.  
 
 ## Part 1       
 
