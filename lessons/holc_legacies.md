@@ -8,7 +8,7 @@ _Figure 1. HOLC grades for Boston neighborhoods._
 
 ![temperature legacies](images/summer_legacies.jpg)  
 
-_Figure 1. Difference of average summer temperatures in each HOLC zone from average summer temperatures in all HOLC zones of study area._
+_Figure 2. Difference of average summer temperatures in each HOLC zone from average summer temperatures in all HOLC zones of study area._
 
 ## Background  
 
@@ -44,7 +44,7 @@ var imageTools = require('users/jhowarth/eePrimer:modules/image_tools.js');
 var cart = require('users/jhowarth/eePrimer:modules/cart.js');
 var customBase = require('users/jhowarth/eePrimer:modules/darkBase.js');
 
-// Define POI as geographic center of Boston: [-71.093556, 42.315528]
+// Define POI as a point in Boston
 
 
 
@@ -117,26 +117,6 @@ Map.add(legend);
 //  Part 2
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// Load modules
-
-var imageTools = require('users/jhowarth/eePrimer:modules/image_tools.js');
-var cart = require('users/jhowarth/eePrimer:modules/cart.js');
-var customBase = require('users/jhowarth/eePrimer:modules/darkBase.js');
-var palettes = require('users/gena/packages:palettes');
-
-// Create POI for geographic center of Boston: [-71.093556, 42.315528]
-
-
-
-// Buffer POI by 20 kilometers to define study region.   
-
-
-
-// Import feature collection of HOLC maps from 'projects/ee-primer/assets/holc_numeric_grades'
-// and filter collection for features that overlap study region.
-
-
-
 // -------------------------------------------------------------------
 // Load image collection.
 // -------------------------------------------------------------------
@@ -147,7 +127,7 @@ var LandsatLST = require('users/sofiaermida/landsat_smw_lst:modules/Landsat_LST.
 
 // Apply function from module to produce image collection with LST band for each image.
 // Use the 'L8' collection.
-// Use the full record. Start: '2013-03-18'. End: '2022-01-01'
+// Use the full record. Start: '2013-03-18'. End: '2022-04-01'
 // Filter by study region (POI buffered by 20 kilometers).
 
 
@@ -234,14 +214,6 @@ var LandsatLST = require('users/sofiaermida/landsat_smw_lst:modules/Landsat_LST.
 // --------------------------------------------------------------------
 // Display on the result on the map.
 // --------------------------------------------------------------------
-
-// Set base map to 'darkBase'.
-
-
-
-// Center map on filtered HOLC collection.  
-
-
 
 // Configure visualization parameters.
 
