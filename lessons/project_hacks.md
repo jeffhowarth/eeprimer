@@ -59,7 +59,7 @@ This first three steps can be helpful if your feature collection geometry is too
 
 #### Using awesome-spectral-indices  
 
-[This script](https://code.earthengine.google.com/b2335562d6b1f174e8f072d8022ba1aa) demonstrates how to work with the awesome spectral indices module and creates an NDVI anomaly for California in July 2020.  
+[This script](https://code.earthengine.google.com/5f0e0db4662d9d0323106daee894dede) demonstrates how to work with the awesome spectral indices module and creates an NDVI anomaly for California in July 2020.  
 
 #### Export to asset  
 
