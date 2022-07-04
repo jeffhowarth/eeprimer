@@ -1,6 +1,10 @@
 ## RGB of stable nighttime lights (1993 - 2013)  
 
+[_Dataset source_](https://developers.google.com/earth-engine/datasets/catalog/NOAA_DMSP-OLS_CALIBRATED_LIGHTS_V4?hl=en)
+
 [_Earth Engine script_](rgbLights.js)  
+
+
 
 This image uses additive color to compare brightness of stable nighttime lights in 2013, 2003, 1993.  
 
