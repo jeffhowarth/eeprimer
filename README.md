@@ -1,11 +1,11 @@
 ## Earth Engine Primer  
 
-These are materials that I have developed for teaching with Google Earth Engine at a small, undergraduate, liberal arts college in Vermont, USA.  
+Materials for teaching with Google Earth Engine to undergraduate students who are new to coding and spatial analysis.  
 
-The [table of contents](toc.md) shows the sequence that I use in an introductory geography course ([Geography 150: Mapping global environmental change](https://geog0150.github.io/s22/)).  
+In Fall 2022, I will be updating these materials regularly while teaching a course that uses them.
 
-The [Glossary](glossary.md) defines and illustrates key terms.  
+The materials can be viewed here:  
 
-This is a work in progress and updated regularly.    
+   
 
 _Please note: I keep test problems in private repositories. Please contact me if you are an instructor who would like access to them._  
