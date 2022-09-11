@@ -6,6 +6,6 @@ In Fall 2022, I will be updating these materials regularly while teaching a cour
 
 The materials can be viewed here:  
 
-   
+https://jeffhowarth.github.io/eeprimer/  
 
 _Please note: I keep test problems in private repositories. Please contact me if you are an instructor who would like access to them._  
