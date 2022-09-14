@@ -481,8 +481,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../addVectorLayer/" class="md-nav__link">
-        Add vector layer to map
+      <a href="../addLayer/" class="md-nav__link">
+        Add layer to map
       </a>
     </li>
   
@@ -493,8 +493,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../setProperties/" class="md-nav__link">
-        Set properties of a feature
+      <a href="../centerObject/" class="md-nav__link">
+        Center map on object
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructFeature/" class="md-nav__link">
+        Construct a feature
       </a>
     </li>
   
@@ -591,15 +603,35 @@
                 <p><img alt="code" src="../../../images/code.png" /></p>
 <h1 id="get-map-center">Get map center</h1>
 <p>When you first open the <a href="https://code.earthengine.google.com/" target="_blank">Code Editor</a>, the Map UI will be centered on a point in  Buffalo Valley, OK. You can retrieve the coordinates of a map&rsquo;s center with this:  </p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">center</span> <span class="o">=</span> <span class="nx">Map</span><span class="p">.</span><span class="nx">getCenter</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get map center.</span>
+
+<span class="kd">var</span> <span class="nx">center</span> <span class="o">=</span> <span class="nx">Map</span><span class="p">.</span><span class="nx">getCenter</span><span class="p">();</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Center point&#39;</span><span class="p">,</span> <span class="nx">center</span><span class="p">);</span>
 </code></pre></div>
+<p>Please copy and paste the above code snippet into the Code Editor, then run it, and try to answer the questions below.</p>
 <details>
 <summary><b>Check your understanding:</b></summary>
+<br>
+Please look at the Console Panel.<br>    
 <br>
 <li>Which number represents latitude and which represents longitude?</li>
 <br>
 <li>What does it mean if a number is negative?</li>
+</details>
+
+<p>Please write down the coordinates that you printed to the Console.  </p>
+<p>Now click the <em>pan</em> button (the little glove in the upper left of the Map UI), then click the map and, while holding your click, drag towards your left.  </p>
+<p>Now run the code again and try to answer the questions below.</p>
+<details>
+<summary><b>Check your understanding:</b></summary>
+<br>
+Again, please look at the Console Panel.<br>    
+<br>
+<li>Which number changed the most when you panned?</li>
+<br>
+<li>How did it change?</li>
+<br>
+<li>Do you think you are moving the map when you pan, or are you moving the window through which you are looking at the map?</li>
 </details>
                 
               

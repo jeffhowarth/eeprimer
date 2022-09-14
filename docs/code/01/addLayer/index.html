@@ -13,14 +13,14 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/01/addVectorLayer/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/01/addLayer/">
       
       <link rel="icon" href="../../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Add vector layer to map - a primer for Earth Engine</title>
+        <title>Add layer to map - a primer for Earth Engine</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add vector layer to map
+              Add layer to map
             
           </span>
         </div>
@@ -481,7 +481,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Add vector layer to map
+        Add layer to map
       </a>
       
     </li>
@@ -493,8 +493,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../setProperties/" class="md-nav__link">
-        Set properties of a feature
+      <a href="../centerObject/" class="md-nav__link">
+        Center map on object
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructFeature/" class="md-nav__link">
+        Construct a feature
       </a>
     </li>
   
@@ -589,18 +601,20 @@
                 
                 
                 <p><img alt="code" src="../../../images/code.png" />  </p>
-<h1 id="add-vector-layer-to-map">Add vector layer to map</h1>
-<p>Here is how you can add a vector layer to a map. In this example, I assume you have <a href="../constructPointGeometry/">a point object</a> named &lsquo;point&rsquo;.  </p>
+<h1 id="add-layer-to-map">Add layer to map</h1>
+<p>If you have one or more point, line, or polygon objects stored as a variable, you can display the variable on the Map UI as a <em>layer</em>. The layer metaphor goes back to the days when people would place a mylar sheet on top of a reference map and then draw shapes on the mylar. Thus the reference map was the <em>base layer</em> and each mylar sheet put on top of it was a <em>thematic layer</em>. Even though we don&rsquo;t use mylar anymore, the map layer metaphor is helpful as a conceptual device.   </p>
+<p>In the example below, I assume you have <a href="../constructPointGeometry/">a point object</a> named &lsquo;point&rsquo;.  </p>
 <div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span>
-  <span class="nx">point</span><span class="p">,</span>                  <span class="c1">// Object to show on the map.  </span>
+  <span class="nx">point</span><span class="p">,</span>                  <span class="c1">// Geometry object to show on the map.  </span>
   <span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s1">&#39;blue&#39;</span><span class="p">},</span>         <span class="c1">// Color to display the objects.  </span>
   <span class="s1">&#39;My first point&#39;</span>        <span class="c1">// A label for the layer that will appear in the label panel.</span>
 <span class="p">);</span>
 </code></pre></div>
+<p><em>Please note: If you don&rsquo;t seen the point on your map, it may be because it is not in your current map extent. So you will need to zoom out and pan around to find it.</em>  </p>
 <details>
 <summary><b>Check your understanding</b></summary>
 <br>
-<li>Compare and contrast how the size versus the shape of the circles change as you move from the equator towards the poles.
+<li>How would you change the display so that the point appears red?
 </details>
                 
               
@@ -637,13 +651,13 @@
       
       
         
-        <a href="../setProperties/" class="md-footer__link md-footer__link--next" aria-label="Next: Set properties of a feature" rel="next">
+        <a href="../centerObject/" class="md-footer__link md-footer__link--next" aria-label="Next: Center map on object" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Set properties of a feature
+              Center map on object
             </div>
           </div>
           <div class="md-footer__button md-icon">

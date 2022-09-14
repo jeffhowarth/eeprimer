@@ -481,8 +481,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../addVectorLayer/" class="md-nav__link">
-        Add vector layer to map
+      <a href="../addLayer/" class="md-nav__link">
+        Add layer to map
       </a>
     </li>
   
@@ -493,8 +493,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../setProperties/" class="md-nav__link">
-        Set properties of a feature
+      <a href="../centerObject/" class="md-nav__link">
+        Center map on object
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructFeature/" class="md-nav__link">
+        Construct a feature
       </a>
     </li>
   
@@ -590,12 +602,17 @@
                 
                 <p><img alt="code" src="../../../images/code.png" /></p>
 <h1 id="get-zoom-level">Get zoom level</h1>
-<p>By default, the map zoom level is set so that you can see all of the lower 48 states (plus Puerto Rico) in the map window. You can retrieve the zoom level used to display the map with this:   </p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">zoom</span> <span class="o">=</span> <span class="nx">Map</span><span class="p">.</span><span class="nx">getZoom</span><span class="p">();</span>
+<p>By default, the map will always initialize so that you see all of the lower 48 states (plus Puerto Rico) in the map window.  </p>
+<p>After panning the map in the last step, you have changed the region of the world displayed on the map. But you have not changed the amount of detail that the map displays.  </p>
+<p>In the Map UI, <em>zoom level</em> defines the amount of detail displayed on the map. You can retrieve the zoom level used to display a map with this:   </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Get zoom level of map.  </span>
+
+<span class="kd">var</span> <span class="nx">zoom</span> <span class="o">=</span> <span class="nx">Map</span><span class="p">.</span><span class="nx">getZoom</span><span class="p">();</span>
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Zoom level&#39;</span><span class="p">,</span> <span class="nx">zoom</span><span class="p">);</span>
 </code></pre></div>
 <details>
 <summary><b>Check your understanding:</b></summary>
+<br> Use the + and - buttons at the top left of the Map UI and re-run the code snippet to answer these two questions.<br>  
 <br>
 <li>What zoom level is the most 'zoomed out'?</li>
 <br>

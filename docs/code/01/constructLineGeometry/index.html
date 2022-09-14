@@ -473,8 +473,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../addVectorLayer/" class="md-nav__link">
-        Add vector layer to map
+      <a href="../addLayer/" class="md-nav__link">
+        Add layer to map
       </a>
     </li>
   
@@ -485,8 +485,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../setProperties/" class="md-nav__link">
-        Set properties of a feature
+      <a href="../centerObject/" class="md-nav__link">
+        Center map on object
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructFeature/" class="md-nav__link">
+        Construct a feature
       </a>
     </li>
   
@@ -590,10 +602,10 @@
                 
                 <p><img alt="code" src="../../../images/code.png" />    </p>
 <h1 id="construct-line-geometry">Construct line geometry</h1>
-<p>A <mark>line</mark> consists of two or more points.  </p>
+<p>A <em>line</em> consists of two or more points.  </p>
 <p>When you stretch a string tightly between two points on a globe, you show the <em>great circle route</em>. This shows the shortest distance across the globe&rsquo;s surface between the two points.  </p>
 <p>Google Earth Engine uses a spheroid model to represent line objects. The resulting lines represent great circle routes, just like if you were working with a string and a globe.  </p>
-<p>Here is how to construct a line object from two point objects:    </p>
+<p>Earth Engine provides a method to construct line objects from two or more points. You call the method with the phrase ee.Geometry.LineString(). It takes a list of points as an argument.     </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Construct two points.</span>
 
 <span class="kd">var</span> <span class="nx">point</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">]);</span>
@@ -635,7 +647,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../setProperties/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Set properties of a feature" rel="prev">
+        <a href="../constructFeature/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Construct a feature" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -644,7 +656,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Set properties of a feature
+              Construct a feature
             </div>
           </div>
         </a>

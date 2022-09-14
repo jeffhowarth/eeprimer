@@ -26,12 +26,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/01/addVectorLayer/</loc>
+         <loc>https://github.com/jeffhowarth/eePrimer/code/01/addLayer/</loc>
          <lastmod>2022-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/code/01/calculateLength/</loc>
+         <lastmod>2022-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/jeffhowarth/eePrimer/code/01/centerObject/</loc>
+         <lastmod>2022-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/jeffhowarth/eePrimer/code/01/constructFeature/</loc>
          <lastmod>2022-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -62,11 +72,6 @@
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/code/01/setCenterZoom/</loc>
-         <lastmod>2022-09-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/01/setProperties/</loc>
          <lastmod>2022-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>

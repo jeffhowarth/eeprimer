@@ -481,8 +481,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../addVectorLayer/" class="md-nav__link">
-        Add vector layer to map
+      <a href="../addLayer/" class="md-nav__link">
+        Add layer to map
       </a>
     </li>
   
@@ -493,8 +493,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../setProperties/" class="md-nav__link">
-        Set properties of a feature
+      <a href="../centerObject/" class="md-nav__link">
+        Center map on object
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructFeature/" class="md-nav__link">
+        Construct a feature
       </a>
     </li>
   
@@ -590,20 +602,22 @@
                 
                 <p><img alt="code" src="../../../images/code.png" />    </p>
 <h1 id="construct-point-geometry">Construct point geometry</h1>
-<p>While you can create geometry objects with the geometry buttons in the upper-left of the Map user interface, you can also create them with code.   </p>
+<p>While you can create geometry objects with the <em>drawing</em> buttons in the upper-left of the Map user interface, you can also create them with code.   </p>
+<p>Earth Engine provides a method to make a point from coordinates (x,y). You call the method with the phrase ee.Geometry.Point(). Then you tell it the coordinates in the parentheses. To work, the coordinates need to be in the form of a list.  </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Construct new point geometry object.  </span>
 
 <span class="kd">var</span> <span class="nx">point</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">]);</span>
 
 <span class="c1">// Inspect the result.</span>
+
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Point object&#39;</span><span class="p">,</span> <span class="nx">point</span><span class="p">);</span>
 </code></pre></div>
 <details>
 <summary><b>Check your understanding</b></summary>
 <br>
-<li>Which number represents the equator</li>  
+<li>Which number represents the Prime Meridian</li>  
 <br>  
-<li>Which number represents the Prime Meridian?
+<li>Which number represents the Equator?
 </details>
                 
               
@@ -640,13 +654,13 @@
       
       
         
-        <a href="../addVectorLayer/" class="md-footer__link md-footer__link--next" aria-label="Next: Add vector layer to map" rel="next">
+        <a href="../addLayer/" class="md-footer__link md-footer__link--next" aria-label="Next: Add layer to map" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Add vector layer to map
+              Add layer to map
             </div>
           </div>
           <div class="md-footer__button md-icon">

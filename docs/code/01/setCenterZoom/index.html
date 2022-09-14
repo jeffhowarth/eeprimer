@@ -481,8 +481,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../addVectorLayer/" class="md-nav__link">
-        Add vector layer to map
+      <a href="../addLayer/" class="md-nav__link">
+        Add layer to map
       </a>
     </li>
   
@@ -493,8 +493,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../setProperties/" class="md-nav__link">
-        Set properties of a feature
+      <a href="../centerObject/" class="md-nav__link">
+        Center map on object
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructFeature/" class="md-nav__link">
+        Construct a feature
       </a>
     </li>
   
@@ -590,13 +602,16 @@
                 
                 <p><img alt="code" src="../../../images/code.png" />  </p>
 <h1 id="set-map-center-and-zoom-level">Set map center and zoom level</h1>
-<p>You can customize the map extent by changing the map center and zoom level like this:   </p>
-<div class="highlight"><pre><span></span><code><span class="nx">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">73.1819</span><span class="p">,</span> <span class="mf">44.0133</span><span class="p">,</span> <span class="mf">19</span><span class="p">);</span>
+<p>Together, map center and zoom level define a map&rsquo;s extent. You can customize the map extent by changing the map center and zoom level like this:   </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Set map center and zoom.  </span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">73.1812983597342</span><span class="p">,</span> <span class="mf">44.013157468373876</span><span class="p">,</span> <span class="mf">19</span><span class="p">);</span>
 </code></pre></div>
 <details>
 <summary><b>Check your understanding:</b></summary>
 <br>
-<li>Which buttons on the Map UI let you manually change the center and zoom level?</li>
+At this zoom level, how many decimal places do you really need to center the map at this location?<br>
+<br><i>Hint: remove a decimal from the two coordinates and re-run the script. Repeat until you see first see BiHall move (just a tad).</i>
 </details>
                 
               

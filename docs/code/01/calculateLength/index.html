@@ -473,8 +473,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../addVectorLayer/" class="md-nav__link">
-        Add vector layer to map
+      <a href="../addLayer/" class="md-nav__link">
+        Add layer to map
       </a>
     </li>
   
@@ -485,8 +485,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../setProperties/" class="md-nav__link">
-        Set properties of a feature
+      <a href="../centerObject/" class="md-nav__link">
+        Center map on object
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constructFeature/" class="md-nav__link">
+        Construct a feature
       </a>
     </li>
   
@@ -590,47 +602,26 @@
                 
                 <p><img alt="code" src="../../../images/code.png" />    </p>
 <h1 id="calculate-length">Calculate length</h1>
-<p>Geometry objects have implicit spatial properties, the number of which depends on their dimensions.  </p>
-<table>
-<thead>
-<tr>
-<th align="center">Geometry</th>
-<th align="center">Dimensions</th>
-<th align="left">Spatial Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">point</td>
-<td align="center">0</td>
-<td align="left">Location</td>
-</tr>
-<tr>
-<td align="center">line</td>
-<td align="center">1</td>
-<td align="left">Location </br>Length</td>
-</tr>
-<tr>
-<td align="center">polygon</td>
-<td align="center">2</td>
-<td align="left">Location </br>Perimeter </br>Area</td>
-</tr>
-</tbody>
-</table>
-<p>These spatial properties can be calculated with methods of each object class.  </p>
-<p>The example below shows two things:  </p>
-<ol>
-<li>How to calculate the length of a line object.</li>
-<li>How to convert the length from meters to kilometers through division.  </li>
-</ol>
-<p>The snippet assumes that you have a <a href="../constructLineGeometry/">line object</a> named &lsquo;line&rsquo;.  </p>
-<div class="highlight"><pre><span></span><code><span class="c1">//  Calculate the length of a line object and convert from meters to kilometers.</span>
+<p>Geometry objects have implicit spatial properties, like length, area, center, etc. Earth Engine provides methods to calculate these for each geometry class. For example, the method .length() calculates the length of a line (or &lsquo;LineString&rsquo;) object. To call the method, you append .length() to the variable that stores the line object.  </p>
+<p>The snippet below assumes that you have a <a href="../constructLineGeometry/">line object</a> named &lsquo;line&rsquo;.  </p>
+<div class="highlight"><pre><span></span><code><span class="c1">//  Calculate the length of a line object.</span>
 
-<span class="kd">var</span> <span class="nx">route_speed</span> <span class="o">=</span> <span class="nx">route</span>
-  <span class="p">.</span><span class="nx">length</span><span class="p">()</span>
-  <span class="p">.</span><span class="nx">divide</span><span class="p">(</span><span class="mf">1000</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">line_length</span> <span class="o">=</span> <span class="nx">line</span>
+  <span class="p">.</span><span class="nx">length</span><span class="p">()</span>                   
   <span class="p">;</span>
+
+<span class="c1">// Inspect result.  </span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;route distance&#39;</span><span class="p">,</span> <span class="nx">line_length</span><span class="p">);</span>
 </code></pre></div>
+<details>
+<summary><b>Check your understanding</b></summary>
+<br>
+<li>What statement would you write to find the center of the line?<br>
+<br>
+<i>Hint: use the Docs tab to look for a method associated with ee.Geometry.LineString that sounds like it would calculate the center of the line.</i>
+<br>
+</details>
                 
               
               
