@@ -998,6 +998,153 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
+        CODE
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CODE" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          CODE
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/construct_image/" class="md-nav__link">
+        Construct image from address
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/inspect_image/" class="md-nav__link">
+        Inspect image
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/add_image_layer/" class="md-nav__link">
+        Add image as layer to map
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/convert_fc_to_binary/" class="md-nav__link">
+        Convert feature collection to binary image
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/threshold_image/" class="md-nav__link">
+        Threshold an image
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/map_algebra/" class="md-nav__link">
+        Map algebra
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/reclassify_image/" class="md-nav__link">
+        Generalize (reclassify) image
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/apply_mask/" class="md-nav__link">
+        Apply mask to image
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/compute_area/" class="md-nav__link">
+        Compute area of a zone
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code/chart_area_percent/" class="md-nav__link">
+        Chart area of regions as percent of a zone
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1065,6 +1212,17 @@
 
 <span class="c1">// Define a palette to display land cover values.  </span>
 
+<span class="kd">var</span> <span class="nx">lc_palette</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;#A1E67E&#39;</span><span class="p">,</span>    <span class="c1">//   1. Tree Canopy  </span>
+  <span class="s1">&#39;#F2F179&#39;</span><span class="p">,</span>    <span class="c1">//   2. Grass/Shrub</span>
+  <span class="s1">&#39;#f7f7f7&#39;</span><span class="p">,</span>    <span class="c1">//   3. Bare soil</span>
+  <span class="s1">&#39;#95C6E6&#39;</span><span class="p">,</span>    <span class="c1">//   4. Water</span>
+  <span class="s1">&#39;#525252&#39;</span><span class="p">,</span>    <span class="c1">//   5. Buildings    </span>
+  <span class="s1">&#39;white&#39;</span><span class="p">,</span>      <span class="c1">//   6. Roads</span>
+  <span class="s1">&#39;#cccccc&#39;</span><span class="p">,</span>    <span class="c1">//   7. 0ther pavement</span>
+  <span class="s1">&#39;white&#39;</span><span class="p">,</span>      <span class="c1">//   8. Railroads  </span>
+  <span class="p">];</span>
+
 <span class="c1">// Define visualization parameters.</span>
 
 <span class="c1">// Add layer to map.</span>
@@ -1077,7 +1235,7 @@
 
 <span class="c1">// Inspect first record of collection.</span>
 
-<span class="c1">// Add layer to map.</span>
+<span class="c1">// Add layer to map.  </span>
 
 <span class="c1">// Create a function that gives each feature the property &#39;tag&#39; with the value 1.</span>
 
@@ -1092,7 +1250,7 @@
 <span class="c1">// Add binary image to map.</span>
 
 <span class="c1">// ----------------------------------------------------------------------------</span>
-<span class="c1">// Add nominal value as a raster attribute.   </span>
+<span class="c1">// Map algebra: local operations between two raster layers.</span>
 <span class="c1">// ----------------------------------------------------------------------------</span>
 
 <span class="c1">// Invert binary.</span>
@@ -1113,16 +1271,16 @@
 
 <span class="c1">// Reclassify land cover</span>
 
-<span class="c1">// OLD NAME         NEW NAME              NEW VALUE</span>
-<span class="c1">// Ag               Active Field          4</span>
-<span class="c1">// Tree canopy      Forest                1</span>
-<span class="c1">// Grass/Shrub      Old field             3</span>
-<span class="c1">// Bare soil        Developed             5</span>
-<span class="c1">// Water            Water                 2</span>
-<span class="c1">// Buildings        Developed             5</span>
-<span class="c1">// Roads            Developed             5</span>
-<span class="c1">// Other pavement   Developed             5</span>
-<span class="c1">// Railroads        Developed             5</span>
+<span class="c1">// OLD VALUE    OLD NAME            NEW NAME              NEW VALUE</span>
+<span class="c1">// 0            Ag                  Active Field          4</span>
+<span class="c1">// 1            Tree canopy         Forest                1</span>
+<span class="c1">// 2            Grass/Shrub         Old field             3</span>
+<span class="c1">// 3            Bare soil           Developed             5</span>
+<span class="c1">// 4            Water               Water                 2</span>
+<span class="c1">// 5            Buildings           Developed             5</span>
+<span class="c1">// 6            Roads               Developed             5</span>
+<span class="c1">// 7            Other pavement      Developed             5</span>
+<span class="c1">// 8            Railroads           Developed             5</span>
 
 <span class="c1">// Create list of old values.</span>
 
@@ -1137,7 +1295,7 @@
 <span class="c1">// Add generalized layer to map.</span>
 
 <span class="c1">// ----------------------------------------------------------------------------</span>
-<span class="c1">// Convert feature collection to image for mask.  </span>
+<span class="c1">// Convert feature collection to binary image and apply as a mask layer.  </span>
 <span class="c1">// ----------------------------------------------------------------------------</span>
 
 <span class="c1">// Construct feature collection from data.pro.</span>
@@ -1153,7 +1311,7 @@
 <span class="c1">// Add generalized layer to map with protected lands mask.  </span>
 
 <span class="c1">// ----------------------------------------------------------------------------</span>
-<span class="c1">// Convert feature collection to binary image and</span>
+<span class="c1">// Convert feature collection to binary image and apply mask layers.</span>
 <span class="c1">// ----------------------------------------------------------------------------</span>
 
 <span class="c1">// Construct feature collection from data.uva.</span>
@@ -1185,26 +1343,25 @@
 <span class="c1">// Inspect result.</span>
 
 <span class="c1">// ----------------------------------------------------------------------------</span>
-<span class="c1">// Compute area of multiple zones.  </span>
+<span class="c1">// Chart area of regions as a percent of zone.  </span>
 <span class="c1">// ----------------------------------------------------------------------------</span>
 
-<span class="c1">// Create a layer where each pixel represents area normalized by study region area.</span>
+<span class="c1">// Represent the percentage of the study region&#39;s area represented by the area of each pixel.  </span>
+<span class="c1">// In other words, divide the area of each pixel by the area of the study region.</span>
 <span class="c1">// Rename this layer &#39;all of town&#39;.</span>
 
 <span class="c1">// Inspect results.</span>
 
-<span class="c1">// Create a raster with four bands:  </span>
-<span class="c1">//  1. pixel percentages  </span>
-<span class="c1">//  2. pixel percentages masked by protected lands  </span>
-<span class="c1">//  3. pixel percentages masked by uva lands without permanent protections  </span>
-<span class="c1">//  4. generalized land cover classes.</span>
-
+<span class="c1">// Construct image with three dough bands and one cutter band.   </span>
+<span class="c1">//  Band 1 = pixel percentages  </span>
+<span class="c1">//  Band 2 = pixel percentages masked by protected lands  </span>
+<span class="c1">//  Band 3 = pixel percentages masked by uva lands without permanent protections  </span>
+<span class="c1">//  Band 4 = generalized land cover classes.</span>
 
 <span class="c1">// Inspect result.</span>
 
-
 <span class="c1">// ----------------------------------------------------------------------------</span>
-<span class="c1">// Show area of multiple zones in a chart.</span>
+<span class="c1">// Chart zonal statistic of each dough band with cutter zones. </span>
 <span class="c1">// ----------------------------------------------------------------------------</span>
 
 <span class="kd">var</span> <span class="nx">lc_labels</span> <span class="o">=</span> <span class="p">[</span>
@@ -1273,6 +1430,21 @@
           </div>
         </a>
       
+      
+        
+        <a href="../../code/construct_image/" class="md-footer__link md-footer__link--next" aria-label="Next: Construct image from address" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Construct image from address
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
