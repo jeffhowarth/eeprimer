@@ -13,14 +13,14 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/03/code/inspect_image/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/03/concepts/review_questions/">
       
       <link rel="icon" href="../../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Inspect image - a primer for Earth Engine</title>
+        <title>Review questions - a primer for Earth Engine</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inspect image
+              Review questions
             
           </span>
         </div>
@@ -991,14 +991,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
       <label class="md-nav__link" for="__nav_5_2">
         CODE
@@ -1016,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../construct_image/" class="md-nav__link">
+      <a href="../../code/construct_image/" class="md-nav__link">
         Construct image from address
       </a>
     </li>
@@ -1026,19 +1024,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../code/inspect_image/" class="md-nav__link">
         Inspect image
       </a>
-      
     </li>
   
 
@@ -1048,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../add_image_layer/" class="md-nav__link">
+      <a href="../../code/add_image_layer/" class="md-nav__link">
         Add image as layer to map
       </a>
     </li>
@@ -1060,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convert_fc_to_binary/" class="md-nav__link">
+      <a href="../../code/convert_fc_to_binary/" class="md-nav__link">
         Convert feature collection to binary image
       </a>
     </li>
@@ -1072,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../threshold_image/" class="md-nav__link">
+      <a href="../../code/threshold_image/" class="md-nav__link">
         Threshold an image
       </a>
     </li>
@@ -1084,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../map_algebra/" class="md-nav__link">
+      <a href="../../code/map_algebra/" class="md-nav__link">
         Map algebra
       </a>
     </li>
@@ -1096,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reclassify_image/" class="md-nav__link">
+      <a href="../../code/reclassify_image/" class="md-nav__link">
         Generalize (reclassify) image
       </a>
     </li>
@@ -1108,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apply_mask/" class="md-nav__link">
+      <a href="../../code/apply_mask/" class="md-nav__link">
         Apply mask to image
       </a>
     </li>
@@ -1120,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../compute_area/" class="md-nav__link">
+      <a href="../../code/compute_area/" class="md-nav__link">
         Compute area of a zone
       </a>
     </li>
@@ -1132,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chart_area_percent/" class="md-nav__link">
+      <a href="../../code/chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
       </a>
     </li>
@@ -1148,12 +1138,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
       
       <label class="md-nav__link" for="__nav_5_3">
         CONCEPTS
@@ -1169,11 +1161,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../concepts/review_questions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Review questions
       </a>
+      
     </li>
   
 
@@ -1203,15 +1203,18 @@
               
                 
                 
-                <p><img alt="code" src="../../../images/code.png" />  </p>
-<h1 id="inspect-an-image">Inspect an image.</h1>
-<p>You can print an image to the Console, though this won&rsquo;t visualize the image with color. It returns &lsquo;matadata&rsquo; (data about data). Dry as this sounds you can learn some things from it.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Inspect an image.</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;label&#39;</span><span class="p">,</span> <span class="nx">data_object</span><span class="p">);</span>        <span class="c1">// Where data_object is the name of the variable that holds the image.  </span>
-</code></pre></div>
-<p>In the Console panel, expand the &lsquo;carrots&rsquo; to explore the properties and bands of the image. Please note that an image will alway contain at least one band. The name of the band is in double quotes. The default name of the first band in an image is &ldquo;b1&rdquo; (short for band one).  </p>
-<p>You can also inspect an image with the Inspector panel. With the crosshair, click on a location and the value of each band in each image at that location will print to the Inspector panel.   </p>
+                <p><img alt="concepts" src="../../../images/concepts.png" /></p>
+<h1 id="review-questions-for-raster-concepts">Review questions for raster concepts</h1>
+<ol>
+<li>How does a <em>raster</em> store attributes of locations?  </li>
+<li>What <em>data objects</em> does Earth Engine provide to work with geographic information in a raster framework?</li>
+<li>What are similarities and differences between <em>raster</em> and <em>vector</em> models?  </li>
+<li>How does a raster model display <em>data values</em> with <em>colors</em>?  </li>
+<li>How does a raster represent <em>points</em>, <em>lines</em>, and <em>zones</em>?  </li>
+<li>What are similarities and differences between <em>thresholding</em> and <em>generalizing</em>?  </li>
+<li>What are similarities and differences between <em>map algebra</em> and <em>masks</em>?  </li>
+<li>What are similarities and differences between <em>computation of area</em> in vector versus raster models?        </li>
+</ol>
                 
               
               
@@ -1231,7 +1234,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../construct_image/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Construct image from address" rel="prev">
+        <a href="../../code/chart_area_percent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chart area of regions as percent of a zone" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1240,26 +1243,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Construct image from address
+              Chart area of regions as percent of a zone
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../add_image_layer/" class="md-footer__link md-footer__link--next" aria-label="Next: Add image as layer to map" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Add image as layer to map
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
