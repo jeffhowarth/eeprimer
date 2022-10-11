@@ -2,267 +2,272 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/00/code/account/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/00/code/code_editor/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/00/code/javaScript101/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/apply/discussion/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/apply/longest_haul/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/addLayer/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/calculateLength/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/centerObject/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/constructFeature/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/constructLineGeometry/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/constructPointGeometry/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/convert_units/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/getMapCenter/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/getZoom/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/setBasemap/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/code/setCenterZoom/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/concepts/geographic_framework/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/concepts/modeling/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/concepts/transformations/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/01/concepts/vectorModel/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/apply/corridor_easement_list/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/apply/starter_script/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/aggregate_array/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/area/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/buffer/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/centerObject/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/filterBounds/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/filterBounds_geometry/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/filter_eq/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/filter_gt/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/intersection/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/map_area/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/map_buffer/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/map_intersection/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/print_first/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/starter_coords/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/table_widget/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/union/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/02/code/union_right/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/apply/protected_lands/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/apply/starter_script/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/add_image_layer/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/apply_mask/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/chart_area_percent/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/compute_area/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/construct_image/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/convert_fc_to_binary/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/inspect_image/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/map_algebra/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/reclassify_image/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/code/threshold_image/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/03/concepts/review_questions/</loc>
-         <lastmod>2022-09-29</lastmod>
+         <lastmod>2022-10-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/jeffhowarth/eePrimer/04/apply/global_oceans/</loc>
+         <lastmod>2022-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
