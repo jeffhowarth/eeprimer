@@ -1,0 +1,1 @@
+You will need to sign up for a Google Earth Engine account. This is free for students. We will walk through the sign-up process in our first meeting. You sign up through the Google Earth Engine [web site](https://earthengine.google.com/){target=_blank}. 

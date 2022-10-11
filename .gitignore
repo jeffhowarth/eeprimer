@@ -28,7 +28,5 @@ Temporary Items
 .apdisk
 
 # eePrimer clutter
-drafts/  
-src/
-mkdocs.yml
+drafts/
 .gitignore
