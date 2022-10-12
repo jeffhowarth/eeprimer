@@ -1412,7 +1412,7 @@
 <p>ee-palettes is a resource created by Gennadii Donchyts, Fedor Baart &amp; Justin Braaten. You can access this resource through the project&rsquo;s <a href="https://github.com/gee-community/ee-palettes" target="_blank">GitHub repository</a>. The README file (the web page that is displayed when you click the GitHub link) thoroughly documents how to work with the resource. The snippets below aim to provide some additional support for EE newbies.  </p>
 <h2 id="1-load-the-module">1. Load the module.</h2>
 <p>In this community resource, palettes are contained in an Earth Engine <em>module</em>, or a collection of data objects that can be called from other scripts. This follows the <em>modular programming</em> paradigm that seeks to break complex tasks into simple, reusable sub-tasks.  </p>
-<p>For example, many EE problems require the coder to create a palette to call as a visualization parameter. So rather than force all coders to do this from scratch each time, Gena, Fedor, and Justin wrote up a module that contains many different solutions to this task. Then they very kindly shared this module (for no cost) with the broader EE user community.   </p>
+<p>Many EE problems require the coder to create a palette to call as a visualization parameter. So rather than force all coders to do this from scratch each time, Gena, Fedor, and Justin wrote up a module that contains many different solutions to this task. Then they very kindly shared this module (for no cost) with the broader EE user community.   </p>
 <p>The snippet below loads the ee-palettes module into a variable called <em>palettes</em>.  </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load ee-palettes module.</span>
 
@@ -1469,7 +1469,7 @@
 <h3 id="3-invert-the-palette">3. Invert the palette.</h3>
 <p>Sometimes you will need to reverse the order of colors in a color list. For example, the Red-Blue diverging ColorBrewer scheme is inherently ordered from red to blue.  </p>
 <p><img alt="colorbrewer.RdBu" src="https://github.com/gee-community/ee-palettes/raw/master/pals/RdBu.png" /></p>
-<p>But what if you want to use this palette to display temperature anomalies, where negative numbers represent cooler than normal temperatures and positive values represent warmer than normal tempertures? Good cartographic practice aims to make the visual display of data intuitive for the map reader. To use cool colors for cool temperatures and warm colors for warm temperatures, you can reverse the color list.  </p>
+<p>But what if you want to use this palette to display temperature anomalies, where negative numbers represent cooler than normal temperatures and positive values represent warmer than normal temperatures? Good cartographic practice aims to make the visual display of data intuitive for the map reader. To use cool colors for cool temperatures and warm colors for warm temperatures, you can reverse the color list.  </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Define palette and reverse the color list.</span>
 
 <span class="kd">var</span> <span class="nx">palette_reversed</span> <span class="o">=</span> <span class="nx">palettes</span><span class="p">.</span><span class="nx">colorbrewer</span><span class="p">.</span><span class="nx">RdBu</span><span class="p">[</span><span class="mf">9</span><span class="p">].</span><span class="nx">reverse</span><span class="p">();</span>  

@@ -203,18 +203,7 @@ nav:
       - Select bands: 04/code/select_bands.md
       - Inspect image collection: 04/code/inspect_ic.md
       - Filter by dates: 04/code/filter_by_dates.md
-      - Reduce with local operations: 04/code/reduce_local_operation.md  
-
-
-
-
-
-
-
-
-
-
-
+      - Reduce with local operations: 04/code/reduce_local_operation.md
 
 
 #  - Contributing: contributing.md

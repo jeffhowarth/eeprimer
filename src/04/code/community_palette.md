@@ -8,7 +8,7 @@ ee-palettes is a resource created by Gennadii Donchyts, Fedor Baart & Justin Bra
 
 In this community resource, palettes are contained in an Earth Engine _module_, or a collection of data objects that can be called from other scripts. This follows the _modular programming_ paradigm that seeks to break complex tasks into simple, reusable sub-tasks.  
 
-For example, many EE problems require the coder to create a palette to call as a visualization parameter. So rather than force all coders to do this from scratch each time, Gena, Fedor, and Justin wrote up a module that contains many different solutions to this task. Then they very kindly shared this module (for no cost) with the broader EE user community.   
+Many EE problems require the coder to create a palette to call as a visualization parameter. So rather than force all coders to do this from scratch each time, Gena, Fedor, and Justin wrote up a module that contains many different solutions to this task. Then they very kindly shared this module (for no cost) with the broader EE user community.   
 
 The snippet below loads the ee-palettes module into a variable called _palettes_.  
 
@@ -86,7 +86,7 @@ Sometimes you will need to reverse the order of colors in a color list. For exam
 
 ![colorbrewer.RdBu](https://github.com/gee-community/ee-palettes/raw/master/pals/RdBu.png)
 
-But what if you want to use this palette to display temperature anomalies, where negative numbers represent cooler than normal temperatures and positive values represent warmer than normal tempertures? Good cartographic practice aims to make the visual display of data intuitive for the map reader. To use cool colors for cool temperatures and warm colors for warm temperatures, you can reverse the color list.  
+But what if you want to use this palette to display temperature anomalies, where negative numbers represent cooler than normal temperatures and positive values represent warmer than normal temperatures? Good cartographic practice aims to make the visual display of data intuitive for the map reader. To use cool colors for cool temperatures and warm colors for warm temperatures, you can reverse the color list.  
 
 ```js
 // Define palette and reverse the color list.
