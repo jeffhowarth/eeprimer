@@ -191,9 +191,21 @@ nav:
       - Chart area of regions as percent of a zone: 03/code/chart_area_percent.md
     - CONCEPTS:
       - Review questions: 03/concepts/review_questions.md
-  - 4. Global oceans:
+  - 4. Working with Image Collections:
     - APPLY:
-      - Bathymetry, sea surface temperature, and chlorophyll-a: 04/apply/global_oceans.md  
+      - Global oceans: 04/apply/global_oceans.md
+      - Starter script: 04/apply/starter_script.md
+      - Starter script (2): 04/apply/starter_script_02.md
+    - CODE:
+      - Community palette module: 04/code/community_palette.md
+      - Palettes for multiband images: 04/code/palettes_mb.md
+      - Load image collection: 04/code/load_ic.md
+      - Select bands: 04/code/select_bands.md
+      - Inspect image collection: 04/code/inspect_ic.md
+      - Filter by dates: 04/code/filter_by_dates.md
+      - Reduce with local operations: 04/code/reduce_local_operation.md  
+
+
 
 
 

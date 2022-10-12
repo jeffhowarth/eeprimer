@@ -34,4 +34,4 @@ _Here is [a link](https://jhowarth.users.earthengine.app/view/eeprimer-global-oc
 - **Earth Engine datasets**  
     - ['NOAA/NGDC/ETOPO1'](https://developers.google.com/earth-engine/datasets/catalog/NOAA_NGDC_ETOPO1){target=_blank}  
     - ['NASA/OCEANDATA/MODIS-Terra/L3SMI'](https://developers.google.com/earth-engine/datasets/catalog/NASA_OCEANDATA_MODIS-Terra_L3SMI){target=_blank}  
-- [MODIS](https://modis.gsfc.nasa.gov/){target=_blank} 
+- [MODIS](https://modis.gsfc.nasa.gov/){target=_blank}
