@@ -5,12 +5,11 @@
 ## Questions  
 
 - How does the elevation of the ocean's floor relate to phytoplankton blooms?
-- How does sea surface temperature relate to phytoplankton blooms?  
 - How do sea surface temperatures and phytoplankton blooms change over seasons?  
 - How does one season differ from a long term average?  
 - How do these anomalies in sea surface temperature relate to hurricanes?  
 - How does SST relate to El Ni&ntilde;o and La Ni&ntilde;a events ([hint](https://psl.noaa.gov/enso/mei/){target=_blank})?  
-- How do Chlorophyll change seasonally ([hint](https://earthobservatory.nasa.gov/features/Phytoplankton){target=_blank})?      
+- How does sea surface temperature relate to phytoplankton blooms ([hint](https://earthobservatory.nasa.gov/features/Phytoplankton){target=_blank})?      
 
 
 ## Goal  
