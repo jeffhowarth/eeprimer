@@ -1476,7 +1476,7 @@
 
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;palette reversed&#39;</span><span class="p">,</span> <span class="nx">palette_reversed</span><span class="p">);</span>
 </code></pre></div>
-<p>Go ahead and compared the result from above with the original palette to check your understanding.  </p>
+<p>Compare the result from above with the original palette to check your understanding.  </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Original palette.</span>
 
 <span class="kd">var</span> <span class="nx">palette_original</span> <span class="o">=</span> <span class="nx">palettes</span><span class="p">.</span><span class="nx">colorbrewer</span><span class="p">.</span><span class="nx">RdBu</span><span class="p">[</span><span class="mf">9</span><span class="p">].</span><span class="nx">reverse</span><span class="p">();</span>  
@@ -1484,9 +1484,9 @@
 <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;palette original&#39;</span><span class="p">,</span> <span class="nx">palette_original</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="3-slice-the-palette">3. Slice the palette.</h3>
-<p>Sometimes you will want to use a portion of the palette, but not the entire palette. For example, imagine that you would like to map concentrations of chlorophyll-a. You find a palette from the niccoli color scheme that transitions from dark violet to green to white.</p>
+<p>Sometimes you will want to use a portion of the palette, but not the entire palette. For example, imagine that you would like to map concentrations of chlorophyll-a. You find a palette from the niccoli color scheme that transitions from dark blue to green through a yellow-peach to white.</p>
 <p><img alt="nicolli.linearl" src="https://github.com/gee-community/ee-palettes/raw/master/pals/linearl.png" />  </p>
-<p>For your map, you would like the palette to end at the green color and not extend into the yellow and white. To do this, you can slice the palette:  </p>
+<p>For your map, you would like the palette to end at the green color and not extend into the yellow and white bit. To do this, you can slice the palette:  </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Slice the palette to use a portion of it.</span>
 
 <span class="kd">var</span> <span class="nx">palette_sliced</span> <span class="o">=</span> <span class="nx">palettes</span><span class="p">.</span><span class="nx">niccoli</span><span class="p">.</span><span class="nx">linearl</span><span class="p">[</span><span class="mf">7</span><span class="p">].</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">5</span><span class="p">);</span>

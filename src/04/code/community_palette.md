@@ -97,7 +97,7 @@ print('palette reversed', palette_reversed);
 
 ```
 
-Go ahead and compared the result from above with the original palette to check your understanding.  
+Compare the result from above with the original palette to check your understanding.  
 
 ```js
 // Original palette.
@@ -110,11 +110,11 @@ print('palette original', palette_original);
 
 ### 3. Slice the palette.
 
-Sometimes you will want to use a portion of the palette, but not the entire palette. For example, imagine that you would like to map concentrations of chlorophyll-a. You find a palette from the niccoli color scheme that transitions from dark violet to green to white.
+Sometimes you will want to use a portion of the palette, but not the entire palette. For example, imagine that you would like to map concentrations of chlorophyll-a. You find a palette from the niccoli color scheme that transitions from dark blue to green through a yellow-peach to white.
 
 ![nicolli.linearl](https://github.com/gee-community/ee-palettes/raw/master/pals/linearl.png)  
 
-For your map, you would like the palette to end at the green color and not extend into the yellow and white. To do this, you can slice the palette:  
+For your map, you would like the palette to end at the green color and not extend into the yellow and white bit. To do this, you can slice the palette:  
 
 ```js
 // Slice the palette to use a portion of it.
