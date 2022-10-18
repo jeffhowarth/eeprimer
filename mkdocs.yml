@@ -204,6 +204,9 @@ nav:
       - Inspect image collection: 04/code/inspect_ic.md
       - Filter by dates: 04/code/filter_by_dates.md
       - Reduce with local operations: 04/code/reduce_local_operation.md
+  - 5. Working with collections of scenes:
+    - CONCEPTS:
+      - Global LST: 05/concepts/global_lst.md
 
 
 #  - Contributing: contributing.md
