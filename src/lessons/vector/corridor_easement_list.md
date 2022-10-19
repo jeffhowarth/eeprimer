@@ -1,7 +1,3 @@
-![apply](../../images/apply.png)   
-
-#River corridor easement outreach  
-
 ##Introduction  
 
 The State of Vermont’s [Climate Action Plan](https://climatechange.vermont.gov/sites/climatecouncilsandbox/files/2021-12/Initial%20Climate%20Action%20Plan%20-%20Final%20-%2012-1-21.pdf){target=_blank} anticipates that the next century will bring broad shifts in local patterns of precipitation and temperature. Annual temperatures are projected to increase over 2°F by 2050 and between 4 to 9°F by 2100. The number of days with extreme heat (defined by a high temperature of at least 90°F) are projected to double in frequency to nine days a year by 2050 and then increase to between 15 and 45 days a year by the century’s end. Annual precipitation is projected to increase one to two inches by 2050 and between four and nine inches by 2100.  Much of this increased precipitation will be delivered in higher intensity storms, as extreme precipitation events (those with more than two inches of rain in a 24-hour period) are expected to increase.    

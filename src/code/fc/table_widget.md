@@ -2,7 +2,7 @@ So far, we have seen how to print attributes of features and feature collections
 
 In Earth Engine, you can show attributes of a feature collection as a table _widget_, also called a user-interface (ui) object. In the example below, we still just print the table to the Console, but eventually we will add the table to the map layout.    
 
-The snippet below assumes that you have worked through the [starter script](../apply/starter_script.md) so:    
+The snippet below assumes that you have worked through the [starter script](../../lessons/vector/corridor_easement_list.md#starter-script) for the River Corridor Easement Outreach problem and have the following:    
 
 1. You have a feature collection called large_owners (change this name to whatever you called your final result),  
 2. Each feature in this collection has a property called 'OWNER1',

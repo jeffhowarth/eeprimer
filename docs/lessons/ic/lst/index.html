@@ -13,14 +13,14 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/geometry/aggregate_array/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/lessons/ic/lst/">
       
       <link rel="icon" href="../../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Aggregate array - a primer for Earth Engine</title>
+        <title>5. Land surface temperature - a primer for Earth Engine</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aggregate array
+              5. Land surface temperature
             
           </span>
         </div>
@@ -290,12 +295,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Lesson plans
@@ -313,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/cart_roots/longest_haul/" class="md-nav__link">
+      <a href="../../cart_roots/longest_haul/" class="md-nav__link">
         1. Shortest route for the longest haul
       </a>
     </li>
@@ -325,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/vector/corridor_easement_list/" class="md-nav__link">
+      <a href="../../vector/corridor_easement_list/" class="md-nav__link">
         2. River corridor easement outreach
       </a>
     </li>
@@ -337,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/raster/protected_lands/" class="md-nav__link">
+      <a href="../../raster/protected_lands/" class="md-nav__link">
         3. Area-based goals at town scale
       </a>
     </li>
@@ -349,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/ic/global_oceans/" class="md-nav__link">
+      <a href="../global_oceans/" class="md-nav__link">
         4. Global oceans
       </a>
     </li>
@@ -359,11 +366,82 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../lessons/ic/global_lst/" class="md-nav__link">
-        5. Global LST
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5. Land surface temperature
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        5. Land surface temperature
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading" class="md-nav__link">
+    Reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-goal" class="md-nav__link">
+    Map goal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    Dropbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-methods" class="md-nav__link">
+    New methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starter-script" class="md-nav__link">
+    Starter script
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -424,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../map/getMapCenter/" class="md-nav__link">
+      <a href="../../../code/map/getMapCenter/" class="md-nav__link">
         Get map center
       </a>
     </li>
@@ -436,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../map/getZoom/" class="md-nav__link">
+      <a href="../../../code/map/getZoom/" class="md-nav__link">
         Get zoom
       </a>
     </li>
@@ -448,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../map/setCenterZoom/" class="md-nav__link">
+      <a href="../../../code/map/setCenterZoom/" class="md-nav__link">
         Set map center and zoom
       </a>
     </li>
@@ -460,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../map/setBasemap/" class="md-nav__link">
+      <a href="../../../code/map/setBasemap/" class="md-nav__link">
         Set base map
       </a>
     </li>
@@ -472,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../map/addLayer/" class="md-nav__link">
+      <a href="../../../code/map/addLayer/" class="md-nav__link">
         Add layer to map
       </a>
     </li>
@@ -484,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../map/centerObject/" class="md-nav__link">
+      <a href="../../../code/map/centerObject/" class="md-nav__link">
         Center map on object
       </a>
     </li>
@@ -523,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../constructPointGeometry/" class="md-nav__link">
+      <a href="../../../code/geometry/constructPointGeometry/" class="md-nav__link">
         Construct point geometry
       </a>
     </li>
@@ -535,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../constructFeature/" class="md-nav__link">
+      <a href="../../../code/geometry/constructFeature/" class="md-nav__link">
         Construct feature from geometry
       </a>
     </li>
@@ -547,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../constructLineGeometry/" class="md-nav__link">
+      <a href="../../../code/geometry/constructLineGeometry/" class="md-nav__link">
         Construct line geometry
       </a>
     </li>
@@ -559,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../calculateLength/" class="md-nav__link">
+      <a href="../../../code/geometry/calculateLength/" class="md-nav__link">
         Calculate line length
       </a>
     </li>
@@ -571,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convert_units/" class="md-nav__link">
+      <a href="../../../code/geometry/convert_units/" class="md-nav__link">
         Convert units
       </a>
     </li>
@@ -610,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/starter_coords/" class="md-nav__link">
+      <a href="../../../code/features/starter_coords/" class="md-nav__link">
         Vector objects
       </a>
     </li>
@@ -622,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/buffer/" class="md-nav__link">
+      <a href="../../../code/features/buffer/" class="md-nav__link">
         Buffer a feature
       </a>
     </li>
@@ -634,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/area/" class="md-nav__link">
+      <a href="../../../code/features/area/" class="md-nav__link">
         Compute area
       </a>
     </li>
@@ -646,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/union_right/" class="md-nav__link">
+      <a href="../../../code/features/union_right/" class="md-nav__link">
         Union two features
       </a>
     </li>
@@ -658,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../features/intersection/" class="md-nav__link">
+      <a href="../../../code/features/intersection/" class="md-nav__link">
         Intersection of two features
       </a>
     </li>
@@ -697,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/print_first/" class="md-nav__link">
+      <a href="../../../code/fc/print_first/" class="md-nav__link">
         Inspect first feature
       </a>
     </li>
@@ -709,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/aggregate_array/" class="md-nav__link">
+      <a href="../../../code/fc/aggregate_array/" class="md-nav__link">
         Inspect unique values of one property
       </a>
     </li>
@@ -721,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filter_eq/" class="md-nav__link">
+      <a href="../../../code/fc/filter_eq/" class="md-nav__link">
         Filter by nominal attribute
       </a>
     </li>
@@ -733,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filter_gt/" class="md-nav__link">
+      <a href="../../../code/fc/filter_gt/" class="md-nav__link">
         Filter by numeric attribute
       </a>
     </li>
@@ -745,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/map_buffer/" class="md-nav__link">
+      <a href="../../../code/fc/map_buffer/" class="md-nav__link">
         Buffer every feature in collection
       </a>
     </li>
@@ -757,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/map_area/" class="md-nav__link">
+      <a href="../../../code/fc/map_area/" class="md-nav__link">
         Compute area of every feature in collection
       </a>
     </li>
@@ -769,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filterBounds_geometry/" class="md-nav__link">
+      <a href="../../../code/fc/filterBounds_geometry/" class="md-nav__link">
         Filter for features that intersect geometry
       </a>
     </li>
@@ -781,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filterBounds/" class="md-nav__link">
+      <a href="../../../code/fc/filterBounds/" class="md-nav__link">
         Filter for features that interset feature collection
       </a>
     </li>
@@ -793,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/union/" class="md-nav__link">
+      <a href="../../../code/fc/union/" class="md-nav__link">
         Union features in collection
       </a>
     </li>
@@ -805,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/map_intersection/" class="md-nav__link">
+      <a href="../../../code/fc/map_intersection/" class="md-nav__link">
         Intersection between a feature and collection
       </a>
     </li>
@@ -817,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/table_widget/" class="md-nav__link">
+      <a href="../../../code/fc/table_widget/" class="md-nav__link">
         Display attributes of feature collection as a table
       </a>
     </li>
@@ -829,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/convert_to_image/" class="md-nav__link">
+      <a href="../../../code/fc/convert_to_image/" class="md-nav__link">
         Convert to image
       </a>
     </li>
@@ -868,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/construct_image/" class="md-nav__link">
+      <a href="../../../code/image/construct_image/" class="md-nav__link">
         Construct image from address
       </a>
     </li>
@@ -880,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/inspect_image/" class="md-nav__link">
+      <a href="../../../code/image/inspect_image/" class="md-nav__link">
         Inspect image
       </a>
     </li>
@@ -892,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/add_image_layer/" class="md-nav__link">
+      <a href="../../../code/image/add_image_layer/" class="md-nav__link">
         Add image as layer to map
       </a>
     </li>
@@ -904,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/convert_fc_to_binary/" class="md-nav__link">
+      <a href="../../../code/image/convert_fc_to_binary/" class="md-nav__link">
         Convert feature collection to binary image
       </a>
     </li>
@@ -916,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/threshold_image/" class="md-nav__link">
+      <a href="../../../code/image/threshold_image/" class="md-nav__link">
         Threshold an image
       </a>
     </li>
@@ -928,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/map_algebra/" class="md-nav__link">
+      <a href="../../../code/image/map_algebra/" class="md-nav__link">
         Map algebra
       </a>
     </li>
@@ -940,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/reclassify_image/" class="md-nav__link">
+      <a href="../../../code/image/reclassify_image/" class="md-nav__link">
         Generalize (reclassify) image
       </a>
     </li>
@@ -952,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/apply_mask/" class="md-nav__link">
+      <a href="../../../code/image/apply_mask/" class="md-nav__link">
         Apply mask to image
       </a>
     </li>
@@ -964,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/compute_area/" class="md-nav__link">
+      <a href="../../../code/image/compute_area/" class="md-nav__link">
         Compute area of a zone
       </a>
     </li>
@@ -976,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/reduce_by_regions/" class="md-nav__link">
+      <a href="../../../code/image/reduce_by_regions/" class="md-nav__link">
         Reduce by regions
       </a>
     </li>
@@ -988,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/chart_area_percent/" class="md-nav__link">
+      <a href="../../../code/image/chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
       </a>
     </li>
@@ -1027,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ic/load_ic/" class="md-nav__link">
+      <a href="../../../code/ic/load_ic/" class="md-nav__link">
         Load image collection
       </a>
     </li>
@@ -1039,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ic/select_bands/" class="md-nav__link">
+      <a href="../../../code/ic/select_bands/" class="md-nav__link">
         Select bands
       </a>
     </li>
@@ -1051,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ic/inspect_ic/" class="md-nav__link">
+      <a href="../../../code/ic/inspect_ic/" class="md-nav__link">
         Inspect image collection
       </a>
     </li>
@@ -1063,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ic/filter_by_dates/" class="md-nav__link">
+      <a href="../../../code/ic/filter_by_dates/" class="md-nav__link">
         Filter by dates
       </a>
     </li>
@@ -1075,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ic/filter_by_image_property/" class="md-nav__link">
+      <a href="../../../code/ic/filter_by_image_property/" class="md-nav__link">
         Filter by image property
       </a>
     </li>
@@ -1087,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ic/reduce_local_operation/" class="md-nav__link">
+      <a href="../../../code/ic/reduce_local_operation/" class="md-nav__link">
         Reduce with local operations
       </a>
     </li>
@@ -1126,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cart/community_palette/" class="md-nav__link">
+      <a href="../../../code/cart/community_palette/" class="md-nav__link">
         Community palette module
       </a>
     </li>
@@ -1138,8 +1216,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cart/palettes_mb/" class="md-nav__link">
+      <a href="../../../code/cart/palettes_mb/" class="md-nav__link">
         Palettes for multiband images
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../code/cart/gradient_legend/" class="md-nav__link">
+        Gradient legend
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../code/cart/qualitative_legend/" class="md-nav__link">
+        Qualitative legend
       </a>
     </li>
   
@@ -1308,29 +1410,379 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading" class="md-nav__link">
+    Reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-goal" class="md-nav__link">
+    Map goal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropbox" class="md-nav__link">
+    Dropbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-methods" class="md-nav__link">
+    New methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starter-script" class="md-nav__link">
+    Starter script
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Aggregate array</h1>
+                  <h1>5. Land surface temperature</h1>
                 
-                <div class="highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------------</span>
-<span class="c1">// Inspect all the unique values for one property of features in the collection.</span>
-<span class="c1">// ----------------------------------------------------------------------------</span>
+                <h2 id="introduction">Introduction</h2>
+<p>This week we will estimate land surface temperature from Landsat imagery and then compare how parts of a region differ from the whole region.  </p>
+<p>Our key technical questions this week include:  </p>
+<ul>
+<li>What are <em>scenes</em>?  </li>
+<li>What are common <em>sources</em> for image scenes and how do they differ?</li>
+<li>How does a <em>mosaic</em> differ from a <em>composite</em>?</li>
+</ul>
+<p><a href="../../../concepts/scenes/" target="_blank"><em>Link to background materials</em></a>  </p>
+<p>Our thematic questions include:  </p>
+<ul>
+<li>What is <em>land surface temperature</em> (LST)?  </li>
+<li>What is a <em>spatial anomaly</em> and how does this differ from the anomalies that we derived last week?  </li>
+<li>How are spatial anomalies related to the principle of <em>distributive justice</em>?  </li>
+</ul>
+<p><a href="../../../concepts/LST/" target="_blank"><em>Link to background materials</em></a>  </p>
+<h2 id="reading">Reading</h2>
+<p>In prep for this week&rsquo;s problem, please read <a href="https://www.nytimes.com/interactive/2020/08/24/climate/racism-redlining-cities-global-warming.html?searchResultPosition=1" target="_blank">this article</a> from <em>The New York Times</em>.</p>
+<h2 id="map-goal">Map goal</h2>
+<p><iframe
+  src="https://jhowarth.users.earthengine.app/view/eeprimer-holc-2022"
+  style="width:100%; height:800px;"
+></iframe>
+</p>
+<p><em>Here is <a href="https://jhowarth.users.earthengine.app/view/eeprimer-holc-2022" target="_blank">a link</a> to the app that will open in a separate window.</em>  </p>
+<h2 id="dropbox">Dropbox</h2>
+<p>By the end of lab, please submit a link to your solution in this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQ0R_Dnn2oNoIhs7KAk6asWzVu7VZUCNc5PWYyboPsWD5NNA/viewform?usp=sf_link" target="_blank">DROPBOX</a>. If you have worked through the end of lab and have not completed the solution, please try to complete the work and submit a link that updates your solution to the same dropbox before the start of lecture tomorrow.  </p>
+<h2 id="new-methods">New methods</h2>
+<p>The starter script below draws on many methods that you have learned previously. Here is a list of the new methods that you will need for this problem:  </p>
+<ul>
+<li><a href="../../../code/ic/filter_by_image_property/" target="_blank">Filter image collection by image property</a>  </li>
+<li><a href="../../../code/image/reduce_by_regions/" target="_blank">Reduce image by regions</a>    </li>
+<li><a href="../../../code/fc/convert_to_image/" target="_blank">Convert feature collection to image</a>  </li>
+<li><a href="../../../code/cart/gradient_legend/" target="_blank">Construct a gradient legend</a>  </li>
+<li><a href="../../../code/cart/qualitative_legend/" target="_blank">Construct a qualitative legend</a>    </li>
+</ul>
+<h2 id="starter-script">Starter script</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="c1">//  Problem:      LST and HOLC in US Cities</span>
+<span class="c1">//  Date:         10/19/2022</span>
+<span class="c1">//  Author:       Your name here please</span>
+<span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-<span class="c1">// 1. Get list.  </span>
+<span class="c1">// -------------------------------------------------------------------</span>
+<span class="c1">// 1. LOAD HOLC ZONES FOR A STUDY REGION</span>
+<span class="c1">// -------------------------------------------------------------------</span>
 
-<span class="kd">var</span> <span class="nx">value_list</span> <span class="o">=</span> <span class="nx">point_collection</span>
-  <span class="p">.</span><span class="nx">aggregate_array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">distinct</span><span class="p">()</span>
-  <span class="p">.</span><span class="nx">sort</span><span class="p">()</span>
+<span class="c1">// Import feature collection of HOLC maps from &#39;projects/ee-primer/assets/holc_numeric_grades&#39;</span>
+
+<span class="kd">var</span> <span class="nx">holc</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s1">&#39;projects/ee-primer/assets/holc_numeric_grades&#39;</span><span class="p">);</span>
+
+<span class="c1">// Inspect feature collection.</span>
+<span class="c1">//  Print first feature in collection.</span>
+<span class="c1">//  And print list of US cities in &#39;city&#39; property of the feature collection.</span>
+<span class="c1">//    This list should show every distinct city name sorted alphabetically.</span>
+<span class="c1">//    Your result should contain 196 elements (city names).</span>
+
+
+
+<span class="c1">// Filter feature collection for a study region.</span>
+<span class="c1">// To start, please filter for features where &#39;city&#39; property is &#39;Baltimore&#39;.</span>
+
+
+
+<span class="c1">// -------------------------------------------------------------------</span>
+<span class="c1">// 2. Load Landsat image collection.</span>
+<span class="c1">// -------------------------------------------------------------------</span>
+
+<span class="c1">// Import module for LST computation from &#39;users/sofiaermida/landsat_smw_lst:modules/Landsat_LST.js&#39;</span>
+
+<span class="kd">var</span> <span class="nx">LandsatLST</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/sofiaermida/landsat_smw_lst:modules/Landsat_LST.js&#39;</span><span class="p">);</span>
+
+<span class="c1">// Apply module to produce image collection.</span>
+<span class="c1">// Use the &#39;L8&#39; collection.</span>
+<span class="c1">// Start: 2020-07-01&#39;. End: &#39;2022-09-01&#39;</span>
+
+<span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">LandsatLST</span>
+  <span class="p">.</span><span class="nx">collection</span>
+    <span class="p">(</span>
+      <span class="s1">&#39;L8&#39;</span><span class="p">,</span>                               <span class="c1">// landsat collection</span>
+      <span class="s1">&#39;2020-07-01&#39;</span><span class="p">,</span>                       <span class="c1">// start date</span>
+      <span class="s1">&#39;2022-09-01&#39;</span><span class="p">,</span>                       <span class="c1">// end date</span>
+      <span class="nx">fc</span>                                  <span class="c1">// name of study region to filter images  </span>
+    <span class="p">)</span>
 <span class="p">;</span>
 
-<span class="c1">// 2. Print list.  </span>
+<span class="c1">// Print first image in collection and size of collection.</span>
+<span class="c1">// If you used Baltimore as study city,</span>
+<span class="c1">// the collection should contain 42 images.</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;list of values&#39;</span><span class="p">,</span> <span class="nx">value_list</span><span class="p">);</span>
+
+
+<span class="c1">// -------------------------------------------------------------------</span>
+<span class="c1">// 3. Filter Landsat image collection.</span>
+<span class="c1">// -------------------------------------------------------------------</span>
+
+<span class="c1">// Filter the collection from last step (output of LandsatLST)</span>
+<span class="c1">// for images collected in summer months (July and August)</span>
+<span class="c1">// with cloud cover less that 10 percent.</span>
+<span class="c1">// Also select only the &#39;LST&#39; band from the images.</span>
+
+
+
+<span class="c1">// Print first image and size of collection.</span>
+<span class="c1">// If you used Baltimore as study city,</span>
+<span class="c1">// the collection should now contain 4 images.</span>
+
+
+
+<span class="c1">// --------------------------------------------------------------------------------</span>
+<span class="c1">// 4. Reduce image collection to image.</span>
+<span class="c1">// --------------------------------------------------------------------------------</span>
+
+<span class="c1">// Write a function that does two things:</span>
+<span class="c1">//  (1) reduce summer month collection to mean image (grr!)</span>
+<span class="c1">//  (2) convert units of reduced image from Kelvin to Fahrenheit.</span>
+<span class="c1">//</span>
+<span class="c1">// K to F conversion involves three steps:</span>
+<span class="c1">//  (1) Subtract 273.15 from Kelvin temperature</span>
+<span class="c1">//  (2) Multiply by 1.8</span>
+<span class="c1">//  (3) Add 32</span>
+
+
+
+<span class="c1">// Apply function to summer month image collection.</span>
+
+
+
+<span class="c1">// Print your result.</span>
+<span class="c1">// The output should now be an Image rather than an Image collection.</span>
+
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">// 5. Reduce image by regions.</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// First you want to find the mean temp in each part of your study city.</span>
+<span class="c1">// To do this, reduce mean summer temperature values within each study city HOLC feature.</span>
+<span class="c1">//  where HOLC features are cookie cutters,</span>
+<span class="c1">//  and mean summer month LST is dough.</span>
+<span class="c1">//</span>
+<span class="c1">// Set the scale so that it is the same as the &#39;dough&#39;.</span>
+
+
+
+<span class="c1">// Inspect the result.</span>
+<span class="c1">// This should be a feature collection.</span>
+<span class="c1">// For Baltimore, you should have 59 features in collection.</span>
+<span class="c1">// Each feature will have a new property called &#39;mean&#39; that holds mean temp of feature.</span>
+
+
+
+<span class="c1">// Now you want to represent the &#39;whole&#39; study region as a single feature.</span>
+<span class="c1">// To do this, union all HOLC features in study city.</span>
+
+
+
+<span class="c1">// Inspect result. You should have a Feature Collection with 1 Feature in it.</span>
+
+
+
+<span class="c1">// Now you can find the mean temp in your whole study region.</span>
+<span class="c1">// Reduce mean summer month land surface temperature within union of holc features</span>
+<span class="c1">//</span>
+
+
+
+<span class="c1">// Inspect result. This should be a feature collection with one feature.</span>
+<span class="c1">// Again, the feature should have a property &#39;mean&#39;</span>
+<span class="c1">// that holds the mean LST in the whole study region.</span>
+
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">// 6. Convert vector to raster.</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// Create a function to convert feature collection to image.</span>
+
+
+
+<span class="c1">// Apply function to convert mean summer temperature in each HOLC feature into an image.</span>
+
+
+
+<span class="c1">// Inspect result. Output should now be an Image.</span>
+
+
+
+<span class="c1">// Apply function to convert mean summer temperature for the union of HOLC features into an image.</span>
+
+
+
+<span class="c1">// Inspect result. Again, output should now be an Image.</span>
+
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">// 7. Compute spatial anomalies as percent difference.</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// Use map algebra to estimate the &#39;percent difference&#39; between parts and whole:</span>
+<span class="c1">//  percent_diff =  (mean_part - mean_whole) / mean_whole * 100</span>
+
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">// 8. Compose map.</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// Load modules.</span>
+
+<span class="kd">var</span> <span class="nx">customBase</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/darkBase.js&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">palettes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/gena/packages:palettes&#39;</span><span class="p">);</span>
+
+<span class="c1">// Set base map to &#39;darkBase&#39;.</span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;darkBase&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;darkBase&#39;</span><span class="o">:</span> <span class="nx">customBase</span><span class="p">.</span><span class="nx">darkBase</span><span class="p">});</span>
+
+<span class="c1">// Center map on study city HOLC collection at zoom level 11.</span>
+
+
+
+<span class="c1">// Configure visualization parameters for percent different image.</span>
+<span class="c1">//  Show values from -7 to 7</span>
+<span class="c1">//  and use crameri.vik[25] from ee-palettes.</span>
+
+
+
+<span class="c1">// Add percent difference image as layer to map.</span>
+<span class="c1">//  Label layer &#39;Percent difference from average&#39;.</span>
+<span class="c1">//  Make layer display 0.5 opacity by default.</span>
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">// 9. Construct HOLC zone reference map and masked layers.</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// Convert HOLC study city feature collection into an image.</span>
+<span class="c1">// Use the &#39;grade&#39; property to paint image values.</span>
+
+
+
+<span class="c1">// Inspect the result from above.</span>
+
+
+
+
+<span class="c1">// Add layer of percent differences that only shows the redlined zones.</span>
+<span class="c1">// Label this layer &#39;Redlined neighborhoods&#39;.</span>
+
+
+
+<span class="c1">// Add layer of percent differences that only shows the non-redlined zones.</span>
+<span class="c1">// Label this layer &#39;Not redlined neighborhoods&#39;.</span>
+
+
+<span class="c1">// Define vis parameters for HOLC zones.</span>
+<span class="c1">// Here is a palette based on the original HOLC color scheme:</span>
+<span class="c1">// [&#39;#74a161&#39;,&#39;#7caeb6&#39;,&#39;#d5c958&#39;,&#39;#d97867&#39;]</span>
+
+
+
+<span class="c1">// Add HOLC reference layer to map with vis parameters defined in last step.</span>
+
+
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">// 10. Add map keys (legends) for map layers.</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// Load cart module.</span>
+
+<span class="kd">var</span> <span class="nx">cart</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/cart.js&#39;</span><span class="p">);</span>
+
+<span class="c1">// Construct gradient legend for percent difference of LST layer.</span>
+
+
+
+<span class="c1">// Add legend to map.</span>
+
+
+
+<span class="c1">// Make labels for HOLC grades.</span>
+
+<span class="kd">var</span> <span class="nx">holc_grades</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;A: Best&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;B: Still desirable&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;C: Definitely declining&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;D: Hazardous&#39;</span>
+  <span class="p">]</span>
+<span class="p">;</span>
+
+<span class="c1">// Construct qualitative legend for HOLC reference map.</span>
+
+
+
+<span class="c1">// Add legend to map.</span>
 </code></pre></div>
                 
               
@@ -1347,6 +1799,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../global_oceans/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. Global oceans" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              4. Global oceans
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../code/map/getMapCenter/" class="md-footer__link md-footer__link--next" aria-label="Next: Get map center" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Get map center
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

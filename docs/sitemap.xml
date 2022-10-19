@@ -126,27 +126,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/aggregate_array/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/area/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/buffer/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/calculateLength/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/centerObject/</loc>
          <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -167,71 +147,6 @@
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/convert_units/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/filterBounds/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/filterBounds_geometry/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/filter_eq/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/filter_gt/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/intersection/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/map_area/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/map_buffer/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/map_intersection/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/print_first/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/starter_coords/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/table_widget/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/union/</loc>
-         <lastmod>2022-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/code/geometry/union_right/</loc>
          <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -381,12 +296,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/lessons/ic/global_lst/</loc>
+         <loc>https://github.com/jeffhowarth/eePrimer/lessons/ic/global_oceans/</loc>
          <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/lessons/ic/global_oceans/</loc>
+         <loc>https://github.com/jeffhowarth/eePrimer/lessons/ic/lst/</loc>
          <lastmod>2022-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

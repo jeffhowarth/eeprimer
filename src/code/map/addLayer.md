@@ -1,7 +1,7 @@
 
 If you have one or more point, line, or polygon objects stored as a variable, you can display the variable on the Map UI as a _layer_. The layer metaphor goes back to the days when people would place a mylar sheet on top of a reference map and then draw shapes on the mylar. Thus the reference map was the _base layer_ and each mylar sheet put on top of it was a _thematic layer_. Even though we don't use mylar anymore, the map layer metaphor is helpful as a conceptual device.   
 
-In the example below, I assume you have [a point object](constructPointGeometry.md) named 'point'.  
+In the example below, I assume you have [a point object](../../code/geometry/constructPointGeometry.md) named 'point'.  
 
 ```js
 Map.addLayer(

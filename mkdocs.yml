@@ -136,7 +136,7 @@ nav:
     - 2. River corridor easement outreach: lessons/vector/corridor_easement_list.md
     - 3. Area-based goals at town scale: lessons/raster/protected_lands.md
     - 4. Global oceans: lessons/ic/global_oceans.md
-    - 5. Global LST: lessons/ic/global_lst.md
+    - 5. Land surface temperature: lessons/ic/lst.md
   - Code catalog:
     - Map methods:
       - Get map center: code/map/getMapCenter.md
@@ -169,7 +169,7 @@ nav:
       - Union features in collection: code/fc/union.md
       - Intersection between a feature and collection: code/fc/map_intersection.md
       - Display attributes of feature collection as a table: code/fc/table_widget.md
-      - Convert to image: code/fc/convert_to_image.md  
+      - Convert to image: code/fc/convert_to_image.md
     - Image methods:
       - Construct image from address: code/image/construct_image.md
       - Inspect image: code/image/inspect_image.md
@@ -192,6 +192,8 @@ nav:
     - Cartography:
       - Community palette module: code/cart/community_palette.md
       - Palettes for multiband images: code/cart/palettes_mb.md
+      - Gradient legend: code/cart/gradient_legend.md
+      - Qualitative legend: code/cart/qualitative_legend.md
   - Concepts:
     - Technical:
       - Cartographic roots: concepts/cart_roots.md
