@@ -95,7 +95,7 @@ markdown_extensions:
   - markdown.extensions.meta
   - markdown.extensions.toc:
       permalink: false
-      toc_depth: 0
+      toc_depth: 2
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -131,82 +131,78 @@ nav:
       - Account: 00/code/account.md
       - Code Editor: 00/code/code_editor.md
       - Javascript 101: 00/code/javaScript101.md
-  - 1. Cartographic Roots:
-    - CONCEPTS:
-      - Geographic framework: 01/concepts/geographic_framework.md
-      - Vector model: 01/concepts/vectorModel.md
-      - Transformations: 01/concepts/transformations.md
-      - Cartographic modeling: 01/concepts/modeling.md
-    - CODE:
-      - Get map center: 01/code/getMapCenter.md
-      - Get zoom: 01/code/getZoom.md
-      - Set map center and zoom: 01/code/setCenterZoom.md
-      - Set base map: 01/code/setBasemap.md
-      - Construct point geometry: 01/code/constructPointGeometry.md
-      - Add layer to map: 01/code/addLayer.md
-      - Center map on object: 01/code/centerObject.md
-      - Construct a feature: 01/code/constructFeature.md
-      - Construct line geometry: 01/code/constructLineGeometry.md
-      - Calculate line length: 01/code/calculateLength.md
-      - Convert units: 01/code/convert_units.md
-    - APPLY:
-      - Shortest route for the longest haul: 01/apply/longest_haul.md
-      - Discussion: 01/apply/discussion.md
-  - 2. Working with Features:
-    - APPLY:
-      - River corridor easement outreach: 02/apply/corridor_easement_list.md
-      - Starter script: 02/apply/starter_script.md
-    - CODE:
-      - Vector objects: 02/code/starter_coords.md
-      - Center map on object: 02/code/centerObject.md
-      - Inspect first feature: 02/code/print_first.md
-      - Inspect unique values of one property: 02/code/aggregate_array.md
-      - Filter by nominal attribute: 02/code/filter_eq.md
-      - Filter by numeric attribute: 02/code/filter_gt.md
-      - Buffer a feature: 02/code/buffer.md
-      - Compute area: 02/code/area.md
-      - Buffer every feature in collection: 02/code/map_buffer.md
-      - Compute area of every feature in collection: 02/code/map_area.md
-      - Filter for features that intersect geometry: 02/code/filterBounds_geometry.md
-      - Filter for features that interset feature collection: 02/code/filterBounds.md
-      - Union two features: 02/code/union_right.md
-      - Union features in collection: 02/code/union.md
-      - Intersection of two features: 02/code/intersection.md
-      - Intersection between a feature and collection: 02/code/map_intersection.md
-      - Display attributes of feature collection as a table: 02/code/table_widget.md
-  - 3. Working with Rasters:
-    - APPLY:
-      - Area-based goals at the town scale: 03/apply/protected_lands.md
-      - Starter script: 03/apply/starter_script.md
-    - CODE:
-      - Construct image from address: 03/code/construct_image.md
-      - Inspect image: 03/code/inspect_image.md
-      - Add image as layer to map: 03/code/add_image_layer.md
-      - Convert feature collection to binary image: 03/code/convert_fc_to_binary.md
-      - Threshold an image: 03/code/threshold_image.md
-      - Map algebra: 03/code/map_algebra.md
-      - Generalize (reclassify) image: 03/code/reclassify_image.md
-      - Apply mask to image: 03/code/apply_mask.md
-      - Compute area of a zone: 03/code/compute_area.md
-      - Chart area of regions as percent of a zone: 03/code/chart_area_percent.md
-    - CONCEPTS:
-      - Review questions: 03/concepts/review_questions.md
-  - 4. Working with Image Collections:
-    - APPLY:
-      - Global oceans: 04/apply/global_oceans.md
-      - Starter script: 04/apply/starter_script.md
-      - Starter script (2): 04/apply/starter_script_02.md
-    - CODE:
-      - Community palette module: 04/code/community_palette.md
-      - Palettes for multiband images: 04/code/palettes_mb.md
-      - Load image collection: 04/code/load_ic.md
-      - Select bands: 04/code/select_bands.md
-      - Inspect image collection: 04/code/inspect_ic.md
-      - Filter by dates: 04/code/filter_by_dates.md
-      - Reduce with local operations: 04/code/reduce_local_operation.md
-  - 5. Working with collections of scenes:
-    - CONCEPTS:
-      - Global LST: 05/concepts/global_lst.md
+  - Lesson plans:
+    - 1. Shortest route for the longest haul: lessons/cart_roots/longest_haul.md
+    - 2. River corridor easement outreach: lessons/vector/corridor_easement_list.md
+    - 3. Area-based goals at town scale: lessons/raster/protected_lands.md
+    - 4. Global oceans: lessons/ic/global_oceans.md
+    - 5. Global LST: lessons/ic/global_lst.md
+  - Code catalog:
+    - Map methods:
+      - Get map center: code/map/getMapCenter.md
+      - Get zoom: code/map/getZoom.md
+      - Set map center and zoom: code/map/setCenterZoom.md
+      - Set base map: code/map/setBasemap.md
+      - Add layer to map: code/map/addLayer.md
+      - Center map on object: code/map/centerObject.md
+    - Geometry methods:
+      - Construct point geometry: code/geometry/constructPointGeometry.md
+      - Construct feature from geometry: code/geometry/constructFeature.md
+      - Construct line geometry: code/geometry/constructLineGeometry.md
+      - Calculate line length: code/geometry/calculateLength.md
+      - Convert units: code/geometry/convert_units.md
+    - Feature methods:
+      - Vector objects: code/features/starter_coords.md
+      - Buffer a feature: code/features/buffer.md
+      - Compute area: code/features/area.md
+      - Union two features: code/features/union_right.md
+      - Intersection of two features: code/features/intersection.md
+    - Feature collections:
+      - Inspect first feature: code/fc/print_first.md
+      - Inspect unique values of one property: code/fc/aggregate_array.md
+      - Filter by nominal attribute: code/fc/filter_eq.md
+      - Filter by numeric attribute: code/fc/filter_gt.md
+      - Buffer every feature in collection: code/fc/map_buffer.md
+      - Compute area of every feature in collection: code/fc/map_area.md
+      - Filter for features that intersect geometry: code/fc/filterBounds_geometry.md
+      - Filter for features that interset feature collection: code/fc/filterBounds.md
+      - Union features in collection: code/fc/union.md
+      - Intersection between a feature and collection: code/fc/map_intersection.md
+      - Display attributes of feature collection as a table: code/fc/table_widget.md
+      - Convert to image: code/fc/convert_to_image.md  
+    - Image methods:
+      - Construct image from address: code/image/construct_image.md
+      - Inspect image: code/image/inspect_image.md
+      - Add image as layer to map: code/image/add_image_layer.md
+      - Convert feature collection to binary image: code/image/convert_fc_to_binary.md
+      - Threshold an image: code/image/threshold_image.md
+      - Map algebra: code/image/map_algebra.md
+      - Generalize (reclassify) image: code/image/reclassify_image.md
+      - Apply mask to image: code/image/apply_mask.md
+      - Compute area of a zone: code/image/compute_area.md
+      - Reduce by regions: code/image/reduce_by_regions.md
+      - Chart area of regions as percent of a zone: code/image/chart_area_percent.md
+    - Image collection:
+      - Load image collection: code/ic/load_ic.md
+      - Select bands: code/ic/select_bands.md
+      - Inspect image collection: code/ic/inspect_ic.md
+      - Filter by dates: code/ic/filter_by_dates.md
+      - Filter by image property: code/ic/filter_by_image_property.md
+      - Reduce with local operations: code/ic/reduce_local_operation.md
+    - Cartography:
+      - Community palette module: code/cart/community_palette.md
+      - Palettes for multiband images: code/cart/palettes_mb.md
+  - Concepts:
+    - Technical:
+      - Cartographic roots: concepts/cart_roots.md
+      - Feature model: concepts/features.md
+      - Raster model: concepts/raster.md
+      - Image scenes: concepts/scenes.md
+    - Thematic:
+      - Land Surface Temperature: concepts/LST.md
+
+
+
 
 
 #  - Contributing: contributing.md

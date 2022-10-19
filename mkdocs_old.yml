@@ -1,0 +1,218 @@
+# Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: a primer for Earth Engine
+site_url: https://github.com/jeffhowarth/eePrimer
+site_author: Jeff Howarth
+site_description: >-
+  A primer for Earth Engine, Fall 2022
+
+# Repository
+repo_name: jeffhowarth/eeprimer
+repo_url: https://github.com/jeffhowarth/eeprimer
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2022 Jeff Howarth
+
+# Configuration
+theme:
+  logo: images/GG0150-icon.png
+  favicon: images/GG0150-icon.png
+  name: material
+  # custom_dir: mkdocs-material/material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+
+  features:
+    # - tabs
+    - instant
+
+  palette:
+    scheme: white
+    primary: white
+    accent: orange
+  font:
+    text: Libre Baskerville
+    # text: Didact Gothic
+    code: Roboto Mono
+
+# Plugins
+plugins:
+  - search
+  - minify
+
+# src and site directories
+docs_dir: 'src'
+site_dir: 'docs'
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jeffhowarth
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/jeffgeographer
+  extra_css:
+    - stylesheets/extra.css
+
+# Extensions
+markdown_extensions:
+  - smarty
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: false
+      toc_depth: 0
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - attr_list
+
+# Page tree
+nav:
+  - Introduction: index.md
+  - Getting started with GEE:
+      - Account: 00/code/account.md
+      - Code Editor: 00/code/code_editor.md
+      - Javascript 101: 00/code/javaScript101.md
+  - 1. Cartographic Roots:
+    - CONCEPTS:
+      - Geographic framework: 01/concepts/geographic_framework.md
+      - Vector model: 01/concepts/vectorModel.md
+      - Transformations: 01/concepts/transformations.md
+      - Cartographic modeling: 01/concepts/modeling.md
+    - CODE:
+      - Get map center: 01/code/getMapCenter.md
+      - Get zoom: 01/code/getZoom.md
+      - Set map center and zoom: 01/code/setCenterZoom.md
+      - Set base map: 01/code/setBasemap.md
+      - Construct point geometry: 01/code/constructPointGeometry.md
+      - Add layer to map: 01/code/addLayer.md
+      - Center map on object: 01/code/centerObject.md
+      - Construct a feature: 01/code/constructFeature.md
+      - Construct line geometry: 01/code/constructLineGeometry.md
+      - Calculate line length: 01/code/calculateLength.md
+      - Convert units: 01/code/convert_units.md
+    - APPLY:
+      - Shortest route for the longest haul: 01/apply/longest_haul.md
+      - Discussion: 01/apply/discussion.md
+  - 2. Working with Features:
+    - APPLY:
+      - River corridor easement outreach: 02/apply/corridor_easement_list.md
+      - Starter script: 02/apply/starter_script.md
+    - CODE:
+      - Vector objects: 02/code/starter_coords.md
+      - Center map on object: 02/code/centerObject.md
+      - Inspect first feature: 02/code/print_first.md
+      - Inspect unique values of one property: 02/code/aggregate_array.md
+      - Filter by nominal attribute: 02/code/filter_eq.md
+      - Filter by numeric attribute: 02/code/filter_gt.md
+      - Buffer a feature: 02/code/buffer.md
+      - Compute area: 02/code/area.md
+      - Buffer every feature in collection: 02/code/map_buffer.md
+      - Compute area of every feature in collection: 02/code/map_area.md
+      - Filter for features that intersect geometry: 02/code/filterBounds_geometry.md
+      - Filter for features that interset feature collection: 02/code/filterBounds.md
+      - Union two features: 02/code/union_right.md
+      - Union features in collection: 02/code/union.md
+      - Intersection of two features: 02/code/intersection.md
+      - Intersection between a feature and collection: 02/code/map_intersection.md
+      - Display attributes of feature collection as a table: 02/code/table_widget.md
+  - 3. Working with Rasters:
+    - APPLY:
+      - Area-based goals at the town scale: 03/apply/protected_lands.md
+      - Starter script: 03/apply/starter_script.md
+    - CODE:
+      - Construct image from address: 03/code/construct_image.md
+      - Inspect image: 03/code/inspect_image.md
+      - Add image as layer to map: 03/code/add_image_layer.md
+      - Convert feature collection to binary image: 03/code/convert_fc_to_binary.md
+      - Threshold an image: 03/code/threshold_image.md
+      - Map algebra: 03/code/map_algebra.md
+      - Generalize (reclassify) image: 03/code/reclassify_image.md
+      - Apply mask to image: 03/code/apply_mask.md
+      - Compute area of a zone: 03/code/compute_area.md
+      - Chart area of regions as percent of a zone: 03/code/chart_area_percent.md
+    - CONCEPTS:
+      - Review questions: 03/concepts/review_questions.md
+  - 4. Working with Image Collections:
+    - APPLY:
+      - Global oceans: 04/apply/global_oceans.md
+      - Starter script: 04/apply/starter_script.md
+      - Starter script (2): 04/apply/starter_script_02.md
+    - CODE:
+      - Community palette module: 04/code/community_palette.md
+      - Palettes for multiband images: 04/code/palettes_mb.md
+      - Load image collection: 04/code/load_ic.md
+      - Select bands: 04/code/select_bands.md
+      - Inspect image collection: 04/code/inspect_ic.md
+      - Filter by dates: 04/code/filter_by_dates.md
+      - Reduce with local operations: 04/code/reduce_local_operation.md
+  - 5. Working with collections of scenes:
+    - CONCEPTS:
+      - Global LST: 05/concepts/global_lst.md
+
+
+#  - Contributing: contributing.md
+#  - License: license.md
+
+# Google Analytics
+google_analytics:
+  - G-G4GWH4RPQ1
+  - auto
