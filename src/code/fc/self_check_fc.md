@@ -48,12 +48,12 @@ When the property contains _numerical values_, you can quickly print a summary s
 ;
 ```
 
-##Add collection as layer to map for quick peak  
+##Add collection as layer to map   
 
 To quickly add a feature collection as a map layer, you can define the viz parameters as an empty object and still label the layer and define the _shown_ parameter as false (or 0).  
 
 ```js
-// Add feature collection to map as a layer for a quick peak.
+// Add feature collection to map as a layer for a quick check.
 
 Map.addLayer(fc, {}, 'fc quick check', 0);
 

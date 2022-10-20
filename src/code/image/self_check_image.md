@@ -45,7 +45,7 @@ Please note that this computation can be intensive and slow down your script, so
 You can quickly add the image as a grayscale layer to the map. A grayscale will display the data values on a gradient from black to white with black for the lowest value and white for the greatest value. To do this quickly, you can run the code below.    
 
 ```js
-// Add image as a grayscale layer to map for a quick peak.  
+// Add image as a grayscale layer to map for a quick peek.  
 
 Map.addLayer(image_output, {min: __, max: __}, 'Image output check', 0);
 
