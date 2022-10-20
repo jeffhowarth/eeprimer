@@ -143,6 +143,7 @@ var collection = LandsatLST
 
 // Print your result.
 // The output should now be an Image rather than an Image collection.
+// If you check for min and max values, your min should be 68.2 and your max 118.8.
 
 
 
@@ -163,6 +164,7 @@ var collection = LandsatLST
 // This should be a feature collection.
 // For Baltimore, you should have 59 features in collection.
 // Each feature will have a new property called 'mean' that holds mean temp of feature.
+// The min value should be 92.4 and the max should be 110.7.   
 
 
 
@@ -177,13 +179,14 @@ var collection = LandsatLST
 
 // Now you can find the mean temp in your whole study region.
 // Reduce mean summer month land surface temperature within union of holc features
-//
+
 
 
 
 // Inspect result. This should be a feature collection with one feature.
 // Again, the feature should have a property 'mean'
 // that holds the mean LST in the whole study region.
+// The min and max should be 102.1.
 
 
 
@@ -200,6 +203,7 @@ var collection = LandsatLST
 
 
 // Inspect result. Output should now be an Image.
+// The min should be 110.7 and the max should be 92.4.
 
 
 
@@ -208,6 +212,7 @@ var collection = LandsatLST
 
 
 // Inspect result. Again, output should now be an Image.
+// The min and max should both be 102.1.
 
 
 
@@ -219,6 +224,7 @@ var collection = LandsatLST
 //  percent_diff =  (mean_part - mean_whole) / mean_whole * 100
 
 
+// If you check, the min should be -9.5 and the max 8.5.
 
 // --------------------------------------------------------------------
 // 8. Compose map.
@@ -326,7 +332,7 @@ var holc_grades = [
 
 This topic was also covered by [National Public Radio](https://www.npr.org/2020/01/14/795961381/racist-housing-practices-from-the-1930s-linked-to-hotter-neighborhoods-today){target=_blank} soon after publication of this [academic research article](https://www.mdpi.com/2225-1154/8/1/12/htm){target=_blank}.   
 
-In fall 2020, Zach Levitt '20.5 developed the earth engine app shown below as an independent study with me in Geography. The study compared graphical presentations of data in news and academic outlets, reproduced the presentations in one or more source, and piloted designs to support novice readers. Zach is currently a [graphics editor](https://www.nytimes.com/by/zach-levitt){target=_blank} at *The New York Times*. 
+In fall 2020, Zach Levitt '20.5 developed the earth engine app shown below as an independent study with me in Geography. The study compared graphical presentations of data in news and academic outlets, reproduced the presentations in one or more source, and piloted designs to support novice readers. Zach is currently a [graphics editor](https://www.nytimes.com/by/zach-levitt){target=_blank} at *The New York Times*.
 
 <iframe
   src="https://jhowarth.users.earthengine.app/view/holc-env-legacies"

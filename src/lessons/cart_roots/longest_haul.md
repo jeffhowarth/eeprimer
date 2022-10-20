@@ -23,7 +23,7 @@ To solve this problem, please reference the following _new_ code snippets:
 - [Construct a feature](../../code/geometry/constructFeature.md)
 - [Construct line geometry](../../code/geometry/constructLineGeometry.md)  
 - [Calculate line length](../../code/geometry/calculateLength.md)  
-- [Convert units](../../code/geometry/convertUnits.md)  
+- [Convert units](../../code/geometry/convert_units.md)  
 
 ##Concepts    
 
