@@ -18,9 +18,9 @@ Our thematic questions include:
 
 [_Link to background materials_](../../concepts/LST.md){target=_blank}  
 
-##Reading     
+##Readings     
 
-In prep for this week's problem, please read [this article](https://www.nytimes.com/interactive/2020/08/24/climate/racism-redlining-cities-global-warming.html?searchResultPosition=1){target=_blank} from *The New York Times*.
+In prep for this week's problem, please read [this article](https://www.nytimes.com/interactive/2020/08/24/climate/racism-redlining-cities-global-warming.html?searchResultPosition=1){target=_blank} from *The New York Times*.   
 
 ##Map goal  
 
@@ -321,3 +321,16 @@ var holc_grades = [
 
 
 ```
+
+##Further resources  
+
+This topic was also covered by [National Public Radio](https://www.npr.org/2020/01/14/795961381/racist-housing-practices-from-the-1930s-linked-to-hotter-neighborhoods-today){target=_blank} soon after publication of this [academic research article](https://www.mdpi.com/2225-1154/8/1/12/htm){target=_blank}.   
+
+In fall 2020, Zach Levitt '20.5 developed the earth engine app shown below as an independent study with me in Geography. The study compared graphical presentations of data in news and academic outlets, reproduced the presentations in one or more source, and piloted designs to support novice readers. Zach is currently a [graphics editor](https://www.nytimes.com/by/zach-levitt){target=_blank} at *The New York Times*. 
+
+<iframe
+  src="https://jhowarth.users.earthengine.app/view/holc-env-legacies"
+  style="width:100%; height:800px;"
+></iframe>
+
+_Here is [a link](https://jhowarth.users.earthengine.app/view/holc-env-legacies){target=_blank} to the app that will open in a separate window._  
