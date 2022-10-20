@@ -15,6 +15,20 @@ The app below illustrates that basic tool that you will make.
 
 _Here is [a link](https://jhowarth.users.earthengine.app/view/eeprimer-river-corridor-easement){target=_blank} to the app that will open in a separate window._  
 
+##New code    
+
+The list below introduces _new_ methods that you will use to solve this problem. Each snippet introduces a method with a toy case. Your task is to apply these new methods with methods you have learned previously to complete all sections of the starter script below.  
+
+- [Vector objects](../../code/features/starter_coords.md)  
+- [Inspect first feature](../../code/fc/print_first.md)  
+- [Inspect unique values of one property](../../code/fc/aggregate_array.md)  
+- [Filter by nominal attribute](../../code/fc/filter_eq.md)  
+- [Filter by numerical attribute](../../code/fc/filter_gt.md)  
+- [Buffer a feature](../../code/features/buffer.md)  
+- [Compute area](../../code/features/area.md)  
+- [Intersection](../../code/features/intersection.md)
+- Buffer every feature in collection  
+
 ##Starter script  
 
 ```js
@@ -156,17 +170,3 @@ var datasets = {
 
 
 ```
-
-##New code snippets  
-
-The list below introduces _new_ methods that you will use to make this app. Each snippet introduces a method with a toy case. Your task is to apply these new methods with methods you have learned previously to complete all sections of the starter script.  
-
-- Vector objects  
-- Center map on object  
-- Inspect first feature  
-- Inspect unique values of one property  
-- Filter by nominal attribute  
-- Filter by numerical attribute  
-- Buffer a feature  
-- Compute area  
-- Buffer every feature in collection  

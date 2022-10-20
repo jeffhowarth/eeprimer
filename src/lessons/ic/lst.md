@@ -39,11 +39,13 @@ By the end of lab, please submit a link to your solution in this [DROPBOX](https
 
 The starter script below draws on many methods that you have learned previously. Here is a list of the new methods that you will need for this problem:  
 
-- [Filter image collection by image property](../../code/ic/filter_by_image_property.md){target=_blank}  
-- [Reduce image by regions](../../code/image/reduce_by_regions.md){target=_blank}    
-- [Convert feature collection to image](../../code/fc/convert_to_image.md){target=_blank}  
-- [Construct a gradient legend](../../code/cart/gradient_legend.md){target=_blank}  
-- [Construct a qualitative legend](../../code/cart/qualitative_legend.md){target=_blank}    
+- [Filter image collection by image property](../../code/ic/filter_by_image_property.md)  
+- [Reduce image by regions](../../code/image/reduce_by_regions.md)
+- [Convert feature collection to image](../../code/fc/convert_to_image.md)
+- [Construct a gradient legend](../../code/cart/gradient_legend.md)
+- [Construct a qualitative legend](../../code/cart/qualitative_legend.md)   
+- [Check image output during workflow](../../code/image/self_check_image.md)
+- [Check feature collection during workflow](../../code/fc/self_check_fc.md)  
 
 ##Starter script  
 

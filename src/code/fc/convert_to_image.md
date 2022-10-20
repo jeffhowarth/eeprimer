@@ -1,3 +1,11 @@
+This workflow creates an image from a feature collection. It involves two steps:  
+
+  1. Create a function that takes a feature collection and a property of features in the collection as arguments and then returns an image where each pixel value holds the specified property of the feature at that location.   
+
+  2. Apply the function by calling it and naming the two arguments.  
+
+The output will be an image with a single band (named 'constant').   
+
 ```js
 // Create a function to convert feature collection to image.
 

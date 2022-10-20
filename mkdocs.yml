@@ -170,6 +170,7 @@ nav:
       - Intersection between a feature and collection: code/fc/map_intersection.md
       - Display attributes of feature collection as a table: code/fc/table_widget.md
       - Convert to image: code/fc/convert_to_image.md
+      - Check feature collection outputs during workflow: code/fc/self_check_fc.md
     - Image methods:
       - Construct image from address: code/image/construct_image.md
       - Inspect image: code/image/inspect_image.md
@@ -182,6 +183,7 @@ nav:
       - Compute area of a zone: code/image/compute_area.md
       - Reduce by regions: code/image/reduce_by_regions.md
       - Chart area of regions as percent of a zone: code/image/chart_area_percent.md
+      - Check image output during a workflow: code/image/self_check_image.md
     - Image collection:
       - Load image collection: code/ic/load_ic.md
       - Select bands: code/ic/select_bands.md

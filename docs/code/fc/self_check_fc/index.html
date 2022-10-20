@@ -13,14 +13,14 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/ic/load_ic/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/fc/self_check_fc/">
       
       <link rel="icon" href="../../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Load image collection - a primer for Earth Engine</title>
+        <title>Check feature collection outputs during workflow - a primer for Earth Engine</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Load image collection
+              Check feature collection outputs during workflow
             
           </span>
         </div>
@@ -676,12 +681,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
       
       <label class="md-nav__link" for="__nav_4_4">
         Feature collections
@@ -699,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/print_first/" class="md-nav__link">
+      <a href="../print_first/" class="md-nav__link">
         Inspect first feature
       </a>
     </li>
@@ -711,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/aggregate_array/" class="md-nav__link">
+      <a href="../aggregate_array/" class="md-nav__link">
         Inspect unique values of one property
       </a>
     </li>
@@ -723,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filter_eq/" class="md-nav__link">
+      <a href="../filter_eq/" class="md-nav__link">
         Filter by nominal attribute
       </a>
     </li>
@@ -735,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filter_gt/" class="md-nav__link">
+      <a href="../filter_gt/" class="md-nav__link">
         Filter by numeric attribute
       </a>
     </li>
@@ -747,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/map_buffer/" class="md-nav__link">
+      <a href="../map_buffer/" class="md-nav__link">
         Buffer every feature in collection
       </a>
     </li>
@@ -759,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/map_area/" class="md-nav__link">
+      <a href="../map_area/" class="md-nav__link">
         Compute area of every feature in collection
       </a>
     </li>
@@ -771,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filterBounds_geometry/" class="md-nav__link">
+      <a href="../filterBounds_geometry/" class="md-nav__link">
         Filter for features that intersect geometry
       </a>
     </li>
@@ -783,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/filterBounds/" class="md-nav__link">
+      <a href="../filterBounds/" class="md-nav__link">
         Filter for features that interset feature collection
       </a>
     </li>
@@ -795,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/union/" class="md-nav__link">
+      <a href="../union/" class="md-nav__link">
         Union features in collection
       </a>
     </li>
@@ -807,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/map_intersection/" class="md-nav__link">
+      <a href="../map_intersection/" class="md-nav__link">
         Intersection between a feature and collection
       </a>
     </li>
@@ -819,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/table_widget/" class="md-nav__link">
+      <a href="../table_widget/" class="md-nav__link">
         Display attributes of feature collection as a table
       </a>
     </li>
@@ -831,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fc/convert_to_image/" class="md-nav__link">
+      <a href="../convert_to_image/" class="md-nav__link">
         Convert to image
       </a>
     </li>
@@ -841,11 +848,82 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../fc/self_check_fc/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Check feature collection outputs during workflow
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Check feature collection outputs during workflow
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-feature-collection-to-console" class="md-nav__link">
+    Print feature collection to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-nominal-values-of-one-property-to-console" class="md-nav__link">
+    Print nominal values of one property to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-numerical-values-of-one-property-to-console" class="md-nav__link">
+    Print numerical values of one property to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-collection-as-layer-to-map-for-quick-peak" class="md-nav__link">
+    Add collection as layer to map for quick peak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-out-after-checking" class="md-nav__link">
+    Comment out after checking
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1030,14 +1108,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
       
       <label class="md-nav__link" for="__nav_4_6">
         Image collection
@@ -1053,19 +1129,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ic/load_ic/" class="md-nav__link">
         Load image collection
       </a>
-      
     </li>
   
 
@@ -1075,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../select_bands/" class="md-nav__link">
+      <a href="../../ic/select_bands/" class="md-nav__link">
         Select bands
       </a>
     </li>
@@ -1087,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inspect_ic/" class="md-nav__link">
+      <a href="../../ic/inspect_ic/" class="md-nav__link">
         Inspect image collection
       </a>
     </li>
@@ -1099,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filter_by_dates/" class="md-nav__link">
+      <a href="../../ic/filter_by_dates/" class="md-nav__link">
         Filter by dates
       </a>
     </li>
@@ -1111,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filter_by_image_property/" class="md-nav__link">
+      <a href="../../ic/filter_by_image_property/" class="md-nav__link">
         Filter by image property
       </a>
     </li>
@@ -1123,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reduce_local_operation/" class="md-nav__link">
+      <a href="../../ic/reduce_local_operation/" class="md-nav__link">
         Reduce with local operations
       </a>
     </li>
@@ -1368,19 +1436,122 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-feature-collection-to-console" class="md-nav__link">
+    Print feature collection to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-nominal-values-of-one-property-to-console" class="md-nav__link">
+    Print nominal values of one property to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-numerical-values-of-one-property-to-console" class="md-nav__link">
+    Print numerical values of one property to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-collection-as-layer-to-map-for-quick-peak" class="md-nav__link">
+    Add collection as layer to map for quick peak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-out-after-checking" class="md-nav__link">
+    Comment out after checking
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Load image collection</h1>
+                  <h1>Check feature collection outputs during workflow</h1>
                 
-                <p>This pattern resembles that for loading feature collections and images. You name a variable for the output and use the ee.ImageCollection() method. This takes the asset id as an argument and the asset id must be a string.   </p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Load image collection.</span>
+                <h2 id="introduction">Introduction</h2>
+<p>You should learn and employ strategies to self-check your work while you are working on a solution. This involves making requests to visualize a method&rsquo;s output and either checking the result with known benchmarks or critically thinking: does this look right?  </p>
+<h2 id="print-feature-collection-to-console">Print feature collection to console</h2>
+<p>For feature collections, you can print information to console. For example, the following code will print the first feature in the collection and the number of features in the collection.  </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Print information about a feature collection.  </span>
 
-<span class="kd">var</span> <span class="nx">ic_name</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span>
+  <span class="s1">&#39;fc check&#39;</span><span class="p">,</span>           <span class="c1">// Label to print to console.</span>
+  <span class="nx">fc</span><span class="p">.</span><span class="nx">first</span><span class="p">(),</span>           <span class="c1">// First record in collection.</span>
+  <span class="nx">fc</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span>             <span class="c1">// Number of records in collection.</span>
+  <span class="p">)</span>
+<span class="p">;</span>
 </code></pre></div>
+<h2 id="print-nominal-values-of-one-property-to-console">Print nominal values of one property to console</h2>
+<p>You can run the code above to see the properties associated with each feature in the collection. With this information, you can then summarize the values for one property.</p>
+<p>When the property contains <em>nominal values</em> (words), you can quickly print a list of all the unique values.  </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Print unique values of a specified property.  </span>
+
+<span class="nx">print</span><span class="p">(</span>
+  <span class="s1">&#39;fc property check&#39;</span><span class="p">,</span>                <span class="c1">// Label to print to console.</span>
+  <span class="nx">fc</span><span class="p">.</span><span class="nx">aggregate_array</span><span class="p">(</span><span class="s1">&#39;property name&#39;</span><span class="p">)</span> <span class="c1">// Return all the values for this property.</span>
+    <span class="p">.</span><span class="nx">distinct</span><span class="p">()</span>                       <span class="c1">// Filter to return only unique values.</span>
+    <span class="p">.</span><span class="nx">sort</span><span class="p">()</span>                           <span class="c1">// Sort the list alphabetically.</span>
+  <span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<h2 id="print-numerical-values-of-one-property-to-console">Print numerical values of one property to console</h2>
+<p>When the property contains <em>numerical values</em>, you can quickly print a summary statistic for a specified property.  </p>
+<div class="highlight"><pre><span></span><code> <span class="nx">print</span><span class="p">(</span>
+   <span class="s1">&#39;fc numerical property check&#39;</span><span class="p">,</span>          <span class="c1">// Label to print to console.</span>
+   <span class="nx">fc</span><span class="p">.</span><span class="nx">aggregate_min</span><span class="p">(</span><span class="s1">&#39;property name&#39;</span><span class="p">),</span>      <span class="c1">// Print min value of specified property.</span>
+   <span class="nx">fc</span><span class="p">.</span><span class="nx">aggregate_max</span><span class="p">(</span><span class="s1">&#39;property name&#39;</span><span class="p">)</span>       <span class="c1">// Print max value of specified property.</span>
+  <span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<h2 id="add-collection-as-layer-to-map-for-quick-peak">Add collection as layer to map for quick peak</h2>
+<p>To quickly add a feature collection as a map layer, you can define the viz parameters as an empty object and still label the layer and define the <em>shown</em> parameter as false (or 0).  </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Add feature collection to map as a layer for a quick peak.</span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">fc</span><span class="p">,</span> <span class="p">{},</span> <span class="s1">&#39;fc quick check&#39;</span><span class="p">,</span> <span class="mf">0</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="comment-out-after-checking">Comment out after checking</h2>
+<p>After you have used these methods to check your work, you should comment out the lines to prevent them from running each time you run your code. This will help your code run more efficiently.  </p>
                 
               
               
@@ -1400,7 +1571,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../image/self_check_image/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Check image output during a workflow" rel="prev">
+        <a href="../convert_to_image/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Convert to image" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1409,20 +1580,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Check image output during a workflow
+              Convert to image
             </div>
           </div>
         </a>
       
       
         
-        <a href="../select_bands/" class="md-footer__link md-footer__link--next" aria-label="Next: Select bands" rel="next">
+        <a href="../../image/construct_image/" class="md-footer__link md-footer__link--next" aria-label="Next: Construct image from address" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Select bands
+              Construct image from address
             </div>
           </div>
           <div class="md-footer__button md-icon">

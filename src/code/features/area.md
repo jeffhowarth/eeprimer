@@ -1,3 +1,4 @@
+If you have completed the [buffer a feature](../../code/features/buffer.md) code, then you can do the following:    
 
 ```js
 // ----------------------------------------------------------------------------

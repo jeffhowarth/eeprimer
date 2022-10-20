@@ -360,6 +360,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#code-key" class="md-nav__link">
+    Code key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#starter-script" class="md-nav__link">
     Starter script
   </a>
@@ -369,20 +383,6 @@
         <li class="md-nav__item">
   <a href="#airport-support" class="md-nav__link">
     Airport support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-key" class="md-nav__link">
-    Code key
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concept-key" class="md-nav__link">
-    Concept key
   </a>
   
 </li>
@@ -918,6 +918,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../code/fc/self_check_fc/" class="md-nav__link">
+        Check feature collection outputs during workflow
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1072,6 +1084,18 @@
     <li class="md-nav__item">
       <a href="../../../code/image/chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../code/image/self_check_image/" class="md-nav__link">
+        Check image output during a workflow
       </a>
     </li>
   
@@ -1440,6 +1464,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#code-key" class="md-nav__link">
+    Code key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#starter-script" class="md-nav__link">
     Starter script
   </a>
@@ -1449,20 +1487,6 @@
         <li class="md-nav__item">
   <a href="#airport-support" class="md-nav__link">
     Airport support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-key" class="md-nav__link">
-    Code key
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concept-key" class="md-nav__link">
-    Concept key
   </a>
   
 </li>
@@ -1493,6 +1517,22 @@
 <p>Currently, the longest non-stop commercial flight connects Singapore (SIN) to Newark (EWR). Does the flight path follow the great circle route between the two airports? In theory, this route represents the shortest geographic distance between these two locations.       </p>
 <p>To begin to answer this question, please create a map that shows the great circle route between the two airports. Please copy and paste the starter script (below) into the code editor and then save it to your repo. Please write one or more lines of code to &lsquo;answer&rsquo; each prompt.  </p>
 <p>We will discuss both your solution (script) and our original question (does the flight follow the great circle route?) in our next class meeting. At that time, I will also show you how to submit your scripts and document your coursework this semester.      </p>
+<h2 id="code-key">Code key</h2>
+<p>To solve this problem, please reference the following <em>new</em> code snippets:      </p>
+<ul>
+<li><a href="../../../code/map/getMapCenter/">Get map center</a>  </li>
+<li><a href="../../../code/map/getZoom/">Get zoom</a>  </li>
+<li><a href="../../../code/map/setCenterZoom/">Set map center and zoom</a>  </li>
+<li><a href="../../../code/geometry/constructPointGeometry/">Construct point geometry</a>  </li>
+<li><a href="../../../code/map/addLayer/">Add layer to map</a></li>
+<li><a href="../../../code/map/centerObject/">Center map on object</a>  </li>
+<li><a href="../../../code/geometry/constructFeature/">Construct a feature</a></li>
+<li><a href="../../../code/geometry/constructLineGeometry/">Construct line geometry</a>  </li>
+<li><a href="../../../code/geometry/calculateLength/">Calculate line length</a>  </li>
+<li><a href="../../code/geometry/convertUnits.md">Convert units</a>  </li>
+</ul>
+<h2 id="concepts">Concepts</h2>
+<p>To understand these code snippets, we will discuss these <a href="../../../concepts/cart_roots/">concepts</a> in lecture.    </p>
 <h2 id="starter-script">Starter script</h2>
 <div class="highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 <span class="c1">//  Problem:      The longest haul  </span>
@@ -1524,28 +1564,6 @@
 <p><img alt="SIN" src="https://geography.middlebury.edu/GEOG0150/images/01/SIN.png" /></p>
 <p>And here is another that shows the location of EWR.</p>
 <p><img alt="EWR" src="https://geography.middlebury.edu/GEOG0150/images/01/EWR.png" /></p>
-<h2 id="code-key">Code key</h2>
-<p>To solve this problem, please reference the following <em>new</em> code snippets:      </p>
-<ul>
-<li>Get map center  </li>
-<li>Get zoom  </li>
-<li>Set map center and zoom  </li>
-<li>Construct point geometry  </li>
-<li>Add layer to map  </li>
-<li>Center map on object  </li>
-<li>Construct a feature  </li>
-<li>Construct line geometry  </li>
-<li>Calculate line length  </li>
-<li>Convert units  </li>
-</ul>
-<h2 id="concept-key">Concept key</h2>
-<p>To understand these code snippets, please reference the following <em>new</em> concepts:  </p>
-<ul>
-<li>Geographic frameworks  </li>
-<li>Vector model  </li>
-<li>Transformations  </li>
-<li>Cartographic modeling  </li>
-</ul>
 <h2 id="discussion">Discussion</h2>
 <ul>
 <li><a href="https://geography.middlebury.edu/GEOG0150/images/01/_for_discussion.pdf" target="_blank">Drawing lines on Mercator</a>  </li>

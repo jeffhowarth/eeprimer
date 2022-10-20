@@ -848,6 +848,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_check_fc/" class="md-nav__link">
+        Check feature collection outputs during workflow
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1002,6 +1014,18 @@
     <li class="md-nav__item">
       <a href="../../image/chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image/self_check_image/" class="md-nav__link">
+        Check image output during a workflow
       </a>
     </li>
   
@@ -1352,7 +1376,17 @@
                 
                   <h1>Convert to image</h1>
                 
-                <div class="highlight"><pre><span></span><code><span class="c1">// Create a function to convert feature collection to image.</span>
+                <p>This workflow creates an image from a feature collection. It involves two steps:  </p>
+<ol>
+<li>
+<p>Create a function that takes a feature collection and a property of features in the collection as arguments and then returns an image where each pixel value holds the specified property of the feature at that location.   </p>
+</li>
+<li>
+<p>Apply the function by calling it and naming the two arguments.  </p>
+</li>
+</ol>
+<p>The output will be an image with a single band (named &lsquo;constant&rsquo;).   </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a function to convert feature collection to image.</span>
 
 <span class="kd">var</span> <span class="nx">makeImage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fc</span><span class="p">,</span> <span class="nx">property</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span><span class="p">()</span>                                 <span class="c1">//  Create empty image</span>
@@ -1405,13 +1439,13 @@
       
       
         
-        <a href="../../image/construct_image/" class="md-footer__link md-footer__link--next" aria-label="Next: Construct image from address" rel="next">
+        <a href="../self_check_fc/" class="md-footer__link md-footer__link--next" aria-label="Next: Check feature collection outputs during workflow" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Construct image from address
+              Check feature collection outputs during workflow
             </div>
           </div>
           <div class="md-footer__button md-icon">

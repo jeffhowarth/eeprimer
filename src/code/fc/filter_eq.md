@@ -1,4 +1,6 @@
- 
+
+If you have completed the [vector objects](../../code/features/starter_coords.md) code, you can then do the following: 
+
 ```js
 // ----------------------------------------------------------------------------
 // Filter collection by a nominal attribute.

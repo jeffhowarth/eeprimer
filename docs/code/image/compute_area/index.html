@@ -838,6 +838,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fc/self_check_fc/" class="md-nav__link">
+        Check feature collection outputs during workflow
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1002,6 +1014,18 @@
     <li class="md-nav__item">
       <a href="../chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_check_image/" class="md-nav__link">
+        Check image output during a workflow
       </a>
     </li>
   
@@ -1352,7 +1376,7 @@
                 
                   <h1>Compute area of a zone</h1>
                 
-                <p>This snippet shows how to compute the area of a region as a <em>zonal statistic</em>. A zonal statistic computes a statistic with the values of one layer in one or more zones defined by a second layer. I tend to think of the zones as cookie cutters and the image that provides the statistics as the cookie dough. We will draw this out in class.</p>
+                <p>This workflow computes the area of a region as a <em>zonal statistic</em>. A zonal statistic computes a statistic with the values of one layer in one or more zones defined by a second layer. I tend to think of the zones as cookie cutters and the image that provides the statistics as the cookie dough. We will draw this out in class.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Create a layer where each pixel value reports the pixel&#39;s area.</span>
 
 <span class="kd">var</span> <span class="nx">pixel_area_layer</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Image</span>

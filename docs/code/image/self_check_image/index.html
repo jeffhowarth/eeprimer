@@ -13,14 +13,14 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/ic/load_ic/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/image/self_check_image/">
       
       <link rel="icon" href="../../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Load image collection - a primer for Earth Engine</title>
+        <title>Check image output during a workflow - a primer for Earth Engine</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Load image collection
+              Check image output during a workflow
             
           </span>
         </div>
@@ -859,12 +864,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
       
       <label class="md-nav__link" for="__nav_4_5">
         Image methods
@@ -882,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/construct_image/" class="md-nav__link">
+      <a href="../construct_image/" class="md-nav__link">
         Construct image from address
       </a>
     </li>
@@ -894,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/inspect_image/" class="md-nav__link">
+      <a href="../inspect_image/" class="md-nav__link">
         Inspect image
       </a>
     </li>
@@ -906,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/add_image_layer/" class="md-nav__link">
+      <a href="../add_image_layer/" class="md-nav__link">
         Add image as layer to map
       </a>
     </li>
@@ -918,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/convert_fc_to_binary/" class="md-nav__link">
+      <a href="../convert_fc_to_binary/" class="md-nav__link">
         Convert feature collection to binary image
       </a>
     </li>
@@ -930,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/threshold_image/" class="md-nav__link">
+      <a href="../threshold_image/" class="md-nav__link">
         Threshold an image
       </a>
     </li>
@@ -942,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/map_algebra/" class="md-nav__link">
+      <a href="../map_algebra/" class="md-nav__link">
         Map algebra
       </a>
     </li>
@@ -954,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/reclassify_image/" class="md-nav__link">
+      <a href="../reclassify_image/" class="md-nav__link">
         Generalize (reclassify) image
       </a>
     </li>
@@ -966,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/apply_mask/" class="md-nav__link">
+      <a href="../apply_mask/" class="md-nav__link">
         Apply mask to image
       </a>
     </li>
@@ -978,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/compute_area/" class="md-nav__link">
+      <a href="../compute_area/" class="md-nav__link">
         Compute area of a zone
       </a>
     </li>
@@ -990,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/reduce_by_regions/" class="md-nav__link">
+      <a href="../reduce_by_regions/" class="md-nav__link">
         Reduce by regions
       </a>
     </li>
@@ -1002,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/chart_area_percent/" class="md-nav__link">
+      <a href="../chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
       </a>
     </li>
@@ -1012,11 +1019,68 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../image/self_check_image/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Check image output during a workflow
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Check image output during a workflow
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-image-to-console" class="md-nav__link">
+    Print image to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-min-and-max-values-of-image-to-console" class="md-nav__link">
+    Print min and max values of image to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-image-as-a-grayscale-layer-to-the-map" class="md-nav__link">
+    Add the image as a grayscale layer to the map
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1030,14 +1094,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
       
       <label class="md-nav__link" for="__nav_4_6">
         Image collection
@@ -1053,19 +1115,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ic/load_ic/" class="md-nav__link">
         Load image collection
       </a>
-      
     </li>
   
 
@@ -1075,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../select_bands/" class="md-nav__link">
+      <a href="../../ic/select_bands/" class="md-nav__link">
         Select bands
       </a>
     </li>
@@ -1087,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inspect_ic/" class="md-nav__link">
+      <a href="../../ic/inspect_ic/" class="md-nav__link">
         Inspect image collection
       </a>
     </li>
@@ -1099,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filter_by_dates/" class="md-nav__link">
+      <a href="../../ic/filter_by_dates/" class="md-nav__link">
         Filter by dates
       </a>
     </li>
@@ -1111,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filter_by_image_property/" class="md-nav__link">
+      <a href="../../ic/filter_by_image_property/" class="md-nav__link">
         Filter by image property
       </a>
     </li>
@@ -1123,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reduce_local_operation/" class="md-nav__link">
+      <a href="../../ic/reduce_local_operation/" class="md-nav__link">
         Reduce with local operations
       </a>
     </li>
@@ -1368,19 +1422,102 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-image-to-console" class="md-nav__link">
+    Print image to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print-min-and-max-values-of-image-to-console" class="md-nav__link">
+    Print min and max values of image to console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-image-as-a-grayscale-layer-to-the-map" class="md-nav__link">
+    Add the image as a grayscale layer to the map
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Load image collection</h1>
+                  <h1>Check image output during a workflow</h1>
                 
-                <p>This pattern resembles that for loading feature collections and images. You name a variable for the output and use the ee.ImageCollection() method. This takes the asset id as an argument and the asset id must be a string.   </p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Load image collection.</span>
+                <h2 id="introduction">Introduction</h2>
+<p>You should learn and employ strategies to self-check your work while you are working on a solution. This involves making requests to visualize a method&rsquo;s output and either checking the result with known benchmarks or critically thinking: does this look right?  </p>
+<h2 id="print-image-to-console">Print image to console</h2>
+<p>For images, you can print information to the Console. This will confirm that the output is an image and describe the list of bands that it contains. For each band, you can also inspect the data type. A binary image should only contain integers of the set [0, 1]. A nominal image (that represents categories or names of things) should also only contain integers, but of a larger set. A quantitative image (that represents continuous values with  decimal numbers) will likely be a <em>double</em> data type.     </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Self check image output by printing to Console.  </span>
 
-<span class="kd">var</span> <span class="nx">ic_name</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">);</span>
+<span class="nx">print</span><span class="p">(</span>
+  <span class="s1">&#39;Self check image output&#39;</span><span class="p">,</span>      <span class="c1">// Label to print in Console.</span>
+  <span class="nx">image_output</span>                    <span class="c1">// Name of image output to check.  </span>
+  <span class="p">)</span>
+<span class="p">;</span>
 </code></pre></div>
+<h2 id="print-min-and-max-values-of-image-to-console">Print min and max values of image to console</h2>
+<p>Another good strategy is to print the minimum and maximum values of an image for a study region. To do this, you need to apply the reduce region method to the image that you can nest as an argument to a print statement.   </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// print min and max values of image with study region.</span>
+
+<span class="nx">print</span><span class="p">(</span>
+  <span class="s1">&#39;image output min and max&#39;</span><span class="p">,</span>
+  <span class="nx">image_output</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">(</span>
+    <span class="p">{</span>
+      <span class="nx">reducer</span><span class="o">:</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">minMax</span><span class="p">(),</span>         <span class="c1">// The reducer for min and max values.</span>
+      <span class="nx">geometry</span><span class="o">:</span> <span class="nx">study_region</span><span class="p">,</span>               <span class="c1">// A feature collection or geometry that defines your study site.</span>
+      <span class="nx">scale</span><span class="o">:</span> <span class="nx">__</span><span class="p">,</span>                            <span class="c1">// The scale of image output.</span>
+      <span class="nx">maxPixels</span><span class="o">:</span> <span class="mf">1e12</span><span class="p">,</span>                      <span class="c1">// The maximum number of pixels to use in the computation.</span>
+      <span class="nx">tileScale</span><span class="o">:</span> <span class="mf">2</span>                          <span class="c1">// You can use two (2) to help if run quickly.</span>
+    <span class="p">}</span>
+  <span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Please note that this computation can be intensive and slow down your script, so after you have run the script to check your work, you should comment out the lines to avoid running them repetitively when you no longer need the information.</p>
+<h2 id="add-the-image-as-a-grayscale-layer-to-the-map">Add the image as a grayscale layer to the map</h2>
+<p>You can quickly add the image as a grayscale layer to the map. A grayscale will display the data values on a gradient from black to white with black for the lowest value and white for the greatest value. To do this quickly, you can run the code below.    </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Add image as a grayscale layer to map for a quick peak.  </span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">image_output</span><span class="p">,</span> <span class="p">{</span><span class="nx">min</span><span class="o">:</span> <span class="nx">__</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span> <span class="nx">__</span><span class="p">},</span> <span class="s1">&#39;Image output check&#39;</span><span class="p">,</span> <span class="mf">0</span><span class="p">);</span>
+</code></pre></div>
+<p>Please note that you will need to enter the min and max values for the image. The previous code block above is a good way to get this information quickly. If you do not specify the min and max data values to display, the layer will likely have very poor contrast (because the min and max will be defined by the image data type, which is usually a much greater range than that populated with data values). Also note that the default palette is [&lsquo;black&rsquo;, &lsquo;white&rsquo;], so you do not need to specify a palette to produce a grayscale image.</p>
                 
               
               
@@ -1400,7 +1537,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../image/self_check_image/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Check image output during a workflow" rel="prev">
+        <a href="../chart_area_percent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chart area of regions as percent of a zone" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1409,20 +1546,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Check image output during a workflow
+              Chart area of regions as percent of a zone
             </div>
           </div>
         </a>
       
       
         
-        <a href="../select_bands/" class="md-footer__link md-footer__link--next" aria-label="Next: Select bands" rel="next">
+        <a href="../../ic/load_ic/" class="md-footer__link md-footer__link--next" aria-label="Next: Load image collection" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Select bands
+              Load image collection
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -81,11 +81,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#apply-mask-to-an-image" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -843,6 +838,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fc/self_check_fc/" class="md-nav__link">
+        Check feature collection outputs during workflow
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -967,8 +974,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Apply mask to image
@@ -1009,6 +1014,18 @@
     <li class="md-nav__item">
       <a href="../chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_check_image/" class="md-nav__link">
+        Check image output during a workflow
       </a>
     </li>
   
@@ -1351,31 +1368,20 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <p><img alt="code" src="../../../images/code.png" />  </p>
-<h1 id="apply-mask-to-an-image">Apply mask to an image</h1>
+                  <h1>Apply mask to image</h1>
+                
+                <p>This workflow involves two rasters:  </p>
+<ul>
+<li>a <em>bottom raster</em> contains values to be displayed or analyzed,</li>
+<li>a <em>binary raster</em> contains two possible values (zeros or ones).</li>
+</ul>
+<p>When you apply a mask, you drape the binary raster over the bottom raster. Any location with the value one (1) in the binary raster will be visible in the bottom raster. Any location with the value zero (0) in the binary raster will be <em>masked</em>. A masked value will not be visible when you display the image on a map, nor will it be used in computations when you mask an image in a workflow.  </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Apply binary raster as a mask on another raster.  </span>
 
 <span class="kd">var</span> <span class="nx">image_with_mask</span> <span class="o">=</span> <span class="nx">bottom_raster</span><span class="p">.</span><span class="nx">updateMask</span><span class="p">(</span><span class="nx">binary_raster</span><span class="p">);</span>

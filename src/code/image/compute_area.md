@@ -1,5 +1,5 @@
 
-This snippet shows how to compute the area of a region as a _zonal statistic_. A zonal statistic computes a statistic with the values of one layer in one or more zones defined by a second layer. I tend to think of the zones as cookie cutters and the image that provides the statistics as the cookie dough. We will draw this out in class.
+This workflow computes the area of a region as a _zonal statistic_. A zonal statistic computes a statistic with the values of one layer in one or more zones defined by a second layer. I tend to think of the zones as cookie cutters and the image that provides the statistics as the cookie dough. We will draw this out in class.
 
 
 ```js

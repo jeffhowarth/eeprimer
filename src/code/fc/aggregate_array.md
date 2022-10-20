@@ -1,3 +1,5 @@
+If you have completed the [vector objects](../../code/features/starter_coords.md) code, you can then do the following: 
+
 ``` js
 // ----------------------------------------------------------------------------
 // Inspect all the unique values for one property of features in the collection.
