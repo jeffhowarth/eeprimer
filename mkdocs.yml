@@ -132,11 +132,13 @@ nav:
       - Code Editor: 00/code/code_editor.md
       - Javascript 101: 00/code/javaScript101.md
   - Lesson plans:
-    - 1. Shortest route for the longest haul: lessons/cart_roots/longest_haul.md
-    - 2. River corridor easement outreach: lessons/vector/corridor_easement_list.md
-    - 3. Area-based goals at town scale: lessons/raster/protected_lands.md
-    - 4. Global oceans: lessons/ic/global_oceans.md
-    - 5. Land surface temperature: lessons/ic/lst.md
+    - Shortest route for the longest haul: lessons/cart_roots/longest_haul.md
+    - River corridor easement outreach: lessons/vector/corridor_easement_list.md
+    - Area-based goals at town scale: lessons/raster/protected_lands.md
+    - Global oceans: lessons/ic/global_oceans.md
+    - Land surface temperature: lessons/ic/lst.md
+    - Changes in the night: lessons/ic/changes_in_the_night.md
+    - Natural and false color: lessons/ic/natural_false_color.md
   - Code catalog:
     - Map methods:
       - Get map center: code/map/getMapCenter.md
@@ -196,14 +198,21 @@ nav:
       - Palettes for multiband images: code/cart/palettes_mb.md
       - Gradient legend: code/cart/gradient_legend.md
       - Qualitative legend: code/cart/qualitative_legend.md
-  - Concepts:
-    - Technical:
+  - Concept Catalog:
+    - Raster:
+      - Band and Image: concepts/bands_image.md
+      - Grayscale layer: concepts/grayscale.md
+      - Contrast enhancement: concepts/contrast_enhancement.md
+      - RGB composites: concepts/rgb_composites.md
+      - Additive color: concepts/additive_color.md
+      - Image scenes: concepts/scenes.md
+    - Vector:
       - Cartographic roots: concepts/cart_roots.md
       - Feature model: concepts/features.md
-      - Raster model: concepts/raster.md
-      - Image scenes: concepts/scenes.md
     - Thematic:
       - Land Surface Temperature: concepts/LST.md
+    - Review questions:
+      - Raster model: concepts/raster.md
 
 
 
