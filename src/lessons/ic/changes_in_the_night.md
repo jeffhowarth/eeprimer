@@ -1,6 +1,6 @@
 ##Introduction  
 
-The US military designed the [Defense Meteorological Program (DMSP)](https://eogdata.mines.edu/products/dmsp/){target=_blank} Operational Line-Scan System (OLS) to observe weather patterns with satellites. Unexpectedly, the system also proved capable of detecting visible and near-infrared (VNIR) emission sources at night.
+The US military designed the [Operational Line-Scan System (OLS)](https://eogdata.mines.edu/products/dmsp/){target=_blank} of the Defense Meteorological Program (DMSP) to observe weather patterns with satellites. Unexpectedly, the system also proved capable of detecting visible and near-infrared (VNIR) emission sources at night.
 
 - What do you think are sources of bright lights at night?  
 - What do you think we could learn by studying changes in these lights over time?  
