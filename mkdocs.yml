@@ -132,13 +132,14 @@ nav:
       - Code Editor: 00/code/code_editor.md
       - Javascript 101: 00/code/javaScript101.md
   - Lesson plans:
-    - Shortest route for the longest haul: lessons/cart_roots/longest_haul.md
-    - River corridor easement outreach: lessons/vector/corridor_easement_list.md
-    - Area-based goals at town scale: lessons/raster/protected_lands.md
-    - Global oceans: lessons/ic/global_oceans.md
-    - Land surface temperature: lessons/ic/lst.md
-    - Changes in the night: lessons/ic/changes_in_the_night.md
-    - Natural and false color: lessons/ic/natural_false_color.md
+    - Shortest route for the longest haul: lessons/longest_haul.md
+    - River corridor easement outreach: lessons/corridor_easement_list.md
+    - Area-based goals at town scale: lessons/protected_lands.md
+    - Global oceans: lessons/global_oceans.md
+    - Land surface temperature: lessons/lst.md
+    - Changes in the night: lessons/changes_in_the_night.md
+    - Natural and false color: lessons/natural_false_color.md
+    - Compare OLS with L5: lessons/compare_ols_L5.md
   - Code catalog:
     - Map methods:
       - Get map center: code/map/getMapCenter.md
@@ -147,6 +148,9 @@ nav:
       - Set base map: code/map/setBasemap.md
       - Add layer to map: code/map/addLayer.md
       - Center map on object: code/map/centerObject.md
+    - Number methods:
+      - Construct number: code/number/construct_number.md
+      - Math with number objects: code/number/math.md
     - Geometry methods:
       - Construct point geometry: code/geometry/constructPointGeometry.md
       - Construct feature from geometry: code/geometry/constructFeature.md
@@ -186,9 +190,11 @@ nav:
       - Reduce by regions: code/image/reduce_by_regions.md
       - Chart area of regions as percent of a zone: code/image/chart_area_percent.md
       - Check image output during a workflow: code/image/self_check_image.md
+      - Use module to check image output: code/image/check_module.md  
     - Image collection:
       - Load image collection: code/ic/load_ic.md
       - Select bands: code/ic/select_bands.md
+      - Add bands: code/ic/add_bands.md
       - Inspect image collection: code/ic/inspect_ic.md
       - Filter by dates: code/ic/filter_by_dates.md
       - Filter by image property: code/ic/filter_by_image_property.md
@@ -205,6 +211,7 @@ nav:
       - Contrast enhancement: concepts/contrast_enhancement.md
       - RGB composites: concepts/rgb_composites.md
       - Additive color: concepts/additive_color.md
+      - Band combinations: concepts/band_combinations.md
       - Image scenes: concepts/scenes.md
     - Vector:
       - Cartographic roots: concepts/cart_roots.md

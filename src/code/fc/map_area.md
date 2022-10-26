@@ -1,4 +1,4 @@
-If you have completed [buffer every feature in a collection](../../code/fc/map_buffer.md), then you can then do the following:  
+If you have completed [buffer every feature in a collection](../fc/map_buffer.md), then you can then do the following:  
 
 ``` js
 // ----------------------------------------------------------------------------

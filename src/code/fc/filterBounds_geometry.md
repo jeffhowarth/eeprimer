@@ -1,4 +1,4 @@
-If you have completed the [buffer a feature](../../code/features/buffer.md) code, then you can then do the following: 
+If you have completed the [buffer a feature](../features/buffer.md) code, then you can then do the following: 
 
 ``` js
 // ----------------------------------------------------------------------------

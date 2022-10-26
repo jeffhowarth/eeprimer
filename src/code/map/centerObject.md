@@ -1,7 +1,7 @@
 
 You can also define your map extent so that the map centers on a geometry object, like a sample point or city center.  
 
-In the example below, I assume you have [a point object](../../code/geometry/constructPointGeometry.md) named 'point'.  
+In the example below, I assume you have [a point object](../geometry/constructPointGeometry.md) named 'point'.  
 
 ```js
 // Center on a point.  

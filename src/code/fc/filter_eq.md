@@ -1,5 +1,5 @@
 
-If you have completed the [vector objects](../../code/features/starter_coords.md) code, you can then do the following: 
+If you have completed the [vector objects](../features/starter_coords.md) code, you can then do the following: 
 
 ```js
 // ----------------------------------------------------------------------------
