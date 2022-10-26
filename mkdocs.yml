@@ -190,7 +190,7 @@ nav:
       - Reduce by regions: code/image/reduce_by_regions.md
       - Chart area of regions as percent of a zone: code/image/chart_area_percent.md
       - Check image output during a workflow: code/image/self_check_image.md
-      - Use module to check image output: code/image/check_module.md  
+      - Use module to check image output: code/image/check_module.md
     - Image collection:
       - Load image collection: code/ic/load_ic.md
       - Select bands: code/ic/select_bands.md
@@ -198,6 +198,7 @@ nav:
       - Inspect image collection: code/ic/inspect_ic.md
       - Filter by dates: code/ic/filter_by_dates.md
       - Filter by image property: code/ic/filter_by_image_property.md
+      - Sort by cloud cover: code/ic/sort_cloud_cover.md  
       - Reduce with local operations: code/ic/reduce_local_operation.md
     - Cartography:
       - Community palette module: code/cart/community_palette.md

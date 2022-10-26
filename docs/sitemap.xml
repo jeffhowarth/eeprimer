@@ -191,6 +191,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/jeffhowarth/eePrimer/code/ic/sort_cloud_cover/</loc>
+         <lastmod>2022-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/jeffhowarth/eePrimer/code/image/add_image_layer/</loc>
          <lastmod>2022-10-26</lastmod>
          <changefreq>daily</changefreq>

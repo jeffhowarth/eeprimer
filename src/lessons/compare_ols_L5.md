@@ -20,6 +20,7 @@ The script draws on the following _new_ code blocks:
 - [Construct number](../code/number/construct_number.md)  
 - [Math with number objects](../code/number/math.md)  
 - [Add bands to an image](../code/ic/add_bands.md)  
+- [Sort by cloud cover](../code/ic/sort_cloud_cover.md)  
 - [Check image with module](../code/image/check_module.md)
 
 
