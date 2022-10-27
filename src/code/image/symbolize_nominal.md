@@ -1,15 +1,22 @@
+##Use cases  
 
-Visualize data with color in three steps:  
+Use this method to symbolize _nominal data_, or data that represents categories or classes (e.g. land cover categories or elevation classes), from one band of an image.  
 
-  1. define color palette,
-  2. define range, data source, and palette,
+In this case, your goal is to represent each unique category or class with a unique color.  
+
+##Workflow   
+
+The involves three steps:  
+
+  1. define _palette_ (set of colors),
+  2. define range, band, and palette (collectively called _visualization parameters_),
   3. visualize as a map layer.  
+
+##Code   
 
 ```js
 
-// 1. Define color palette.  
-
-// For nominal data, the number of color codes should equal the number of unique nominal values.   
+// 1. Define palette.   
 
 var palette_name = [
   'color code',             //   Describe label  

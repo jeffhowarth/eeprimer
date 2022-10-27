@@ -180,7 +180,9 @@ nav:
     - Image methods:
       - Construct image from address: code/image/construct_image.md
       - Inspect image: code/image/inspect_image.md
-      - Add image as layer to map: code/image/add_image_layer.md
+      - Symbolize nominal data with a palette: code/image/symbolize_nominal.md
+      - Symbolize gradients with a palette: code/image/symbolize_gradients.md
+      - Symbolize three bands with additive color: code/image/rgb_composites.md
       - Convert feature collection to binary image: code/image/convert_fc_to_binary.md
       - Threshold an image: code/image/threshold_image.md
       - Map algebra: code/image/map_algebra.md
@@ -196,9 +198,10 @@ nav:
       - Select bands: code/ic/select_bands.md
       - Add bands: code/ic/add_bands.md
       - Inspect image collection: code/ic/inspect_ic.md
+      - Filter by location: code/ic/filter_by_location.md  
       - Filter by dates: code/ic/filter_by_dates.md
       - Filter by image property: code/ic/filter_by_image_property.md
-      - Sort by cloud cover: code/ic/sort_cloud_cover.md  
+      - Sort by cloud cover: code/ic/sort_cloud_cover.md
       - Reduce with local operations: code/ic/reduce_local_operation.md
     - Cartography:
       - Community palette module: code/cart/community_palette.md

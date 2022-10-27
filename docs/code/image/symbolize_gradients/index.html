@@ -13,14 +13,14 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/features/intersection/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/code/image/symbolize_gradients/">
       
       <link rel="icon" href="../../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Intersection of two features - a primer for Earth Engine</title>
+        <title>Symbolize gradients with a palette - a primer for Earth Engine</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#use-cases" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intersection of two features
+              Symbolize gradients with a palette
             
           </span>
         </div>
@@ -676,14 +681,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
       
       <label class="md-nav__link" for="__nav_4_4">
         Feature methods
@@ -701,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../starter_coords/" class="md-nav__link">
+      <a href="../../features/starter_coords/" class="md-nav__link">
         Vector objects
       </a>
     </li>
@@ -713,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../buffer/" class="md-nav__link">
+      <a href="../../features/buffer/" class="md-nav__link">
         Buffer a feature
       </a>
     </li>
@@ -725,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../area/" class="md-nav__link">
+      <a href="../../features/area/" class="md-nav__link">
         Compute area
       </a>
     </li>
@@ -737,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../union_right/" class="md-nav__link">
+      <a href="../../features/union_right/" class="md-nav__link">
         Union two features
       </a>
     </li>
@@ -747,19 +750,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../features/intersection/" class="md-nav__link">
         Intersection of two features
       </a>
-      
     </li>
   
 
@@ -956,12 +951,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" checked>
       
       <label class="md-nav__link" for="__nav_4_6">
         Image methods
@@ -979,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/construct_image/" class="md-nav__link">
+      <a href="../construct_image/" class="md-nav__link">
         Construct image from address
       </a>
     </li>
@@ -991,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/inspect_image/" class="md-nav__link">
+      <a href="../inspect_image/" class="md-nav__link">
         Inspect image
       </a>
     </li>
@@ -1003,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/symbolize_nominal/" class="md-nav__link">
+      <a href="../symbolize_nominal/" class="md-nav__link">
         Symbolize nominal data with a palette
       </a>
     </li>
@@ -1013,11 +1010,61 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../image/symbolize_gradients/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Symbolize gradients with a palette
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Symbolize gradients with a palette
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1027,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/rgb_composites/" class="md-nav__link">
+      <a href="../rgb_composites/" class="md-nav__link">
         Symbolize three bands with additive color
       </a>
     </li>
@@ -1039,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/convert_fc_to_binary/" class="md-nav__link">
+      <a href="../convert_fc_to_binary/" class="md-nav__link">
         Convert feature collection to binary image
       </a>
     </li>
@@ -1051,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/threshold_image/" class="md-nav__link">
+      <a href="../threshold_image/" class="md-nav__link">
         Threshold an image
       </a>
     </li>
@@ -1063,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/map_algebra/" class="md-nav__link">
+      <a href="../map_algebra/" class="md-nav__link">
         Map algebra
       </a>
     </li>
@@ -1075,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/reclassify_image/" class="md-nav__link">
+      <a href="../reclassify_image/" class="md-nav__link">
         Generalize (reclassify) image
       </a>
     </li>
@@ -1087,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/apply_mask/" class="md-nav__link">
+      <a href="../apply_mask/" class="md-nav__link">
         Apply mask to image
       </a>
     </li>
@@ -1099,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/compute_area/" class="md-nav__link">
+      <a href="../compute_area/" class="md-nav__link">
         Compute area of a zone
       </a>
     </li>
@@ -1111,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/reduce_by_regions/" class="md-nav__link">
+      <a href="../reduce_by_regions/" class="md-nav__link">
         Reduce by regions
       </a>
     </li>
@@ -1123,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/chart_area_percent/" class="md-nav__link">
+      <a href="../chart_area_percent/" class="md-nav__link">
         Chart area of regions as percent of a zone
       </a>
     </li>
@@ -1135,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/self_check_image/" class="md-nav__link">
+      <a href="../self_check_image/" class="md-nav__link">
         Check image output during a workflow
       </a>
     </li>
@@ -1147,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../image/check_module/" class="md-nav__link">
+      <a href="../check_module/" class="md-nav__link">
         Use module to check image output
       </a>
     </li>
@@ -1653,27 +1700,99 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Intersection of two features</h1>
+                  <h1>Symbolize gradients with a palette</h1>
                 
-                <p>If you have completed the <a href="../buffer/">buffer a feature</a> code, then you can do the following:  </p>
-<div class="highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------------</span>
-<span class="c1">// Intersection of two features.</span>
-<span class="c1">// ----------------------------------------------------------------------------</span>
+                <h2 id="use-cases">Use cases</h2>
+<p>Use this method to symbolize <em>continuous data</em>, or data that represents a gradient of values (e.g. elevation, temperature, reflectance), from one band of an image.  </p>
+<p>In this case, your goal is to stretch a <em>palette</em> across a <em>range</em> of data values.</p>
+<h2 id="workflow">Workflow</h2>
+<p>To symbolize image data from a single band with color:  </p>
+<ol>
+<li>define color palette,</li>
+<li>define range, band, and palette (collectively called <em>visualization parameters</em>),</li>
+<li>visualize as a map layer.  </li>
+</ol>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Define color palette.  </span>
 
-<span class="kd">var</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="nx">point01</span><span class="p">.</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">buffer2</span> <span class="o">=</span> <span class="nx">point02</span><span class="p">.</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span>
+<span class="c1">// For nominal data, the number of color codes should equal the number of unique nominal values.   </span>
 
-<span class="kd">var</span> <span class="nx">intersection_features</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">intersection</span><span class="p">(</span><span class="nx">buffer2</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">palette_name</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;color code&#39;</span><span class="p">,</span>             <span class="c1">//   Color for min value  </span>
+  <span class="s1">&#39;color code&#39;</span><span class="p">,</span>             <span class="c1">//   Color for max value or intermediate color</span>
+  <span class="s1">&#39;...&#39;</span>                     <span class="c1">//   Last color symbolizes max value.   </span>
+  <span class="p">];</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Intersection of two features&#39;</span><span class="p">,</span> <span class="nx">intersection_features</span><span class="p">);</span>
+<span class="c1">// 2. Define &#39;visualization parameters&#39;, or how values map to colors.</span>
 
-<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">intersection_features</span><span class="p">,</span> <span class="p">{</span><span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;gray&#39;</span><span class="p">},</span> <span class="s1">&#39;Intersection of two features&#39;</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">vis</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">min</span><span class="o">:</span>  <span class="mf">0</span><span class="p">,</span>                  <span class="c1">//  Min data value to symbolize.</span>
+  <span class="nx">max</span><span class="o">:</span>  <span class="mf">255</span><span class="p">,</span>                <span class="c1">//  Max data value to symbolize.</span>
+  <span class="nx">bands</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>          <span class="c1">//  Source for data values.</span>
+  <span class="nx">palette</span><span class="o">:</span> <span class="nx">palette_name</span><span class="p">,</span>    <span class="c1">//  Source for palette (range of colors)</span>
+  <span class="p">}</span>
+<span class="p">;</span>
+
+<span class="c1">// 3. Add as layer to map.</span>
+
+<span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span>
+  <span class="nx">data_object</span><span class="p">,</span>              <span class="c1">//  Band with values to visualize</span>
+  <span class="nx">vis</span><span class="p">,</span>                      <span class="c1">//  Range, source, and palette</span>
+  <span class="s1">&#39;layer label&#39;</span><span class="p">,</span>            <span class="c1">//  Layer label  </span>
+  <span class="kc">false</span><span class="p">,</span>                    <span class="c1">//  Shown   </span>
+  <span class="mf">1</span>                         <span class="c1">//  Opacity  </span>
+  <span class="p">)</span>
+<span class="p">;</span>
 </code></pre></div>
                 
               
@@ -1694,7 +1813,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../union_right/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Union two features" rel="prev">
+        <a href="../symbolize_nominal/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Symbolize nominal data with a palette" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1703,20 +1822,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Union two features
+              Symbolize nominal data with a palette
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../fc/print_first/" class="md-footer__link md-footer__link--next" aria-label="Next: Inspect first feature" rel="next">
+        <a href="../rgb_composites/" class="md-footer__link md-footer__link--next" aria-label="Next: Symbolize three bands with additive color" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Inspect first feature
+              Symbolize three bands with additive color
             </div>
           </div>
           <div class="md-footer__button md-icon">
