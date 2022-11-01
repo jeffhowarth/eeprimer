@@ -346,6 +346,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/jeffhowarth/eePrimer/concepts/contrast_three_bands/</loc>
+         <lastmod>2022-11-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/jeffhowarth/eePrimer/concepts/features/</loc>
          <lastmod>2022-11-01</lastmod>
          <changefreq>daily</changefreq>

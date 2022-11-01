@@ -217,6 +217,7 @@ nav:
       - RGB composites: concepts/rgb_composites.md
       - Additive color: concepts/additive_color.md
       - Band combinations: concepts/band_combinations.md
+      - Three band contrast enhancement: concepts/contrast_three_bands.md  
       - Image scenes: concepts/scenes.md
     - TBD:
       - Cartographic roots: concepts/cart_roots.md

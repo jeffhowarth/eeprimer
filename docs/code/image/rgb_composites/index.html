@@ -1073,6 +1073,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#contrast-enhance-composites" class="md-nav__link">
+    Contrast enhance composites
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1572,6 +1579,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../concepts/contrast_three_bands/" class="md-nav__link">
+        Three band contrast enhancement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../concepts/scenes/" class="md-nav__link">
         Image scenes
       </a>
@@ -1764,6 +1783,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#contrast-enhance-composites" class="md-nav__link">
+    Contrast enhance composites
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1793,6 +1819,33 @@
 <span class="kd">var</span> <span class="nx">vis</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">min</span><span class="o">:</span>  <span class="mf">0</span><span class="p">,</span>                  <span class="c1">//  Min value of data range.</span>
   <span class="nx">max</span><span class="o">:</span>  <span class="mf">255</span><span class="p">,</span>                <span class="c1">//  Max value of data range.</span>
+  <span class="nx">bands</span><span class="o">:</span> <span class="p">[</span>                  <span class="c1">//  Band list:</span>
+    <span class="s1">&#39;band_name&#39;</span><span class="p">,</span>            <span class="c1">//  Symbolize this band with red channel</span>
+    <span class="s1">&#39;band_name&#39;</span><span class="p">,</span>            <span class="c1">//  Symbolize this band with green channel</span>
+    <span class="s1">&#39;band_name&#39;</span>             <span class="c1">//  Symbolize this band with blue channel</span>
+    <span class="p">],</span>          
+  <span class="p">}</span>
+<span class="p">;</span>
+
+<span class="c1">// 2. Add as layer to map.</span>
+
+<span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span>
+  <span class="nx">data_object</span><span class="p">,</span>              <span class="c1">//  Image with bands to visualize</span>
+  <span class="nx">vis</span><span class="p">,</span>                      <span class="c1">//  Range and band list</span>
+  <span class="s1">&#39;layer label&#39;</span><span class="p">,</span>            <span class="c1">//  Layer label  </span>
+  <span class="kc">false</span><span class="p">,</span>                    <span class="c1">//  Shown (optional, default is 1)  </span>
+  <span class="mf">1</span>                         <span class="c1">//  Opacity (optional, default is 1)</span>
+  <span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<h2 id="contrast-enhance-composites">Contrast enhance composites</h2>
+<p>The example above uses the same min and max display range for all three bands in the composite. The histogram for each of band, however, may differ because each band may contain different data ranges. Using a single display range for all three bands will thus likely diminish the contrast of your composite.      </p>
+<p>You can enhance the contrast of RGB composites by defining a different min and max for each band. Your visualization parameters will essentially contain three lists: list of min values, list of max values, list of bands. The first min value and first max value in the list will be applied to the first band, the second min value and second max value will be applied to the second band, and the third min value and third max value will be applied to the third band.   </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Define &#39;visualization parameters&#39;, or how values map to colors.</span>
+
+<span class="kd">var</span> <span class="nx">vis</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">min</span><span class="o">:</span>  <span class="p">[</span><span class="mf">0</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">0</span><span class="p">]</span>          <span class="c1">//  Min value of data range for each band in the list.</span>
+  <span class="nx">max</span><span class="o">:</span>  <span class="p">[</span><span class="mf">255</span><span class="p">,</span> <span class="mf">245</span><span class="p">,</span> <span class="mf">245</span><span class="p">],</span>    <span class="c1">//  Max value of data range for each band in the list.</span>
   <span class="nx">bands</span><span class="o">:</span> <span class="p">[</span>                  <span class="c1">//  Band list:</span>
     <span class="s1">&#39;band_name&#39;</span><span class="p">,</span>            <span class="c1">//  Symbolize this band with red channel</span>
     <span class="s1">&#39;band_name&#39;</span><span class="p">,</span>            <span class="c1">//  Symbolize this band with green channel</span>
