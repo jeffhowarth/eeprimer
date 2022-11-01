@@ -198,7 +198,7 @@ nav:
       - Select bands: code/ic/select_bands.md
       - Add bands: code/ic/add_bands.md
       - Inspect image collection: code/ic/inspect_ic.md
-      - Filter by location: code/ic/filter_by_location.md  
+      - Filter by location: code/ic/filter_by_location.md
       - Filter by dates: code/ic/filter_by_dates.md
       - Filter by image property: code/ic/filter_by_image_property.md
       - Sort by cloud cover: code/ic/sort_cloud_cover.md
@@ -209,18 +209,19 @@ nav:
       - Gradient legend: code/cart/gradient_legend.md
       - Qualitative legend: code/cart/qualitative_legend.md
   - Concept Catalog:
-    - Raster:
+    - Data models:
       - Band and Image: concepts/bands_image.md
+    - Map layers:
       - Grayscale layer: concepts/grayscale.md
       - Contrast enhancement: concepts/contrast_enhancement.md
       - RGB composites: concepts/rgb_composites.md
       - Additive color: concepts/additive_color.md
       - Band combinations: concepts/band_combinations.md
       - Image scenes: concepts/scenes.md
-    - Vector:
+    - TBD:
       - Cartographic roots: concepts/cart_roots.md
       - Feature model: concepts/features.md
-    - Thematic:
+    - Applications:
       - Land Surface Temperature: concepts/LST.md
     - Review questions:
       - Raster model: concepts/raster.md

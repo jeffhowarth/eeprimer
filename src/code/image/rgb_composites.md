@@ -18,10 +18,10 @@ This involves two steps:
 var vis = {
   min:  0,                  //  Min value of data range.
   max:  255,                //  Max value of data range.
-  bands: [                  //  Band list.
-    'band 1',               //  Symbolize this data with red channel
-    'band 2',               //  Symbolize this data with green channel
-    'band 3'                //  Symbolize this data with blue channel
+  bands: [                  //  Band list:
+    'band_name',            //  Symbolize this band with red channel
+    'band_name',            //  Symbolize this band with green channel
+    'band_name'             //  Symbolize this band with blue channel
     ],          
   }
 ;
