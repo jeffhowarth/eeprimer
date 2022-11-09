@@ -105,7 +105,7 @@ The goal today is to visualize changes over the last 30 years in the vicinity of
 // Write a function that implements your test workflow and takes three arguments:
 //  ic: image collection address
 //  yr: year for calendar range
-//  vp: viz paramters
+//  vp: viz parameters
 //
 // This function should implement:
 //  Step 1
@@ -164,7 +164,7 @@ If you followed the naming conventions in the starter script, then the script be
 var time_series_01 = ee.ImageCollection.fromImages([
   L5_1989,
   L5_1994,
-  L5_1999,
+  L5_2000,
   L7_2004,
   L7_2009
   ]
