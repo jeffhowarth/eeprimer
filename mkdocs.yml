@@ -140,6 +140,8 @@ nav:
     - Changes in the night: lessons/changes_in_the_night.md
     - Natural and false color: lessons/natural_false_color.md
     - Compare OLS with L5: lessons/compare_ols_L5.md
+    - Seaside town in the desert: lessons/seaside_town_in_the_desert.md
+    - Spectral signature scavenger hunt: lessons/spectral_signatures.md
   - Code catalog:
     - Map methods:
       - Get map center: code/map/getMapCenter.md
@@ -203,6 +205,7 @@ nav:
       - Filter by image property: code/ic/filter_by_image_property.md
       - Sort by cloud cover: code/ic/sort_cloud_cover.md
       - Reduce with local operations: code/ic/reduce_local_operation.md
+      - Scale landsat collections: code/ic/landsat_scaling_function.md  
     - Cartography:
       - Community palette module: code/cart/community_palette.md
       - Palettes for multiband images: code/cart/palettes_mb.md
@@ -211,14 +214,22 @@ nav:
   - Concept Catalog:
     - Data models:
       - Band and Image: concepts/bands_image.md
+    - Remote sensing:
+      - Remote sensing systems: concepts/remote_sensing_systems.md
+      - Reflectance: concepts/reflectance.md
+      - Electromagnetic spectrum: concepts/electromagnetic_spectrum.md
+      - What is Landsat?: concepts/what_is_landsat.md
+      - Mother of Landsat: concepts/mother_of_landsat.md
+      - Landsat lexicon: concepts/landsat_lexicon.md
     - Map layers:
       - Grayscale layer: concepts/grayscale.md
       - Contrast enhancement: concepts/contrast_enhancement.md
       - RGB composites: concepts/rgb_composites.md
       - Additive color: concepts/additive_color.md
       - Band combinations: concepts/band_combinations.md
-      - Three band contrast enhancement: concepts/contrast_three_bands.md  
+      - Three band contrast enhancement: concepts/contrast_three_bands.md
       - Image scenes: concepts/scenes.md
+
     - TBD:
       - Cartographic roots: concepts/cart_roots.md
       - Feature model: concepts/features.md
