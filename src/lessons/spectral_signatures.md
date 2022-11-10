@@ -8,7 +8,7 @@ What is a _spectral signature_ chart and how do these charts serve as guides for
 - [Reflectance](../concepts/reflectance.md){target=_blank}     
 - [Electromagnetic spectrum](../concepts/electromagnetic_spectrum.md){target=_blank}  
 - [Spectral signatures](../concepts/spectral_signature.md){target=_blank}
-- [Sentinel](../concepts/sentinel.md){target=_blank} 
+- [Sentinel](../concepts/sentinel.md){target=_blank}
 
 ## Spectral signature app       
 
@@ -49,7 +49,7 @@ Please gather a library of spectral signatures for the following land cover type
 
 For each, please sample two points. So your chart should have two lines total and the lines should be similar. If they aren't similar, clear the chart and try again. They don't need to be _exactly_ identical, but they should show similar signatures.
 
-Please use this [**Google form**](https://forms.gle/fvD4W9UM2x55MQjV9){target=_blank} to submit each chart (12 total).
+Please use this [**Google form**](https://forms.gle/fvD4W9UM2x55MQjV9){target=_blank} to submit each chart. You can take a break and return to your work if necessary, so use this form to make 12 individual submissions. Please use the lecture time today to make progress on this task and complete your submissions **by 5pm on Friday 11/11** or contact me if you would like to request additional time. Thank you.
 
 ##App instructions      
 
