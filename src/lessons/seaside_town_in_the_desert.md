@@ -2,6 +2,12 @@
 
 The goal today is to visualize changes over the last 30 years in the vicinity of [Muynak, Uzbekistan](https://www.nytimes.com/2018/08/09/world/asia/aral-sea-disappearing-uzbekistan.html){target=_blank} by making a gif animation similar to [Google's Time Lapse](https://earthengine.google.com/timelapse/){target=_blank}.  
 
+## Dropbox  
+
+Please paste a copy of your final script in the dropbox below by 5pm on Friday 11/11. As announced in class on Wed, we will not distribute copies of the script in class on Thursday and there will be no correction phase this week.  
+
+[DROPBOX](https://forms.gle/HkWfyB3FBKhoHVnh7){target=_blank}  
+
 ## Background   
 
 - [What is Landsat?](../concepts/what_is_landsat.md){target=_blank}  

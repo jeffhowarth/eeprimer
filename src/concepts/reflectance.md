@@ -1,6 +1,6 @@
 ## Definition   
 
-The ratio of the amount of energy leaving a target to the amount of energy striking the target. A property of the target.  
+The amount of energy leaving a location on the earth's surface / the amount of energy striking that location, usually expressed as a ratio or percentage.  
 
 ## Illustration  
 

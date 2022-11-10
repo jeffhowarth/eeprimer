@@ -205,7 +205,7 @@ nav:
       - Filter by image property: code/ic/filter_by_image_property.md
       - Sort by cloud cover: code/ic/sort_cloud_cover.md
       - Reduce with local operations: code/ic/reduce_local_operation.md
-      - Scale landsat collections: code/ic/landsat_scaling_function.md  
+      - Scale landsat collections: code/ic/landsat_scaling_function.md
     - Cartography:
       - Community palette module: code/cart/community_palette.md
       - Palettes for multiband images: code/cart/palettes_mb.md
@@ -218,9 +218,11 @@ nav:
       - Remote sensing systems: concepts/remote_sensing_systems.md
       - Reflectance: concepts/reflectance.md
       - Electromagnetic spectrum: concepts/electromagnetic_spectrum.md
+      - Spectral signatures: concepts/spectral_signature.md
       - What is Landsat?: concepts/what_is_landsat.md
       - Mother of Landsat: concepts/mother_of_landsat.md
       - Landsat lexicon: concepts/landsat_lexicon.md
+      - Sentinel: concepts/sentinel.md  
     - Map layers:
       - Grayscale layer: concepts/grayscale.md
       - Contrast enhancement: concepts/contrast_enhancement.md
