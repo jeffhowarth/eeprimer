@@ -10,3 +10,7 @@ You can recreate these colors and explore other intermediary colors with the RGB
   src="https://jhowarth.users.earthengine.app/view/ee-edu-rgb"
   style="width:910px; height:576px;"
 ></iframe>
+
+## App  
+
+- [RGB mixer](https://jhowarth.users.earthengine.app/view/ee-edu-rgb){target=_blank}  

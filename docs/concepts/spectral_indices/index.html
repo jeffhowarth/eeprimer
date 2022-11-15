@@ -13,14 +13,14 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/concepts/raster/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/concepts/spectral_indices/">
       
       <link rel="icon" href="../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Raster model - a primer for Earth Engine</title>
+        <title>Spectral indices - a primer for Earth Engine</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#review-questions" class="md-skip">
+        <a href="#normalized-difference" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raster model
+              Spectral indices
             
           </span>
         </div>
@@ -1485,12 +1485,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
       
       <label class="md-nav__link" for="__nav_5_2">
         Remote sensing
@@ -1602,11 +1604,47 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../spectral_indices/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Spectral indices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Spectral indices
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normalized-difference" class="md-nav__link">
+    Normalized difference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1821,14 +1859,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
       
       <label class="md-nav__link" for="__nav_5_6">
         Review questions
@@ -1844,47 +1880,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Raster model
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../raster/" class="md-nav__link">
         Raster model
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#review-questions" class="md-nav__link">
-    Review questions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1925,8 +1925,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#review-questions" class="md-nav__link">
-    Review questions
+  <a href="#normalized-difference" class="md-nav__link">
+    Normalized difference
   </a>
   
 </li>
@@ -1944,21 +1944,15 @@
               
                 
                 
-                  <h1>Raster model</h1>
+                  <h1>Spectral indices</h1>
                 
-                <h2 id="review-questions">Review questions</h2>
-<ol>
-<li>How does a <em>raster</em> store attributes of locations?  </li>
-<li>What <em>data objects</em> does Earth Engine provide to work with geographic information in a raster framework?</li>
-<li>What are similarities and differences between <em>raster</em> and <em>vector</em> models?  </li>
-<li>How does a raster model display <em>data values</em> with <em>colors</em>?  </li>
-<li>How does a raster represent <em>points</em>, <em>lines</em>, and <em>zones</em>?  </li>
-<li>What are similarities and differences between <em>thresholding</em> and <em>generalizing</em>?  </li>
-<li>What are similarities and differences between <em>map algebra</em> and <em>masks</em>?  </li>
-<li>What are similarities and differences between <em>computation of area</em> in vector versus raster models?   </li>
-<li>What towns have most to lose if UVA lands are developed?  </li>
-<li>Who wins, who loses when setting 30 x &lsquo;30 goal at state versus town scale?       </li>
-</ol>
+                <h2 id="normalized-difference">Normalized difference</h2>
+<p>(first - second) / (first + second)   </p>
+<p>The <strong>normalized burn ratio (NBR)</strong> is a normalized ratio so we are dividing the difference of two bands by their sum. NBR uses the SWIR 2 and NIR bands.</p>
+<p><img alt="NBR" src="https://un-spider.org/sites/default/files/Spectral_responses.jpg" /></p>
+<p>The <strong>Burn Severity Index</strong> is derived from the change in NBR before and after a fire. The classes shown below are standards proposed by the USGS.  </p>
+<p><img alt="Burn severity" src="https://un-spider.org/sites/default/files/table+legend.PNG" />  </p>
+<p>The map shown at the top uses the thresholds that are not scaled (column on right).  </p>
                 
               
               
@@ -1978,7 +1972,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../LST/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Land Surface Temperature" rel="prev">
+        <a href="../sentinel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sentinel" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1987,11 +1981,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Land Surface Temperature
+              Sentinel
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../grayscale/" class="md-footer__link md-footer__link--next" aria-label="Next: Grayscale layer" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Grayscale layer
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

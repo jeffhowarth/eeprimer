@@ -142,6 +142,7 @@ nav:
     - Compare OLS with L5: lessons/compare_ols_L5.md
     - Seaside town in the desert: lessons/seaside_town_in_the_desert.md
     - Spectral signature scavenger hunt: lessons/spectral_signatures.md
+    - A world on fire: lessons/global_fires.md
   - Code catalog:
     - Map methods:
       - Get map center: code/map/getMapCenter.md
@@ -222,7 +223,8 @@ nav:
       - What is Landsat?: concepts/what_is_landsat.md
       - Mother of Landsat: concepts/mother_of_landsat.md
       - Landsat lexicon: concepts/landsat_lexicon.md
-      - Sentinel: concepts/sentinel.md  
+      - Sentinel: concepts/sentinel.md
+      - Spectral indices: concepts/spectral_indices.md
     - Map layers:
       - Grayscale layer: concepts/grayscale.md
       - Contrast enhancement: concepts/contrast_enhancement.md
