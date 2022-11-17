@@ -8,17 +8,21 @@ Fires are always present on our planet. If you look any day of the year and any 
 
 ![FIRMS fire map](https://www.earthdata.nasa.gov/s3fs-public/2022-05/FIRMS-fire-map.jpg?VersionId=tvQzN89zIjpktGF.l6HGzylBTJcgG4s_)
 
-- [FIRMS fire map](https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@0.0,0.0,3z){target=_blank}  
+<center>  
+
+[_FIRMS fire map_](https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@0.0,0.0,3z){target=_blank}  
+
+</center>  
 
 ## Background  
 
 - [spectral signatures](../concepts/spectral_signature.md){target=_blank}
 - [additive color](../concepts/additive_color.md){target=_blank}
-- _Sample spectral signatures of forest and grasslands near Davenport, California: June 1 - August 1, 2020_
-
 - [burn severity](../concepts/burn_severity.md){target=_blank}  
-- _Sample spectral signatures of forest and grasslands near Davenport, California: September 1 - November 1, 2020_
-
+- [MODIS](../concepts/MODIS.md){target=_blank}  
+- [band dictionary](https://github.com/awesome-spectral-indices/awesome-spectral-indices#expressions){target=_blank}  
+- [spectral indices](https://awesome-ee-spectral-indices.readthedocs.io/en/latest/list.html){target=_blank}  
+- [awesome spectral indices](https://github.com/awesome-spectral-indices/spectral){target=_blank}  
 
 ## Burn severity explorer  
 

@@ -1,5 +1,5 @@
 
-You can print an image to the Console, though this won't visualize the image with color. It returns 'matadata' (data about data). Dry as this sounds you can learn some things from it.
+You can print an image to the Console, though this won't visualize the image with color. It returns 'metadata' (data about data). Dry as this sounds you can learn some things from it.
 
 ```js
 // Inspect an image.

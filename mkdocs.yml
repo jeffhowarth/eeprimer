@@ -197,7 +197,7 @@ nav:
       - Check image output during a workflow: code/image/self_check_image.md
       - Use module to check image output: code/image/check_module.md
       - Normalized difference: code/image/normalized_difference.md
-      - Reclassify with defined breaks: code/image/reclassify.md  
+      - Reclassify with defined breaks: code/image/reclassify.md
     - Image collection:
       - Load image collection: code/ic/load_ic.md
       - Select bands: code/ic/select_bands.md
@@ -227,6 +227,7 @@ nav:
       - Mother of Landsat: concepts/mother_of_landsat.md
       - Landsat lexicon: concepts/landsat_lexicon.md
       - Sentinel: concepts/sentinel.md
+      - MODIS: concepts/MODIS.md  
       - Spectral indices: concepts/spectral_indices.md
     - Map layers:
       - Grayscale layer: concepts/grayscale.md

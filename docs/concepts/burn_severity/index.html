@@ -1640,6 +1640,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../MODIS/" class="md-nav__link">
+        MODIS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../spectral_indices/" class="md-nav__link">
         Spectral indices
       </a>
@@ -1842,13 +1854,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#spectral-indices" class="md-nav__link">
-    Spectral indices
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#sources" class="md-nav__link">
     Sources
   </a>
@@ -2022,13 +2027,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#spectral-indices" class="md-nav__link">
-    Spectral indices
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#sources" class="md-nav__link">
     Sources
   </a>
@@ -2058,11 +2056,11 @@
 <p><img alt="Fire intensity versus burn severity" src="https://un-spider.org/sites/default/files/Fire_intensity_vs_burn_severity.jpg" /></p>
 <h2 id="burn-ratio">Burn ratio</h2>
 <ul>
-<li><strong>Normalized Burn Ratio (NBR):</strong>  ratio between NIR and SWIR bands. A high NBR indicates healthy vegetation while a low NBR value indicates bare ground and recently burnt areas.   </li>
+<li><strong>Normalized Burn Ratio (NBR):</strong>  ratio between NIR and SWIR2 bands. A high NBR indicates healthy vegetation while a low NBR value indicates bare ground and recently burnt areas.   </li>
 </ul>
 <p><img alt="Exploiting spectral signatures" src="https://un-spider.org/sites/default/files/Spectral_responses.jpg" />  </p>
 <p><img alt="Equation" src="https://un-spider.org/sites/default/files/NBR_formula.jpg" /></p>
-<p><em>Sample burned and unburned spectral signatures of forests near Davenport Aug 1 - Oct 1, 2020 and calculate burn ratios.</em>  </p>
+<p><img alt="Davenport Fire" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/147000/147374/california_oli_2020270_dbnr_lrg.jpg" /></p>
 <h2 id="severity-classes">Severity classes</h2>
 <ul>
 <li><strong>Burn severity:</strong> difference between pre-fire and post-fire NBR. A higher dNBR indicates more severe damage, while negative dNBR may indicate regrowth.  </li>
@@ -2072,16 +2070,6 @@
 <li><strong>Severity level:</strong> USGS thresholds for assigning severity classes.</li>
 </ul>
 <p><img alt="Severity classes" src="https://un-spider.org/sites/default/files/table+legend.PNG" /></p>
-<h2 id="spectral-indices">Spectral indices</h2>
-<p>The Burn Severity Index is only one example of a <em>spectral index</em> based on the ratio of two or more bands. These are very powerful tools in remote sensing.   </p>
-<ul>
-<li>
-<p>Here is <a href="https://awesome-ee-spectral-indices.readthedocs.io/en/latest/list.html" target="_blank">a curated list</a>  </p>
-</li>
-<li>
-<p>The <a href="https://github.com/awesome-spectral-indices/spectral" target="_blank">awesome spectral indices</a> module can be a helpful tool for finding and implementing these indices with ee.  </p>
-</li>
-</ul>
 <h2 id="sources">Sources</h2>
 <ul>
 <li>

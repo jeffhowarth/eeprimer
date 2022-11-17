@@ -7,13 +7,13 @@
 
 ## Burn ratio    
 
-- **Normalized Burn Ratio (NBR):**  ratio between NIR and SWIR bands. A high NBR indicates healthy vegetation while a low NBR value indicates bare ground and recently burnt areas.   
+- **Normalized Burn Ratio (NBR):**  ratio between NIR and SWIR2 bands. A high NBR indicates healthy vegetation while a low NBR value indicates bare ground and recently burnt areas.   
 
 ![Exploiting spectral signatures](https://un-spider.org/sites/default/files/Spectral_responses.jpg)  
 
 ![Equation](https://un-spider.org/sites/default/files/NBR_formula.jpg)
 
-*Sample burned and unburned spectral signatures of forests near Davenport Aug 1 - Oct 1, 2020 and calculate burn ratios.*  
+![Davenport Fire](https://eoimages.gsfc.nasa.gov/images/imagerecords/147000/147374/california_oli_2020270_dbnr_lrg.jpg)
 
 ## Severity classes  
 
@@ -24,14 +24,6 @@
 - **Severity level:** USGS thresholds for assigning severity classes.
 
 ![Severity classes](https://un-spider.org/sites/default/files/table+legend.PNG)
-
-## Spectral indices  
-
-The Burn Severity Index is only one example of a _spectral index_ based on the ratio of two or more bands. These are very powerful tools in remote sensing.   
-
-- Here is [a curated list](https://awesome-ee-spectral-indices.readthedocs.io/en/latest/list.html){target=_blank}  
-
-- The [awesome spectral indices](https://github.com/awesome-spectral-indices/spectral){target=_blank} module can be a helpful tool for finding and implementing these indices with ee.  
 
 ## Sources  
 
