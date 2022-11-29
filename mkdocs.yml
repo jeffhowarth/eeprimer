@@ -143,6 +143,7 @@ nav:
     - Seaside town in the desert: lessons/seaside_town_in_the_desert.md
     - Spectral signature scavenger hunt: lessons/spectral_signatures.md
     - A world on fire: lessons/global_fires.md
+    - Global forest loss: lessons/global_forest_loss.md  
   - Code catalog:
     - Map methods:
       - Get map center: code/map/getMapCenter.md
@@ -227,7 +228,7 @@ nav:
       - Mother of Landsat: concepts/mother_of_landsat.md
       - Landsat lexicon: concepts/landsat_lexicon.md
       - Sentinel: concepts/sentinel.md
-      - MODIS: concepts/MODIS.md  
+      - MODIS: concepts/MODIS.md
       - Spectral indices: concepts/spectral_indices.md
     - Map layers:
       - Grayscale layer: concepts/grayscale.md
