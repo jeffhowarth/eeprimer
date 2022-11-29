@@ -8,16 +8,22 @@
 
 ## Introduction  
 
-- Over the last twenty years, how has the annual amount of deforestation changed in different regions of the world?  
+- Over the last twenty years, how has the rate of deforestation changed in different regions of the world?  
 
-- How can satellite imagery distinguish different patterns of deforestation?  
-- What human and environmental factors influence these patterns?
+- How can satellite imagery distinguish different human and environmental factors that cause deforestation?
+
+- How does the size and shape of study regions influence the calculation of deforestation?  
 
 ## Background  
 
 - [Motivation](https://www.science.org/content/article/deforestation-amazon-shooting-brazil-s-president-calls-data-lie){target=_blank}  
+
 - [Earth observatory stories](https://earthobservatory.nasa.gov/collection/1676/amazon-deforestation){target=_blank}  
-- [High-Resolution Global Maps of 21st-Cnetury Forest Cover Change](https://www.science.org/doi/10.1126/science.1244693){target=_blank}  
+
+- [High-Resolution Global Maps of 21st-Century Forest Cover Change](https://www.science.org/doi/10.1126/science.1244693){target=_blank}
+
+- [Hansen Global Forest Change (2000 - 2021)](https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen_global_forest_change_2021_v1_9){target=_blank}
+
 - [Global Forest Change](https://glad.earthengine.app/view/global-forest-change#dl=1;old=off;bl=off;lon=20;lat=10;zoom=3;){target=_blank}
 
 ## Global forest loss explorer  
