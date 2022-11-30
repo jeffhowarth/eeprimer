@@ -143,7 +143,7 @@ nav:
     - Seaside town in the desert: lessons/seaside_town_in_the_desert.md
     - Spectral signature scavenger hunt: lessons/spectral_signatures.md
     - A world on fire: lessons/global_fires.md
-    - Global forest loss: lessons/global_forest_loss.md  
+    - Global forest loss: lessons/global_forest_loss.md
   - Code catalog:
     - Map methods:
       - Get map center: code/map/getMapCenter.md
@@ -179,7 +179,8 @@ nav:
       - Union features in collection: code/fc/union.md
       - Intersection between a feature and collection: code/fc/map_intersection.md
       - Display attributes of feature collection as a table: code/fc/table_widget.md
-      - Convert to image: code/fc/convert_to_image.md
+      - Convert to binary image: code/fc/convert_fc_to_binary.md
+      - Convert to nominal (class) image: code/fc/convert_to_image.md
       - Check feature collection outputs during workflow: code/fc/self_check_fc.md
     - Image methods:
       - Construct image from address: code/image/construct_image.md
@@ -187,7 +188,6 @@ nav:
       - Symbolize nominal data with a palette: code/image/symbolize_nominal.md
       - Symbolize gradients with a palette: code/image/symbolize_gradients.md
       - Symbolize three bands with additive color: code/image/rgb_composites.md
-      - Convert feature collection to binary image: code/image/convert_fc_to_binary.md
       - Threshold an image: code/image/threshold_image.md
       - Map algebra: code/image/map_algebra.md
       - Generalize (reclassify) image: code/image/reclassify_image.md
@@ -216,6 +216,11 @@ nav:
       - Palettes for multiband images: code/cart/palettes_mb.md
       - Gradient legend: code/cart/gradient_legend.md
       - Qualitative legend: code/cart/qualitative_legend.md
+      - Map widget: code/cart/widget_map.md
+      - Swipe maps: code/cart/widget_swipe.md
+      - Panel widget: code/cart/widget_panel.md
+      - Label widget: code/cart/widget_label.md
+      - Show feature outlines without fills: code/cart/feature_outlines.md  
   - Concept Catalog:
     - Data models:
       - Band and Image: concepts/bands_image.md
@@ -238,6 +243,8 @@ nav:
       - Band combinations: concepts/band_combinations.md
       - Three band contrast enhancement: concepts/contrast_three_bands.md
       - Image scenes: concepts/scenes.md
+    - App design:
+      - CSS box model: concepts/css_box_model.md
     - Applications:
       - Burn severity: concepts/burn_severity.md
       - Land Surface Temperature: concepts/LST.md
