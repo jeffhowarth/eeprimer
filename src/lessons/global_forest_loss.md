@@ -557,7 +557,7 @@ var regions = ee.FeatureCollection("FAO/GAUL/2015/level1");
 
 //  Initialize map layer as a widget.
 //  Call style_regions with .style method.
-//  Label the layer 'Regions;.
+//  Label the layer 'regions_layer'.
 
 
 
