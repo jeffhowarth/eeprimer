@@ -261,7 +261,7 @@ New code:
 
 - [Panel widget](../code/cart/widget_panel.md)   
 - [Map widget](../code/cart/widget_map.md)  
-- [Swipe maps](../code/cart/widget_swipe.md)  
+- [Wipe maps](../code/cart/widget_wipe.md)  
 
 ---  
 

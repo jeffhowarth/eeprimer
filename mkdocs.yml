@@ -217,10 +217,10 @@ nav:
       - Gradient legend: code/cart/gradient_legend.md
       - Qualitative legend: code/cart/qualitative_legend.md
       - Map widget: code/cart/widget_map.md
-      - Swipe maps: code/cart/widget_swipe.md
+      - Wipe maps: code/cart/widget_wipe.md
       - Panel widget: code/cart/widget_panel.md
       - Label widget: code/cart/widget_label.md
-      - Show feature outlines without fills: code/cart/feature_outlines.md  
+      - Show feature outlines without fills: code/cart/feature_outlines.md
   - Concept Catalog:
     - Data models:
       - Band and Image: concepts/bands_image.md

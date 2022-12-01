@@ -1,6 +1,6 @@
-A _swipe map_ is a popular way to compare two layers and an alternative to changing the visibility or opacity of two overlying layers.  
+A _wipe map_ is a popular way to compare two layers and an alternative to changing the visibility or opacity of two overlying layers.  
 
-The code below creates a swipe between two maps with a split panel. This involves two steps:
+The code below creates a wipe between two maps with a split panel. This involves two steps:
 
 1. Initialize a linker widget. This will allow you to change the map center and zoom in one map that controls the map center and zoom of a linked map. This allows the user to pan and zoom while keeping the geographic extent of the two maps consistent.    
 
