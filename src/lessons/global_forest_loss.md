@@ -870,4 +870,28 @@ left_map.onClick(handleMapClick);
 
 ## Deliverables (part 2)  
 
-Please submit a link to your completed code in this [DROPBOX](https://forms.gle/wJCDgxzEXjn7W2HD9){target=_blank} by 9am on Thursday (12/1). We will discuss how to publish you code as an app in class.  
+Please submit a link to your completed code in this [DROPBOX](https://forms.gle/wJCDgxzEXjn7W2HD9){target=_blank} by 9am on Thursday (12/1). We will discuss how to publish you code as an app in class.
+
+## Explore global forest loss  
+
+For each region listed below, please use the App and try to answer these questions:  
+
+- how has the location of deforestation changed over time in the region?  
+- are the proximate drivers of deforestation from wildfire, farming, ranging, mining, or another kind of land use?  
+- how has the location of deforestation in protected areas changed over time?   
+
+Regions:  
+
+- Mato Grosso, Brazil  
+- Para, Brazil  
+- Rondonia, Brazil  
+- Madre de Dios, Peru  
+- Equateur, Democratic Republic of Congo  
+- Kasai, Democratic Republic of Congo  
+- Kalimantan Timur, Indonesia  
+- Nimrod, Oregon  
+- Panama City, Florida  
+
+## Deliverables (part 3)  
+
+Please choose one region in the world to investigate (not from the list above) and respond to the prompts in [**this form**](https://forms.gle/bxLGr8xnmjL347Ru9){target=_blank}. Thank you.   
