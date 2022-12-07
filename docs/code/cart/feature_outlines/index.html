@@ -2076,8 +2076,7 @@
 <span class="p">};</span>
 
 <span class="c1">//  Initialize map layer as a widget.</span>
-<span class="c1">//  Call style_regions with .style method.</span>
-<span class="c1">//  Label the layer &#39;Regions;.</span>
+<span class="c1">//  Call style parameters as argument in .style() method.</span>
 
 <span class="kd">var</span> <span class="nx">fc_layer</span> <span class="o">=</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">Map</span><span class="p">.</span><span class="nx">Layer</span><span class="p">(</span>
   <span class="nx">regions</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="nx">style_fc</span><span class="p">),</span>             <span class="c1">//  Call style parameters with .style method.</span>
@@ -2086,9 +2085,9 @@
   <span class="kc">true</span>                                 <span class="c1">//  Show by default (true or false)</span>
 <span class="p">);</span>
 
-<span class="c1">//  Add map layer widget to left map.</span>
+<span class="c1">//  Add map layer to a Map or map widget variable.  </span>
 
-<span class="nx">left_map</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">regions_layer</span><span class="p">);</span>          <span class="c1">// Note: you use .add() method, not .addLayer() method.</span>
+<span class="nx">map_widget</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">fc_layer</span><span class="p">);</span>              <span class="c1">// Note: you use .add() method, not .addLayer() method.</span>
 </code></pre></div>
                 
               

@@ -19,8 +19,7 @@ var style_fc = {
 };
 
 //  Initialize map layer as a widget.
-//  Call style_regions with .style method.
-//  Label the layer 'Regions;.
+//  Call style parameters as argument in .style() method.
 
 var fc_layer = ui.Map.Layer(
   regions.style(style_fc),             //  Call style parameters with .style method.
@@ -29,8 +28,8 @@ var fc_layer = ui.Map.Layer(
   true                                 //  Show by default (true or false)
 );
 
-//  Add map layer widget to left map.
+//  Add map layer to a Map or map widget variable.  
 
-left_map.add(regions_layer);          // Note: you use .add() method, not .addLayer() method.
+map_widget.add(fc_layer);              // Note: you use .add() method, not .addLayer() method.
 
 ```

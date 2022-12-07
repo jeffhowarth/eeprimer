@@ -2054,22 +2054,23 @@
                 
                   <h1>Qualitative legend</h1>
                 
-                <div class="highlight"><pre><span></span><code><span class="c1">// Load cart module.</span>
+                <div class="highlight"><pre><span></span><code><span class="c1">//  Load cart module.</span>
 
 <span class="kd">var</span> <span class="nx">cart</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/cart.js&#39;</span><span class="p">);</span>
 
-<span class="c1">// Make labels for nominal image values.</span>
+<span class="c1">//  Make labels for nominal image values.</span>
+<span class="c1">//  The number of labels in the list must be the same as the number of colors in the palette.  </span>
 
 <span class="kd">var</span> <span class="nx">qualitative_labels</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">]</span>
 <span class="p">;</span>
 
-<span class="c1">// Construct legend for HOLC reference map.</span>
+<span class="c1">//  Construct legend for HOLC reference map.</span>
 
 <span class="kd">var</span> <span class="nx">legend</span> <span class="o">=</span> <span class="nx">cart</span><span class="p">.</span><span class="nx">makeLegend</span><span class="p">(</span>
   <span class="s1">&#39;Legend label&#39;</span><span class="p">,</span>                         <span class="c1">// Label for legend</span>
   <span class="nx">palette</span><span class="p">,</span>                                <span class="c1">// Palette for image  </span>
-  <span class="nx">qualitative_labels</span><span class="p">,</span>                     <span class="c1">// labels to display                  </span>
+  <span class="nx">qualitative_labels</span><span class="p">,</span>                     <span class="c1">// labels to display for each color                  </span>
   <span class="s1">&#39;bottom-left&#39;</span>                           <span class="c1">// Where you want to put legend on the map.</span>
 <span class="p">);</span>
 
