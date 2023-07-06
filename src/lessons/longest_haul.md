@@ -1,8 +1,22 @@
 #The Shortest Route for the Longest Haul        
 
+##Purpose
+
+You should know that the map display in the Code Editor distorts space. All maps do, but not all maps distort space the same way. The distortion depends on the map's *projection*. The Code Editor map uses a *Web Mercator* projection.
+
+(1) How does this projection distort distance?  
+
+(2) How does it distort area?
+
+This lesson aims to help you see these distortions so that you can avoid being mislead by them when you interpret information displayed on this map. 
+
 ##Introduction  
 
-Currently, the longest non-stop commercial flight connects Singapore (SIN) to Newark (EWR). Does the flight path follow the great circle route between the two airports? In theory, this route represents the shortest geographic distance between these two locations.       
+Currently, the longest non-stop commercial flight connects Singapore (SIN) to Newark (EWR).
+
+On a globe, a *great circle* route represents the shortest geographic distance between these two locations.    
+
+Does the flight path follow the great circle route between the two airports?
 
 To begin to answer this question, please create a map that shows the great circle route between the two airports. Please copy and paste the starter script (below) into the code editor and then save it to your repo. Please write one or more lines of code to 'answer' each prompt.  
 

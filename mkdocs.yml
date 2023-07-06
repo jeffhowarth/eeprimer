@@ -131,10 +131,8 @@ nav:
       - Account: 00/code/account.md
       - Code Editor: 00/code/code_editor.md
       - Javascript 101: 00/code/javaScript101.md
-  - Lesson plans:
+  - Lessons plans:
     - Shortest route for the longest haul: lessons/longest_haul.md
-    - River corridor easement outreach: lessons/corridor_easement_list.md
-    - Area-based goals at town scale: lessons/protected_lands.md
     - Global oceans: lessons/global_oceans.md
     - Land surface temperature: lessons/lst.md
     - Changes in the night: lessons/changes_in_the_night.md

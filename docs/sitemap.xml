@@ -491,11 +491,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/lessons/corridor_easement_list/</loc>
-         <lastmod>2023-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/jeffhowarth/eePrimer/lessons/global_fires/</loc>
          <lastmod>2023-07-06</lastmod>
          <changefreq>daily</changefreq>
@@ -522,11 +517,6 @@
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/lessons/natural_false_color/</loc>
-         <lastmod>2023-07-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/jeffhowarth/eePrimer/lessons/protected_lands/</loc>
          <lastmod>2023-07-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
