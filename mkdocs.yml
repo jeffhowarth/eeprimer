@@ -31,7 +31,7 @@ repo_url: https://github.com/jeffhowarth/eeprimer
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2022 Jeff Howarth
+copyright: Copyright &copy; 2023 Jeff Howarth
 
 # Configuration
 theme:
@@ -53,7 +53,13 @@ theme:
 
   features:
     # - tabs
-    - instant
+    - navigation.instant
+    # - navigation.sections
+    - navigation.indexes 
+    - navigation.footer 
+
+    - navigation.expand 
+    - content.code.copy
 
   palette:
     scheme: white
@@ -63,6 +69,9 @@ theme:
     text: Libre Baskerville
     # text: Didact Gothic
     code: Roboto Mono
+
+extra_css:
+  - extra.css
 
 # Plugins
 plugins:
@@ -80,8 +89,6 @@ extra:
       link: https://github.com/jeffhowarth
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/jeffgeographer
-  extra_css:
-    - stylesheets/extra.css
 
 # Extensions
 markdown_extensions:
@@ -95,7 +102,7 @@ markdown_extensions:
   - markdown.extensions.meta
   - markdown.extensions.toc:
       permalink: false
-      toc_depth: 2
+      toc_depth: 3
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -106,7 +113,9 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
+      use_pygments: true
       linenums_style: pymdownx-inline
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
@@ -126,136 +135,21 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Introduction: index.md
-  - Getting started with GEE:
-      - Account: 00/code/account.md
-      - Code Editor: 00/code/code_editor.md
-      - Javascript 101: 00/code/javaScript101.md
-  - Lessons plans:
-    - Shortest route for the longest haul: lessons/longest_haul.md
-    - Global oceans: lessons/global_oceans.md
-    - Land surface temperature: lessons/lst.md
-    - Changes in the night: lessons/changes_in_the_night.md
-    - Natural and false color: lessons/natural_false_color.md
-    - Compare OLS with L5: lessons/compare_ols_L5.md
-    - Seaside town in the desert: lessons/seaside_town_in_the_desert.md
-    - Spectral signature scavenger hunt: lessons/spectral_signatures.md
-    - A world on fire: lessons/global_fires.md
-    - Global forest loss: lessons/global_forest_loss.md
-  - Code catalog:
-    - Map methods:
-      - Get map center: code/map/getMapCenter.md
-      - Get zoom: code/map/getZoom.md
-      - Set map center and zoom: code/map/setCenterZoom.md
-      - Set base map: code/map/setBasemap.md
-      - Add layer to map: code/map/addLayer.md
-      - Center map on object: code/map/centerObject.md
-    - Number methods:
-      - Construct number: code/number/construct_number.md
-      - Math with number objects: code/number/math.md
-    - Geometry methods:
-      - Construct point geometry: code/geometry/constructPointGeometry.md
-      - Construct feature from geometry: code/geometry/constructFeature.md
-      - Construct line geometry: code/geometry/constructLineGeometry.md
-      - Calculate line length: code/geometry/calculateLength.md
-      - Convert units: code/geometry/convert_units.md
-    - Feature methods:
-      - Vector objects: code/features/starter_coords.md
-      - Buffer a feature: code/features/buffer.md
-      - Compute area: code/features/area.md
-      - Union two features: code/features/union_right.md
-      - Intersection of two features: code/features/intersection.md
-    - Feature collections:
-      - Inspect first feature: code/fc/print_first.md
-      - Inspect unique values of one property: code/fc/aggregate_array.md
-      - Filter by nominal attribute: code/fc/filter_eq.md
-      - Filter by numeric attribute: code/fc/filter_gt.md
-      - Buffer every feature in collection: code/fc/map_buffer.md
-      - Compute area of every feature in collection: code/fc/map_area.md
-      - Filter for features that intersect geometry: code/fc/filterBounds_geometry.md
-      - Filter for features that interset feature collection: code/fc/filterBounds.md
-      - Union features in collection: code/fc/union.md
-      - Intersection between a feature and collection: code/fc/map_intersection.md
-      - Display attributes of feature collection as a table: code/fc/table_widget.md
-      - Convert to binary image: code/fc/convert_fc_to_binary.md
-      - Convert to nominal (class) image: code/fc/convert_to_image.md
-      - Check feature collection outputs during workflow: code/fc/self_check_fc.md
-    - Image methods:
-      - Construct image from address: code/image/construct_image.md
-      - Inspect image: code/image/inspect_image.md
-      - Symbolize nominal data with a palette: code/image/symbolize_nominal.md
-      - Symbolize gradients with a palette: code/image/symbolize_gradients.md
-      - Symbolize three bands with additive color: code/image/rgb_composites.md
-      - Threshold an image: code/image/threshold_image.md
-      - Map algebra: code/image/map_algebra.md
-      - Generalize (reclassify) image: code/image/reclassify_image.md
-      - Apply mask to image: code/image/apply_mask.md
-      - Compute area of a zone: code/image/compute_area.md
-      - Reduce by regions: code/image/reduce_by_regions.md
-      - Chart area of regions as percent of a zone: code/image/chart_area_percent.md
-      - Check image output during a workflow: code/image/self_check_image.md
-      - Use module to check image output: code/image/check_module.md
-      - Normalized difference: code/image/normalized_difference.md
-      - Reclassify with defined breaks: code/image/reclassify.md
-    - Image collection:
-      - Load image collection: code/ic/load_ic.md
-      - Select bands: code/ic/select_bands.md
-      - Add bands: code/ic/add_bands.md
-      - Inspect image collection: code/ic/inspect_ic.md
-      - Filter by location: code/ic/filter_by_location.md
-      - Filter by dates: code/ic/filter_by_dates.md
-      - Filter by image property: code/ic/filter_by_image_property.md
-      - Sort by cloud cover: code/ic/sort_cloud_cover.md
-      - Reduce with local operations: code/ic/reduce_local_operation.md
-      - Scale landsat collections: code/ic/landsat_scaling_function.md
-      - Mapping cloud masks: code/ic/cloud_masks.md
-    - Cartography:
-      - Community palette module: code/cart/community_palette.md
-      - Palettes for multiband images: code/cart/palettes_mb.md
-      - Gradient legend: code/cart/gradient_legend.md
-      - Qualitative legend: code/cart/qualitative_legend.md
-      - Map widget: code/cart/widget_map.md
-      - Wipe maps: code/cart/widget_wipe.md
-      - Panel widget: code/cart/widget_panel.md
-      - Label widget: code/cart/widget_label.md
-      - Show feature outlines without fills: code/cart/feature_outlines.md
-  - Concept Catalog:
-    - Data models:
-      - Band and Image: concepts/bands_image.md
-    - Remote sensing:
-      - Remote sensing systems: concepts/remote_sensing_systems.md
-      - Reflectance: concepts/reflectance.md
-      - Electromagnetic spectrum: concepts/electromagnetic_spectrum.md
-      - Spectral signatures: concepts/spectral_signature.md
-      - What is Landsat?: concepts/what_is_landsat.md
-      - Mother of Landsat: concepts/mother_of_landsat.md
-      - Landsat lexicon: concepts/landsat_lexicon.md
-      - Sentinel: concepts/sentinel.md
-      - MODIS: concepts/MODIS.md
-      - Spectral indices: concepts/spectral_indices.md
-    - Map layers:
-      - Grayscale layer: concepts/grayscale.md
-      - Contrast enhancement: concepts/contrast_enhancement.md
-      - RGB composites: concepts/rgb_composites.md
-      - Additive color: concepts/additive_color.md
-      - Band combinations: concepts/band_combinations.md
-      - Three band contrast enhancement: concepts/contrast_three_bands.md
-      - Image scenes: concepts/scenes.md
-    - App design:
-      - CSS box model: concepts/css_box_model.md
-    - Applications:
-      - Burn severity: concepts/burn_severity.md
-      - Land Surface Temperature: concepts/LST.md
-    - TBD:
-      - Cartographic roots: concepts/cart_roots.md
-      - Feature model: concepts/features.md
-    - Review questions:
-      - Raster model: concepts/raster.md
+  - Hello!: index.md 
+  - Toolbox:  
+    - Google Earth Engine: toolbox/GEE.md 
+    - QGIS: toolbox/QGIS.md
+  # - Introduction: 
+  #   - Javascript 101: intro/js101.md  
+  #   - GEE GUI: intro/gee_gui.md  
+  #   - QGIS GUI: intro/q_gui.md  
+  # - Vector data model: 
+  #   - Geometry: vector/geometry.md  
+  #   - Feature: vector/feature.md 
+  #   - Feature Collection: vector/feature_collection.md  
+  #   - Shapefile: vector/shapefile.md
 
-
-
-
-
+  
 #  - Contributing: contributing.md
 #  - License: license.md
 
