@@ -1,0 +1,1075 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A primer for Earth Engine, Fall 2022">
+      
+      
+        <meta name="author" content="Jeff Howarth">
+      
+      
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/intro/js101/">
+      
+      
+        <link rel="prev" href="../../toolbox/QGIS/">
+      
+      
+        <link rel="next" href="../gee_gui/">
+      
+      <link rel="icon" href="../../images/GG0150-icon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Javascript 101 - a primer for Earth Engine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libre Baskerville";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="white" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="a primer for Earth Engine" class="md-header__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
+      
+  <img src="../../images/GG0150-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            a primer for Earth Engine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Javascript 101
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jeffhowarth/eeprimer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jeffhowarth/eeprimer
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="a primer for Earth Engine" class="md-nav__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
+      
+  <img src="../../images/GG0150-icon.png" alt="logo">
+
+    </a>
+    a primer for Earth Engine
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jeffhowarth/eeprimer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jeffhowarth/eeprimer
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Hello!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Toolbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Toolbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolbox/GEE/" class="md-nav__link">
+        Google Earth Engine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolbox/QGIS/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Javascript 101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Javascript 101
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    Tutorial
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-tour" class="md-nav__link">
+    Quick tour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-repo-save-file" class="md-nav__link">
+    New Repo, Save File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-1" class="md-nav__link">
+    Data types (1)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#line-comment" class="md-nav__link">
+    Line Comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable" class="md-nav__link">
+    Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semi-colon" class="md-nav__link">
+    Semi-colon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-quotes" class="md-nav__link">
+    Double quotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentheses" class="md-nav__link">
+    Parentheses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comma" class="md-nav__link">
+    Comma
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-2" class="md-nav__link">
+    Data types (2)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number" class="md-nav__link">
+    Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-3" class="md-nav__link">
+    Data types (3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-values" class="md-nav__link">
+    Key values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-4" class="md-nav__link">
+    Data types (4)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mercator-distortion" class="md-nav__link">
+    Mercator distortion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gee_gui/" class="md-nav__link">
+        GEE User Interface
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    Tutorial
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-tour" class="md-nav__link">
+    Quick tour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-repo-save-file" class="md-nav__link">
+    New Repo, Save File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-1" class="md-nav__link">
+    Data types (1)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#line-comment" class="md-nav__link">
+    Line Comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable" class="md-nav__link">
+    Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semi-colon" class="md-nav__link">
+    Semi-colon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-quotes" class="md-nav__link">
+    Double quotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentheses" class="md-nav__link">
+    Parentheses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comma" class="md-nav__link">
+    Comma
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-2" class="md-nav__link">
+    Data types (2)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number" class="md-nav__link">
+    Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-3" class="md-nav__link">
+    Data types (3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-values" class="md-nav__link">
+    Key values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types-4" class="md-nav__link">
+    Data types (4)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data types (4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mercator-distortion" class="md-nav__link">
+    Mercator distortion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Javascript 101</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>To use GEE, you will need to write code.    </p>
+<p>In this course, we will use the GEE Code Editor, which means that we will be coding in JavaScript.    </p>
+<h2 id="tutorial">Tutorial</h2>
+<p>I made the videos below to help walk you through through some basic JavaScript syntax, data types, and methods. I broke the tutorial into a set of short videos, rather than recording one long one. You should work through all the videos in the set.     </p>
+<p>To follow along, you will need to open the GEE Code Editor in a web browser.  </p>
+<p>I recommend that you use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> when working with the GEE Code Editor.     </p>
+<p>This is the web address to the Code Editor: </p>
+<p><a href="https://code.earthengine.google.com/" target="_blank">https://code.earthengine.google.com/</a></p>
+<p>Honestly, you might as well bookmark that page and move the bookmark to the left corner of your toolbar. You will be visiting this site a lot over the semester.  </p>
+<p>Below the video, you should find snippets for the code shown in the video. If you hover your cursor over the upper-right corner of the snippet, you should see a little button that you can click to copy the code. You can then paste the code into the Code Editor while you watch the video. My intention is to save you some time and reduce errors that come from typos.  </p>
+<h3 id="quick-tour">Quick tour</h3>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/GO1HMg5DpIg?si=gqwfC4gctYah2A7u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="new-repo-save-file">New Repo, Save File</h3>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/VRqb4JqlexA?si=lGoOxrRDleGNiviZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="data-types-1">Data types (1)</h3>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/VTU8z6gqGfk?si=36miYHrFsP37HCEu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h4 id="line-comment">Line Comment</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// This is a line comment. </span>
+</code></pre></div>
+<h4 id="string">String</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="s1">&#39;Hello, world&#39;</span><span class="w">  </span><span class="c1">// Single quotes defines a string. </span>
+</code></pre></div>
+<h4 id="variable">Variable</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use var keyword to define a variable to store data. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hello, world!&#39;</span><span class="w"> </span><span class="c1">// This variable stores a string. </span>
+</code></pre></div>
+<h4 id="semi-colon">Semi-colon</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// End statements with semi-colons so that the editor does not complain.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">hello_again</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hola Mundo&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="double-quotes">Double quotes</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// You can also define strings with double quotes. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">who_dat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Who&#39;s there?&quot;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="parentheses">Parentheses</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// You can pass variables to functions within parentheses. </span>
+
+<span class="nx">print</span><span class="p">(</span><span class="nx">hello_again</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="comma">Comma</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// You can pass more than one variable separated by commas.</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="nx">hello_again</span><span class="p">,</span><span class="w"> </span><span class="nx">who_dat</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="data-types-2">Data types (2)</h3>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/YxzUmrtJlOM?si=bb-3J4GzcweYdJHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h4 id="number">Number</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// This variable stores a number. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2023</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="list">List</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Square brackets defines a list. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">some_vt_towns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Middlebury&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;New Haven&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bristol&#39;</span><span class="p">];</span>
+</code></pre></div>
+<h4 id="index">Index</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use square brackets after list object to call index of items in list.</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="nx">some_vt_towns</span><span class="p">,</span><span class="w"> </span><span class="nx">some_vt_towns</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+</code></pre></div>
+<h4 id="methods">Methods</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use dot notation to call methods associated with the data type. </span>
+
+<span class="nx">print</span><span class="p">(</span><span class="nx">some_vt_towns</span><span class="p">.</span><span class="nx">sort</span><span class="p">());</span>
+</code></pre></div>
+<h3 id="data-types-3">Data types (3)</h3>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/LaLw-JNG1Rg?si=tAYelPOujzu3qHtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h4 id="dictionary">Dictionary</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use curly brackets (or braces) to define dictionaries. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">midd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Middlebury&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Dictionaries are composed of key:value pairs.</span>
+<span class="w">  </span><span class="s2">&quot;pop_2010&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8496</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;pop_2020&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9152</span>
+<span class="p">};</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Middlebury&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">midd</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="key-values">Key values</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use dot notation to call the value of object key.  </span>
+
+<span class="nx">print</span><span class="p">(</span><span class="nx">midd</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Population change&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">midd</span><span class="p">.</span><span class="nx">pop_2020</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">midd</span><span class="p">.</span><span class="nx">pop_2010</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="data-types-4">Data types (4)</h3>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/pseBwP-semM?si=q41ds01P5aNqKkpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h4 id="functions">Functions</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Functions can be defined as a way to reuse code and make it easier to read.  </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">i_love_function</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">some_string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;I love &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">some_string</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;!&#39;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="nx">i_love_function</span><span class="p">(</span><span class="s1">&#39;maps&#39;</span><span class="p">));</span>
+</code></pre></div>
+<h4 id="modules">Modules</h4>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Modules can be used to share functions across multiple scripts by:</span>
+
+<span class="c1">// 1. storing the module as a variable,</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">tool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/tissot.js&#39;</span><span class="p">);</span>
+
+<span class="c1">// 2. calling functions in the module as methods of this variable.</span>
+
+<span class="nx">tool</span><span class="p">.</span><span class="nx">drawTissot</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="mercator-distortion">Mercator distortion</h3>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/RYCvzdUvNQM?si=-G6yHlrOYjHim0A3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p><a href="https://www.thetruesize.com/" target="_blank">The True Size of</a></p>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../toolbox/QGIS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: QGIS" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                QGIS
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../gee_gui/" class="md-footer__link md-footer__link--next" aria-label="Next: GEE User Interface" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                GEE User Interface
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Jeff Howarth
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jeffhowarth" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/jeffgeographer" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.footer", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

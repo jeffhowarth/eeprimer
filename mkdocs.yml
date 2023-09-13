@@ -102,7 +102,7 @@ markdown_extensions:
   - markdown.extensions.meta
   - markdown.extensions.toc:
       permalink: false
-      toc_depth: 3
+      toc_depth: 4
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -139,10 +139,10 @@ nav:
   - Toolbox:  
     - Google Earth Engine: toolbox/GEE.md 
     - QGIS: toolbox/QGIS.md
-  # - Introduction: 
-  #   - Javascript 101: intro/js101.md  
-  #   - GEE GUI: intro/gee_gui.md  
-  #   - QGIS GUI: intro/q_gui.md  
+  - Introduction: 
+    - Javascript 101: intro/js101.md  
+    - GEE User Interface: intro/gee_gui.md  
+    # - QGIS GUI: intro/q_gui.md  
   # - Vector data model: 
   #   - Geometry: vector/geometry.md  
   #   - Feature: vector/feature.md 
