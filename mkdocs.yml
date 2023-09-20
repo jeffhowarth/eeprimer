@@ -141,7 +141,9 @@ nav:
     - QGIS: toolbox/QGIS.md
   - Introduction: 
     - Javascript 101: intro/js101.md  
-    - GEE User Interface: intro/gee_gui.md  
+    - GEE User Interface: intro/gee_gui.md 
+  - Workflows:  
+    - Image collections: workflows/image_collections.md 
     # - QGIS GUI: intro/q_gui.md  
   # - Vector data model: 
   #   - Geometry: vector/geometry.md  
