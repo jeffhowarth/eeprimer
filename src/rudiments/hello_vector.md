@@ -22,7 +22,7 @@ This tutorial introduces the vector data model with QGIS. It walks you through a
 
 ---
 
-## Scale, detail, accuracy  
+## Display by attribute  
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/OCRhrz25D_k?si=33eThxPVfoMprUhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
