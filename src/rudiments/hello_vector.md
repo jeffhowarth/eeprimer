@@ -24,6 +24,8 @@ This tutorial introduces the vector data model with QGIS. It walks you through a
 
 ## Display by attribute  
 
+_Please note: I edited this video in YouTube Studio this morning (9/28) so that it should now end at 7:15 mark. Sometimes Studio takes some time to process edits, so if the video served to you keeps going after 7:15, you are welcome to stop it and move onto next one. Thanks._ 
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/OCRhrz25D_k?si=33eThxPVfoMprUhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
