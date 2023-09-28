@@ -12,25 +12,27 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/rudiments/hello_vector/">
       
       
+        <link rel="prev" href="../../intro/qgis_gui/">
       
-        <link rel="next" href="toolbox/GEE/">
       
-      <link rel="icon" href="images/GG0150-icon.png">
+        <link rel="next" href="../../workflows/image_collections/">
+      
+      <link rel="icon" href="../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>a primer for Earth Engine</title>
+        <title>Hello Vector - a primer for Earth Engine</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -46,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="extra.css">
+      <link rel="stylesheet" href="../../extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,9 +91,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="a primer for Earth Engine" class="md-header__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
+    <a href="../.." title="a primer for Earth Engine" class="md-header__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
       
-  <img src="images/GG0150-icon.png" alt="logo">
+  <img src="../../images/GG0150-icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hello!
+              Hello Vector
             
           </span>
         </div>
@@ -183,9 +190,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="a primer for Earth Engine" class="md-nav__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
+    <a href="../.." title="a primer for Earth Engine" class="md-nav__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
       
-  <img src="images/GG0150-icon.png" alt="logo">
+  <img src="../../images/GG0150-icon.png" alt="logo">
 
     </a>
     a primer for Earth Engine
@@ -211,19 +218,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Hello!
       </a>
-      
     </li>
   
 
@@ -271,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="toolbox/GEE/" class="md-nav__link">
+      <a href="../../toolbox/GEE/" class="md-nav__link">
         Google Earth Engine
       </a>
     </li>
@@ -285,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="toolbox/QGIS/" class="md-nav__link">
+      <a href="../../toolbox/QGIS/" class="md-nav__link">
         QGIS
       </a>
     </li>
@@ -344,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intro/js101/" class="md-nav__link">
+      <a href="../../intro/js101/" class="md-nav__link">
         Javascript 101
       </a>
     </li>
@@ -358,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intro/gee_gui/" class="md-nav__link">
+      <a href="../../intro/gee_gui/" class="md-nav__link">
         GEE User Interface
       </a>
     </li>
@@ -372,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intro/qgis_gui/" class="md-nav__link">
+      <a href="../../intro/qgis_gui/" class="md-nav__link">
         QGIS User Interface
       </a>
     </li>
@@ -392,16 +391,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
         
@@ -414,7 +413,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Rudiments of Vector
@@ -425,11 +424,90 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="rudiments/hello_vector/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hello Vector
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Hello Vector
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-shapefile" class="md-nav__link">
+    Create a new shapefile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digitize-a-feature" class="md-nav__link">
+    Digitize a feature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-new-field" class="md-nav__link">
+    Add a new field
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-detail-accuracy" class="md-nav__link">
+    Scale, detail, accuracy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#under-the-shapefile-hood" class="md-nav__link">
+    Under the shapefile hood
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    Deliverable
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -482,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="workflows/image_collections/" class="md-nav__link">
+      <a href="../../workflows/image_collections/" class="md-nav__link">
         Image collections
       </a>
     </li>
@@ -514,6 +592,63 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-shapefile" class="md-nav__link">
+    Create a new shapefile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digitize-a-feature" class="md-nav__link">
+    Digitize a feature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-new-field" class="md-nav__link">
+    Add a new field
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-detail-accuracy" class="md-nav__link">
+    Scale, detail, accuracy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#under-the-shapefile-hood" class="md-nav__link">
+    Under the shapefile hood
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    Deliverable
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -527,17 +662,27 @@
                   
 
 
-  <h1>Hello!</h1>
+  <h1>Hello Vector</h1>
 
-<p>Welcome to my Earth Engine primer!</p>
-<p>These materials aim to help undergraduate students in Geography and Environmental Studies learn geospatial methods for investigating the global environment. While most of the lessons introduce methods and workflows in Google Earth Engine, I also show students around QGIS and how to move between the two platforms. The ultimate goal of the materials is to help students learn timeless concepts of geospatial analysis that transcend specific software platforms. That is the goal at least. </p>
-<p>I use the materials to teach undergraduates at Middlebury College (Vermont, USA) and revise the materials every fall semester while teaching. This means that I scrub the site in September and then publish revised materials each week through December.  </p>
-<p>Please contact me if you have any questions. </p>
-<p>Jeff Howarth<br />
-<em>Associate Professor of Geography</em><br />
-Middlebury College, Middlebury, Vermont, USA<br />
-<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#104;&#111;&#119;&#97;&#114;&#116;&#104;&#64;&#109;&#105;&#100;&#100;&#108;&#101;&#98;&#117;&#114;&#121;&#46;&#101;&#100;&#117;">&#106;&#104;&#111;&#119;&#97;&#114;&#116;&#104;&#64;&#109;&#105;&#100;&#100;&#108;&#101;&#98;&#117;&#114;&#121;&#46;&#101;&#100;&#117;</a>    </p>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This tutorial introduces the vector data model with QGIS. It walks you through a simple task of creating and populating a vector table stored as a shapefile, and aims to get you thinking about relationships between detail, accuracy, map scale, and mapping purpose.  </p>
+<h2 id="create-a-new-shapefile">Create a new shapefile</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/7RNiQBXy_Ds?si=bt0gOeSVXGch2RoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="digitize-a-feature">Digitize a feature</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/6QYmjcSmO7A?si=18y-JQYTD5sgEDS6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="add-a-new-field">Add a new field</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/09vY1GHxGdU?si=2yjjb2BSWIOCrIVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="scale-detail-accuracy">Scale, detail, accuracy</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/OCRhrz25D_k?si=33eThxPVfoMprUhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="under-the-shapefile-hood">Under the shapefile hood</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/ZkrcWxef4U4?si=dbWGyyHAtMXrRJx7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="deliverable">Deliverable</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/UNU6uHr9mlk?si=PTxymZmDAtrQMLOa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 
@@ -558,15 +703,30 @@ Middlebury College, Middlebury, Vermont, USA<br />
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../../intro/qgis_gui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: QGIS User Interface" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                QGIS User Interface
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="toolbox/GEE/" class="md-footer__link md-footer__link--next" aria-label="Next: Google Earth Engine" rel="next">
+          <a href="../../workflows/image_collections/" class="md-footer__link md-footer__link--next" aria-label="Next: Image collections" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Google Earth Engine
+                Image collections
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -628,10 +788,10 @@ Middlebury College, Middlebury, Vermont, USA<br />
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.indexes", "navigation.footer", "navigation.expand", "content.code.copy"], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.footer", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>

@@ -1,6 +1,6 @@
 ## Introduction  
 
-This tutorial introduces a basic workflow for processing and visualizing image collections with Earth Engine. You will use a MODIS Land Surface Temperature product to make a map that shows the mean LST for January 2023 in degrees Celsius. By the end of the tutorial, you should have a map that looks like the image below. 
+This tutorial introduces a common workflow for processing and visualizing image collections with Earth Engine. You will use a MODIS Land Surface Temperature product to make a map that shows the mean LST for January 2023 in degrees Celsius. By the end of the tutorial, you should have a map that looks like the image below. 
 
 ![Week 02 tutorial result](https://geography.middlebury.edu/GEOG0251/tutorials/wk02_tutorial.png)
 

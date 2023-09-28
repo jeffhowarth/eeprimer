@@ -138,13 +138,23 @@ nav:
   - Hello!: index.md 
   - Toolbox:  
     - Google Earth Engine: toolbox/GEE.md 
-    - QGIS: toolbox/QGIS.md
+    - QGIS: toolbox/QGIS.md  
   - Introduction: 
     - Javascript 101: intro/js101.md  
     - GEE User Interface: intro/gee_gui.md 
-  - Workflows:  
-    - Image collections: workflows/image_collections.md 
-    # - QGIS GUI: intro/q_gui.md  
+    - QGIS User Interface: intro/qgis_gui.md 
+  - Rudiments of Vector:
+    - Hello Vector: rudiments/hello_vector.md
+    # - Geometry and feature: rudiments/geometry_feature.md
+    # - Features from features: rudiments/features_from_features.md 
+    # - Overlay operations: rudiments/overlay_operations.md  
+    # - Spatial queries: rudiments/spatial_queries.md  
+  - Common Workflows:  
+    - Image collections: workflows/image_collections.md  
+    # - Feature collections: workflows/feature_collections.md  
+
+
+ 
   # - Vector data model: 
   #   - Geometry: vector/geometry.md  
   #   - Feature: vector/feature.md 
