@@ -12,20 +12,20 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/intro/gee_gui/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/rudiments/hello_feature_collection/">
       
       
-        <link rel="prev" href="../js101/">
+        <link rel="prev" href="../hello_vector/">
       
       
-        <link rel="next" href="../qgis_gui/">
+        <link rel="next" href="../../workflows/image_collections/">
       
       <link rel="icon" href="../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>GEE User Interface - a primer for Earth Engine</title>
+        <title>Hello Feature Collection - a primer for Earth Engine</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GEE User Interface
+              Hello Feature Collection
             
           </span>
         </div>
@@ -304,16 +304,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
       
       
         
@@ -330,7 +330,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Introduction
@@ -343,8 +343,93 @@
   
   
     <li class="md-nav__item">
-      <a href="../js101/" class="md-nav__link">
+      <a href="../../intro/js101/" class="md-nav__link">
         Javascript 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/gee_gui/" class="md-nav__link">
+        GEE User Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/qgis_gui/" class="md-nav__link">
+        QGIS User Interface
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Rudiments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Rudiments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hello_vector/" class="md-nav__link">
+        Hello Vector
       </a>
     </li>
   
@@ -365,12 +450,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          GEE User Interface
+          Hello Feature Collection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        GEE User Interface
+        Hello Feature Collection
       </a>
       
         
@@ -394,57 +479,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tutorial" class="md-nav__link">
-    Tutorial
-  </a>
-  
-    <nav class="md-nav" aria-label="Tutorial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#explore-the-map-interface" class="md-nav__link">
-    Explore the map interface.
+  <a href="#start-a-new-script" class="md-nav__link">
+    Start a new script
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#write-a-header" class="md-nav__link">
-    Write a header.
+      
+        <li class="md-nav__item">
+  <a href="#import-a-table-as-an-asset" class="md-nav__link">
+    Import a table as an Asset
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#center-map-and-set-zoom-level" class="md-nav__link">
-    Center map and set zoom level.
+      
+        <li class="md-nav__item">
+  <a href="#construct-collection-from-string" class="md-nav__link">
+    Construct Collection from String
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#set-the-default-base-map" class="md-nav__link">
-    Set the default base map.
+      
+        <li class="md-nav__item">
+  <a href="#center-map-on-object" class="md-nav__link">
+    Center map on Object
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#load-lst-module" class="md-nav__link">
-    Load LST module.
+      
+        <li class="md-nav__item">
+  <a href="#add-feature-collection-as-map-layer" class="md-nav__link">
+    Add Feature Collection as Map Layer
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#inspect-data" class="md-nav__link">
-    Inspect data.
+      
+        <li class="md-nav__item">
+  <a href="#create-a-geometry" class="md-nav__link">
+    Create a geometry
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#construct-a-feature" class="md-nav__link">
+    Construct a feature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-feature-collection-into-an-image" class="md-nav__link">
+    Convert feature collection into an image
+  </a>
   
 </li>
       
@@ -452,91 +538,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../qgis_gui/" class="md-nav__link">
-        QGIS User Interface
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          Rudiments
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Rudiments
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../rudiments/hello_vector/" class="md-nav__link">
-        Hello Vector
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../rudiments/hello_feature_collection/" class="md-nav__link">
-        Hello Feature Collection
-      </a>
     </li>
   
 
@@ -651,57 +652,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tutorial" class="md-nav__link">
-    Tutorial
-  </a>
-  
-    <nav class="md-nav" aria-label="Tutorial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#explore-the-map-interface" class="md-nav__link">
-    Explore the map interface.
+  <a href="#start-a-new-script" class="md-nav__link">
+    Start a new script
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#write-a-header" class="md-nav__link">
-    Write a header.
+      
+        <li class="md-nav__item">
+  <a href="#import-a-table-as-an-asset" class="md-nav__link">
+    Import a table as an Asset
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#center-map-and-set-zoom-level" class="md-nav__link">
-    Center map and set zoom level.
+      
+        <li class="md-nav__item">
+  <a href="#construct-collection-from-string" class="md-nav__link">
+    Construct Collection from String
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#set-the-default-base-map" class="md-nav__link">
-    Set the default base map.
+      
+        <li class="md-nav__item">
+  <a href="#center-map-on-object" class="md-nav__link">
+    Center map on Object
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#load-lst-module" class="md-nav__link">
-    Load LST module.
+      
+        <li class="md-nav__item">
+  <a href="#add-feature-collection-as-map-layer" class="md-nav__link">
+    Add Feature Collection as Map Layer
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#inspect-data" class="md-nav__link">
-    Inspect data.
+      
+        <li class="md-nav__item">
+  <a href="#create-a-geometry" class="md-nav__link">
+    Create a geometry
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#construct-a-feature" class="md-nav__link">
+    Construct a feature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-feature-collection-into-an-image" class="md-nav__link">
+    Convert feature collection into an image
+  </a>
   
 </li>
       
@@ -720,62 +722,145 @@
                   
 
 
-  <h1>GEE User Interface</h1>
+  <h1>Hello Feature Collection</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>In this course, we will work with Google Earth Engine via the GEE Code Editor. The tutorial below provides an overview of the different components of the Code Editor&rsquo;s graphical user interface (GUI).   </p>
-<h2 id="tutorial">Tutorial</h2>
-<p>I split this tutorial into separate videos. If I show code in the video, you can find the snippets below each video.  </p>
-<p>To follow along with the videos, you will need to open the GEE Code Editor in a web browser. Please see the previous tutorial if you forget how to access the editor. </p>
-<h3 id="explore-the-map-interface">Explore the map interface.</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/71lDbWlqZec?si=2XSmOzjZvE8vAznJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h3 id="write-a-header">Write a header.</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/b3TPJSb5CNU?si=QuRg4mAhfYgOmiib" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class="c1">//  Name:     gee_ui.js </span>
-<span class="c1">//  Author:   Jeff Howarth</span>
-<span class="c1">//  Date:     9/7/2023 </span>
-<span class="c1">//  Purpose:  Introduce Earth Engine Graphical User Interface (Code Editor)</span>
-<span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  </span>
+<p>The videos below introduce geometry and feature objects in Google Earth Engine. They walk you through how to import a table as an asset and how to construct a feature from scratch in the Code Editor.  </p>
+<hr />
+<h2 id="start-a-new-script">Start a new script</h2>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="c1">//  Hello Feature Collection</span>
+<span class="c1">//</span>
+<span class="c1">//  Jeff Howarth </span>
+<span class="c1">//  Geography 251</span>
+<span class="c1">//</span>
+<span class="c1">//  Oct 1, 2023</span>
+<span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 </code></pre></div>
-<h3 id="center-map-and-set-zoom-level">Center map and set zoom level.</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/EKhfGl6A6Gw?si=xPDUF6f7kgczWJ2C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr />
+<h2 id="import-a-table-as-an-asset">Import a table as an Asset</h2>
+<p><em>insert video</em></p>
+<hr />
+<h2 id="construct-collection-from-string">Construct Collection from String</h2>
+<pre class="mermaid"><code>graph LR
+  method["ee.FeatureCollection.()"] --&gt; output&gt;output\n\nFEATURE COLLECTION];
+  arg_att([pathname\n\nSTRING]) --&gt; method
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">//  Center and set zoom level the map.</span>
+  style method fill:#ADD8E6,stroke-width:0px
+  style output fill:#FFD700,stroke-width:0px
+  style arg_att fill:#DCDCDC,stroke-width:0px</code></pre>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Construct Feature Collection from String (collection name). </span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
 
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span>
-<span class="w">  </span><span class="o">-</span><span class="mf">50</span><span class="p">,</span><span class="w">                  </span><span class="c1">// Longitude</span>
-<span class="w">   </span><span class="mf">40</span><span class="p">,</span><span class="w">                  </span><span class="c1">// Latitude</span>
-<span class="w">   </span><span class="mf">3</span><span class="w">                    </span><span class="c1">// Zoom level</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">hello_pond</span><span class="w"> </span><span class="p">;</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;HELLO FEATURE COLLECTION:&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hello_pond</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hello_pond</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
+<span class="w">  </span><span class="nx">hello_pond</span><span class="p">.</span><span class="nx">first</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 </code></pre></div>
-<h3 id="set-the-default-base-map">Set the default base map.</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/lFiWSTi-luc?si=czgfEgrPRQ-CRdho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr />
+<h2 id="center-map-on-object">Center map on Object</h2>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Center Map on Object.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// -------------------------------------------------------------------------- </span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">//  Set the default base map. </span>
-
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;SATELLITE&#39;</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">();</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">();</span>
 </code></pre></div>
-<h3 id="load-lst-module">Load LST module.</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/djy4oVgaFlE?si=sDsY8yK1AWRZBB5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr />
+<h2 id="add-feature-collection-as-map-layer">Add Feature Collection as Map Layer</h2>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Add Feature Collection as Map Layer.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">//  Load module</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">tool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/modis_lst_demo.js&#39;</span><span class="p">);</span>
-
-<span class="c1">// You can then call functions in the module as methods of this object.</span>
-
-<span class="nx">tool</span><span class="p">.</span><span class="nx">makeMap</span><span class="p">();</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
 </code></pre></div>
-<h3 id="inspect-data">Inspect data.</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/Gv4ASCrLMB4?si=1PCOu2oLaRg8EcAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr />
+<h2 id="create-a-geometry">Create a geometry</h2>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Create a Geometry.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Print info about map layers. </span>
+<span class="nx">print</span><span class="p">(</span>
+<span class="w"> </span><span class="s1">&#39;Pond Geometry:&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">geometry</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="construct-a-feature">Construct a feature</h2>
+<pre class="mermaid"><code>graph LR
+  method["ee.Feature()"] --&gt; output&gt;output\n\nFEATURE];
+  arg_geom([GEOMETRY]) --&gt; method;
+  arg_att([attributes\n\nDICTIONARY]) --&gt; method;
 
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Layers on this map:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Map</span><span class="p">.</span><span class="nx">layers</span><span class="p">());</span>
+  style method fill:#ADD8E6,stroke-width:0px
+  style output fill:#FFD700,stroke-width:0px
+  style arg_geom fill:#FFD700,stroke-width:0px
+  style arg_att fill:#DCDCDC,stroke-width:0px</code></pre>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Construct a Feature.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
+
+<span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">pond_attributes</span><span class="w"> </span><span class="p">;</span>
+
+<span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">pond_feature</span><span class="w"> </span><span class="p">;</span>
+
+<span class="w"> </span><span class="nx">print</span><span class="p">(</span>
+<span class="w">   </span><span class="s2">&quot;HELLO POND FEATURE:&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;geometry:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">geometry</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;attributes:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pond_attributes</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;feature:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pond_feature</span>
+<span class="w">   </span><span class="p">)</span>
+<span class="w">  </span><span class="p">;</span>
+
+<span class="w"> </span><span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="convert-feature-collection-into-an-image">Convert feature collection into an image</h2>
+<pre class="mermaid"><code>graph LR
+  input[/input\n\nFEATURE COLLECTION/] --&gt; method[".reduceToImage()"]
+  method --&gt; output&gt;output\n\nIMAGE];
+  arg_att1([property key\n\nSTRING]) --&gt; method;
+  arg_att2(["ee.Reducer()"]) --&gt; method;
+
+  style input fill:#FFD700,stroke-width:0px
+  style method fill:#ADD8E6,stroke-width:0px
+  style output fill:#FFD700,stroke-width:0px
+  style arg_att1 fill:#DCDCDC,stroke-width:0px
+  style arg_att2 fill:#ADD8E6,stroke-width:0px</code></pre>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
+<span class="c1">//  Convert feature collection into an image. </span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 10/01/23</span>
+<span class="c1">// ---------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">pond_feature_collection</span><span class="w"> </span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">pond_image</span><span class="w"> </span><span class="p">;</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;HELLO POND IMAGE:&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">pond_image</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
 </code></pre></div>
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
@@ -800,7 +885,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../js101/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Javascript 101" rel="prev">
+          <a href="../hello_vector/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hello Vector" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -809,20 +894,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Javascript 101
+                Hello Vector
               </div>
             </div>
           </a>
         
         
           
-          <a href="../qgis_gui/" class="md-footer__link md-footer__link--next" aria-label="Next: QGIS User Interface" rel="next">
+          <a href="../../workflows/image_collections/" class="md-footer__link md-footer__link--next" aria-label="Next: Basic image collections" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                QGIS User Interface
+                Basic image collections
               </div>
             </div>
             <div class="md-footer__button md-icon">

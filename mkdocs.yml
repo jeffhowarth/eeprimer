@@ -126,7 +126,11 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format 
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -143,15 +147,13 @@ nav:
     - Javascript 101: intro/js101.md  
     - GEE User Interface: intro/gee_gui.md 
     - QGIS User Interface: intro/qgis_gui.md 
-  - Rudiments of Vector:
+  - Rudiments:
     - Hello Vector: rudiments/hello_vector.md
-    # - Geometry and feature: rudiments/geometry_feature.md
-    # - Features from features: rudiments/features_from_features.md 
-    # - Overlay operations: rudiments/overlay_operations.md  
-    # - Spatial queries: rudiments/spatial_queries.md  
-  - Common Workflows:  
-    - Image collections: workflows/image_collections.md  
-    # - Feature collections: workflows/feature_collections.md  
+    - Hello Feature Collection: rudiments/hello_feature_collection.md 
+
+  - Worked out examples:  
+    - Basic image collections: workflows/image_collections.md  
+    - Grassland bird habitat: workflows/grassland_bird_habitat.md  
 
 
  
