@@ -71,7 +71,7 @@ graph TD
   style method1 fill:#ADD8E6,stroke-width:0px
   style method2 fill:#ADD8E6,stroke-width:0px
   style method3 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
@@ -113,9 +113,9 @@ graph TD
 
   style method1 fill:#ADD8E6,stroke-width:0px
   style method2 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
-  style arg_att2 fill:#FFD700,stroke-width:0px
+  style arg_att2 fill:#E1C3E6,stroke-width:0px
 ```
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/PNAnfKmJYbg?si=L9JMaEV26sVZeuwL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -159,12 +159,12 @@ graph TD
   arg_att4([maxError\n\nNUMBER])  --> method4 ;
 
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#E1C3E6,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
   style method2 fill:#ADD8E6,stroke-width:0px
   style method3 fill:#ADD8E6,stroke-width:0px
   style method4 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
@@ -200,7 +200,7 @@ graph LR
   method1 --> output>output\n\nIMAGE];
 
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
@@ -251,9 +251,9 @@ graph LR
   arg_att2([new values\n\nLIST]) --> method1;
   method1 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
 ```
@@ -289,9 +289,9 @@ graph LR
   arg_att1([region or aoi\n\nGEOMETRY, FEATURE or\nFEATURE COLLECTION]) --> method1;
   method1 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
@@ -327,9 +327,9 @@ graph LR
   arg_att1([value\n\nNUMBER]) --> method1;
   method1 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
@@ -370,12 +370,12 @@ graph TB
   arg_att4([value\n\nNUMBER]) --> method4;
   method4 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
   style method2 fill:#ADD8E6,stroke-width:0px
   style method3 fill:#ADD8E6,stroke-width:0px
   style method4 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
@@ -419,9 +419,9 @@ graph LR
   arg_att1([value\n\nNUMBER]) --> method1;
   method1 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
@@ -460,11 +460,11 @@ graph LR
   arg_att4([crs\n\nSTRING]) --> method1;
   method1 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
-  style arg_att1 fill:#FFD700,stroke-width:0px
-  style arg_att2 fill:#ADD8E6,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
+  style arg_att1 fill:#E1C3E6,stroke-width:0px
+  style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
@@ -504,10 +504,10 @@ graph LR
   arg_att1([mask\n\nIMAGE]) --> method1;
   method1 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
-  style arg_att1 fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
+  style arg_att1 fill:#C5E6A1,stroke-width:0px
 ```
 
 __Case 2:__ to use an image to mask itself:  
@@ -517,9 +517,9 @@ graph LR
   input[/input\n\nIMAGE/] --> method1[".selfMask()"] ;
   method1 --> output>output\n\nIMAGE];
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
 ```
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/MoqbeTucypc?si=wUyiszjggDRYDoVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -559,17 +559,19 @@ graph LR
   arg_att4([geometryType\n\nSTRING]) --> method1;
   arg_att5([eightConnected\n\nBOOLEAN]) --> method1;
   arg_att6([maxPixels\n\nNUMBER]) --> method1;
+  arg_att7([geometryInNativeProjection\n\nBOOLEAN]) --> method1;
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
 
   style arg_att1 fill:#ADD8E6,stroke-width:0px
-  style arg_att2 fill:#FFD700,stroke-width:0px
+  style arg_att2 fill:#E1C3E6,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
   style arg_att4 fill:#DCDCDC,stroke-width:0px
   style arg_att5 fill:#DCDCDC,stroke-width:0px
   style arg_att6 fill:#DCDCDC,stroke-width:0px
+  style arg_att7 fill:#DCDCDC,stroke-width:0px
 ```
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/wROroakCXQU?si=pyjYezz6Kv6T5HyR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -603,10 +605,10 @@ graph LR
 
   arg_att1([target\n\nGEOMETRY or FEATURE]) --> method2;
 
-  style input fill:#FFD700,stroke-width:0px  
+  style input fill:#E1C3E6,stroke-width:0px  
   style method2 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
-  style arg_att1 fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
+  style arg_att1 fill:#E1C3E6,stroke-width:0px
 ```
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/jUoOV2sTm8I?si=BTW_TliZ0Prkdr9-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -641,9 +643,9 @@ graph LR
 
   arg_att1([getArea\n\nFUNCTION]) --> method2;
 
-  style input fill:#FFD700,stroke-width:0px  
+  style input fill:#E1C3E6,stroke-width:0px  
   style method2 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att1 fill:#ADD8E6,stroke-width:0px
 ```
 
@@ -696,12 +698,12 @@ graph TD
   method2 --> output>output\n\nFEATURE COLLECTION];
 
 
-  style input fill:#FFD700,stroke-width:0px  
+  style input fill:#E1C3E6,stroke-width:0px  
   style method1 fill:#ADD8E6,stroke-width:0px
   style method2 fill:#ADD8E6,stroke-width:0px
   style method3 fill:#ADD8E6,stroke-width:0px
   style method4 fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
@@ -743,7 +745,7 @@ graph LR
 
   style method1 fill:#ADD8E6,stroke-width:0px
   style output fill:#ADD8E6,stroke-width:0px
-  style arg_att1 fill:#FFD700,stroke-width:0px
+  style arg_att1 fill:#E1C3E6,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
 ```

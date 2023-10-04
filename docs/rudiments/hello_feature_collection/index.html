@@ -493,8 +493,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#construct-collection-from-string" class="md-nav__link">
-    Construct Collection from String
+  <a href="#load-feature-collection-from-string" class="md-nav__link">
+    Load Feature Collection from String
   </a>
   
 </li>
@@ -666,8 +666,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#construct-collection-from-string" class="md-nav__link">
-    Construct Collection from String
+  <a href="#load-feature-collection-from-string" class="md-nav__link">
+    Load Feature Collection from String
   </a>
   
 </li>
@@ -725,9 +725,11 @@
   <h1>Hello Feature Collection</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>The videos below introduce geometry and feature objects in Google Earth Engine. They walk you through how to import a table as an asset and how to construct a feature from scratch in the Code Editor.  </p>
+<p>The videos below introduce geometry and feature objects in Google Earth Engine. They walk you through how to import a table as an asset, how to construct a feature from scratch in the Code Editor, and how to convert vector into raster in Earth Engine.  </p>
 <hr />
 <h2 id="start-a-new-script">Start a new script</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-c-l-s1wnG8?si=9wS04bnlPLH1Ewht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 <span class="c1">//  Hello Feature Collection</span>
 <span class="c1">//</span>
@@ -739,18 +741,21 @@
 </code></pre></div>
 <hr />
 <h2 id="import-a-table-as-an-asset">Import a table as an Asset</h2>
-<p><em>insert video</em></p>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/5Q0ll_qkPVs?si=4fH24him5ajy10ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <hr />
-<h2 id="construct-collection-from-string">Construct Collection from String</h2>
+<h2 id="load-feature-collection-from-string">Load Feature Collection from String</h2>
 <pre class="mermaid"><code>graph LR
   method["ee.FeatureCollection.()"] --&gt; output&gt;output\n\nFEATURE COLLECTION];
   arg_att([pathname\n\nSTRING]) --&gt; method
 
   style method fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/BtC1QSO2-_I?si=WpHHLPzTmbhkfKeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
-<span class="c1">//  Construct Feature Collection from String (collection name). </span>
+<span class="c1">//  Load Feature Collection from String (collection name). </span>
 <span class="c1">//</span>
 <span class="c1">//  Updated: 9/30/23</span>
 <span class="c1">// --------------------------------------------------------------------------</span>
@@ -767,6 +772,8 @@
 </code></pre></div>
 <hr />
 <h2 id="center-map-on-object">Center map on Object</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/h3UvN4i9IDI?si=p1RbSh6ZZeOvCsav" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
 <span class="c1">//  Center Map on Object.</span>
 <span class="c1">//</span>
@@ -778,6 +785,8 @@
 </code></pre></div>
 <hr />
 <h2 id="add-feature-collection-as-map-layer">Add Feature Collection as Map Layer</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4oq8vGiKmOk?si=wrMb7nwLbGVx6Q8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
 <span class="c1">//  Add Feature Collection as Map Layer.</span>
 <span class="c1">//</span>
@@ -788,6 +797,8 @@
 </code></pre></div>
 <hr />
 <h2 id="create-a-geometry">Create a geometry</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/clBmMnhcfZU?si=KrY5AMQz3y3TBgSx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
 <span class="c1">//  Create a Geometry.</span>
 <span class="c1">//</span>
@@ -808,9 +819,11 @@
   arg_att([attributes\n\nDICTIONARY]) --&gt; method;
 
   style method fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
-  style arg_geom fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
+  style arg_geom fill:#E1C3E6,stroke-width:0px
   style arg_att fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/W3035QKNPkw?si=Nue5AiaEI0IGrTiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
 <span class="c1">//  Construct a Feature.</span>
 <span class="c1">//</span>
@@ -836,21 +849,21 @@
 <pre class="mermaid"><code>graph LR
   input[/input\n\nFEATURE COLLECTION/] --&gt; method[".reduceToImage()"]
   method --&gt; output&gt;output\n\nIMAGE];
-  arg_att1([property key\n\nSTRING]) --&gt; method;
+  arg_att1([property key\n\nLIST]) --&gt; method;
   arg_att2(["ee.Reducer()"]) --&gt; method;
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#E1C3E6,stroke-width:0px
   style method fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#ADD8E6,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/5As-FO7NfQ8?si=8qoRMY-VlkJPdx-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  Convert feature collection into an image. </span>
 <span class="c1">//</span>
 <span class="c1">//  Updated: 10/01/23</span>
 <span class="c1">// ---------------------------------------------------------------------------</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">pond_feature_collection</span><span class="w"> </span><span class="p">;</span>
 
 <span class="kd">var</span><span class="w"> </span><span class="nx">pond_image</span><span class="w"> </span><span class="p">;</span>
 

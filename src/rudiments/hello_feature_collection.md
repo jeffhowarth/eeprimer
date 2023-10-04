@@ -1,10 +1,12 @@
 ## Introduction 
 
-The videos below introduce geometry and feature objects in Google Earth Engine. They walk you through how to import a table as an asset and how to construct a feature from scratch in the Code Editor.  
+The videos below introduce geometry and feature objects in Google Earth Engine. They walk you through how to import a table as an asset, how to construct a feature from scratch in the Code Editor, and how to convert vector into raster in Earth Engine.  
 
 ---
 
-## Start a new script
+## Start a new script  
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-c-l-s1wnG8?si=9wS04bnlPLH1Ewht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ```js
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,11 +24,11 @@ The videos below introduce geometry and feature objects in Google Earth Engine. 
 
 ## Import a table as an Asset
 
-_insert video_
+<iframe width="720" height="405" src="https://www.youtube.com/embed/5Q0ll_qkPVs?si=4fH24him5ajy10ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
-## Construct Collection from String
+## Load Feature Collection from String
 
 ``` mermaid
 graph LR
@@ -34,13 +36,15 @@ graph LR
   arg_att([pathname\n\nSTRING]) --> method
 
   style method fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/BtC1QSO2-_I?si=WpHHLPzTmbhkfKeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // --------------------------------------------------------------------------
-//  Construct Feature Collection from String (collection name). 
+//  Load Feature Collection from String (collection name). 
 //
 //  Updated: 9/30/23
 // --------------------------------------------------------------------------
@@ -60,6 +64,8 @@ print(
 
 ## Center map on Object
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/h3UvN4i9IDI?si=p1RbSh6ZZeOvCsav" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // --------------------------------------------------------------------------
 //  Center Map on Object.
@@ -75,6 +81,8 @@ Map.setOptions();
 
 ## Add Feature Collection as Map Layer
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4oq8vGiKmOk?si=wrMb7nwLbGVx6Q8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // --------------------------------------------------------------------------
 //  Add Feature Collection as Map Layer.
@@ -88,6 +96,8 @@ Map.addLayer();
 ---
 
 ## Create a geometry  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/clBmMnhcfZU?si=KrY5AMQz3y3TBgSx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ```js
 // --------------------------------------------------------------------------
@@ -114,10 +124,12 @@ graph LR
   arg_att([attributes\n\nDICTIONARY]) --> method;
 
   style method fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
-  style arg_geom fill:#FFD700,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
+  style arg_geom fill:#E1C3E6,stroke-width:0px
   style arg_att fill:#DCDCDC,stroke-width:0px
 ```
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/W3035QKNPkw?si=Nue5AiaEI0IGrTiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ```js
 // --------------------------------------------------------------------------
@@ -149,15 +161,17 @@ graph LR
 graph LR
   input[/input\n\nFEATURE COLLECTION/] --> method[".reduceToImage()"]
   method --> output>output\n\nIMAGE];
-  arg_att1([property key\n\nSTRING]) --> method;
+  arg_att1([property key\n\nLIST]) --> method;
   arg_att2(["ee.Reducer()"]) --> method;
 
-  style input fill:#FFD700,stroke-width:0px
+  style input fill:#E1C3E6,stroke-width:0px
   style method fill:#ADD8E6,stroke-width:0px
-  style output fill:#FFD700,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#ADD8E6,stroke-width:0px
 ```
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/5As-FO7NfQ8?si=8qoRMY-VlkJPdx-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ```js
 // ---------------------------------------------------------------------------
@@ -165,8 +179,6 @@ graph LR
 //
 //  Updated: 10/01/23
 // ---------------------------------------------------------------------------
-
-var pond_feature_collection ;
 
 var pond_image ;
 
