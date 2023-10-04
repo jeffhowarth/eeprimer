@@ -590,8 +590,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-load-land-cover-for-vermont" class="md-nav__link">
-    4. Load land cover for Vermont
+  <a href="#4-load-an-image" class="md-nav__link">
+    4. Load an image
   </a>
   
 </li>
@@ -611,8 +611,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-select-if-equals-a-value" class="md-nav__link">
-    7. Select if equals a value
+  <a href="#7-select-by-pixel-value" class="md-nav__link">
+    7. Select by pixel value
   </a>
   
 </li>
@@ -661,7 +661,7 @@
       
         <li class="md-nav__item">
   <a href="#14-compute-spatial-attributes" class="md-nav__link">
-    14. Compute spatial attributes.
+    14. Compute spatial attributes
   </a>
   
 </li>
@@ -674,8 +674,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#16-export-to-asset" class="md-nav__link">
-    16. Export to asset
+  <a href="#16-export-to-ee-asset" class="md-nav__link">
+    16. Export to EE Asset
   </a>
   
 </li>
@@ -769,8 +769,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-load-land-cover-for-vermont" class="md-nav__link">
-    4. Load land cover for Vermont
+  <a href="#4-load-an-image" class="md-nav__link">
+    4. Load an image
   </a>
   
 </li>
@@ -790,8 +790,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-select-if-equals-a-value" class="md-nav__link">
-    7. Select if equals a value
+  <a href="#7-select-by-pixel-value" class="md-nav__link">
+    7. Select by pixel value
   </a>
   
 </li>
@@ -840,7 +840,7 @@
       
         <li class="md-nav__item">
   <a href="#14-compute-spatial-attributes" class="md-nav__link">
-    14. Compute spatial attributes.
+    14. Compute spatial attributes
   </a>
   
 </li>
@@ -853,8 +853,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#16-export-to-asset" class="md-nav__link">
-    16. Export to asset
+  <a href="#16-export-to-ee-asset" class="md-nav__link">
+    16. Export to EE Asset
   </a>
   
 </li>
@@ -883,7 +883,7 @@
 </blockquote>
 <p>To answer this question, we will develop a model based on <a href="https://vtfishandwildlife.com/sites/fishandwildlife/files/documents/Conserve/RegulatoryReview/Guidelines/Grassland-Bird-Habitat-Conservation-Guidance-2021.pdf" target="_blank">these guidelines</a> developed by the Vermont Agency of Natural Resources.  </p>
 <h2 id="background">Background</h2>
-<p>The Bobolink (<em>Dolichonyx oryzivorus</em>) is grassland bird species with a bubbling song and a remarkable life cycle. Bobolinks winter in South America, primarily Paraguay, Argentina, and Bolivia. In the spring, they migrate back to their breeding habitats in North America, including grassland habitat here in the Champlain Valley. Interestingly, Bobolinks seem to have a remarkable spatial memory and sense of place; they tend to return to the same specific field each summer to breed and research indicates that this &ldquo;site fidelity&rdquo; improves breeding success. </p>
+<p>The Bobolink (<em>Dolichonyx oryzivorus</em>) is a grassland bird species with a bubbling song and a remarkable life cycle. Bobolinks winter in South America, primarily Paraguay, Argentina, and Bolivia. In the spring, they migrate back to their breeding habitats in North America, including grassland habitat here in the Champlain Valley. Interestingly, Bobolinks seem to have keen spatial memory and sense of place; they tend to return to the same specific field each summer to breed and research indicates that this &ldquo;site fidelity&rdquo; improves breeding success. </p>
 <p><img alt="Bobolink" src="https://inaturalist-open-data.s3.amazonaws.com/photos/192899937/large.jpg" /></p>
 <p><em>source:</em> <a href="https://www.inaturalist.org/taxa/10487-Dolichonyx-oryzivorus" target="_blank"><em>iNaturalist</em></a></p>
 <p>Bobolinks are also an interesting example of a &ldquo;new native&rdquo; species. During Abenaki times, Bobolinks did not breed in Vermont, because there was very little grassland habitat for them to do so. Open, grassy habitat was uncommon in what we now call the Champlain Valley; the landscape here was largely forested, save for the margins of water bodies and places where Abekai cultivated crops or set fires at a frequency that prevented trees from growing. Following the American Revolution, white migrants appropriated Abenaki lands in the Champlain Valley and pitched farms, claiming the land by clearing it of trees. This created large expanses of open habitat in the formerly forested landscape. Bobolinks soon colonized this new habitat, migrating from native breeding territories on the midwestern prairies of North America.  </p>
@@ -899,6 +899,8 @@
 </ol>
 <hr />
 <h2 id="start-a-new-script">Start a new script</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-6xHgblRxWs?si=pmwang3Z6_4iJp_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 <span class="c1">//</span>
 <span class="c1">//  Grassland bird habitat on Middlebury College Lands in Champlain Valley. </span>
@@ -915,7 +917,7 @@
   arg_att1([pathname\n\nSTRING]) --&gt; method1;
 
   method1 --&gt; method2[".filter()"];
-  method2 --&gt; method3["ee.Filter.eq()"];
+  method2 --&gt; method3(["ee.Filter.eq()"]);
 
   method3 --&gt; output&gt;output\n\nFEATURE COLLECTION];
 
@@ -929,19 +931,18 @@
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/9Dc0zxy2x1I?si=afXBeSU2CAxo02ej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  1. Load feature collection and filter by attribute.</span>
 <span class="c1">//</span>
 <span class="c1">//  Isolate Champlain Lowlands.</span>
 <span class="c1">// ---------------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">region</span><span class="w"> </span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;projects/conservation-atlas/assets/regions/Ecoregion_07232023&quot;</span><span class="p">);</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;STEP 1:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">region</span><span class="p">.</span><span class="nx">first</span><span class="p">(),</span>
-<span class="w">  </span><span class="nx">region</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
-<span class="w">  </span><span class="nx">region</span><span class="p">.</span><span class="nx">aggregate_array</span><span class="p">(</span><span class="s2">&quot;US_L4NAME&quot;</span><span class="p">).</span><span class="nx">distinct</span><span class="p">().</span><span class="nx">sort</span><span class="p">()</span>
+<span class="w">  </span><span class="s2">&quot;STEP 1:&quot;</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 
@@ -963,18 +964,18 @@
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#FFD700,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/PNAnfKmJYbg?si=L9JMaEV26sVZeuwL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  2. Load feature collection and filter by location,</span>
 <span class="c1">//</span>
 <span class="c1">//  Isolate College Lands in Champlain Valley.</span>
 <span class="c1">// ---------------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">college_lands</span><span class="w"> </span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">college_lands</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="s2">&quot;projects/conservation-atlas/assets/cadastre/Midd_College_Parcels_withattributes&quot;</span><span class="p">);</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;STEP 2:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">college_lands</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
-<span class="w">  </span><span class="nx">college_lands</span><span class="p">.</span><span class="nx">first</span><span class="p">()</span>
+<span class="w">  </span><span class="s2">&quot;STEP 2:&quot;</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 
@@ -991,7 +992,7 @@
   method1 --&gt; method2[".geometry()"];
   method2 --&gt; method3[".bounds()"];
   method3 --&gt; method4[".buffer()"]
-  method4 --&gt; output&gt;output\n\nFEATURE COLLECTION];
+  method4 --&gt; output&gt;output\n\nGEOMETRY];
 
   arg_att1([maxError\n\nNUMBER]) --&gt; method1 ;
   arg_att2([maxError\n\nNUMBER])  --&gt; method3 ;
@@ -1009,6 +1010,8 @@
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
   style arg_att4 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-4dzn5gy_ps?si=8uLRWTztpUi20cDJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">// 3. Define study region</span>
 <span class="c1">// ---------------------------------------------------------------------------</span>
@@ -1024,7 +1027,7 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
 </code></pre></div>
 <hr />
-<h2 id="4-load-land-cover-for-vermont">4. Load land cover for Vermont</h2>
+<h2 id="4-load-an-image">4. Load an image</h2>
 <pre class="mermaid"><code>graph LR
   method1["ee.Image()"] ;
   arg_att1([pathname\n\nSTRING]) --&gt; method1;
@@ -1033,6 +1036,8 @@
   style method1 fill:#ADD8E6,stroke-width:0px
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/PpbGfoXpQcM?si=Gvfs13mb8b53NLrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  4. Load an image</span>
 <span class="c1">//</span>
@@ -1078,6 +1083,8 @@
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/EOHXIr2g_rs?si=EuzVmAnn9y3Wx1-x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  5. Reclassify an image</span>
 <span class="c1">//</span>
@@ -1106,6 +1113,8 @@
   style method1 fill:#ADD8E6,stroke-width:0px
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/vaojIs242gY?si=GhmRQsoOv1NX_06D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  6. Clip image by region</span>
 <span class="c1">//</span>
@@ -1124,7 +1133,7 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
 </code></pre></div>
 <hr />
-<h2 id="7-select-if-equals-a-value">7. Select if equals a value</h2>
+<h2 id="7-select-by-pixel-value">7. Select by pixel value</h2>
 <pre class="mermaid"><code>graph LR
   input[/input\n\nIMAGE/] --&gt; method1[".eq()"] ;
   arg_att1([value\n\nNUMBER]) --&gt; method1;
@@ -1134,8 +1143,10 @@
   style method1 fill:#ADD8E6,stroke-width:0px
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/64qp__GXrIw?si=_8rJKpWYoRtaH4RF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
-<span class="c1">//  7. Select by equality</span>
+<span class="c1">//  7. Select by pixel value.</span>
 <span class="c1">//</span>
 <span class="c1">//  Invert the grassland binary. </span>
 <span class="c1">// ---------------------------------------------------------------------------</span>
@@ -1174,6 +1185,8 @@
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
   style arg_att4 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/8hGTmmWUPyE?si=P6RxzGAYPK44kQIL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  8. Compute distance </span>
 <span class="c1">//</span>
@@ -1208,6 +1221,8 @@
   style method1 fill:#ADD8E6,stroke-width:0px
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/_CuSV5vHSbA?si=WpIP-MX17D833VqR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  9. Select by threshold value </span>
 <span class="c1">//</span>
@@ -1217,7 +1232,7 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">grassland_cores</span><span class="w"> </span><span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;Step 7.3:&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;Step 9:&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">grassland_cores</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">grassland_cores</span><span class="p">.</span><span class="nx">projection</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
@@ -1242,6 +1257,8 @@
   style arg_att2 fill:#ADD8E6,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
   style arg_att4 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/WxU2h6dt4tM?si=taLFaE_EkMIH4FI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  10. Zonal overlay </span>
 <span class="c1">//</span>
@@ -1253,7 +1270,7 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">college_with_core_filter</span><span class="w"> </span><span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;STEP 8:&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;STEP 10:&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">college_with_core</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
 <span class="w">  </span><span class="nx">college_with_core_filter</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
@@ -1281,13 +1298,15 @@
   style input fill:#FFD700,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
   style output fill:#FFD700,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/MoqbeTucypc?si=wUyiszjggDRYDoVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  11. Mask an image</span>
 <span class="c1">//</span>
 <span class="c1">//  Ignore all pixels that are not grasslands. </span>
 <span class="c1">// ---------------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">grassland_cores_masked</span><span class="p">;</span><span class="w">      </span><span class="c1">// First show them it could be updateMask.</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">grassland_cores_masked</span><span class="p">;</span><span class="w">      </span>
 
 <span class="nx">print</span><span class="p">(</span>
 <span class="w">  </span><span class="s2">&quot;STEP 11:&quot;</span><span class="p">,</span>
@@ -1321,6 +1340,8 @@
   style arg_att4 fill:#DCDCDC,stroke-width:0px
   style arg_att5 fill:#DCDCDC,stroke-width:0px
   style arg_att6 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/wROroakCXQU?si=pyjYezz6Kv6T5HyR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  12. Make objects. </span>
 <span class="c1">//</span>
@@ -1330,7 +1351,7 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">grassland_objects</span><span class="w"> </span><span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;STEP 10:&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;STEP 12:&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">grassland_objects</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
@@ -1349,6 +1370,8 @@
   style method2 fill:#ADD8E6,stroke-width:0px
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#FFD700,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/jUoOV2sTm8I?si=BTW_TliZ0Prkdr9-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  13. Select by location.</span>
 <span class="c1">//</span>
@@ -1358,7 +1381,7 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">college_grasslands</span><span class="w"> </span><span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;STEP 11:&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;STEP 13:&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">college_grasslands</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
 <span class="w">  </span><span class="nx">college_grasslands</span><span class="p">.</span><span class="nx">first</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
@@ -1367,7 +1390,7 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
 </code></pre></div>
 <hr />
-<h2 id="14-compute-spatial-attributes">14. Compute spatial attributes.</h2>
+<h2 id="14-compute-spatial-attributes">14. Compute spatial attributes</h2>
 <pre class="mermaid"><code>graph LR
   input[/input\n\nFEATURE COLLECTION/] --&gt; method2[".map()"];
   method2 --&gt; output&gt;output\n\nFEATURE COLLECTION];
@@ -1378,6 +1401,8 @@
   style method2 fill:#ADD8E6,stroke-width:0px
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#ADD8E6,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/GZrXo1CU9Qo?si=Ykvxy3hnyGAbwgcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  14. Compute spatial attributes.</span>
 <span class="c1">//</span>
@@ -1385,15 +1410,16 @@
 <span class="c1">// ---------------------------------------------------------------------------</span>
 
 <span class="kd">var</span><span class="w"> </span><span class="nx">getArea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;EPSG: 32145&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Vermont State Plane North American Datum 1983</span>
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">crs</span><span class="p">).</span><span class="nx">divide</span><span class="p">(</span><span class="mf">4046.86</span><span class="p">);</span>
-<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">perimeter</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">crs</span><span class="p">).</span><span class="nx">divide</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="mf">1</span><span class="p">));</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">perimeter</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">crs</span><span class="p">).</span><span class="nx">divide</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">crs</span><span class="p">));</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span><span class="s2">&quot;area&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">area</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pa&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">pa</span><span class="p">});</span>
 <span class="p">};</span>
 
 <span class="kd">var</span><span class="w"> </span><span class="nx">grasslands_with_criteria</span><span class="w"> </span><span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;STEP 12:&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;STEP 14:&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">grasslands_with_criteria</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
 <span class="w">  </span><span class="nx">grasslands_with_criteria</span><span class="p">.</span><span class="nx">first</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
@@ -1403,7 +1429,7 @@
 </code></pre></div>
 <hr />
 <h2 id="15-select-by-two-attributes">15. Select by two attributes</h2>
-<pre class="mermaid"><code>graph LR
+<pre class="mermaid"><code>graph TD
   input[/input\n\nFEATURE COLLECTION/] --&gt; method1[".filter()"];
   method1 --&gt; method2(["ee.Filter.and()"])
 
@@ -1429,6 +1455,8 @@
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
   style arg_att4 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/CNV0PMe_Ofk?si=zXajXqlHxl8HGuWe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
 <span class="c1">//  15. Select by two attributes</span>
 <span class="c1">//</span>
@@ -1438,7 +1466,7 @@
 <span class="kd">var</span><span class="w"> </span><span class="nx">best_grassland_habitat</span><span class="w"> </span><span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;STEP 13:&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;STEP 15:&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">best_grassland_habitat</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
 <span class="w">  </span><span class="nx">best_grassland_habitat</span><span class="p">.</span><span class="nx">first</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
@@ -1447,7 +1475,7 @@
 <span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
 </code></pre></div>
 <hr />
-<h2 id="16-export-to-asset">16. Export to asset</h2>
+<h2 id="16-export-to-ee-asset">16. Export to EE Asset</h2>
 <pre class="mermaid"><code>graph LR
   method1["Export.table.toAsset()"] --&gt; output&gt;output\n\nTASK];
 
@@ -1460,8 +1488,10 @@
   style arg_att1 fill:#FFD700,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/93-7gsmORZc?si=rm69ILxOCWuhgxG7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
-<span class="c1">//  16. Export to asset</span>
+<span class="c1">//  16. Export to EE Asset</span>
 <span class="c1">//</span>
 <span class="c1">//  To run workflow with crs condition on distance (Step 10).</span>
 <span class="c1">// ---------------------------------------------------------------------------</span>

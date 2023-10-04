@@ -8,7 +8,7 @@ To answer this question, we will develop a model based on [these guidelines][anr
 
 ## Background  
 
-The Bobolink (_Dolichonyx oryzivorus_) is grassland bird species with a bubbling song and a remarkable life cycle. Bobolinks winter in South America, primarily Paraguay, Argentina, and Bolivia. In the spring, they migrate back to their breeding habitats in North America, including grassland habitat here in the Champlain Valley. Interestingly, Bobolinks seem to have a remarkable spatial memory and sense of place; they tend to return to the same specific field each summer to breed and research indicates that this "site fidelity" improves breeding success. 
+The Bobolink (_Dolichonyx oryzivorus_) is a grassland bird species with a bubbling song and a remarkable life cycle. Bobolinks winter in South America, primarily Paraguay, Argentina, and Bolivia. In the spring, they migrate back to their breeding habitats in North America, including grassland habitat here in the Champlain Valley. Interestingly, Bobolinks seem to have keen spatial memory and sense of place; they tend to return to the same specific field each summer to breed and research indicates that this "site fidelity" improves breeding success. 
 
 ![Bobolink](https://inaturalist-open-data.s3.amazonaws.com/photos/192899937/large.jpg)
 
@@ -37,6 +37,9 @@ According to the ANR guidelines, the best potential habitat for Bobolink and oth
 
 ## Start a new script
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-6xHgblRxWs?si=pmwang3Z6_4iJp_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 ```js
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
@@ -58,7 +61,7 @@ graph TD
   arg_att1([pathname\n\nSTRING]) --> method1;
 
   method1 --> method2[".filter()"];
-  method2 --> method3["ee.Filter.eq()"];
+  method2 --> method3(["ee.Filter.eq()"]);
 
   method3 --> output>output\n\nFEATURE COLLECTION];
 
@@ -74,6 +77,9 @@ graph TD
   style arg_att3 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/9Dc0zxy2x1I?si=afXBeSU2CAxo02ej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 ```js
 // ---------------------------------------------------------------------------
 //  1. Load feature collection and filter by attribute.
@@ -81,13 +87,10 @@ graph TD
 //  Isolate Champlain Lowlands.
 // ---------------------------------------------------------------------------
 
-var region ;
+var region = ee.FeatureCollection("projects/conservation-atlas/assets/regions/Ecoregion_07232023");
 
 print(
-  "STEP 1:",
-  region.first(),
-  region.size(),
-  region.aggregate_array("US_L4NAME").distinct().sort()
+  "STEP 1:"
   )
 ;
 
@@ -115,6 +118,8 @@ graph TD
   style arg_att2 fill:#FFD700,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/PNAnfKmJYbg?si=L9JMaEV26sVZeuwL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  2. Load feature collection and filter by location,
@@ -122,12 +127,10 @@ graph TD
 //  Isolate College Lands in Champlain Valley.
 // ---------------------------------------------------------------------------
 
-var college_lands ;
+var college_lands = ee.FeatureCollection("projects/conservation-atlas/assets/cadastre/Midd_College_Parcels_withattributes");
 
 print(
-  "STEP 2:",
-  college_lands.size(),
-  college_lands.first()
+  "STEP 2:"
   )
 ;
 
@@ -148,7 +151,7 @@ graph TD
   method1 --> method2[".geometry()"];
   method2 --> method3[".bounds()"];
   method3 --> method4[".buffer()"]
-  method4 --> output>output\n\nFEATURE COLLECTION];
+  method4 --> output>output\n\nGEOMETRY];
 
   arg_att1([maxError\n\nNUMBER]) --> method1 ;
   arg_att2([maxError\n\nNUMBER])  --> method3 ;
@@ -168,6 +171,8 @@ graph TD
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-4dzn5gy_ps?si=8uLRWTztpUi20cDJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 // 3. Define study region
@@ -186,7 +191,7 @@ Map.addLayer();
 
 ---
 
-## 4. Load land cover for Vermont
+## 4. Load an image
 
 ``` mermaid
 graph LR
@@ -198,6 +203,8 @@ graph LR
   style output fill:#FFD700,stroke-width:0px
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/PpbGfoXpQcM?si=Gvfs13mb8b53NLrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ```js
 // ---------------------------------------------------------------------------
@@ -251,6 +258,8 @@ graph LR
   style arg_att2 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/EOHXIr2g_rs?si=EuzVmAnn9y3Wx1-x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  5. Reclassify an image
@@ -286,6 +295,8 @@ graph LR
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/vaojIs242gY?si=GhmRQsoOv1NX_06D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  6. Clip image by region
@@ -308,7 +319,7 @@ Map.addLayer();
 
 ---
 
-## 7. Select if equals a value  
+## 7. Select by pixel value 
 
 ``` mermaid
 graph LR
@@ -322,9 +333,11 @@ graph LR
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/64qp__GXrIw?si=_8rJKpWYoRtaH4RF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
-//  7. Select by equality
+//  7. Select by pixel value.
 //
 //  Invert the grassland binary. 
 // ---------------------------------------------------------------------------
@@ -369,6 +382,8 @@ graph TB
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/8hGTmmWUPyE?si=P6RxzGAYPK44kQIL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  8. Compute distance 
@@ -410,6 +425,8 @@ graph LR
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/_CuSV5vHSbA?si=WpIP-MX17D833VqR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  9. Select by threshold value 
@@ -420,7 +437,7 @@ graph LR
 var grassland_cores ;
 
 print(
-  "Step 7.3:",
+  "Step 9:",
   grassland_cores,
   grassland_cores.projection()
   )
@@ -452,6 +469,7 @@ graph LR
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/WxU2h6dt4tM?si=taLFaE_EkMIH4FI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ```js
 // ---------------------------------------------------------------------------
@@ -465,7 +483,7 @@ var college_with_core ;
 var college_with_core_filter ;
 
 print(
-  "STEP 8:",
+  "STEP 10:",
   college_with_core.size(),
   college_with_core_filter.size()
   )
@@ -504,6 +522,8 @@ graph LR
   style output fill:#FFD700,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/MoqbeTucypc?si=wUyiszjggDRYDoVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  11. Mask an image
@@ -511,7 +531,7 @@ graph LR
 //  Ignore all pixels that are not grasslands. 
 // ---------------------------------------------------------------------------
 
-var grassland_cores_masked;      // First show them it could be updateMask.
+var grassland_cores_masked;      
 
 print(
   "STEP 11:",
@@ -552,6 +572,8 @@ graph LR
   style arg_att6 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/wROroakCXQU?si=pyjYezz6Kv6T5HyR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  12. Make objects. 
@@ -562,7 +584,7 @@ graph LR
 var grassland_objects ;
 
 print(
-  "STEP 10:",
+  "STEP 12:",
   grassland_objects
   )
 ;
@@ -587,6 +609,8 @@ graph LR
   style arg_att1 fill:#FFD700,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/jUoOV2sTm8I?si=BTW_TliZ0Prkdr9-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  13. Select by location.
@@ -597,7 +621,7 @@ graph LR
 var college_grasslands ;
 
 print(
-  "STEP 11:",
+  "STEP 13:",
   college_grasslands.size(),
   college_grasslands.first()
   )
@@ -608,7 +632,7 @@ Map.addLayer();
 
 ---
 
-## 14. Compute spatial attributes.
+## 14. Compute spatial attributes
 
 ``` mermaid
 graph LR
@@ -623,6 +647,8 @@ graph LR
   style arg_att1 fill:#ADD8E6,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/GZrXo1CU9Qo?si=Ykvxy3hnyGAbwgcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  14. Compute spatial attributes.
@@ -631,15 +657,16 @@ graph LR
 // ---------------------------------------------------------------------------
 
 var getArea = function(f) {
+  var crs = "EPSG: 32145"; // Vermont State Plane North American Datum 1983
   var area = f.area(1, crs).divide(4046.86);
-  var pa = f.perimeter(1, crs).divide(f.area(1));
+  var pa = f.perimeter(1, crs).divide(f.area(1, crs));
   return f.set({"area": area, "pa": pa});
 };
 
 var grasslands_with_criteria ;
 
 print(
-  "STEP 12:",
+  "STEP 14:",
   grasslands_with_criteria.size(),
   grasslands_with_criteria.first()
   )
@@ -653,7 +680,7 @@ Map.addLayer();
 ## 15. Select by two attributes
 
 ``` mermaid
-graph LR
+graph TD
   input[/input\n\nFEATURE COLLECTION/] --> method1[".filter()"];
   method1 --> method2(["ee.Filter.and()"])
 
@@ -681,6 +708,8 @@ graph LR
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/CNV0PMe_Ofk?si=zXajXqlHxl8HGuWe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
 //  15. Select by two attributes
@@ -691,7 +720,7 @@ graph LR
 var best_grassland_habitat ;
 
 print(
-  "STEP 13:",
+  "STEP 15:",
   best_grassland_habitat.size(),
   best_grassland_habitat.first()
   )
@@ -702,7 +731,7 @@ Map.addLayer();
 
 ---
 
-## 16. Export to asset
+## 16. Export to EE Asset
 
 ``` mermaid
 graph LR
@@ -719,9 +748,11 @@ graph LR
   style arg_att3 fill:#DCDCDC,stroke-width:0px
 ```
 
+<iframe width="720" height="405" src="https://www.youtube.com/embed/93-7gsmORZc?si=rm69ILxOCWuhgxG7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```js
 // ---------------------------------------------------------------------------
-//  16. Export to asset
+//  16. Export to EE Asset
 //
 //  To run workflow with crs condition on distance (Step 10).
 // ---------------------------------------------------------------------------
