@@ -35,6 +35,86 @@ According to the ANR guidelines, the best potential habitat for Bobolink and oth
 
 ---  
 
+## Workflow overview  
+
+The diagram below shows the general workflow for the model, or how each step in the tutorial connects to other steps. The color represents the format of the result (or output) of each step as shown below.  
+
+<center>
+
+``` mermaid
+graph TD
+  vector[vector] ;
+  raster[raster] ;
+  task[task] ;
+
+style vector fill:#E1C3E6,stroke-width:0px
+style raster fill:#C5E6A1,stroke-width:0px
+style task fill:#ADD8E6,stroke-width:0px
+```
+
+</center>
+
+Here is how each step in the workflow connects to another step.     
+
+``` mermaid
+graph LR
+  step01[1] ;
+  step02[2] ;
+  step03[3] ;
+  step04[4] ;
+  step05[5] ;
+  step06[6] ;
+  step07[7] ;
+  step08[8] ;
+  step09[9] ;
+  step10[10] ;
+  step11[11] ;
+  step12[12] ;
+  step13[13] ;
+  step14[14] ;
+  step15[15] ;
+  step16[16] ;
+
+  step01 --> step02 --> step03  
+  step04 --> step05
+  step03 --> step06
+  step05 --> step06
+  step06 --> step07 
+  step07 --> step08  
+  step08 --> step09
+  step02 --> step10
+  step09 --> step10  
+  step09 --> step11
+  step11 --> step12
+  step03 --> step12
+  step12 --> step13  
+  step02 --> step13
+  step13 --> step14  
+  step14 --> step15
+  step15 --> step16
+
+  style step01 fill:#E1C3E6,stroke-width:0px
+  style step02 fill:#E1C3E6,stroke-width:0px
+  style step03 fill:#E1C3E6,stroke-width:0px
+  style step04 fill:#C5E6A1,stroke-width:0px
+  style step05 fill:#C5E6A1,stroke-width:0px
+  style step06 fill:#C5E6A1,stroke-width:0px
+  style step07 fill:#C5E6A1,stroke-width:0px
+  style step08 fill:#C5E6A1,stroke-width:0px
+  style step09 fill:#C5E6A1,stroke-width:0px
+  style step10 fill:#E1C3E6,stroke-width:0px
+  style step11 fill:#C5E6A1,stroke-width:0px
+  style step12 fill:#E1C3E6,stroke-width:0px
+  style step13 fill:#E1C3E6,stroke-width:0px
+  style step14 fill:#E1C3E6,stroke-width:0px
+  style step15 fill:#E1C3E6,stroke-width:0px
+  style step16 fill:#ADD8E6,stroke-width:0px
+```
+
+The connections are made because the output of one step provides an input or argument for another step. This makes the workflow one long _chain_, or a series of connected input-method-output links. 
+
+The videos below walk you through each step in this workflow.    
+
 ## Start a new script
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/-6xHgblRxWs?si=pmwang3Z6_4iJp_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -56,7 +136,7 @@ According to the ANR guidelines, the best potential habitat for Bobolink and oth
 ## 1. Load feature collection and filter by attribute
 
 ``` mermaid
-graph TD
+graph LR
   method1["ee.FeatureCollection()"] ;
   arg_att1([pathname\n\nSTRING]) --> method1;
 
@@ -102,7 +182,7 @@ Map.addLayer();
 ## 2. Load feature collection and filter by location
 
 ``` mermaid
-graph TD
+graph LR
   method1["ee.FeatureCollection()"] ;
   arg_att1([path name\n\nSTRING]) --> method1;
 
@@ -145,7 +225,7 @@ Map.addLayer();
 ## 3. Define study region  
 
 ``` mermaid
-graph TD
+graph LR
   input[/input\n\nFEATURE COLLECTION/] --> method1[".union()"] ;
 
   method1 --> method2[".geometry()"];
@@ -359,7 +439,7 @@ Map.addLayer();
 ## 8. Compute distance  
 
 ``` mermaid
-graph TB
+graph LR
   input[/input\n\nIMAGE/] --> method1[".distance()"] ;
   method1 --> method2(["ee.Kernel.euclidean()"])
   arg_att1([radius\n\nNUMBER]) --> method2;
@@ -682,7 +762,7 @@ Map.addLayer();
 ## 15. Select by two attributes
 
 ``` mermaid
-graph TD
+graph LR
   input[/input\n\nFEATURE COLLECTION/] --> method1[".filter()"];
   method1 --> method2(["ee.Filter.and()"])
 
@@ -768,3 +848,7 @@ Export.table.toAsset({
   }
 );
 ```
+
+---
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

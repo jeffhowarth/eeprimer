@@ -149,7 +149,8 @@ nav:
     - QGIS User Interface: intro/qgis_gui.md 
   - Rudiments:
     - Hello Vector: rudiments/hello_vector.md
-    - Hello Feature Collection: rudiments/hello_feature_collection.md 
+    - Hello Feature Collection: rudiments/hello_feature_collection.md  
+    - On Distance: rudiments/on_distance.md  
 
   - Worked out examples:  
     - Basic image collections: workflows/image_collections.md  

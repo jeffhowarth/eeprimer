@@ -1,0 +1,1095 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A primer for Earth Engine, Fall 2022">
+      
+      
+        <meta name="author" content="Jeff Howarth">
+      
+      
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/rudiments/on_distance/">
+      
+      
+        <link rel="prev" href="../hello_feature_collection/">
+      
+      
+        <link rel="next" href="../../workflows/image_collections/">
+      
+      <link rel="icon" href="../../images/GG0150-icon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>On Distance - a primer for Earth Engine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libre Baskerville";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="white" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="a primer for Earth Engine" class="md-header__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
+      
+  <img src="../../images/GG0150-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            a primer for Earth Engine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              On Distance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jeffhowarth/eeprimer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jeffhowarth/eeprimer
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="a primer for Earth Engine" class="md-nav__button md-logo" aria-label="a primer for Earth Engine" data-md-component="logo">
+      
+  <img src="../../images/GG0150-icon.png" alt="logo">
+
+    </a>
+    a primer for Earth Engine
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jeffhowarth/eeprimer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jeffhowarth/eeprimer
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Hello!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Toolbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Toolbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolbox/GEE/" class="md-nav__link">
+        Google Earth Engine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolbox/QGIS/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/js101/" class="md-nav__link">
+        Javascript 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/gee_gui/" class="md-nav__link">
+        GEE User Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/qgis_gui/" class="md-nav__link">
+        QGIS User Interface
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Rudiments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Rudiments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hello_vector/" class="md-nav__link">
+        Hello Vector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hello_feature_collection/" class="md-nav__link">
+        Hello Feature Collection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          On Distance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        On Distance
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-point-feature-collection" class="md-nav__link">
+    Test point feature collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-point-image" class="md-nav__link">
+    Test point image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-distance-image" class="md-nav__link">
+    Simple distance image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-distance-threshold" class="md-nav__link">
+    Simple distance threshold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-image-with-reprojectcrs" class="md-nav__link">
+    Distance image with .reproject(crs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Worked out examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Worked out examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/image_collections/" class="md-nav__link">
+        Basic image collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/grassland_bird_habitat/" class="md-nav__link">
+        Grassland bird habitat
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-point-feature-collection" class="md-nav__link">
+    Test point feature collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-point-image" class="md-nav__link">
+    Test point image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-distance-image" class="md-nav__link">
+    Simple distance image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-distance-threshold" class="md-nav__link">
+    Simple distance threshold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-image-with-reprojectcrs" class="md-nav__link">
+    Distance image with .reproject(crs)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>On Distance</h1>
+
+<p><em>INCOMPLETE DRAFT:</em><br />
+<em>October 5, 2023</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>I find working with distance methods on raster datasets in Earth Engine to be a little confusing, so I made the app below to better understand how these things work. The text below walks you through how to make sense of it. </p>
+<p><iframe
+  src="https://ee-edu-apps.projects.earthengine.app/view/ee-edu-distance"
+  style="width:854px; height:480px"
+></iframe>
+</p>
+<h2 id="test-point-feature-collection">Test point feature collection</h2>
+<p>You should see a yellow point on the 50 yard line of Youngman Field. If you click on the <strong>Layers widget</strong>, you should see a list of layers that you can add to the map. When you first load the embedded app, the layer at the bottom should be the only one checked; this is the layer with the little yellow dot, called <strong>Test point (Feature Collection)</strong> because it is a feature collection with one feature in it.  </p>
+<h2 id="test-point-image">Test point image</h2>
+<p>The next layer up from the bottom is called  <strong>Test Point Image</strong>. It is the same point at midfield, but now is is stored as a binary image. The little white pixel in the center marks the location of the test point; this pixel has a value of 1. All the black pixels have a value of 0.  </p>
+<p>If you zoom out a little (by clicking the - button on the upper left), you should see the extent of the image. There is an edge to the raster beyond which you can see the underlying satellite base map. The extent is 300 meters by 300 meters.  </p>
+<h2 id="simple-distance-image">Simple distance image</h2>
+<p>Still moving from bottom up in the layer panel, the next layer is called <strong>Simple Test Distance Image</strong> and represents the distance from the test point image. The figure below shows how I made it.</p>
+<pre class="mermaid"><code>graph LR
+  input[/test point image/] --&gt; method1[".distance()"] ;
+  method1 --&gt; method2(["ee.Kernel.euclidean()"])
+  arg_att1(["radius: 250"]) --&gt; method2;
+  arg_att2(["units: 'meters'"]) --&gt; method2;
+  method2 --&gt; output&gt;output\n\nIMAGE];
+
+  style input fill:#C5E6A1,stroke-width:0px
+  style method1 fill:#ADD8E6,stroke-width:0px
+  style method2 fill:#ADD8E6,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
+  style arg_att1 fill:#DCDCDC,stroke-width:0px
+  style arg_att2 fill:#DCDCDC,stroke-width:0px</code></pre>
+<p>Notice that the .distance() method takes the ee.Kernel.euclidian() method as an argument. (I use blue to indicate methods and rounded shapes to indicate arguments, or things that get put into a method&rsquo;s parentheses). </p>
+<p>A <strong>kernel</strong> is an analysis window. In this case, the kernel defines the spatial extent of the euclidean distance operation. When we say that we want the radius of the kernel to be 250 meters, we are defining the size of our analysis window. This is a little confusing, because I think Earth Engine actually uses a square as the kernel shape, not a circle, but more on that later.  </p>
+<p>In this case, the extent of the Simple Test Distance Image represents the <strong>kernel extent</strong>; it shows the size of the window that was centered on the only pixel in the binary image with a non-zero value. Within this kernel window, Earth Engine computed the Euclidean distance from the single non-zero pixel to all the other zero pixels in the kernel extent.</p>
+<p>The fact that the extent of the Simple Test Distance Image is smaller than the extent of the Test Point Image also tells us something important. Remember that the Test Point Image was the input to the distance method (I use the parallelogram shape to represent data inputs because I am trying to suggest they are moving or about to undergo change). So the difference between the two extents means that the .distance() method does not make computations across the entire extent of the input image. If it did, the extent of the output would be the same as the input. Instead, the .distance() method computes distance within the extent of the kernel that you feed it. Any locations outside of the kernel extent get masked. </p>
+<h2 id="simple-distance-threshold">Simple distance threshold</h2>
+<p>You may have noticed that if you zoom out too far when looking at the test point image extent in the previous section, Earth Engine stops drawing the Simple Test Distance Image on the map. That is perhaps the first clue that something is weird here. </p>
+<p><em>Why would the ability to draw the layer depend on the zoom level?</em> </p>
+<p>If this fuels a sense of doubt and you begin to wonder how much you should trust what the layer claims to show you, I would like to double-down on such concerns by looking at the next layer, called <strong>Threshold Simple Distance at 50 Yards</strong>. This shows a binary image, where any location 50 yards (45.72 meters) or less from the midfield point are displayed in white and all other locations are masked so you can see the satellite base layer. If you turn off the other layers, you will be able to compare this circle that should have a radius of 50 yards to the football field hatch marks. The circle should reach the goal line, but it does not.    </p>
+<p><em>Why does this distance layer seem to under represent distance?</em>  </p>
+<p>There are two things that help understand why these two things happen when we use the Code Editor: </p>
+<ol>
+<li>Pixel scale changes with zoom level.   </li>
+<li>Zoom level determines analysis scale, unless we specify otherwise. </li>
+</ol>
+<p>Google Earth Engine stores all image assets in a stack of different resolutions defined by zoom level. The idea is that each zoom level serves you an image with the same number of pixels. As a result, pixel scale changes as you move between zoom levels. Here is another way to think about this: you do not get more pixels on your monitor to see more detail, you simply get pixels that represent smaller distances on the Earth&rsquo;s surface.     </p>
+<p><img alt="Google pyramid" src="https://developers.google.com/static/earth-engine/images/Pyramids.png" />
+<em>source:</em> <a href="https://developers.google.com/earth-engine/guides/scale" target="_blank"><em>Google</em></a></p>
+<p>The image above shows how each pixel generalizes the values of a 2x2 block of pixels at the next, more detailed zoom level. As a result, pixel scale resembles a <em>pyramid</em> as you move from small scale to large scale images. </p>
+<p>Often when you use a kernel method in the Code Editor, the zoom level of the map in the Code Editor determines the scale of the analysis. That is why the results appear to change as you zoom in and out; by changing the zoom level, you change the scale of the analysis. </p>
+<h2 id="distance-image-with-reprojectcrs">Distance image with .reproject(crs)</h2>
+<p><em>To be continued&hellip;</em></p>
+<pre class="mermaid"><code>graph LR
+  input[/test point image/] --&gt; method1[".distance()"] ;
+  method1 --&gt; method2(["ee.Kernel.euclidean()"])
+  arg_att1(["radius: 250"]) --&gt; method2;
+  arg_att2(["units: 'meters'"]) --&gt; method2;
+  method2 --&gt; method3[".reproject()"]
+  arg_att3(["crs: 'EPSG: 32145'"]) --&gt; method3;
+  method3 --&gt; output&gt;output\n\nIMAGE];
+
+  style input fill:#C5E6A1,stroke-width:0px
+  style method1 fill:#ADD8E6,stroke-width:0px
+  style method2 fill:#ADD8E6,stroke-width:0px
+  style method2 fill:#ADD8E6,stroke-width:0px
+  style method3 fill:#ADD8E6,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
+  style arg_att1 fill:#DCDCDC,stroke-width:0px
+  style arg_att2 fill:#DCDCDC,stroke-width:0px
+  style arg_att3 fill:#DCDCDC,stroke-width:0px</code></pre>
+<h2 id="source-code">Source code</h2>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="c1">//  On distance in Earth Engine</span>
+<span class="c1">//</span>
+<span class="c1">//  Jeff Howarth</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: Oct 5, 2023</span>
+<span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Make test point at 50 yard line.</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_point1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="o">-</span><span class="mf">73.17965925111653</span><span class="p">,</span><span class="w"> </span><span class="mf">44.00167387729651</span><span class="p">]);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">test_point1</span><span class="p">,</span><span class="w"> </span><span class="mf">17</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">);</span>
+
+<span class="c1">// Map.addLayer(test_point, {color: &#39;red&#39;}, &quot;Test Point&quot;, false);</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Put test point in a feature collection.</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_fc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span>
+<span class="w">  </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Feature</span><span class="p">(</span><span class="nx">test_point1</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;tag&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">}),</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_fc</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Yellow&#39;</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Test point (Feature Collection)&quot;</span><span class="p">);</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Define an abitrary test extent.</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_extent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_point1</span><span class="p">.</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">150</span><span class="p">).</span><span class="nx">bounds</span><span class="p">();</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Convert point to an image.</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;EPSG: 32145&quot;</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">FeatureCollection</span><span class="p">(</span><span class="nx">test_fc</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">reduceToImage</span><span class="p">([</span><span class="s2">&quot;tag&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">max</span><span class="p">())</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">reproject</span><span class="p">({</span><span class="nx">crs</span><span class="o">:</span><span class="w"> </span><span class="nx">crs</span><span class="p">})</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">unmask</span><span class="p">()</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s2">&quot;test_image&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">clip</span><span class="p">(</span><span class="nx">test_extent</span><span class="p">)</span>
+<span class="p">;</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;test image&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">test_image</span><span class="p">,</span><span class="w"> </span><span class="nx">test_image</span><span class="p">.</span><span class="nx">projection</span><span class="p">());</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_image</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="mf">1</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Test point Image&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Make test distance image without .reproject(crs).</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">kernel_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_distance_image_without_crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_image</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">distance</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">euclidean</span><span class="p">({</span><span class="nx">radius</span><span class="o">:</span><span class="w"> </span><span class="nx">kernel_radius</span><span class="p">,</span><span class="w"> </span><span class="nx">units</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;meters&#39;</span><span class="p">}))</span>
+<span class="w">  </span><span class="c1">// .reproject({crs: crs})                                         </span>
+<span class="w">  </span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">;</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;test distance image:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">test_distance_image_without_crs</span><span class="p">,</span><span class="w"> </span><span class="nx">test_distance_image_without_crs</span><span class="p">.</span><span class="nx">projection</span><span class="p">());</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">inferno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#000004&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#320A5A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#781B6C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#BB3654&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#EC6824&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#FBB41A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#FCFFA4&quot;</span><span class="p">].</span><span class="nx">reverse</span><span class="p">();</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_distance_image_without_crs</span><span class="p">,</span><span class="w">  </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="nx">inferno</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Simple Test Distance Image&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Threshold distance image without crs at 50 yards. </span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_image_buffer_without_crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_distance_image_without_crs</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="mf">45.72</span><span class="p">).</span><span class="nx">selfMask</span><span class="p">();</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_image_buffer_without_crs</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="mf">1</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Threshold Simple Distance at 50 Yards&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Make test distance image with .reproject(crs).</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_distance_image_with_crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_image</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">distance</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Kernel</span><span class="p">.</span><span class="nx">euclidean</span><span class="p">({</span><span class="nx">radius</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="nx">units</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;meters&#39;</span><span class="p">}))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">reproject</span><span class="p">({</span><span class="nx">crs</span><span class="o">:</span><span class="w"> </span><span class="nx">crs</span><span class="p">})</span><span class="w">                                         </span>
+<span class="w">  </span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">;</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;test distance image:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">test_distance_image_with_crs</span><span class="p">,</span><span class="w"> </span><span class="nx">test_distance_image_with_crs</span><span class="p">.</span><span class="nx">projection</span><span class="p">());</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">inferno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#000004&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#320A5A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#781B6C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#BB3654&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#EC6824&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#FBB41A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#FCFFA4&quot;</span><span class="p">].</span><span class="nx">reverse</span><span class="p">();</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_distance_image_with_crs</span><span class="p">,</span><span class="w">  </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="nx">inferno</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Test Distance Image with Reproject&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Threshold distance image with crs at 50 yards. </span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_image_buffer_with_crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_distance_image_with_crs</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="mf">45.72</span><span class="p">).</span><span class="nx">selfMask</span><span class="p">();</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_image_buffer_with_crs</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="mf">1</span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Thresholded Test Distance Image with Reproject &#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Convert threshold image with crs to vector. </span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_image_buffer_to_vector_without_crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_image_buffer_without_crs</span><span class="p">.</span><span class="nx">reduceToVectors</span><span class="p">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">countEvery</span><span class="p">(),</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="nx">test_extent</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometryType</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">eightConnected</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">crs</span><span class="o">:</span><span class="w"> </span><span class="nx">crs</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e12</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometryInNativeProjection</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_image_buffer_to_vector_without_crs</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;magenta&#39;</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Threshold Simple Distance Image Converted to Feature&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Convert threshold image with crs to vector. </span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_image_buffer_to_vector_with_crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_image_buffer_with_crs</span><span class="p">.</span><span class="nx">reduceToVectors</span><span class="p">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">countEvery</span><span class="p">(),</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="nx">test_extent</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometryType</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;polygon&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">eightConnected</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">crs</span><span class="o">:</span><span class="w"> </span><span class="nx">crs</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e12</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometryInNativeProjection</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_image_buffer_to_vector_with_crs</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;cyan&#39;</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Threshold Distance Image with Reproject Converted to Feature&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// Buffer vector at 50 yards.</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">makeBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">buffer</span><span class="p">(</span><span class="mf">45.72</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_buffer_vector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_fc</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">makeBuffer</span><span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">test_buffer_vector</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Yellow&#39;</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Vector buffer Method&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="c1">// -----------------------------------------------------------------------------</span>
+<span class="c1">// What is the shape of the Euclidean Kernel?</span>
+<span class="c1">// -----------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">kernel_extent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_distance_image_with_crs</span><span class="p">.</span><span class="nx">gte</span><span class="p">(</span><span class="mf">0</span><span class="p">).</span><span class="nx">reduceToVectors</span><span class="p">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">countEvery</span><span class="p">(),</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometryType</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bb&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">eightConnected</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">crs</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EPSG: 32145&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e12</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometryInNativeProjection</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">kernel_extent</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;White&#39;</span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;Kernel Extent Test Image with Reproject&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_kernel_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">test_distance_image_with_crs</span><span class="p">.</span><span class="nx">reduceRegion</span><span class="p">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">reducer</span><span class="o">:</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Reducer</span><span class="p">.</span><span class="nx">max</span><span class="p">(),</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">geometry</span><span class="o">:</span><span class="w"> </span><span class="nx">kernel_extent</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">crs</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EPSG: 32145&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">maxPixels</span><span class="o">:</span><span class="w"> </span><span class="mf">1e12</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">tileScale</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">pythag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">kernel_radius</span><span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="nx">kernel_radius</span><span class="p">).</span><span class="nx">multiply</span><span class="p">(</span><span class="mf">2</span><span class="p">).</span><span class="nx">sqrt</span><span class="p">();</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;Test Kernel max:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">test_kernel_max</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;pythag diagonal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pythag</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../hello_feature_collection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hello Feature Collection" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Hello Feature Collection
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../workflows/image_collections/" class="md-footer__link md-footer__link--next" aria-label="Next: Basic image collections" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Basic image collections
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Jeff Howarth
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jeffhowarth" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/jeffgeographer" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.footer", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
