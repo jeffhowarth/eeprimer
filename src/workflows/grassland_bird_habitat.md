@@ -56,6 +56,8 @@ style task fill:#ADD8E6,stroke-width:0px
 
 Here is how each step in the workflow connects to another step.     
 
+<center>
+
 ``` mermaid
 graph LR
   step01[1] ;
@@ -111,6 +113,8 @@ graph LR
   style step16 fill:#ADD8E6,stroke-width:0px
 ```
 
+</center>
+
 The connections are made because the output of one step provides an input or argument for another step. This makes the workflow one long _chain_, or a series of connected input-method-output links. 
 
 The videos below walk you through each step in this workflow.    
@@ -135,6 +139,18 @@ The videos below walk you through each step in this workflow.
 
 ## 1. Load feature collection and filter by attribute
 
+### template  
+
+```js
+// Load feature collection and filter by attribute.    
+
+var output = ee.FeatureCollection("path")
+  .filter(ee.Filter.eq("propertyKey", "value"))
+;
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   method1["ee.FeatureCollection()"] ;
@@ -157,8 +173,11 @@ graph LR
   style arg_att3 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/9Dc0zxy2x1I?si=afXBeSU2CAxo02ej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -181,10 +200,23 @@ Map.addLayer();
 
 ## 2. Load feature collection and filter by location
 
+### template  
+
+```js
+// Load feature collection and filter by location.  
+
+var output = ee.FeatureCollection("path")
+  .filterBounds(target)
+;
+
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   method1["ee.FeatureCollection()"] ;
-  arg_att1([path name\n\nSTRING]) --> method1;
+  arg_att1([path\n\nSTRING]) --> method1;
 
   method1 --> method2[".filterBounds()"];
   method2 --> output>output\n\nFEATURE COLLECTION];
@@ -198,7 +230,11 @@ graph LR
   style arg_att2 fill:#E1C3E6,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/PNAnfKmJYbg?si=L9JMaEV26sVZeuwL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code
 
 ```js
 // ---------------------------------------------------------------------------
@@ -223,6 +259,22 @@ Map.addLayer();
 ---
 
 ## 3. Define study region  
+
+### template       
+
+```js
+// Define study region  
+
+var output = FC
+  .union(maxError)       
+  .geometry() 
+  .bounds(maxError) 
+  .buffer(distance, maxError)
+;
+
+```
+
+### diagram   
 
 ``` mermaid
 graph LR
@@ -251,7 +303,11 @@ graph LR
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo 
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/-4dzn5gy_ps?si=8uLRWTztpUi20cDJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -273,10 +329,21 @@ Map.addLayer();
 
 ## 4. Load an image
 
+### template  
+
+```js
+// Load an image.  
+
+var output = ee.Image("path")
+;
+``` 
+
+### diagram 
+
 ``` mermaid
 graph LR
   method1["ee.Image()"] ;
-  arg_att1([pathname\n\nSTRING]) --> method1;
+  arg_att1([path\n\nSTRING]) --> method1;
   method1 --> output>output\n\nIMAGE];
 
   style method1 fill:#ADD8E6,stroke-width:0px
@@ -284,7 +351,11 @@ graph LR
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/PpbGfoXpQcM?si=Gvfs13mb8b53NLrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -324,6 +395,19 @@ Map.addLayer();
 
 ## 5. Reclassify an image
 
+### template  
+
+```js
+// Reclassify an image.  
+
+var output = input.remap(
+  ["o","l","d"],
+  ["n","e","w"],
+);
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   input[/input\n\nIMAGE/] --> method1[".remap()"] ;
@@ -338,7 +422,11 @@ graph LR
   style arg_att2 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/EOHXIr2g_rs?si=EuzVmAnn9y3Wx1-x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code
 
 ```js
 // ---------------------------------------------------------------------------
@@ -361,7 +449,19 @@ Map.addLayer();
 
 ---
 
-## 6. Clip image by region  
+## 6. Clip image by region 
+
+### template  
+
+```js
+// Clip image by region.  
+
+var output = input.clip(region)
+;
+
+```
+
+### diagram  
 
 ``` mermaid
 graph LR
@@ -375,7 +475,11 @@ graph LR
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/vaojIs242gY?si=GhmRQsoOv1NX_06D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -401,6 +505,16 @@ Map.addLayer();
 
 ## 7. Select by pixel value 
 
+### template  
+
+```js
+// Select a pixel value (make a binary).
+
+var output = input.ee(value)
+;
+```
+### diagram  
+
 ``` mermaid
 graph LR
   input[/input\n\nIMAGE/] --> method1[".eq()"] ;
@@ -413,7 +527,11 @@ graph LR
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/64qp__GXrIw?si=_8rJKpWYoRtaH4RF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -437,6 +555,24 @@ Map.addLayer();
 ---
 
 ## 8. Compute distance  
+
+### template  
+
+```js
+// Compute distance with a euclidean kernel.   
+
+var output = input
+  .distance(
+    ee.Kernel.euclidean(radius, "units")
+  )
+  .reproject("crs")       // When should you comment out this line?
+  .unmask(value)          
+)
+
+
+```
+
+### diagram  
 
 ``` mermaid
 graph LR
@@ -462,7 +598,11 @@ graph LR
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/8hGTmmWUPyE?si=P6RxzGAYPK44kQIL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -493,6 +633,17 @@ Map.addLayer();
 
 ## 9. Select by a threshold value
 
+### template  
+
+```js
+// Select by threshold value (and output a binary).
+
+var output = input.gt(value)
+;
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   input[/input\n\nIMAGE/] --> method1[".gt()"] ;
@@ -505,7 +656,11 @@ graph LR
   style arg_att1 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo   
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/_CuSV5vHSbA?si=WpIP-MX17D833VqR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -531,6 +686,23 @@ Map.addLayer();
 
 ## 10. Zonal overlay
 
+### template  
+
+```js
+// Zonal overlay.
+
+var output = input.reduceRegions(
+  {
+    collection: cutter,
+    reducer: ee.Reducer(),
+    scale: number,
+    crs: "string"
+  }
+;
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   input[/"input 'dough'"\n\nIMAGE/] --> method1[".reduceRegions()"] ;
@@ -538,18 +710,22 @@ graph LR
   arg_att2([reducer\n\nREDUCER]) --> method1;
   arg_att3([scale\n\nNUMBER]) --> method1;
   arg_att4([crs\n\nSTRING]) --> method1;
-  method1 --> output>output\n\nIMAGE];
+  method1 --> output>output\n\nFEATURE COLLECTION];
 
   style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#C5E6A1,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
   style arg_att1 fill:#E1C3E6,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px
   style arg_att3 fill:#DCDCDC,stroke-width:0px
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/WxU2h6dt4tM?si=taLFaE_EkMIH4FI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -576,6 +752,28 @@ Map.addLayer();
 
 ## 11. Mask an image.
 
+### template  
+
+__Case 1:__ to use an image to mask another image.
+
+```js
+/// Use an image to mask another image.  
+
+var output = input.updateMask(mask)
+;
+```
+
+__Case 2:__ to use an image to mask itself.  
+
+```js
+/// Use an image to mask itself.  
+
+var output = input.selfMask()
+;
+```
+
+### diagram  
+
 __Case 1:__ to use an image to mask another image.
 
 ``` mermaid
@@ -590,7 +788,7 @@ graph LR
   style arg_att1 fill:#C5E6A1,stroke-width:0px
 ```
 
-__Case 2:__ to use an image to mask itself:  
+__Case 2:__ to use an image to mask itself.  
 
 ``` mermaid
 graph LR
@@ -602,7 +800,11 @@ graph LR
   style output fill:#C5E6A1,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/MoqbeTucypc?si=wUyiszjggDRYDoVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -628,13 +830,33 @@ Map.addLayer();
 
 ## 12. Make objects   
 
+### template  
+
+```js
+// Make objects from a binary image. 
+
+var output = input.reduceToVectors(
+  {
+    reducer: ee.Reducer(),
+    geometry: aoi, // area of interest   
+    scale: number,
+    geometryType: "string",
+    eightConnected: boolean,  
+    maxPixels: 1e12, 
+    geometryInNativeProjection: boolean 
+  }
+);
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   input[/input\n\nIMAGE/] --> method1[".reduceToVectors()"] ;
-  method1 --> output>output\n\nIMAGE];
+  method1 --> output>output\n\nFEATURE COLLECTION];
 
   arg_att1([reducer\n\nREDUCER]) --> method1;
-  arg_att2([geometry\n\nGEOMETRY]) --> method1;
+  arg_att2([aoi\n\nGEOMETRY]) --> method1;
   arg_att3([scale\n\nNUMBER]) --> method1;
   arg_att4([geometryType\n\nSTRING]) --> method1;
   arg_att5([eightConnected\n\nBOOLEAN]) --> method1;
@@ -643,7 +865,7 @@ graph LR
 
   style input fill:#C5E6A1,stroke-width:0px
   style method1 fill:#ADD8E6,stroke-width:0px
-  style output fill:#C5E6A1,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
 
   style arg_att1 fill:#ADD8E6,stroke-width:0px
   style arg_att2 fill:#E1C3E6,stroke-width:0px
@@ -654,7 +876,11 @@ graph LR
   style arg_att7 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/wROroakCXQU?si=pyjYezz6Kv6T5HyR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -678,6 +904,19 @@ Map.addLayer();
 
 ## 13. Select by location  
 
+### template  
+
+```js
+// Select by location.  
+
+var output = input
+  .filterBounds(target)
+;
+
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   input[/input\n\nFEATURE COLLECTION/] --> method2[".filterBounds()"];
@@ -691,7 +930,11 @@ graph LR
   style arg_att1 fill:#E1C3E6,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/jUoOV2sTm8I?si=BTW_TliZ0Prkdr9-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -714,7 +957,29 @@ Map.addLayer();
 
 ---
 
-## 14. Compute spatial attributes
+## 14. Map function over collection  
+
+### template  
+
+```js
+// Step 1: Write a function that takes a feature input. 
+
+var myFunction = function(feature) {
+
+  var crs = string ; 
+  var area = feature.area(1, crs) ;
+
+  return feature.set("area", area) ;
+}
+
+// Step 2: Apply the function to every feature in a collection.   
+
+var output = input.map(myFunction)
+;
+
+```
+
+### diagram   
 
 ``` mermaid
 graph LR
@@ -729,7 +994,11 @@ graph LR
   style arg_att1 fill:#ADD8E6,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/GZrXo1CU9Qo?si=Ykvxy3hnyGAbwgcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -761,6 +1030,22 @@ Map.addLayer();
 
 ## 15. Select by two attributes
 
+### template  
+
+```js
+// Select features from a collection by two attributes.
+
+var output = input.filter(
+  ee.Filter.and(
+    ee.Filter.first("property","value"),
+    ee.Filter.second("property","value")
+  )
+);
+
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   input[/input\n\nFEATURE COLLECTION/] --> method1[".filter()"];
@@ -790,7 +1075,11 @@ graph LR
   style arg_att4 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo  
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/CNV0PMe_Ofk?si=zXajXqlHxl8HGuWe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------
@@ -815,6 +1104,21 @@ Map.addLayer();
 
 ## 16. Export to EE Asset
 
+### template  
+
+```js
+// Export feature collection to Asset.  
+
+Export.table.toAsset({
+  collection: FeatureCollection, 
+  description: "string", 
+  assetId: "string"
+  }
+);
+```
+
+### diagram  
+
 ``` mermaid
 graph LR
   method1["Export.table.toAsset()"] --> output>output\n\nTASK];
@@ -830,7 +1134,11 @@ graph LR
   style arg_att3 fill:#DCDCDC,stroke-width:0px
 ```
 
+### demo
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/93-7gsmORZc?si=rm69ILxOCWuhgxG7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### demo code  
 
 ```js
 // ---------------------------------------------------------------------------

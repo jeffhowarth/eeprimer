@@ -731,7 +731,7 @@
 <pre class="mermaid"><code>graph LR
   input[/test point image/] --&gt; method1[".distance()"] ;
   method1 --&gt; method2(["ee.Kernel.euclidean()"])
-  arg_att1(["radius: 250"]) --&gt; method2;
+  arg_att1(["radius: 100"]) --&gt; method2;
   arg_att2(["units: 'meters'"]) --&gt; method2;
   method2 --&gt; output&gt;output\n\nIMAGE];
 
@@ -742,15 +742,33 @@
   style arg_att1 fill:#DCDCDC,stroke-width:0px
   style arg_att2 fill:#DCDCDC,stroke-width:0px</code></pre>
 <p>Notice that the .distance() method takes the ee.Kernel.euclidian() method as an argument. (I use blue to indicate methods and rounded shapes to indicate arguments, or things that get put into a method&rsquo;s parentheses). </p>
-<p>A <strong>kernel</strong> is an analysis window. In this case, the kernel defines the spatial extent of the euclidean distance operation. When we say that we want the radius of the kernel to be 250 meters, we are defining the size of our analysis window. This is a little confusing, because I think Earth Engine actually uses a square as the kernel shape, not a circle, but more on that later.  </p>
+<p>A <strong>kernel</strong> is an analysis window. In this case, the kernel defines the spatial extent of the euclidean distance operation. When we say that we want the radius of the kernel to be 100 meters, we are defining the size of our analysis window. This is a little confusing, because I think Earth Engine actually uses a square as the kernel shape, not a circle, but more on that later.  </p>
 <p>In this case, the extent of the Simple Test Distance Image represents the <strong>kernel extent</strong>; it shows the size of the window that was centered on the only pixel in the binary image with a non-zero value. Within this kernel window, Earth Engine computed the Euclidean distance from the single non-zero pixel to all the other zero pixels in the kernel extent.</p>
 <p>The fact that the extent of the Simple Test Distance Image is smaller than the extent of the Test Point Image also tells us something important. Remember that the Test Point Image was the input to the distance method (I use the parallelogram shape to represent data inputs because I am trying to suggest they are moving or about to undergo change). So the difference between the two extents means that the .distance() method does not make computations across the entire extent of the input image. If it did, the extent of the output would be the same as the input. Instead, the .distance() method computes distance within the extent of the kernel that you feed it. Any locations outside of the kernel extent get masked. </p>
 <h2 id="simple-distance-threshold">Simple distance threshold</h2>
 <p>You may have noticed that if you zoom out too far when looking at the test point image extent in the previous section, Earth Engine stops drawing the Simple Test Distance Image on the map. That is perhaps the first clue that something is weird here. </p>
 <p><em>Why would the ability to draw the layer depend on the zoom level?</em> </p>
-<p>If this fuels a sense of doubt and you begin to wonder how much you should trust what the layer claims to show you, I would like to double-down on such concerns by looking at the next layer, called <strong>Threshold Simple Distance at 50 Yards</strong>. This shows a binary image, where any location 50 yards (45.72 meters) or less from the midfield point are displayed in white and all other locations are masked so you can see the satellite base layer. If you turn off the other layers, you will be able to compare this circle that should have a radius of 50 yards to the football field hatch marks. The circle should reach the goal line, but it does not.    </p>
-<p><em>Why does this distance layer seem to under represent distance?</em>  </p>
-<p>There are two things that help understand why these two things happen when we use the Code Editor: </p>
+<p>If this fuels a sense of doubt and you begin to wonder how much you should trust what the layer claims to show you, I would like to double-down on such concerns by looking at the next layer, called <strong>Threshold Simple Distance at 50 Yards</strong>. Here is how I made it:  </p>
+<pre class="mermaid"><code>graph LR
+  input[/test point image/] 
+  method1[".lt()"] ;
+  method2[".selfMask()"]
+  arg1(["45.72"]) 
+  output&gt;output\n\nIMAGE];
+
+  input --&gt; method1 ;
+  arg1 --&gt; method1 ;
+  method1 --&gt; method2 ;
+  method2 --&gt; output
+
+  style input fill:#C5E6A1,stroke-width:0px
+  style method1 fill:#ADD8E6,stroke-width:0px
+  style method2 fill:#ADD8E6,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
+  style arg1 fill:#DCDCDC,stroke-width:0px</code></pre>
+<p>The output is a binary image, where all locations that are 50 yards (45.72 meters) or less from the midfield point are displayed in white and all other locations are masked. If you turn off all the other layers, you should be able to see the satellite base layer and compare this circle to hatch marks on the football field. The circle should reach the goal line, but it does not. It seems instead to leave a long field goal.      </p>
+<p><em>Why does this distance layer under represent distance?</em>  </p>
+<p>There are two things that help understand why this happens when we use the Code Editor: </p>
 <ol>
 <li>Pixel scale changes with zoom level.   </li>
 <li>Zoom level determines analysis scale, unless we specify otherwise. </li>
@@ -758,8 +776,8 @@
 <p>Google Earth Engine stores all image assets in a stack of different resolutions defined by zoom level. The idea is that each zoom level serves you an image with the same number of pixels. As a result, pixel scale changes as you move between zoom levels. Here is another way to think about this: you do not get more pixels on your monitor to see more detail, you simply get pixels that represent smaller distances on the Earth&rsquo;s surface.     </p>
 <p><img alt="Google pyramid" src="https://developers.google.com/static/earth-engine/images/Pyramids.png" />
 <em>source:</em> <a href="https://developers.google.com/earth-engine/guides/scale" target="_blank"><em>Google</em></a></p>
-<p>The image above shows how each pixel generalizes the values of a 2x2 block of pixels at the next, more detailed zoom level. As a result, pixel scale resembles a <em>pyramid</em> as you move from small scale to large scale images. </p>
-<p>Often when you use a kernel method in the Code Editor, the zoom level of the map in the Code Editor determines the scale of the analysis. That is why the results appear to change as you zoom in and out; by changing the zoom level, you change the scale of the analysis. </p>
+<p>The image above shows how each pixel generalizes the values of a 2x2 block of pixels at the next, more detailed zoom level. As a result, pixel scale resembles a <em>pyramid</em> as you move from small scale to large scale zoom levels. </p>
+<p>When you use a kernel method in the Code Editor, the zoom level of the map in the Code Editor determines the scale of the analysis. That is why the results appear to change as you zoom in and out; by changing the zoom level, you change the scale of the analysis. </p>
 <h2 id="distance-image-with-reprojectcrs">Distance image with .reproject(crs)</h2>
 <p><em>To be continued&hellip;</em></p>
 <pre class="mermaid"><code>graph LR
