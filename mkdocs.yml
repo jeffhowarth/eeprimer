@@ -151,7 +151,7 @@ nav:
     - Hello Vector: rudiments/hello_vector.md
     - Hello Feature Collection: rudiments/hello_feature_collection.md  
     - On Distance: rudiments/on_distance.md  
-    # - Additive color: rudiments/additive_color.md  
+    - Additive color: rudiments/additive_color.md  
     # - RGB composites: rudiments/RGB_composites.md  
 
   - Worked out examples:  

@@ -1,4 +1,4 @@
-_INCOMPLETE DRAFT:_  
+_INCOMPLETE DRAFT_  
 _October 5, 2023_
 
 ## Introduction
