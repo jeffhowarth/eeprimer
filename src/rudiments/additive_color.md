@@ -110,7 +110,7 @@ You can use the app below to explore this RGB composite and become more familiar
 
 ## Temporal scale and change 
 
-You can also use the app to think a little about how the temporal scale of the change image and may influences the kinds of change that you can see.   
+You can also use the app to think a little about how the temporal scale of the change image may influence the kinds of change that you can see.   
 
 <center>
 
