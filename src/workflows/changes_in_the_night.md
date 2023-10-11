@@ -1,12 +1,12 @@
 ## Introduction  
 
-This tutorial walks you through how to construct an RGB composite that visualizes change in the DPMS/OLS dataset between 1993 and 2013 like the image shown in the [additive color](../rudiments/additive_color.md) chapter.  
+This tutorial walks you through how to construct an RGB composite that visualizes change in the DMSP/OLS dataset between 1993 and 2013 like the image shown in the [additive color](../rudiments/additive_color.md) chapter.  
 
 The diagram below illustrates the general workflow.  
 
 ![Workflow](https://geography.middlebury.edu/howarth/ee_edu/rgb_lights_workflow.png)
 
-The tutorial also shows you how to compose your script (using a dictionary and a custom function) so that you can easily change the three years used to define the RGB composite. In other ways, the purpose of your script is not simply to deliver a map product, but instead to create a flexible tool for exploring and visualizing the nighttime lights dataset with additive color. 
+The tutorial also shows you how to compose your script (using a dictionary and a custom function) so that you can easily change the three years used to define the RGB composite. In other words, the purpose of your script is not simply to deliver a map product, but instead to create a flexible tool for exploring and visualizing the nighttime lights dataset with additive color. 
 
 ---
 
@@ -133,7 +133,7 @@ print(
 
 ---
 
-## Display image as layer  
+## Display image as a map layer  
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/MRZHjkERbg4?si=NEM-gX0LVR8qM6fa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
