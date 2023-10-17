@@ -2,67 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/intro/gee_gui/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/intro/js101/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/intro/qgis_gui/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/additive_color/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/hello_feature_collection/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/hello_vector/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/jeffhowarth/eePrimer/rudiments/natural_and_false_color/</loc>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/on_distance/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/toolbox/GEE/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/toolbox/QGIS/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/changes_in_the_night/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/grassland_bird_habitat/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/image_collections/</loc>
-         <lastmod>2023-10-11</lastmod>
+         <lastmod>2023-10-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
