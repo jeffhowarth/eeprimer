@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: a primer for Earth Engine
+site_name: ee.Primer()
 site_url: https://github.com/jeffhowarth/eePrimer
 site_author: Jeff Howarth
 site_description: >-
@@ -139,7 +139,8 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Hello!: index.md 
+  - Title Page: index.md
+  - Introduction: introduction.md 
   - Toolbox:  
     - Google Earth Engine: toolbox/GEE.md 
     - QGIS: toolbox/QGIS.md  

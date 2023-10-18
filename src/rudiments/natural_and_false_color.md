@@ -71,7 +71,7 @@ The image above looks a little drab because we are not using our display values 
 
 ## Natural color 
 
-Now we can take advantage of [addtive color](additive_color) and display the bands that report the amount of energy in the red, green, and blue portions of the EM spectrum with the red, green, and blue color channels. The result is called a __natural color composite__ because it looks natural to human eyes, or similar to the world that we experience, or at least it looks like the world that we can see from airplane window.    
+Now we can take advantage of [additive color](additive_color) and display the bands that report the amount of energy in the red, green, and blue portions of the EM spectrum with the red, green, and blue color channels. The result is called a __natural color composite__ because it looks natural to human eyes, or similar to the world that we experience, or at least it looks like the world that we can see from an airplane window.    
 
 <center>
 
@@ -109,7 +109,7 @@ So now the colors are false and this can be a little weird to think through, but
 
 </center>
 
-There are a lot of different false color composites that you can make with additive color. For here is another common false color composite that displays shortwave energy.
+There are a lot of different false color composites that you can make with additive color. For example, here is another common false color composite that displays shortwave energy.
 
 <center> 
 
@@ -125,7 +125,7 @@ There are a lot of different false color composites that you can make with addit
 
 ## Make some composites
 
-Go ahead and try to make each of the color composites shown above and use stretch enhancement to improve the contrast of each image.  
+Go ahead and try to make the color composites shown above and use stretch enhancement to improve the contrast of each image.  
 
 <iframe
   src="https://jhowarth.users.earthengine.app/view/ee-edu-eefa-f11-02"
@@ -134,6 +134,9 @@ Go ahead and try to make each of the color composites shown above and use stretc
 ></iframe>
 
 [_Link to app_](https://jhowarth.users.earthengine.app/view/ee-edu-eefa-f11-02){target=_blank}. 
+
+As a guide for exploring color composites, here is [a very helpful resource](https://web.pdx.edu/~nauna/resources/10_BandCombinations.htm){target=_blank} that identifies useful band combinations for different thematic applications in environmental science and geography. 
+
 
 ## What do the colors mean?
 
@@ -155,4 +158,10 @@ We can explore spectral signature with this app.
 
 [S2 band spec sheet](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED#bands){target=_blank}
 
+## Summary  
 
+Remote sensing involves capturing data about a place without being in contact with the place. We capture this data with sensors onboard vehicles, like satellites, drones, and airplanes. These sensors measure the amount of energy that reflects or radiates from the Earth, storing this data in each pixel of a raster dataset. Most sensors capture this data within specific ranges of the electromagnetic spectrum, which are called spectral bands; this includes both visible and non-visible portions of the spectrum. We can use additive color to display the values of three spectral bands at once and we can use stretch enhancement to improve the contrast of the resulting images. The color composites that result help us visualize three slices of the spectral signatures of land cover. We can also use the spectral signatures of land cover to help guide our choice of band combinations to make color composites.   
+
+---
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License</a>.
