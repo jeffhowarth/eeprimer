@@ -42,7 +42,7 @@ Here are two key terms:
 
 - __Reflectance__ is the proportion (ratio) of the amount of energy reflected from the surface versus the total amount of energy striking the surface. 
 
-## What/from where do the sensors report observation?
+## What/of where do the sensors measure?
 
 Here are three common terms:    
 

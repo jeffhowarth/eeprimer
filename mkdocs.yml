@@ -156,6 +156,7 @@ nav:
     - In Additive Color: rudiments/additive_color.md  
     - In Natural and False Color: rudiments/natural_and_false_color.md  
   - Starters:  
+    - Overview: starters/overview.md   
     - Landsat 5: starters/landsat5.md  
     - Landsat 7: starters/landsat7.md  
     - Landsat 8: starters/landsat8.md  

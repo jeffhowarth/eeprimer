@@ -6,7 +6,7 @@ In 1858, "Nadar" (aka Gaspard-F&eacute;lix Tournachon) took a picture of Paris f
 
 ![Nadar and his wife](https://images.metmuseum.org/CRDImages/ph/original/DP158031.jpg)  
 
-[_Naddar with His Wife, Ernestine, in a Balloon_](https://www.metmuseum.org/art/collection/search/286163){target=_blank}
+[_Nadar with His Wife, Ernestine, in a Balloon_](https://www.metmuseum.org/art/collection/search/286163){target=_blank}
 
 The picture below is an example of his work, though it is not the first image he took.  
 
@@ -42,7 +42,7 @@ In 1897, Alfred Nobel successfully took a photography from a rocket.
 
 </center>
 
-Twenty years later, Alfred Maul fired a rocket into the atmosphere that released a camera with a parachute that photographed the German countryside on it's descent.  
+Twenty years later, Alfred Maul fired a rocket into the atmosphere that released a camera with a parachute and photographed the German countryside on it's descent.  
 
 <center>
 
@@ -92,7 +92,7 @@ In 1909, Wilbur Wright took the first photograph from a plane. The method develo
 
 ![](https://cdn.nationalarchives.gov.uk/blog/wp-content/uploads/2015/06/01155506/Aerial-7.jpg)
 
-[_Lieutenant S C Thynne circa 1916_](https://blog.nationalarchives.gov.uk/aerial-photography-first-world-war/)(target=_blank)  
+[_Lieutenant S C Thynne circa 1916_](https://blog.nationalarchives.gov.uk/aerial-photography-first-world-war/){target=_blank}  
 
 Air photographs provided reconnaissance of battlefield theatres that were then schematized into maps by cartographers. 
 
@@ -108,7 +108,7 @@ Air photographs provided reconnaissance of battlefield theatres that were then s
 
 ## Early satellites  
 
-The [Corona Photographic Surveillance](http://heroicrelics.org/info/corona/corona-overview.html){target=_blank} satellites captured photographs of earth on film. The delivered to a dark room by releasing a canister which would eventually fall out of orbit, enter the atmosphere, and release a parachute, which a plane would then retrieve in flight.  
+The [Corona Photographic Surveillance](http://heroicrelics.org/info/corona/corona-overview.html){target=_blank} satellites captured photographs of earth on film. They delivered the film to the dark room by releasing a canister which would eventually fall out of orbit, enter the atmosphere, and release a parachute, which a plane would then retrieve in flight.  
 
 ![Corona](http://heroicrelics.org/info/corona/corona-overview/corona-recovery-sequence-sm.jpg)  
 
