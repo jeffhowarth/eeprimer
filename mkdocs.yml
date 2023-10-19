@@ -147,20 +147,29 @@ nav:
   - Introduction: 
     - Javascript 101: intro/js101.md  
     - GEE User Interface: intro/gee_gui.md 
-    - QGIS User Interface: intro/qgis_gui.md 
+    - QGIS User Interface: intro/qgis_gui.md  
+    - History of Remote Sensing: intro/history-remote-sensing.md  
   - Rudiments:
     - Hello Vector: rudiments/hello_vector.md
     - Hello Feature Collection: rudiments/hello_feature_collection.md  
     - On Distance: rudiments/on_distance.md  
     - In Additive Color: rudiments/additive_color.md  
     - In Natural and False Color: rudiments/natural_and_false_color.md  
-
+  - Starters:  
+    - Landsat 5: starters/landsat5.md  
+    - Landsat 7: starters/landsat7.md  
+    - Landsat 8: starters/landsat8.md  
+    - Landsat 9: starters/landsat9.md  
+    - MODIS: starters/modis.md  
+    - NAIP: starters/naip.md  
+    - Sentinel 2: starters/sentinel2.md  
   - Worked out examples:  
     - Basic Image Collections: workflows/image_collections.md  
     - Grassland Bird Habitat: workflows/grassland_bird_habitat.md  
     - Changes in the Night: workflows/changes_in_the_night.md  
     - Landsat Wipe Map: workflows/landsat-wipe-map.md
-
+  - Glossary: 
+    - Landsat lexicon: glossary/landsat-lexicon.md  
 
 
  
