@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mission" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -690,9 +695,52 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sentinel 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Sentinel 2
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mission" class="md-nav__link">
+    Mission
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bands" class="md-nav__link">
+    Bands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starter-code" class="md-nav__link">
+    Starter Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -723,6 +771,8 @@
       <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
       
       
+        
+          
         
           
         
@@ -802,6 +852,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/CZU-fire-complex/" class="md-nav__link">
+        CZU Fire Complex
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -829,6 +893,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -842,6 +908,20 @@
           Glossary
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/fire-scars/" class="md-nav__link">
+        Fire scars
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -881,6 +961,35 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mission" class="md-nav__link">
+    Mission
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bands" class="md-nav__link">
+    Bands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starter-code" class="md-nav__link">
+    Starter Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -896,11 +1005,19 @@
 
   <h1>Sentinel 2</h1>
 
+<h2 id="mission">Mission</h2>
+<p><a href="https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2" target="_blank">Sentinel-2 Mission Guide</a>  </p>
+<hr />
+<h2 id="bands">Bands</h2>
+<p><img alt="Sentinel Bands" src="https://landsat.gsfc.nasa.gov/wp-content/uploads/2015/06/Landsat.v.Sentinel-2.png" /></p>
+<p><a href="https://landsat.gsfc.nasa.gov/article/sentinel-2a-launches-our-compliments-our-complements/" target="_blank"><em>Sentinel Band Chart</em></a>  </p>
+<hr />
+<h2 id="starter-code">Starter Code</h2>
 <p><a href="https://code.earthengine.google.com/46de2727483a407d266e2eca745c0d31" target="_blank">Open in Code Editor</a></p>
 <div class="language-js highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 <span class="c1">//  Title:        starter_S2.js</span>
 <span class="c1">//  Author:       Jeff Howarth</span>
-<span class="c1">//  Last edited:  10/18/2023</span>
+<span class="c1">//  Last edited:  10/24/2023</span>
 <span class="c1">//</span>
 <span class="c1">//  Starter for Sentinel 2 collection. </span>
 <span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
@@ -932,7 +1049,7 @@
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">SCL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">image</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;SCL&#39;</span><span class="p">)</span>
 <span class="w">    </span><span class="p">.</span><span class="nx">remap</span><span class="p">(</span>
 <span class="w">      </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="mf">7</span><span class="p">,</span><span class="mf">8</span><span class="p">,</span><span class="mf">9</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">11</span><span class="p">],</span>
-<span class="w">      </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">]</span>
+<span class="w">      </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">]</span>
 <span class="w">    </span><span class="p">);</span>
 
 
@@ -952,12 +1069,12 @@
 <span class="c1">// Filter ingredients</span>
 <span class="c1">// ----------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;COPERNICUS/S2_SR&quot;</span><span class="p">)</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s2">&quot;COPERNICUS/S2_SR_HARMONIZED&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">filterBounds</span><span class="p">(</span><span class="nx">geometry</span><span class="p">)</span>
-<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">2020</span><span class="p">,</span><span class="w"> </span><span class="mf">2020</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;year&#39;</span><span class="p">))</span>
+<span class="w">  </span><span class="c1">// .filter(ee.Filter.calendarRange(2020, 2020, &#39;year&#39;))</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">calendarRange</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;month&#39;</span><span class="p">))</span><span class="w"> </span>
-<span class="w">  </span><span class="c1">// .filter(ee.Filter.calendarRange(1, 1, &#39;day_of_year&#39;)) </span>
-<span class="w">  </span><span class="c1">// .filter(ee.Filter.lt(&#39;CLOUDY_PIXEL_PERCENTAGE&#39;,20))</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">ee</span><span class="p">.</span><span class="nx">Filter</span><span class="p">.</span><span class="nx">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span><span class="mf">20</span><span class="p">))</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">cloudMask_S2</span><span class="p">)</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">scale_S2</span><span class="p">)</span>
 <span class="w">  </span><span class="p">.</span><span class="nx">median</span><span class="p">()</span>
@@ -970,8 +1087,10 @@
 <span class="c1">// Display</span>
 <span class="c1">// ----------------------------------------------------------------------</span>
 
+<span class="kd">var</span><span class="w"> </span><span class="nx">viz_bands</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">];</span>
+
 <span class="kd">var</span><span class="w"> </span><span class="nx">viz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;B2&#39;</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">bands</span><span class="o">:</span><span class="w"> </span><span class="nx">viz_bands</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span>
 <span class="p">};</span>

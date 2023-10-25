@@ -168,8 +168,10 @@ nav:
     - Basic Image Collections: workflows/image_collections.md  
     - Grassland Bird Habitat: workflows/grassland_bird_habitat.md  
     - Changes in the Night: workflows/changes_in_the_night.md  
-    - Landsat Wipe Map: workflows/landsat-wipe-map.md
+    - Landsat Wipe Map: workflows/landsat-wipe-map.md  
+    - CZU Fire Complex: workflows/CZU-fire-complex.md  
   - Glossary: 
+    - Fire scars: glossary/fire-scars.md  
     - Landsat lexicon: glossary/landsat-lexicon.md  
 
 

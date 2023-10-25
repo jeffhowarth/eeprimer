@@ -1,10 +1,26 @@
+## Mission  
+
+[Sentinel-2 Mission Guide](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2){target=_blank}  
+
+---  
+
+## Bands  
+
+![Sentinel Bands](https://landsat.gsfc.nasa.gov/wp-content/uploads/2015/06/Landsat.v.Sentinel-2.png)
+
+[_Sentinel Band Chart_](https://landsat.gsfc.nasa.gov/article/sentinel-2a-launches-our-compliments-our-complements/){target=_blank}  
+
+---  
+
+## Starter Code  
+
 [Open in Code Editor](https://code.earthengine.google.com/46de2727483a407d266e2eca745c0d31){target=_blank}
 
 ```js
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //  Title:        starter_S2.js
 //  Author:       Jeff Howarth
-//  Last edited:  10/18/2023
+//  Last edited:  10/24/2023
 //
 //  Starter for Sentinel 2 collection. 
 //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,7 +52,7 @@ function cloudMask_S2 (image) {
   var SCL = image.select('SCL')
     .remap(
       [1,2,3,4,5,6,7,8,9,10,11],
-      [0,1,0,1,1,1,1,0,0, 0, 1]
+      [0,1,0,1,1,1,0,0,0, 0, 1]
     );
 
   
@@ -56,12 +72,12 @@ function cloudMask_S2 (image) {
 // Filter ingredients
 // ----------------------------------------------------------------------
 
-var output = ee.ImageCollection("COPERNICUS/S2_SR")
+
+var output = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
   .filterBounds(geometry)
-  .filter(ee.Filter.calendarRange(2020, 2020, 'year'))
+  // .filter(ee.Filter.calendarRange(2020, 2020, 'year'))
   .filter(ee.Filter.calendarRange(1, 3, 'month')) 
-  // .filter(ee.Filter.calendarRange(1, 1, 'day_of_year')) 
-  // .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',20))
+  .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',20))
   .map(cloudMask_S2)
   .map(scale_S2)
   .median()
@@ -74,12 +90,13 @@ print(output);
 // Display
 // ----------------------------------------------------------------------
 
+var viz_bands = ['B4', 'B3', 'B2'];
+
 var viz = {
-  bands: ['B4', 'B3', 'B2'],
+  bands: viz_bands,
   min: 0.0,
   max: 0.3,
 };
 
 Map.addLayer(output, viz, 'From Sentinel 2 Collection');
-
 ```

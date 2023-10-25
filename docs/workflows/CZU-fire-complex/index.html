@@ -12,20 +12,20 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/workflows/landsat-wipe-map/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/workflows/CZU-fire-complex/">
       
       
-        <link rel="prev" href="../changes_in_the_night/">
+        <link rel="prev" href="../landsat-wipe-map/">
       
       
-        <link rel="next" href="../CZU-fire-complex/">
+        <link rel="next" href="../../glossary/fire-scars/">
       
       <link rel="icon" href="../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Landsat Wipe Map - ee.Primer()</title>
+        <title>CZU Fire Complex - ee.Primer()</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Landsat Wipe Map
+              CZU Fire Complex
             
           </span>
         </div>
@@ -791,6 +791,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../landsat-wipe-map/" class="md-nav__link">
+        Landsat Wipe Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -801,12 +815,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Landsat Wipe Map
+          CZU Fire Complex
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Landsat Wipe Map
+        CZU Fire Complex
       </a>
       
         
@@ -830,113 +844,120 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-a-new-script" class="md-nav__link">
-    Start a new script
+  <a href="#start-a-new-file" class="md-nav__link">
+    Start a new file
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-to-compose-a-map" class="md-nav__link">
-    Start to compose a map
+  <a href="#sentinel-2-starter-script" class="md-nav__link">
+    Sentinel-2 starter script
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-l5-collection" class="md-nav__link">
-    Load L5 collection
+  <a href="#define-aoi" class="md-nav__link">
+    Define aoi
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-out-processing-routine" class="md-nav__link">
-    Work out processing routine
+  <a href="#adjust-ingredients" class="md-nav__link">
+    Adjust ingredients
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#write-routine-as-a-function" class="md-nav__link">
-    Write routine as a function
+  <a href="#adjust-display" class="md-nav__link">
+    Adjust display
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check" class="md-nav__link">
-    CHECK
+  <a href="#write-function" class="md-nav__link">
+    Write function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stretch-enhancement-and-natural-color" class="md-nav__link">
-    Stretch Enhancement and Natural Color
+  <a href="#apply-function" class="md-nav__link">
+    Apply function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_1" class="md-nav__link">
-    CHECK
+  <a href="#calculate-nbr" class="md-nav__link">
+    Calculate NBR
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#false-color" class="md-nav__link">
-    False color
+  <a href="#calculate-burn-severity" class="md-nav__link">
+    Calculate burn severity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-to-accommodate-color-blindness" class="md-nav__link">
-    Try to accommodate color blindness
+  <a href="#classify-burn-severity" class="md-nav__link">
+    Classify burn severity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_2" class="md-nav__link">
-    CHECK
+  <a href="#display-layer-with-color" class="md-nav__link">
+    Display layer with color
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore-potential-time-2-layers" class="md-nav__link">
-    Explore Potential Time 2 Layers
+  <a href="#display-class-key" class="md-nav__link">
+    Display class key
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_3" class="md-nav__link">
-    CHECK
+  <a href="#create-ocean-mask" class="md-nav__link">
+    Create ocean mask
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wipe-template" class="md-nav__link">
-    Wipe template
+  <a href="#get-building-footprints" class="md-nav__link">
+    Get building footprints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fix-the-linked-map" class="md-nav__link">
-    Fix the linked map
+  <a href="#select-burned-buildings" class="md-nav__link">
+    Select burned buildings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#link-to-your-code" class="md-nav__link">
-    Link to your code
+  <a href="#display-building-centroids" class="md-nav__link">
+    Display building centroids
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks-for-tutorial" class="md-nav__link">
+    Checks for tutorial
   </a>
   
 </li>
@@ -945,20 +966,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CZU-fire-complex/" class="md-nav__link">
-        CZU Fire Complex
-      </a>
     </li>
   
 
@@ -1073,113 +1080,120 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-a-new-script" class="md-nav__link">
-    Start a new script
+  <a href="#start-a-new-file" class="md-nav__link">
+    Start a new file
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-to-compose-a-map" class="md-nav__link">
-    Start to compose a map
+  <a href="#sentinel-2-starter-script" class="md-nav__link">
+    Sentinel-2 starter script
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-l5-collection" class="md-nav__link">
-    Load L5 collection
+  <a href="#define-aoi" class="md-nav__link">
+    Define aoi
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-out-processing-routine" class="md-nav__link">
-    Work out processing routine
+  <a href="#adjust-ingredients" class="md-nav__link">
+    Adjust ingredients
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#write-routine-as-a-function" class="md-nav__link">
-    Write routine as a function
+  <a href="#adjust-display" class="md-nav__link">
+    Adjust display
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check" class="md-nav__link">
-    CHECK
+  <a href="#write-function" class="md-nav__link">
+    Write function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stretch-enhancement-and-natural-color" class="md-nav__link">
-    Stretch Enhancement and Natural Color
+  <a href="#apply-function" class="md-nav__link">
+    Apply function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_1" class="md-nav__link">
-    CHECK
+  <a href="#calculate-nbr" class="md-nav__link">
+    Calculate NBR
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#false-color" class="md-nav__link">
-    False color
+  <a href="#calculate-burn-severity" class="md-nav__link">
+    Calculate burn severity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-to-accommodate-color-blindness" class="md-nav__link">
-    Try to accommodate color blindness
+  <a href="#classify-burn-severity" class="md-nav__link">
+    Classify burn severity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_2" class="md-nav__link">
-    CHECK
+  <a href="#display-layer-with-color" class="md-nav__link">
+    Display layer with color
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore-potential-time-2-layers" class="md-nav__link">
-    Explore Potential Time 2 Layers
+  <a href="#display-class-key" class="md-nav__link">
+    Display class key
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_3" class="md-nav__link">
-    CHECK
+  <a href="#create-ocean-mask" class="md-nav__link">
+    Create ocean mask
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wipe-template" class="md-nav__link">
-    Wipe template
+  <a href="#get-building-footprints" class="md-nav__link">
+    Get building footprints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fix-the-linked-map" class="md-nav__link">
-    Fix the linked map
+  <a href="#select-burned-buildings" class="md-nav__link">
+    Select burned buildings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#link-to-your-code" class="md-nav__link">
-    Link to your code
+  <a href="#display-building-centroids" class="md-nav__link">
+    Display building centroids
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks-for-tutorial" class="md-nav__link">
+    Checks for tutorial
   </a>
   
 </li>
@@ -1199,310 +1213,304 @@
                   
 
 
-  <h1>Landsat Wipe Map</h1>
+  <h1>CZU Fire Complex</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>This tutorial introduces a general workflow to make a wipe map for exploring land cover changes with satellite imagery. We will use surface reflectance data from the Landsat 5 image collection to identify spring-time scenes with few clouds of Shanghai, China that are taken 25 years apart. We will then develop natural and false color composites to display the imagery and make a false color composite that aims to be more accessible to color blind map readers. Finally, we will display the two images with a wipe map to help people compare differences between the two time steps. Our final result should look and work like the map in the app below.      </p>
+<p>This tutorial introduces a general workflow to map the burn severity of wildfire with Sentinel-2 data and compare the result to a global dataset of building footprints. </p>
+<p>We will use the <a href="https://en.wikipedia.org/wiki/CZU_Lightning_Complex_fires" target="_blank">CZU Lightning Complex fires</a> on California&rsquo;s Slow Coast as a case study.  </p>
+<p>As you work through the tutorial, you may find it helpful to refer to the <a href="../../glossary/fire-scars/" target="_blank">fire scars</a> page in the glossary and the <a href="../../starters/sentinel2/" target="blank">Sentinel-2</a> page in the starters. </p>
+<p>Your final result should look and work like the map in the app below.  </p>
 <p><iframe
-  src="https://ee-edu-apps.projects.earthengine.app/view/geog0251-05-tutorial"
+  src="https://ee-edu-apps.projects.earthengine.app/view/geog0251-07-tutorial"
   style="width:854px; height:480px"
 ></iframe>
 </p>
+<p><a href="https://ee-edu-apps.projects.earthengine.app/view/geog0251-07-tutorial" target="_blank"><em>Link to app</em></a></p>
 <hr />
-<h2 id="start-a-new-script">Start a new script</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/8P_SX0AITe8?si=RB5GRrwqL7hfNOIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="start-a-new-file">Start a new file</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/B8YEWKTFs7k?si=iJLmf7jAoNyC02vL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class="c1">//  TITLE:      wk06_tutorial_rgb_composites.js</span>
-<span class="c1">//  AUTHOR:     your name</span>
-<span class="c1">//  DATE:       today&#39;s date</span>
-<span class="c1">//  PURPOSE:    A template for comparing color composites at two times.     </span>
-<span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="c1">//  Title: wk07_CZU_fire_complex.js </span>
+<span class="c1">//  Author: Jeff Howarth </span>
+<span class="c1">//  Date: Oct 24, 2023</span>
+
+<span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 </code></pre></div>
+<h2 id="sentinel-2-starter-script">Sentinel-2 starter script</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/UKBy2Iy_lY0?si=tzqtMyI_gIOfODWi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <hr />
-<h2 id="start-to-compose-a-map">Start to compose a map</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/hTVUrvcEu5U?si=-W0hnGcx0bJ1xbqK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="define-aoi">Define aoi</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/1kwTnMvzgmc?si=GFjbhkwTBhWPgCnn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Start a map.</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">//  Define a point of interest (poi) on Shanghai.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">121.46337</span><span class="p">,</span><span class="w"> </span><span class="mf">31.221248</span><span class="p">]);</span>
-
-<span class="c1">//  Center map on geometry (poi) and zoom level 11.</span>
-
-
-
-<span class="c1">//  Set base map to satellite with labels (hybrid).</span>
-</code></pre></div>
 <hr />
-<h2 id="load-l5-collection">Load L5 collection</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/mSO2c_Pejxs?si=V3cl8aUeqCC3neaX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="adjust-ingredients">Adjust ingredients</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/P4Lkn8GuIRs?si=_Ea4XI3S1-La3zDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Load Landsat 5 image collection.</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">// Load L5 collection from this address: &quot;LANDSAT/LT05/C02/T1_L2&quot;</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">ic</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
 <hr />
-<h2 id="work-out-processing-routine">Work out processing routine</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/TWwen5KINFE?si=zjj5EmdhAGdNR3jL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="adjust-display">Adjust display</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/NG1DqfXoTJA?si=mzqd-OTlQVMeG7Q2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Work out how to process the image collection.  </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">// Go to the L5 page on EE Catalog and grab their script for scale factors.</span>
-
-<span class="c1">// Develop the processing workflow.  </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">practice</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Check your results. </span>
-
-<span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;Practice&quot;</span>
-<span class="w">  </span><span class="p">)</span>
-<span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="write-routine-as-a-function">Write routine as a function</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/-gdOBsRy4KI?si=A2I2I_q4xBm1mUjm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Wrap up the workflow as a function.  </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">makeImage</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Apply function to make base image (April 1984).</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr1984</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="check">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/_hF4wfmD6Yw?si=gEyNIzUvml21099I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/checks.js&#39;</span><span class="p">);</span>
-
-<span class="c1">// print(</span>
-<span class="c1">//   &quot;CHECK 01:&quot;,</span>
-<span class="c1">//   yr1984.size(),</span>
-<span class="c1">//   &quot;CHECK 02:&quot;,</span>
-<span class="c1">//   check.cu06(yr1984)</span>
-<span class="c1">//   )</span>
-<span class="c1">// ;</span>
-</code></pre></div>
-<hr />
-<h2 id="stretch-enhancement-and-natural-color">Stretch Enhancement and Natural Color</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/3UUCVJlPimk?si=OsWs2K_HiPQYXH9m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Figure out stretch enhancement.  </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">// Import image tools module.   </span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Import image tools module.   </span>
 
 <span class="kd">var</span><span class="w"> </span><span class="nx">tools</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/image_tools.js&#39;</span><span class="p">);</span>
 
 <span class="c1">// Make a histogram to see data distribution.  </span>
 
-<span class="c1">// var histogram = tools.makeHistogram(</span>
-<span class="c1">//   yr1984.first(),               // Must be an image (not an image collection)</span>
-<span class="c1">//   &quot;SR_B3&quot;,                      // Select one band at a time.</span>
-<span class="c1">//   30,                           // Pixel resolution of image.</span>
-<span class="c1">//   0,                            // Minimum value of x-axis</span>
-<span class="c1">//   0.5                           // Maximum value of x-axis.</span>
-<span class="c1">//   )</span>
-<span class="c1">// ;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">histogram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tools</span><span class="p">.</span><span class="nx">makeHistogram</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">output</span><span class="p">,</span><span class="w">              </span>
+<span class="w">  </span><span class="nx">viz_bands</span><span class="p">[</span><span class="mf">2</span><span class="p">],</span>
+<span class="w">  </span><span class="mf">30</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">0.5</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
 
 <span class="c1">// Print, print, print...</span>
 
-<span class="c1">// print(</span>
-<span class="c1">//   &quot;Year 3&quot;, </span>
-<span class="c1">//   yr1984,</span>
-<span class="c1">//   yr1984.first().bandNames(),</span>
-<span class="c1">//   histogram</span>
-<span class="c1">//   )</span>
-<span class="c1">// ;</span>
-
-<span class="c1">// Viz for natural color composite. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">nat_viz</span><span class="w"> </span>
-<span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="check_1">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/RnJ4iqukxQo?si=BM3cLYuCamI5Od_F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;CHECK 03:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">nat_viz</span><span class="p">.</span><span class="nx">min</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+<span class="w">  </span><span class="s2">&quot;Histogram&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">histogram</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="false-color">False color</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/d_rlRKePNu8?si=BUYfm44yQu7ycNj2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="write-function">Write function</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/hYbVaPD90fY?si=jMP6_sUwYcAfsKqF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// Make viz and display false color (on their own. </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">// Use histograms to figure out viz parameters with good contrast for </span>
-<span class="c1">//  &quot;SR_B7&quot;, &quot;SR_B4&quot;, &quot;SR_B2&quot; in a 742 composite.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">false_viz</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Display base year in false color. </span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------</span>
+<span class="c1">//  Write image processing workflow as a function. </span>
+<span class="c1">// ----------------------------------------------------------------------</span>
 </code></pre></div>
 <hr />
-<h2 id="try-to-accommodate-color-blindness">Try to accommodate color blindness</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/Fgfxxa_ZEDY?si=ZiI2JjAFdMqk5Ye2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="apply-function">Apply function</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/SORdvk0If4o?si=aX2O04sD1YwCGX5V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// Try to accommodate color blindness. </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------</span>
+<span class="c1">//  Apply function to create a post- and pre- burn image. </span>
+<span class="c1">// ----------------------------------------------------------------------</span>
 
-<span class="c1">// Swap the G and B bands to avoid magenta and green.</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">post_burn</span><span class="w"> </span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">pre_burn</span><span class="w"> </span><span class="p">;</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">cb_viz</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Add as map layer.</span>
+<span class="c1">// Display both as map layers.</span>
 </code></pre></div>
 <hr />
-<h2 id="check_2">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/U1tsztX2jLY?si=dLBw95NXzaUG2tnV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="calculate-nbr">Calculate NBR</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/oCswWvg60iE?si=Rj00kTae8Fbdwg1t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------</span>
+<span class="c1">//  Calculate normalized burn ratio for both snapshots.  </span>
+<span class="c1">// ----------------------------------------------------------------------</span>
 
-<span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;CHECK 04:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">false_viz</span><span class="p">.</span><span class="nx">max</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span>
-<span class="w">  </span><span class="s2">&quot;CHECK 05:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">cb_viz</span><span class="p">.</span><span class="nx">max</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+<span class="c1">// var spectral = require(&quot;users/dmlmont/spectral:spectral&quot;);</span>
+
+<span class="c1">// print(spectral);</span>
+
+<span class="c1">// // Test the method. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">nbr_test</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">// Write a function to estimate normalized burn ratio.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">makeBurnRatio</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">// Apply function to post- and pre- conditions.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">post_burn_ratio</span><span class="w"> </span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">pre_burn_ratio</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">// Display as map layers.</span>
+</code></pre></div>
+<hr />
+<h2 id="calculate-burn-severity">Calculate burn severity</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/yIh7EsmXMcA?si=A399RqacVAuUU6r8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------</span>
+<span class="c1">// Calculate burn severity index.  </span>
+<span class="c1">// -------------------------------------------------------------</span>
+
+<span class="c1">// Subtract NBR values of post-conditions from values of pre-conditions.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">burn_severity</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">// Add as map layer. </span>
+</code></pre></div>
+<hr />
+<h2 id="classify-burn-severity">Classify burn severity</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/vRrJIts0QSA?si=9SEmtZsqI_2bpbMN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------</span>
+<span class="c1">// Classify burn severity based on USGS thresholds.  </span>
+<span class="c1">// -------------------------------------------------------------</span>
+
+<span class="c1">// Apply additive thresholds to burn severity image.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">burn_severity_classes</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">// Quickly see results  </span>
+</code></pre></div>
+<hr />
+<h2 id="display-layer-with-color">Display layer with color</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/ZA17D9CPs2Y?si=r0bbPdhzRfN6j_-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------</span>
+<span class="c1">// Display result as a map layer</span>
+<span class="c1">// -------------------------------------------------------------</span>
+
+<span class="c1">// Make viz parameters for classified layer.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">bsc_viz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s1">&#39;#778735&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s1">&#39;#a7c04f&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s1">&#39;#07e444&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s1">&#39;#f6fc0d&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s1">&#39;#f7b140&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s1">&#39;#f86819&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="s1">&#39;#a601d4&#39;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">};</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">burn_severity_classes</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">bsc_viz</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="s1">&#39;Burn severity classes&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">0.6</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="explore-potential-time-2-layers">Explore Potential Time 2 Layers</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/uO9VtgJflHA?si=r7A_xNolanU-6SsH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="display-class-key">Display class key</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/A0uR1lUogAs?si=aJHzrqXatfxa0sF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Explore potential Time 2 layers  </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------</span>
+<span class="c1">// Add key (legend) for burn severity classes. </span>
+<span class="c1">// -------------------------------------------------------------</span>
 
-<span class="c1">// How does 1994 look and work?</span>
+<span class="c1">// Create a list of labels for classes.</span>
+<span class="c1">// The length of this list must equal the length of class values.  </span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr1994</span><span class="w"> </span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">bsc_labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s1">&#39;High post-fire regrowth&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Low post-fire regrowth&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Unburned&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Low Severity&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Moderate-low Severity&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Moderate-high Severity&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;High Severity&#39;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">;</span>
 
-<span class="c1">// Or 2004?</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">cart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/cart.js&#39;</span><span class="p">);</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr2004</span><span class="w"> </span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cart</span><span class="w">                                     </span>
+<span class="w">      </span><span class="p">.</span><span class="nx">makeLegend</span><span class="p">(</span>
+<span class="w">        </span><span class="s1">&#39;Burn severity index&#39;</span><span class="p">,</span><span class="w">                        </span>
+<span class="w">        </span><span class="nx">bsc_viz</span><span class="p">.</span><span class="nx">palette</span><span class="p">,</span><span class="w">                              </span>
+<span class="w">        </span><span class="nx">bsc_labels</span><span class="p">,</span>
+<span class="w">        </span><span class="s1">&#39;bottom-left&#39;</span><span class="w">                                 </span>
+<span class="w">      </span><span class="p">);</span>
 
-<span class="c1">// Or 2009?</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr2009</span><span class="w"> </span><span class="p">;</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">legend</span><span class="p">);</span>
 </code></pre></div>
 <hr />
-<h2 id="check_3">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/xbv6fZpr8YE?si=39uN6KMUs8cOiSyP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="create-ocean-mask">Create ocean mask</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/ySZlc3F2P9Y?si=KoMRhCeHnzratR4z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------</span>
+<span class="c1">// Create a mask to hide the ocean. </span>
+<span class="c1">// -------------------------------------------------------------</span>
 
-<span class="c1">// print(</span>
-<span class="c1">//   &quot;CHECK 06:&quot;,</span>
-<span class="c1">//   yr1994.size(),</span>
-<span class="c1">//   &quot;CHECK 07:&quot;,</span>
-<span class="c1">//   check.cu06(yr1994),</span>
-<span class="c1">//   &quot;CHECK 08:&quot;,</span>
-<span class="c1">//   yr2004.size(),</span>
-<span class="c1">//   &quot;CHECK 09:&quot;,</span>
-<span class="c1">//   check.cu06(yr2004),</span>
-<span class="c1">//   &quot;CHECK 10:&quot;,</span>
-<span class="c1">//   yr2009.size(),</span>
-<span class="c1">//   &quot;CHECK 11:&quot;,</span>
-<span class="c1">//   check.cu06(yr2009)</span>
-<span class="c1">//   )</span>
-<span class="c1">// ;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">ocean_mask</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="wipe-template">Wipe template</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/s7YJD0ikadI?si=lWkYPIWhcfsnY0Zb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="get-building-footprints">Get building footprints</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/TiuP7nwY2TA?si=Bikw9MGub3xy9VFh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------------------------</span>
-<span class="c1">// Wipe Template  </span>
-<span class="c1">// -------------------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------</span>
+<span class="c1">//  Get building footprints  </span>
+<span class="c1">// ----------------------------------------------------------------------</span>
 
-<span class="c1">// Make another map and add a color-NIR composite to it.</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">ee_folder</span><span class="w"> </span><span class="p">;</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">linkedMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nb">Map</span><span class="p">();</span>
+<span class="c1">// print(ee_folder);</span>
 
-<span class="c1">// Link the default Map to the other map.</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">buildings</span><span class="w"> </span><span class="p">;</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">linker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nb">Map</span><span class="p">.</span><span class="nx">Linker</span><span class="p">([</span><span class="nx">ui</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">widgets</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span><span class="w"> </span><span class="nx">linkedMap</span><span class="p">]);</span>
+<span class="c1">// print(buildings.size());</span>
 
-<span class="c1">// Create a SplitPanel which holds the linked maps side-by-side.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">splitPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">SplitPanel</span><span class="p">({</span>
-<span class="w">  </span><span class="nx">firstPanel</span><span class="o">:</span><span class="w"> </span><span class="nx">linker</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span>
-<span class="w">  </span><span class="nx">secondPanel</span><span class="o">:</span><span class="w"> </span><span class="nx">linker</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span>
-<span class="w">  </span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">wipe</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">stretch</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;both&#39;</span><span class="p">}</span>
-<span class="p">});</span>
-
-<span class="c1">// Set the SplitPanel as the only thing in root.</span>
-
-<span class="nx">ui</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">widgets</span><span class="p">().</span><span class="nx">reset</span><span class="p">([</span><span class="nx">splitPanel</span><span class="p">]);</span>
+<span class="c1">// Add layer to map.  </span>
 </code></pre></div>
 <hr />
-<h2 id="fix-the-linked-map">Fix the linked map</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/D6HWPIR1ik0?si=yEVosylN4gxA0ty4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="select-burned-buildings">Select burned buildings</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/NfDEHwBCdAA?si=ehSn1hM6YoysrFBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------------------------</span>
-<span class="c1">//  Work out the linked map. </span>
-<span class="c1">// -------------------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------</span>
+<span class="c1">//  Select buildings in moderately to severely burned areas     </span>
+<span class="c1">// ----------------------------------------------------------------------</span>
 
-<span class="c1">// Center the linked map.  </span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">burn_severity_buildings</span><span class="w"> </span>
+<span class="p">;</span>
 
+<span class="kd">var</span><span class="w"> </span><span class="nx">burned_buildings</span><span class="w"> </span>
+<span class="w">  </span><span class="p">;</span>
 
-
-<span class="c1">// Recreate Time 2 image (if we commented it out). </span>
-
-<span class="c1">// var yr2009 = ;</span>
-
-<span class="c1">// Display Time 2 image as natural, false color, and accessible false color.   </span>
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;Number of burned buildings&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">burned_buildings</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span>
+<span class="w">  </span><span class="p">);</span>
 </code></pre></div>
 <hr />
-<h2 id="link-to-your-code">Link to your code</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/lpWXgcDuZKE?si=GxUCCzjNfLrePGQy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="display-building-centroids">Display building centroids</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/0dXN4jPsijI?si=FHJ6WTT61BCg3vco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<p><center></p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCNJyLKUnBJNLy5YzeETO7YjA9wg-nDJM-DVNKhCxCEc_32g/viewform?embedded=true" width="640" height="608" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------</span>
+<span class="c1">//  Display centroids on map    </span>
+<span class="c1">// ----------------------------------------------------------------------</span>
 
-<p></center></p>
-<p>If the embedded form does not work for you, here is a <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCNJyLKUnBJNLy5YzeETO7YjA9wg-nDJM-DVNKhCxCEc_32g/viewform?usp=sf_link" target="_blank">link</a>.</p>
+<span class="c1">//  Make a centroid function</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">makeCentroid</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">// Apply function</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">burned_centroids</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">// Display as layer. </span>
+</code></pre></div>
 <hr />
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License</a>.</p>
+<h2 id="checks-for-tutorial">Checks for tutorial</h2>
+<p>After you have completed this tutorial, please copy and paste this code block at the end of your script, then run your script, and complete the tutorial quiz on Canvas. </p>
+<p>Please note that these checks simply provide a means to quickly assess if you have successfully reproduced the workflow demonstrated in the tutorial. Developing skills in <em>map interpretation</em> &ndash;  understanding what the results can tell us even though they represent a model of the world and not an exact replica of it &ndash;  complements skills in <em>map production</em>. The checks below, however, simply provide a scalable method to evaluate the latter. The former we will explore more through class discussions.   </p>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ----------------------------------------------------------------------</span>
+<span class="c1">//  Tutorial checks. </span>
+<span class="c1">//</span>
+<span class="c1">//  This code block assumes that you have followed ALL the naming </span>
+<span class="c1">//   variable names used in the tutorial videos.  </span>
+<span class="c1">// ----------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/checks.js&#39;</span><span class="p">);</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 01:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">aoi</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 02:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t07</span><span class="p">(</span><span class="nx">post_burn</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s2">&quot;B8&quot;</span><span class="p">)),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 03:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t07</span><span class="p">(</span><span class="nx">pre_burn</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s2">&quot;B8&quot;</span><span class="p">)),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 04:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t07</span><span class="p">(</span><span class="nx">post_burn_ratio</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 05:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t07</span><span class="p">(</span><span class="nx">pre_burn_ratio</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 06:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t07</span><span class="p">(</span><span class="nx">burn_severity</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 07:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t07</span><span class="p">(</span><span class="nx">burn_severity_classes</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 08&quot;</span><span class="p">,</span><span class="w">  </span><span class="nx">burn_severity_buildings</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 09&quot;</span><span class="p">,</span><span class="w">  </span><span class="nx">burned_buildings</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 10&quot;</span><span class="p">,</span><span class="w">  </span><span class="nx">burned_centroids</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">geometry</span><span class="p">()</span><span class="w">  </span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
 
 
 
@@ -1524,7 +1532,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../changes_in_the_night/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Changes in the Night" rel="prev">
+          <a href="../landsat-wipe-map/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Landsat Wipe Map" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1533,20 +1541,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Changes in the Night
+                Landsat Wipe Map
               </div>
             </div>
           </a>
         
         
           
-          <a href="../CZU-fire-complex/" class="md-footer__link md-footer__link--next" aria-label="Next: CZU Fire Complex" rel="next">
+          <a href="../../glossary/fire-scars/" class="md-footer__link md-footer__link--next" aria-label="Next: Fire scars" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                CZU Fire Complex
+                Fire scars
               </div>
             </div>
             <div class="md-footer__button md-icon">
