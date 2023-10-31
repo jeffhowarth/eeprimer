@@ -147,8 +147,7 @@ nav:
   - Introduction: 
     - Javascript 101: intro/js101.md  
     - GEE User Interface: intro/gee_gui.md 
-    - QGIS User Interface: intro/qgis_gui.md  
-    - History of Remote Sensing: intro/history-remote-sensing.md  
+    - QGIS User Interface: intro/qgis_gui.md   
   - Rudiments:
     - Hello Vector: rudiments/hello_vector.md
     - Hello Feature Collection: rudiments/hello_feature_collection.md  
@@ -170,9 +169,13 @@ nav:
     - Changes in the Night: workflows/changes_in_the_night.md  
     - Landsat Wipe Map: workflows/landsat-wipe-map.md  
     - CZU Fire Complex: workflows/CZU-fire-complex.md  
+    # - LST Anomalies in Regions: workflows/LST-anomalies-in-regions.md
   - Glossary: 
+    - Anomalies: glossary/anomalies.md
     - Fire scars: glossary/fire-scars.md  
+    - History of Remote Sensing: intro/history-remote-sensing.md 
     - Landsat lexicon: glossary/landsat-lexicon.md  
+    - Land surface temperature: glossary/lst.md  
 
 
  
