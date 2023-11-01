@@ -351,7 +351,7 @@ var check = require('users/jhowarth/eePrimer:modules/checks.js');
 
 
 print(
-  "CHECK 01:", aoi.first(),
+  "CHECK 01:", aoi.first().geometry().area(1).divide(1000000),
   "CHECK 02:", aoi_extent.area(1).divide(1000000),
   "CHECK 03:", dataset.size(),
   "CHECK 04:", output.size(),
