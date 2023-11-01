@@ -12,20 +12,20 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/workflows/landsat-wipe-map/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/workflows/LST-anomalies-in-regions/">
       
       
-        <link rel="prev" href="../changes_in_the_night/">
+        <link rel="prev" href="../CZU-fire-complex/">
       
       
-        <link rel="next" href="../CZU-fire-complex/">
+        <link rel="next" href="../../glossary/anomalies/">
       
       <link rel="icon" href="../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Landsat Wipe Map - ee.Primer()</title>
+        <title>LST Anomalies in Regions - ee.Primer()</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Landsat Wipe Map
+              LST Anomalies in Regions
             
           </span>
         </div>
@@ -777,6 +777,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../landsat-wipe-map/" class="md-nav__link">
+        Landsat Wipe Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CZU-fire-complex/" class="md-nav__link">
+        CZU Fire Complex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -787,12 +815,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Landsat Wipe Map
+          LST Anomalies in Regions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Landsat Wipe Map
+        LST Anomalies in Regions
       </a>
       
         
@@ -823,106 +851,85 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-to-compose-a-map" class="md-nav__link">
-    Start to compose a map
+  <a href="#define-area-of-interest" class="md-nav__link">
+    Define area of interest
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-l5-collection" class="md-nav__link">
-    Load L5 collection
+  <a href="#define-aoi-extent-rectangle" class="md-nav__link">
+    Define AOI extent rectangle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-out-processing-routine" class="md-nav__link">
-    Work out processing routine
+  <a href="#calculate-lst-from-landsat" class="md-nav__link">
+    Calculate LST from Landsat
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#write-routine-as-a-function" class="md-nav__link">
-    Write routine as a function
+  <a href="#filter-collection" class="md-nav__link">
+    Filter collection
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check" class="md-nav__link">
-    CHECK
+  <a href="#reduce-collection-to-image" class="md-nav__link">
+    Reduce collection to image
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stretch-enhancement-and-natural-color" class="md-nav__link">
-    Stretch Enhancement and Natural Color
+  <a href="#display-as-map-layer" class="md-nav__link">
+    Display as map layer
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_1" class="md-nav__link">
-    CHECK
+  <a href="#calculate-median-of-aoi" class="md-nav__link">
+    Calculate median of AOI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#false-color" class="md-nav__link">
-    False color
+  <a href="#convert-feature-collection-to-image" class="md-nav__link">
+    Convert feature collection to image
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-to-accommodate-color-blindness" class="md-nav__link">
-    Try to accommodate color blindness
+  <a href="#calculate-anomalies" class="md-nav__link">
+    Calculate anomalies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_2" class="md-nav__link">
-    CHECK
+  <a href="#add-legend" class="md-nav__link">
+    Add legend
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore-potential-time-2-layers" class="md-nav__link">
-    Explore Potential Time 2 Layers
+  <a href="#test-model-on-another-region" class="md-nav__link">
+    Test model on another region
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_3" class="md-nav__link">
-    CHECK
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wipe-template" class="md-nav__link">
-    Wipe template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fix-the-linked-map" class="md-nav__link">
-    Fix the linked map
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-to-your-code" class="md-nav__link">
-    Link to your code
+  <a href="#tutorial-checks" class="md-nav__link">
+    Tutorial Checks
   </a>
   
 </li>
@@ -931,34 +938,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CZU-fire-complex/" class="md-nav__link">
-        CZU Fire Complex
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LST-anomalies-in-regions/" class="md-nav__link">
-        LST Anomalies in Regions
-      </a>
     </li>
   
 
@@ -1128,106 +1107,85 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-to-compose-a-map" class="md-nav__link">
-    Start to compose a map
+  <a href="#define-area-of-interest" class="md-nav__link">
+    Define area of interest
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-l5-collection" class="md-nav__link">
-    Load L5 collection
+  <a href="#define-aoi-extent-rectangle" class="md-nav__link">
+    Define AOI extent rectangle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-out-processing-routine" class="md-nav__link">
-    Work out processing routine
+  <a href="#calculate-lst-from-landsat" class="md-nav__link">
+    Calculate LST from Landsat
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#write-routine-as-a-function" class="md-nav__link">
-    Write routine as a function
+  <a href="#filter-collection" class="md-nav__link">
+    Filter collection
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check" class="md-nav__link">
-    CHECK
+  <a href="#reduce-collection-to-image" class="md-nav__link">
+    Reduce collection to image
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stretch-enhancement-and-natural-color" class="md-nav__link">
-    Stretch Enhancement and Natural Color
+  <a href="#display-as-map-layer" class="md-nav__link">
+    Display as map layer
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_1" class="md-nav__link">
-    CHECK
+  <a href="#calculate-median-of-aoi" class="md-nav__link">
+    Calculate median of AOI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#false-color" class="md-nav__link">
-    False color
+  <a href="#convert-feature-collection-to-image" class="md-nav__link">
+    Convert feature collection to image
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-to-accommodate-color-blindness" class="md-nav__link">
-    Try to accommodate color blindness
+  <a href="#calculate-anomalies" class="md-nav__link">
+    Calculate anomalies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_2" class="md-nav__link">
-    CHECK
+  <a href="#add-legend" class="md-nav__link">
+    Add legend
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore-potential-time-2-layers" class="md-nav__link">
-    Explore Potential Time 2 Layers
+  <a href="#test-model-on-another-region" class="md-nav__link">
+    Test model on another region
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check_3" class="md-nav__link">
-    CHECK
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wipe-template" class="md-nav__link">
-    Wipe template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fix-the-linked-map" class="md-nav__link">
-    Fix the linked map
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link-to-your-code" class="md-nav__link">
-    Link to your code
+  <a href="#tutorial-checks" class="md-nav__link">
+    Tutorial Checks
   </a>
   
 </li>
@@ -1247,308 +1205,307 @@
                   
 
 
-  <h1>Landsat Wipe Map</h1>
+  <h1>LST Anomalies in Regions</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>This tutorial introduces a general workflow to make a wipe map for exploring land cover changes with satellite imagery. We will use surface reflectance data from the Landsat 5 image collection to identify spring-time scenes with few clouds of Shanghai, China that are taken 25 years apart. We will then develop natural and false color composites to display the imagery and make a false color composite that aims to be more accessible to color blind map readers. Finally, we will display the two images with a wipe map to help people compare differences between the two time steps. Our final result should look and work like the map in the app below.      </p>
+<p>This tutorial introduces a general workflow to map land surface temperature (LST) anomalies for locations in a region.  </p>
+<p>We use <strong>Baltimore, MD</strong> as a case to develop the model. We then test and adapt the model by changing our area of interest to <strong>Houston, Texas</strong>.   </p>
+<p>As you work through the tutorial, you may find it helpful to refer to the <a href="../../glossary/lst/" target="_blank">land surface temperature</a> and <a href="../../glossary/anomalies/" target="_blank">anomalies</a> pages in the Glossary. </p>
+<p>The app below shows what your final result should look like for the Test Case (Houston) by the end of the tutorial.   </p>
 <p><iframe
-  src="https://ee-edu-apps.projects.earthengine.app/view/geog0251-05-tutorial"
+  src="https://ee-edu-apps.projects.earthengine.app/view/geog0251-08-tutorial"
   style="width:854px; height:480px"
 ></iframe>
 </p>
+<p><a href="https://ee-edu-apps.projects.earthengine.app/view/geog0251-08-tutorial" target="_blank"><em>Link to app</em></a></p>
 <hr />
 <h2 id="start-a-new-script">Start a new script</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/8P_SX0AITe8?si=RB5GRrwqL7hfNOIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/bQMMZP91G-E?si=zdUVAkyWpG2nOvqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class="c1">//  TITLE:      wk06_tutorial_rgb_composites.js</span>
-<span class="c1">//  AUTHOR:     your name</span>
-<span class="c1">//  DATE:       today&#39;s date</span>
-<span class="c1">//  PURPOSE:    A template for comparing color composites at two times.     </span>
-<span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="c1">//  Name:         wk08_tutorial_lst_spatial_anomalies.js </span>
+<span class="c1">//  Problem:      LST anomalies within urban areas</span>
+<span class="c1">//  Date:         10/29/2023  </span>
+<span class="c1">//  Author:       Jeff Howarth  </span>
+<span class="c1">//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 </code></pre></div>
-<hr />
-<h2 id="start-to-compose-a-map">Start to compose a map</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/hTVUrvcEu5U?si=-W0hnGcx0bJ1xbqK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="define-area-of-interest">Define area of interest</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/xLCWwOQQdig?si=Cgl4DpoH8jWMSjyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Start a map.</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ------------------------------------------------------------------------</span>
+<span class="c1">//  Define area of interest</span>
+<span class="c1">// ------------------------------------------------------------------------</span>
 
-<span class="c1">//  Define a point of interest (poi) on Shanghai.</span>
+<span class="c1">// Import feature collection of Census 2020 Urban Areas from &quot;projects/ee-primer/assets/regions_usa/uac20&quot; </span>
+<span class="c1">// Filter for Baltimore, MD.</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nx">Geometry</span><span class="p">.</span><span class="nx">Point</span><span class="p">([</span><span class="mf">121.46337</span><span class="p">,</span><span class="w"> </span><span class="mf">31.221248</span><span class="p">]);</span>
-
-<span class="c1">//  Center map on geometry (poi) and zoom level 11.</span>
-
-
-
-<span class="c1">//  Set base map to satellite with labels (hybrid).</span>
-</code></pre></div>
-<hr />
-<h2 id="load-l5-collection">Load L5 collection</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/mSO2c_Pejxs?si=V3cl8aUeqCC3neaX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Load Landsat 5 image collection.</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">// Load L5 collection from this address: &quot;LANDSAT/LT05/C02/T1_L2&quot;</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">ic</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="work-out-processing-routine">Work out processing routine</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/TWwen5KINFE?si=zjj5EmdhAGdNR3jL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Work out how to process the image collection.  </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">// Go to the L5 page on EE Catalog and grab their script for scale factors.</span>
-
-<span class="c1">// Develop the processing workflow.  </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">practice</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Check your results. </span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">aoi</span><span class="w"> </span>
+<span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;Practice&quot;</span>
+<span class="w">  </span><span class="s1">&#39;Urban Area&#39;</span>
+<span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<p><a href="https://www.census.gov/geographies/mapping-files/2020/geo/tiger-line-file.html" target="_blank">2020 Tiger/Line Shapefiles</a> </p>
+<hr />
+<h2 id="define-aoi-extent-rectangle">Define AOI extent rectangle</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/X3SH2P2WQvs?si=O-NThHNx3mBzwXr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ------------------------------------------------------------------------</span>
+<span class="c1">//  Define area of interest extent rectangle.</span>
+<span class="c1">// ------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">aoi_extent</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">// Map.centerObject(aoi_extent, 10);</span>
+<span class="c1">// Map.setOptions(&#39;hybrid&#39;);</span>
+
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;AOI&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;EXTENT&quot;</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="write-routine-as-a-function">Write routine as a function</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/-gdOBsRy4KI?si=A2I2I_q4xBm1mUjm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="calculate-lst-from-landsat">Calculate LST from Landsat</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/EzyHImkeDIA?si=tozliuYFesXNoSBu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Wrap up the workflow as a function.  </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ------------------------------------------------------------------------</span>
+<span class="c1">//  Calculate LST from Landsat Collection.</span>
+<span class="c1">// ------------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">makeImage</span><span class="w"> </span><span class="p">;</span>
+<span class="c1">// Import module for LST computation from &#39;users/sofiaermida/landsat_smw_lst:modules/Landsat_LST.js&#39;</span>
 
-<span class="c1">// Apply function to make base image (April 1984).</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">LandsatLST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/sofiaermida/landsat_smw_lst:modules/Landsat_LST.js&#39;</span><span class="p">);</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr1984</span><span class="w"> </span><span class="p">;</span>
+<span class="c1">// Apply module to produce image collection.</span>
+<span class="c1">// Use the &#39;L8&#39; collection.</span>
+<span class="c1">// Start: &#39;2020-07-01&#39;. End: &#39;2022-09-01&#39;.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">dataset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">LandsatLST</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">collection</span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">                      </span><span class="c1">// landsat collection</span>
+<span class="w">                      </span><span class="c1">// start date  </span>
+<span class="w">                      </span><span class="c1">// end date</span>
+<span class="w">                      </span><span class="c1">// filter by aoi extent rectangle</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">;</span>
+
+<span class="c1">// Print first image in collection and size of collection.</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;LST collection&#39;</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="check">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/_hF4wfmD6Yw?si=gEyNIzUvml21099I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="filter-collection">Filter collection</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/Hy_8KLUK6n0?si=vGGaq69TbbeSy2XC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ------------------------------------------------------------------------</span>
+<span class="c1">//  Filter Landsat image collection.</span>
+<span class="c1">// ------------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/checks.js&#39;</span><span class="p">);</span>
+<span class="c1">// Filter the dataset for images collected in summer months (July and August)</span>
+<span class="c1">// with cloud cover less that 10 percent.</span>
+<span class="c1">// Also select only the &#39;LST&#39; band from the images.</span>
 
-<span class="c1">// print(</span>
-<span class="c1">//   &quot;CHECK 01:&quot;,</span>
-<span class="c1">//   yr1984.size(),</span>
-<span class="c1">//   &quot;CHECK 02:&quot;,</span>
-<span class="c1">//   check.cu06(yr1984)</span>
-<span class="c1">//   )</span>
-<span class="c1">// ;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">output</span>
+<span class="p">;</span>
+
+<span class="c1">// Print first image and size of collection.  </span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;Filtered Output&#39;</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="stretch-enhancement-and-natural-color">Stretch Enhancement and Natural Color</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/3UUCVJlPimk?si=OsWs2K_HiPQYXH9m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="reduce-collection-to-image">Reduce collection to image</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/ewBJA8ojC-w?si=OJip108Ph-rQx3Y7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------------</span>
+<span class="c1">//  Reduce image collection to image.  </span>
+<span class="c1">// --------------------------------------------------------------------------------</span>
+
+<span class="c1">// Process image collection as follows:  </span>
+<span class="c1">//  (1) calculate the average (mean) temperature of summer month for each pixel; </span>
+<span class="c1">//  (2) convert units of reduced image from Kelvin to Fahrenheit;</span>
+<span class="c1">//  (3) clip to the aoi bounding geometry</span>
+<span class="c1">//  (4) rename the band &quot;AVG_LST_F&quot; in the output image.</span>
+<span class="c1">//</span>
+<span class="c1">// K to F conversion involves three steps:  </span>
+<span class="c1">//  (1) Subtract 273.15 from Kelvin temperature</span>
+<span class="c1">//  (2) Multiply by 1.8 </span>
+<span class="c1">//  (3) Add 32</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">output_image</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">// Print your result. </span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;Output image&#39;</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="display-as-map-layer">Display as map layer</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/AncThjAsG3A?si=VUq2xnkTTFnZBlgh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Figure out stretch enhancement.  </span>
+<span class="c1">//  Display image as a map layer.  </span>
 <span class="c1">// ---------------------------------------------------------------------</span>
 
-<span class="c1">// Import image tools module.   </span>
+<span class="c1">// Import modules.   </span>
 
 <span class="kd">var</span><span class="w"> </span><span class="nx">tools</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/image_tools.js&#39;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">palettes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/gena/packages:palettes&#39;</span><span class="p">);</span>
+
+
+<span class="c1">// Define viz parameters.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">output_viz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// bands: [],</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">150</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="nx">palettes</span><span class="p">.</span><span class="nx">colorbrewer</span><span class="p">.</span><span class="nx">YlOrRd</span><span class="p">[</span><span class="mf">9</span><span class="p">]</span>
+<span class="p">};</span>
 
 <span class="c1">// Make a histogram to see data distribution.  </span>
 
 <span class="c1">// var histogram = tools.makeHistogram(</span>
-<span class="c1">//   yr1984.first(),               // Must be an image (not an image collection)</span>
-<span class="c1">//   &quot;SR_B3&quot;,                      // Select one band at a time.</span>
-<span class="c1">//   30,                           // Pixel resolution of image.</span>
-<span class="c1">//   0,                            // Minimum value of x-axis</span>
-<span class="c1">//   0.5                           // Maximum value of x-axis.</span>
+<span class="c1">//         // Must be an image (not an image collection)</span>
+<span class="c1">//         // Select one band at a time.</span>
+<span class="c1">//         // Pixel resolution of image.</span>
+<span class="c1">//         // Minimum value of x-axis</span>
+<span class="c1">//         // Maximum value of x-axis.</span>
 <span class="c1">//   )</span>
 <span class="c1">// ;</span>
 
 <span class="c1">// Print, print, print...</span>
 
-<span class="c1">// print(</span>
-<span class="c1">//   &quot;Year 3&quot;, </span>
-<span class="c1">//   yr1984,</span>
-<span class="c1">//   yr1984.first().bandNames(),</span>
-<span class="c1">//   histogram</span>
-<span class="c1">//   )</span>
-<span class="c1">// ;</span>
-
-<span class="c1">// Viz for natural color composite. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">nat_viz</span><span class="w"> </span>
-<span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="check_1">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/RnJ4iqukxQo?si=BM3cLYuCamI5Od_F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;CHECK 03:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">nat_viz</span><span class="p">.</span><span class="nx">min</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+<span class="w">  </span><span class="s2">&quot;Histogram&quot;</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="false-color">False color</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/d_rlRKePNu8?si=BUYfm44yQu7ycNj2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="calculate-median-of-aoi">Calculate median of AOI</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/MyoXwNyaNZE?si=PhtCyYrMQcfYHrEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// Make viz and display false color (on their own. </span>
+<span class="c1">//  Calculate median LST value for the urban area. </span>
 <span class="c1">// ---------------------------------------------------------------------</span>
 
-<span class="c1">// Use histograms to figure out viz parameters with good contrast for </span>
-<span class="c1">//  &quot;SR_B7&quot;, &quot;SR_B4&quot;, &quot;SR_B2&quot; in a 742 composite.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">false_viz</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Display base year in false color. </span>
-</code></pre></div>
-<hr />
-<h2 id="try-to-accommodate-color-blindness">Try to accommodate color blindness</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/Fgfxxa_ZEDY?si=ZiI2JjAFdMqk5Ye2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// Try to accommodate color blindness. </span>
-<span class="c1">// ---------------------------------------------------------------------</span>
-
-<span class="c1">// Swap the G and B bands to avoid magenta and green.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">cb_viz</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Add as map layer.</span>
-</code></pre></div>
-<hr />
-<h2 id="check_2">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/U1tsztX2jLY?si=dLBw95NXzaUG2tnV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
-<span class="c1">// ---------------------------------------------------------------------</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">median_LST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="p">;</span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;CHECK 04:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">false_viz</span><span class="p">.</span><span class="nx">max</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span>
-<span class="w">  </span><span class="s2">&quot;CHECK 05:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">cb_viz</span><span class="p">.</span><span class="nx">max</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+<span class="w">  </span><span class="s2">&quot;Median LST&quot;</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="explore-potential-time-2-layers">Explore Potential Time 2 Layers</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/uO9VtgJflHA?si=r7A_xNolanU-6SsH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="convert-feature-collection-to-image">Convert feature collection to image</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/UpUFAojbeag?si=hXnG4CJGO6wf4Fop" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">//  Explore potential Time 2 layers  </span>
+<span class="c1">//  Convert to image. </span>
 <span class="c1">// ---------------------------------------------------------------------</span>
 
-<span class="c1">// How does 1994 look and work?</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr1994</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Or 2004?</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr2004</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// Or 2009?</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">yr2009</span><span class="w"> </span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">median_LST_image</span><span class="w"> </span>
+<span class="p">;</span>
 </code></pre></div>
 <hr />
-<h2 id="check_3">CHECK</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/xbv6fZpr8YE?si=39uN6KMUs8cOiSyP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="calculate-anomalies">Calculate anomalies</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/pVQCHVUAAx8?si=7RrPIkFV2pob1qId" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
-<span class="c1">// CHECK</span>
+<span class="c1">//  Calculate anomalies as percent difference from regional median </span>
 <span class="c1">// ---------------------------------------------------------------------</span>
 
-<span class="c1">// print(</span>
-<span class="c1">//   &quot;CHECK 06:&quot;,</span>
-<span class="c1">//   yr1994.size(),</span>
-<span class="c1">//   &quot;CHECK 07:&quot;,</span>
-<span class="c1">//   check.cu06(yr1994),</span>
-<span class="c1">//   &quot;CHECK 08:&quot;,</span>
-<span class="c1">//   yr2004.size(),</span>
-<span class="c1">//   &quot;CHECK 09:&quot;,</span>
-<span class="c1">//   check.cu06(yr2004),</span>
-<span class="c1">//   &quot;CHECK 10:&quot;,</span>
-<span class="c1">//   yr2009.size(),</span>
-<span class="c1">//   &quot;CHECK 11:&quot;,</span>
-<span class="c1">//   check.cu06(yr2009)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">anomaly</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">anomaly_viz</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">// Make a histogram to see data distribution.  </span>
+
+<span class="c1">// var histogram = tools.makeHistogram(</span>
+<span class="c1">//     // Must be an image (not an image collection)</span>
+<span class="c1">//     // Select one band at a time.</span>
+<span class="c1">//     // Pixel resolution of image.</span>
+<span class="c1">//     // Minimum value of x-axis</span>
+<span class="c1">//     // Maximum value of x-axis.</span>
 <span class="c1">//   )</span>
 <span class="c1">// ;</span>
+
+<span class="c1">// Print, print, print...</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;Histogram&quot;</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+
+<span class="c1">// Display as layer.</span>
 </code></pre></div>
 <hr />
-<h2 id="wipe-template">Wipe template</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/s7YJD0ikadI?si=lWkYPIWhcfsnY0Zb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="add-legend">Add legend</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/AabEr62mw1o?si=L0v8FOmD-c5tIAcT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------------------------</span>
-<span class="c1">// Wipe Template  </span>
-<span class="c1">// -------------------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------</span>
+<span class="c1">//  Add legend </span>
+<span class="c1">// ---------------------------------------------------------------------</span>
 
-<span class="c1">// Make another map and add a color-NIR composite to it.</span>
+<span class="c1">//  Load cart module.</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">linkedMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nb">Map</span><span class="p">();</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">cart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/cart.js&#39;</span><span class="p">);</span>
 
-<span class="c1">// Link the default Map to the other map.</span>
+<span class="c1">// Call makeGradientLegend function and pass three parameters.</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">linker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nb">Map</span><span class="p">.</span><span class="nx">Linker</span><span class="p">([</span><span class="nx">ui</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">widgets</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span><span class="w"> </span><span class="nx">linkedMap</span><span class="p">]);</span>
+<span class="c1">// var legend = cart                                                     // module</span>
+<span class="c1">//   .makeGradientLegend(                                                // function</span>
+<span class="c1">//       // viz parameters</span>
+<span class="c1">//       // a title for legend</span>
+<span class="c1">//       // position on map</span>
+<span class="c1">//   )</span>
+<span class="c1">// ;</span>
 
-<span class="c1">// Create a SplitPanel which holds the linked maps side-by-side.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">splitPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">SplitPanel</span><span class="p">({</span>
-<span class="w">  </span><span class="nx">firstPanel</span><span class="o">:</span><span class="w"> </span><span class="nx">linker</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mf">0</span><span class="p">),</span>
-<span class="w">  </span><span class="nx">secondPanel</span><span class="o">:</span><span class="w"> </span><span class="nx">linker</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span>
-<span class="w">  </span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">wipe</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">stretch</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;both&#39;</span><span class="p">}</span>
-<span class="p">});</span>
-
-<span class="c1">// Set the SplitPanel as the only thing in root.</span>
-
-<span class="nx">ui</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">widgets</span><span class="p">().</span><span class="nx">reset</span><span class="p">([</span><span class="nx">splitPanel</span><span class="p">]);</span>
+<span class="c1">// Map.add(legend);</span>
 </code></pre></div>
 <hr />
-<h2 id="fix-the-linked-map">Fix the linked map</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/D6HWPIR1ik0?si=yEVosylN4gxA0ty4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="test-model-on-another-region">Test model on another region</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/tvb6GCRILHI?si=HMk2zfNLehTFogdl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -------------------------------------------------------------------------------</span>
-<span class="c1">//  Work out the linked map. </span>
-<span class="c1">// -------------------------------------------------------------------------------</span>
-
-<span class="c1">// Center the linked map.  </span>
-
-
-
-<span class="c1">// Recreate Time 2 image (if we commented it out). </span>
-
-<span class="c1">// var yr2009 = ;</span>
-
-<span class="c1">// Display Time 2 image as natural, false color, and accessible false color.   </span>
-</code></pre></div>
 <hr />
-<h2 id="link-to-your-code">Link to your code</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/lpWXgcDuZKE?si=GxUCCzjNfLrePGQy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="tutorial-checks">Tutorial Checks</h2>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------------</span>
+<span class="c1">//  Tutorial Checks  </span>
+<span class="c1">// --------------------------------------------------------------------------------</span>
 
-<p><center></p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCNJyLKUnBJNLy5YzeETO7YjA9wg-nDJM-DVNKhCxCEc_32g/viewform?embedded=true" width="640" height="608" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<span class="kd">var</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/checks.js&#39;</span><span class="p">);</span>
 
-<p></center></p>
-<p>If the embedded form does not work for you, here is a <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCNJyLKUnBJNLy5YzeETO7YjA9wg-nDJM-DVNKhCxCEc_32g/viewform?usp=sf_link" target="_blank">link</a>.</p>
+<span class="c1">// Please be sure to modify the model to fit the Test Case (Houston).</span>
+<span class="c1">// Please be prepared to report the following checks on the tutorial quiz.</span>
+<span class="c1">// These checks assume that you followed the names used in the tutorial. </span>
+
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 01:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">aoi</span><span class="p">.</span><span class="nx">first</span><span class="p">(),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 02:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">aoi_extent</span><span class="p">.</span><span class="nx">area</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">divide</span><span class="p">(</span><span class="mf">1000000</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 03:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">dataset</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 04:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">output</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 05:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t08</span><span class="p">(</span><span class="nx">output_image</span><span class="p">,</span><span class="w"> </span><span class="nx">aoi</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 06:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">median_LST</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;median&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 07:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">t08</span><span class="p">(</span><span class="nx">anomaly</span><span class="p">,</span><span class="w"> </span><span class="nx">aoi</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License</a>.</p>
 
@@ -1572,7 +1529,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../changes_in_the_night/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Changes in the Night" rel="prev">
+          <a href="../CZU-fire-complex/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CZU Fire Complex" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1581,20 +1538,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Changes in the Night
+                CZU Fire Complex
               </div>
             </div>
           </a>
         
         
           
-          <a href="../CZU-fire-complex/" class="md-footer__link md-footer__link--next" aria-label="Next: CZU Fire Complex" rel="next">
+          <a href="../../glossary/anomalies/" class="md-footer__link md-footer__link--next" aria-label="Next: Anomalies" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                CZU Fire Complex
+                Anomalies
               </div>
             </div>
             <div class="md-footer__button md-icon">
