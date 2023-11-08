@@ -169,7 +169,8 @@ nav:
     - Changes in the Night: workflows/changes_in_the_night.md  
     - Landsat Wipe Map: workflows/landsat-wipe-map.md  
     - CZU Fire Complex: workflows/CZU-fire-complex.md  
-    - LST Anomalies in Regions: workflows/LST-anomalies-in-regions.md
+    - LST Anomalies in Regions: workflows/LST-anomalies-in-regions.md  
+    - Global Forest Change: workflows/global-forest-loss.md
   - Glossary: 
     - Anomalies: glossary/anomalies.md
     - Fire scars: glossary/fire-scars.md  
