@@ -2,162 +2,167 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/introduction/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/glossary/anomalies/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/glossary/fire-scars/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/glossary/landsat-lexicon/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/glossary/lst/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/intro/gee_gui/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/intro/history-remote-sensing/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/intro/js101/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/intro/qgis_gui/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/additive_color/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/hello_feature_collection/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/hello_vector/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/natural_and_false_color/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/rudiments/on_distance/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/landsat5/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/landsat7/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/landsat8/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/landsat9/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/modis/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/naip/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/overview/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/starters/sentinel2/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/toolbox/GEE/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/toolbox/QGIS/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/CZU-fire-complex/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/LST-anomalies-in-regions/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/changes_in_the_night/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/global-forest-loss/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/grassland_bird_habitat/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/image_collections/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/jeffhowarth/eePrimer/workflows/island-biogeography/</loc>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/jeffhowarth/eePrimer/workflows/landsat-wipe-map/</loc>
-         <lastmod>2023-11-08</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

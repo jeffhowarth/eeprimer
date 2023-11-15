@@ -12,20 +12,20 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/workflows/changes_in_the_night/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/workflows/island-biogeography/">
       
       
-        <link rel="prev" href="../grassland_bird_habitat/">
+        <link rel="prev" href="../global-forest-loss/">
       
       
-        <link rel="next" href="../landsat-wipe-map/">
+        <link rel="next" href="../../glossary/anomalies/">
       
       <link rel="icon" href="../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Changes in the Night - ee.Primer()</title>
+        <title>Island Biogeography - ee.Primer()</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Changes in the Night
+              Island Biogeography
             
           </span>
         </div>
@@ -767,118 +767,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Changes in the Night
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../changes_in_the_night/" class="md-nav__link">
         Changes in the Night
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-a-new-script" class="md-nav__link">
-    Start a new script
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#load-image-collection-and-select-a-band" class="md-nav__link">
-    Load image collection and select a band
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-dictionary-for-study-years" class="md-nav__link">
-    Create dictionary for study years
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#make-image-for-band-1" class="md-nav__link">
-    Make image for Band 1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#display-image-as-a-map-layer" class="md-nav__link">
-    Display image as a map layer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#make-and-display-image-for-band-2" class="md-nav__link">
-    Make and display image for Band 2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#write-a-function" class="md-nav__link">
-    Write a function
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-generality-of-function" class="md-nav__link">
-    Test generality of function
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#revise-script-to-apply-function" class="md-nav__link">
-    Revise script to apply function
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#make-and-display-rgb-composite-image" class="md-nav__link">
-    Make and display RGB composite image
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -944,11 +837,132 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../island-biogeography/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Island Biogeography
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Island Biogeography
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-key-terms" class="md-nav__link">
+    Define key terms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-and-display-bathymetry" class="md-nav__link">
+    Load and display bathymetry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-land-binary" class="md-nav__link">
+    Make land binary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-islands" class="md-nav__link">
+    Make islands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#select-mainland" class="md-nav__link">
+    Select mainland
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-minimum-distance" class="md-nav__link">
+    Find minimum distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#act-ii-current-conditions" class="md-nav__link">
+    Act II: Current conditions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identify-oceanic-islands" class="md-nav__link">
+    Identify oceanic islands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identify-and-tag-continental-islands" class="md-nav__link">
+    Identify and tag continental islands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-islands-with-history-classes" class="md-nav__link">
+    Combine islands with history classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-area-distance-chart" class="md-nav__link">
+    Make area-distance chart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-highlighter-layer" class="md-nav__link">
+    Make a highlighter layer
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1111,71 +1125,85 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-a-new-script" class="md-nav__link">
-    Start a new script
+  <a href="#define-key-terms" class="md-nav__link">
+    Define key terms
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-image-collection-and-select-a-band" class="md-nav__link">
-    Load image collection and select a band
+  <a href="#load-and-display-bathymetry" class="md-nav__link">
+    Load and display bathymetry
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-dictionary-for-study-years" class="md-nav__link">
-    Create dictionary for study years
+  <a href="#make-land-binary" class="md-nav__link">
+    Make land binary
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#make-image-for-band-1" class="md-nav__link">
-    Make image for Band 1
+  <a href="#make-islands" class="md-nav__link">
+    Make islands
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#display-image-as-a-map-layer" class="md-nav__link">
-    Display image as a map layer
+  <a href="#select-mainland" class="md-nav__link">
+    Select mainland
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#make-and-display-image-for-band-2" class="md-nav__link">
-    Make and display image for Band 2
+  <a href="#find-minimum-distance" class="md-nav__link">
+    Find minimum distance
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#write-a-function" class="md-nav__link">
-    Write a function
+  <a href="#act-ii-current-conditions" class="md-nav__link">
+    Act II: Current conditions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#test-generality-of-function" class="md-nav__link">
-    Test generality of function
+  <a href="#identify-oceanic-islands" class="md-nav__link">
+    Identify oceanic islands
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#revise-script-to-apply-function" class="md-nav__link">
-    Revise script to apply function
+  <a href="#identify-and-tag-continental-islands" class="md-nav__link">
+    Identify and tag continental islands
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#make-and-display-rgb-composite-image" class="md-nav__link">
-    Make and display RGB composite image
+  <a href="#combine-islands-with-history-classes" class="md-nav__link">
+    Combine islands with history classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-area-distance-chart" class="md-nav__link">
+    Make area-distance chart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-a-highlighter-layer" class="md-nav__link">
+    Make a highlighter layer
   </a>
   
 </li>
@@ -1195,268 +1223,372 @@
                   
 
 
-  <h1>Changes in the Night</h1>
+  <h1>Island Biogeography</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>This tutorial walks you through how to construct an RGB composite that visualizes change in the DMSP/OLS dataset between 1993 and 2013 like the image shown in the <a href="../../rudiments/additive_color/">additive color</a> chapter.  </p>
-<p>The diagram below illustrates the general workflow.  </p>
-<p><img alt="Workflow" src="https://geography.middlebury.edu/howarth/ee_edu/rgb_lights_workflow.png" /></p>
-<p>The tutorial also shows you how to compose your script (using a dictionary and a custom function) so that you can easily change the three years used to define the RGB composite. In other words, the purpose of your script is not simply to deliver a map product, but instead to create a flexible tool for exploring and visualizing the nighttime lights dataset with additive color. </p>
+<p>This tutorial introduces a general workflow to chart islands by area, distance, and recent geological history based on digital elevation models (DEM).  </p>
+<p>We use the <strong>California Channel Islands</strong> as a case to develop the model. Your script should produce a map like the one shown below. </p>
+<p><iframe
+  src="https://ee-edu-apps.projects.earthengine.app/view/geog0251-10-tutorial"
+  style="width:854px; height:480px"
+></iframe>
+</p>
+<p><a href="https://ee-edu-apps.projects.earthengine.app/view/geog0251-10-tutorial" target="_blank"><em>Link to app</em></a></p>
+<p>In addition, your script should produce a chart like the one shown below (but without the &ldquo;demo&rdquo; tag). </p>
+<p><img alt="Island chart" src="https://geography.middlebury.edu/howarth/ee_edu/islands.png" /></p>
 <hr />
-<h2 id="start-a-new-script">Start a new script</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/xoCHaHzRCJw?si=lTZPkoTunmYVKw6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="define-key-terms">Define key terms</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/BmZ2vnIuWQA?si=idYjvMuhul89Eazt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class="c1">//  Name:     changes_in_the_night.js </span>
-<span class="c1">//  Author:   Jeff Howarth</span>
-<span class="c1">//  Date:     10/10/2023 </span>
-<span class="c1">//  Purpose:  Introduce additive color, nighttime lights, and patterns of change.</span>
-<span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  </span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="c1">//  Title: wk10_island_biogeography.js </span>
+<span class="c1">//  Author: Jeff Howarth </span>
+<span class="c1">//  Date: Nov 15, 2023</span>
+
+<span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="c1">//  Module</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">palettes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/gena/packages:palettes&#39;</span><span class="p">);</span>
+
+<span class="c1">//  Key variable</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">ice_age_sea_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">140</span><span class="p">;</span><span class="w">  </span><span class="c1">// meters</span>
+
+<span class="c1">//  A. Wenner and D. Johnson, &quot;Land Vertebrates on the California Islands: </span>
+<span class="c1">//  Sweepstakes or Bridges?&quot; In The California Islands: Proceedings of a</span>
+<span class="c1">//  Multidisciplinary Symposium. Edited by D Power. SBMNH: Santa Barbara.</span>
+<span class="c1">//  1980: 497-530.</span>
 </code></pre></div>
 <hr />
-<h2 id="load-image-collection-and-select-a-band">Load image collection and select a band</h2>
-<pre class="mermaid"><code>graph LR
-  arg1(["pathname\n\nSTRING"]) --&gt; method1["ee.ImageCollection()"] ;
-  method1 --&gt; method2[".select()"] ;
-  arg2(["band name\n\nSTRING"]) --&gt; method2 ;
-  method2 --&gt; output&gt;"output\n\nIMAGE COLLECTION"];
+<h2 id="load-and-display-bathymetry">Load and display bathymetry</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-n-GpDLSgEc?si=FIwHiCWl5AqDCyio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-  style method1 fill:#ADD8E6,stroke-width:0px
-  style method2 fill:#ADD8E6,stroke-width:0px
-  style arg1 fill:#DCDCDC,stroke-width:0px
-  style arg2 fill:#DCDCDC,stroke-width:0px
-  style output fill:#C5E6A1,stroke-width:0px
-</code></pre>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/9f6GMOnaNJo?si=dQV6LFPy9OlGBmZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="c1">//  ACT 1: ICE</span>
+<span class="c1">// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Load image collection and select a band.  </span>
-<span class="c1">// -----------------------------------------------------------------------</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  1.1. Load and display bathymetry </span>
+<span class="c1">// --------------------------------------------------------------------</span>
 
-<span class="c1">// Image Collection pathname: &quot;NOAA/DMSP-OLS/NIGHTTIME_LIGHTS&quot;</span>
-<span class="c1">// Band: &quot;stable_lights&quot;</span>
+<span class="c1">//  Load image collection from &quot;projects/sat-io/open-datasets/gebco/gebco_grid&quot;</span>
+<span class="c1">//  Reduce collection to an image of median values.</span>
+<span class="c1">//  Clip the image by the study region.</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">collection</span><span class="w"> </span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">gebco_grid</span><span class="w">  </span>
 <span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;Collection&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">collection</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">collection</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span><span class="w">                            </span>
-<span class="w">  </span><span class="nx">collection</span><span class="p">.</span><span class="nx">first</span><span class="p">(),</span>
-<span class="w">  </span><span class="nx">collection</span><span class="p">.</span><span class="nx">first</span><span class="p">().</span><span class="nx">bandNames</span><span class="p">()</span><span class="w">                </span>
-<span class="w">  </span><span class="p">)</span>
-<span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="create-dictionary-for-study-years">Create dictionary for study years</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/Lk-z01jjlC8?si=tHnxFPnjaMewljqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="c1">//  Define viz parameters. </span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Create a dictionary for study years to assign band 1, 2, 3</span>
-<span class="c1">// -----------------------------------------------------------------------</span>
-
-<span class="c1">// Your goal is to display pixel values in each layer with these colors:</span>
-<span class="c1">//  2013 with red,</span>
-<span class="c1">//  2003 with green,</span>
-<span class="c1">//  1992 with blue.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">yrs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-
+<span class="kd">var</span><span class="w"> </span><span class="nx">bath_viz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">3000.0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">3000.0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">palette</span><span class="o">:</span><span class="w"> </span><span class="nx">palettes</span><span class="p">.</span><span class="nx">colorbrewer</span><span class="p">.</span><span class="nx">Blues</span><span class="p">[</span><span class="mf">9</span><span class="p">].</span><span class="nx">reverse</span><span class="p">(),</span>
 <span class="p">};</span>
+
+<span class="c1">//  Set up map. </span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">(</span><span class="nx">geometry</span><span class="p">);</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;satellite&#39;</span><span class="p">);</span>
+
+<span class="c1">//  Display as map layer. </span>
+<span class="c1">//  Apply viz parameters. </span>
+<span class="c1">//  Name the layer &quot;1.1. Bathymetry&quot;.</span>
+<span class="c1">//  Display by default. </span>
 </code></pre></div>
 <hr />
-<h2 id="make-image-for-band-1">Make image for Band 1</h2>
-<pre class="mermaid"><code>graph LR
-  input[/"collection\n\nIMAGE COLLECTION"/] --&gt; method1[".filter()"] ;
-  arg1(["study year\n\nDICTIONARY KEY"]) --&gt; method2(["ee.Filter.calendarRange()"]) ;
-  arg2(["time unit\n\nSTRING"]) --&gt; method2 ;
-  method2 --&gt; method1 ;
-  method1 --&gt; method3[".first()"] ;
-  method3 --&gt; method4[".rename()"] ;
-  method5(["String()\n\nFUNCTION"]) --&gt; method4 ;
-  arg1 --&gt; method5 ;
-  method4 --&gt; output&gt;"output\n\nIMAGE"] ;
+<h2 id="make-land-binary">Make land binary</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/9YIvmuO7ZjE?si=eLCqrRJYJe7Upbd5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-  style input fill:#C5E6A1,stroke-width:0px
-  style method1 fill:#ADD8E6,stroke-width:0px
-  style method2 fill:#ADD8E6,stroke-width:0px
-  style method3 fill:#ADD8E6,stroke-width:0px
-  style method4 fill:#ADD8E6,stroke-width:0px
-  style method5 fill:#ADD8E6,stroke-width:0px
-  style arg1 fill:#DCDCDC,stroke-width:0px
-  style arg2 fill:#DCDCDC,stroke-width:0px
-  style output fill:#C5E6A1,stroke-width:0px
-</code></pre>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/UPlVgpav_FQ?si=gWpF261BVg8zNwBu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  1.2. Make and display land binary for Pleistocene. </span>
+<span class="c1">// --------------------------------------------------------------------</span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Make an image for band 1  </span>
-<span class="c1">// -----------------------------------------------------------------------</span>
+<span class="c1">//  Make land binary for Pleistocene. </span>
+<span class="c1">//  Rename &quot;land&quot;.</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">collection</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">land_pleistocene</span><span class="w"> </span>
 <span class="p">;</span>
+
+<span class="c1">//  Display as map layer.</span>
+<span class="c1">//  Use &quot;#D3D3D3&quot; for palette. </span>
+<span class="c1">//  Name the layer &quot;1.2. Pleistocene Land&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="make-islands">Make islands</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/G5JTrkeBilc?si=NjPpSgIoh-QgVetY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  1.3. Make and display Pleistocene islands. </span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Write a function to make islands from land binary. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">makeIslands</span><span class="w"> </span><span class="p">;</span>
+
+<span class="c1">//  Apply the function for Pleistocene land binary. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">islands_pleistocene</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  Display as map layer. </span>
+<span class="c1">//  Name the layer &quot;1.3. Pleistocene islands&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="select-mainland">Select mainland</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/Y9qUdWFPzDI?si=r15PNlAVXn6rb0ij" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  1.4. Select Pleistocene mainland</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Write a function to select mainland from &quot;islands&quot;. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">selectMainland</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  Apply the function for Pleistocene islands. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">mainland_target</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  Display as map layer. </span>
+<span class="c1">//  Use color: &quot;Yellow&quot;</span>
+<span class="c1">//  Name the layer &quot;1.4. Mainland Pleistocene&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="find-minimum-distance">Find minimum distance</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/cwbQ6i_1zlA?si=kTneDedFiQy9t_dY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  1.5. Find minimum distance between each island and the mainland</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Write a function to find the minimum distance from the mainland for an island.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">islandDistance</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  Apply the function over all Pleistocene islands. </span>
+<span class="c1">//  Remove the mainland from the collection.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">distance_pleistocene</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  CHECK 01: How many islands are in your final result for Act I? </span>
 
 <span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;Band 1:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">b1</span>
-<span class="w">  </span><span class="p">)</span>
-<span class="p">;</span>
+<span class="w">  </span><span class="s2">&quot;CHECK 01&quot;</span>
+<span class="w">  </span><span class="p">);</span>
 </code></pre></div>
 <hr />
-<h2 id="display-image-as-a-map-layer">Display image as a map layer</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/MRZHjkERbg4?si=NEM-gX0LVR8qM6fa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="act-ii-current-conditions">Act II: Current conditions</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/juFOOKE6MQY?si=oI7NPyqWFNvyQB2e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Display image as layer on the map.</span>
-<span class="c1">// -----------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="c1">//  ACT 2: NOW</span>
+<span class="c1">// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
 
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="mf">126.8</span><span class="p">,</span><span class="w"> </span><span class="mf">33.485</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">);</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  2.1 Make land binary</span>
+<span class="c1">// --------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">viz</span><span class="w"> </span><span class="p">;</span>
+<span class="c1">// Load dataset </span>
 
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
-</code></pre></div>
-<hr />
-<h2 id="make-and-display-image-for-band-2">Make and display image for Band 2</h2>
-<pre class="mermaid"><code>graph LR
-  input[/"collection\n\nIMAGE COLLECTION"/] --&gt; method1[".filter()"] ;
-  arg1(["study year\n\nDICTIONARY KEY"]) --&gt; method2(["ee.Filter.calendarRange()"]) ;
-  arg2(["time unit\n\nSTRING"]) --&gt; method2 ;
-  method2 --&gt; method1 ;
-  method1 --&gt; method3[".mean()"] ;
-  method3 --&gt; method4[".rename()"] ;
-  method5(["String()\n\nFUNCTION"]) --&gt; method4 ;
-  arg1 --&gt; method5 ;
-  method4 --&gt; output&gt;"output\n\nIMAGE"];
+<span class="c1">// var dem = ee.Image(&#39;MERIT/DEM/v1_0_3&#39;)</span>
+<span class="c1">//     .clip(geometry)</span>
+<span class="c1">//     ;</span>
 
-  style input fill:#C5E6A1,stroke-width:0px
-  style method1 fill:#ADD8E6,stroke-width:0px
-  style method2 fill:#ADD8E6,stroke-width:0px
-  style method3 fill:#ADD8E6,stroke-width:0px
-  style method4 fill:#ADD8E6,stroke-width:0px
-  style method5 fill:#ADD8E6,stroke-width:0px
-  style arg1 fill:#DCDCDC,stroke-width:0px
-  style arg2 fill:#DCDCDC,stroke-width:0px
-  style output fill:#C5E6A1,stroke-width:0px
-</code></pre>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/_HzhYHCNhnw?si=KmhZxDfEZR_Uf8Xv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="c1">// Make land binary (use 1 m above sea level to define coasts)</span>
+<span class="c1">// Multiply binary by 2</span>
+<span class="c1">// Rename band &quot;land&quot;</span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Make and display image for band 2.  </span>
-<span class="c1">// -----------------------------------------------------------------------</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">land_now</span><span class="w"> </span><span class="p">;</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">b2</span><span class="w"> </span>
+<span class="c1">// Add layer to map</span>
+<span class="c1">// Use &quot;#242E33&quot; for palette.</span>
+<span class="c1">// Name the map layer  &quot;2.1. Land Now&quot;</span>
+
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  2.2 Create modern island objects</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Make islands for current conditions</span>
+<span class="c1">//  Filter for islands where &quot;area_sq_km&quot; is greater than 0.1.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">islands_now</span><span class="w"> </span>
 <span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;Band 2:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">b2</span>
-<span class="w">  </span><span class="p">)</span>
+<span class="c1">// CHECK 2: How many island objects are in the collection?</span>
+
+
+<span class="c1">// Add layer to map.</span>
+<span class="c1">// Name the layer &quot;2.2. Islands Now objects&quot;</span>
+
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  2.3. Distinguish mainland from islands</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// Select the mainland from the current islands. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">mainland_target</span><span class="w"> </span>
 <span class="p">;</span>
 
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
-</code></pre></div>
-<p><img alt="DMSP Overpass" src="https://eogdata.mines.edu/products/assets/img/dmsp_overpass_time.png" /></p>
-<p><a href="https://eogdata.mines.edu/products/dmsp/" target="_blank"><em>Source</em></a></p>
-<hr />
-<h2 id="write-a-function">Write a function</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/apii5kp9rA4?si=W1osj81LtIykz78U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="c1">//  Display mainland on the map as a layer</span>
+<span class="c1">//  Use &quot;Yellow&quot; color.</span>
+<span class="c1">//  Name the layer &quot;2.3. Mainland Now&quot;</span>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Write a function  </span>
-<span class="c1">// -----------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">makeImageForBand</span><span class="w"> </span>
+
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  2.4. Find minimum distance between each island and the mainland</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Calculate the distance of each island from the mainland.</span>
+<span class="c1">//  Remove the mainland from the collection. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">islands_distance</span><span class="w"> </span>
 <span class="w">  </span><span class="p">;</span>
 
-<span class="c1">// Call the function</span>
+<span class="c1">//  CHECK 3: How many islands are in the collection?</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">b1</span><span class="w"> </span><span class="p">;</span>
 
-<span class="c1">// Display result as a layer. </span>
-
-<span class="c1">// Map.addLayer();</span>
+<span class="c1">//  Display result as a map layer.</span>
+<span class="c1">//  Name the layer &quot;2.4. Islands with area and distance&quot;</span>
 </code></pre></div>
 <hr />
-<h2 id="test-generality-of-function">Test generality of function</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/KwT0bSjAiak?si=l4nX-et7Ulbn-Ynr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h2 id="identify-oceanic-islands">Identify oceanic islands</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/GzAVlh5yq38?si=wmFczK_t1sVJ3Lyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Test generality of function.  </span>
-<span class="c1">// -----------------------------------------------------------------------</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="c1">//  ACT 3: ACROSS TIMES</span>
+<span class="c1">// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
 
-<span class="c1">// Does .first() and .mean() deliver identical results for b1 case?</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  3.1. Identify Oceanic Islands</span>
+<span class="c1">// --------------------------------------------------------------------</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="p">;</span>
+<span class="c1">//  Convert Pleistocene islands to image. </span>
 
-<span class="c1">// Map.addLayer();</span>
-</code></pre></div>
-<hr />
-<h2 id="revise-script-to-apply-function">Revise script to apply function</h2>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/hfvbH72cBHA?si=kb7EL1vcqqwTqAMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Revise script to apply function. </span>
-<span class="c1">// -----------------------------------------------------------------------</span>
-
-<span class="c1">// 1. Comment out sections above that made and drew b1 and b2;</span>
-
-<span class="c1">// 2. Redefine map options and viz parameters (that were commented out).</span>
-
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="mf">126.8</span><span class="p">,</span><span class="w"> </span><span class="mf">33.485</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
-<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">);</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">viz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">min</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">63</span><span class="p">};</span>
-
-<span class="c1">// 3. Call function to remake all bands</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">b1</span><span class="w"> </span><span class="p">;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">b2</span><span class="w"> </span><span class="p">;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">b3</span><span class="w"> </span><span class="p">;</span>
-
-<span class="c1">// 4. Add results as layers to map.</span>
-
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
-<span class="c1">// </span>
-</code></pre></div>
-<hr />
-<h2 id="make-and-display-rgb-composite-image">Make and display RGB composite image</h2>
-<pre class="mermaid"><code>graph LR
-  input[/"Band 1\n\nIMAGE"/] --&gt; method1[".addBands()"] ;
-  method1 --&gt; method2[".addBands()"] ;
-  arg1(["Band 2\n\nIMAGE"]) --&gt; method1 ;
-  arg2(["Band 3\n\nIMAGE"]) --&gt; method2 ;
-  method2 --&gt; output&gt;"output\n\nIMAGE"];
-
-  style input fill:#C5E6A1,stroke-width:0px
-  style method1 fill:#ADD8E6,stroke-width:0px
-  style method2 fill:#ADD8E6,stroke-width:0px
-  style arg1 fill:#C5E6A1,stroke-width:0px
-  style arg2 fill:#C5E6A1,stroke-width:0px
-  style output fill:#C5E6A1,stroke-width:0px
-</code></pre>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qp6pKLVj9sU?si=o0nB6jHfhNUp8Wb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// -----------------------------------------------------------------------</span>
-<span class="c1">//  Construct and display three band image from the three images.  </span>
-<span class="c1">// -----------------------------------------------------------------------</span>
-
-<span class="c1">// Create image. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">change_image</span><span class="w"> </span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">pleistocene_islands_image</span><span class="w"> </span>
 <span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">&quot;Change Image&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">change_image</span>
+<span class="c1">//  Identify current islands that overlap pleistocene islands. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">now_and_then</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  Isolate oceanic islands. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">islands_oceanic</span>
+<span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="identify-and-tag-continental-islands">Identify and tag continental islands</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/PL8Vd9mhE20?si=mxBaVIwPpBBFlvLy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  3.2. Identify and tag continental islands </span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Write a function to tag continental islands. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">tagContinental</span>
+<span class="p">;</span>
+
+<span class="c1">// Create an continental islands feature collection and apply the function. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">islands_continental</span>
+<span class="p">;</span>
+</code></pre></div>
+<hr />
+<hr />
+<h2 id="combine-islands-with-history-classes">Combine islands with history classes</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/Zd6KamlFCw8?si=wn-xqJy4HEZhRD3D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  3.3. Combine islands with history classes. </span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Merge all the islands into a single collection.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">all_islands</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  Display as map layer.</span>
+<span class="c1">//  Name layer &quot;3.3. Islands with history&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="make-area-distance-chart">Make area-distance chart</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/id28l-dLGSA?si=EqMWUJTZVhBKrbE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  3.4. Make area - distance chart</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">// Define the chart and print it to the console.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">chart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ui</span><span class="p">.</span><span class="nx">Chart</span><span class="p">.</span><span class="nx">feature</span><span class="p">.</span><span class="nx">groups</span><span class="p">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">features</span><span class="o">:</span><span class="w"> </span><span class="nx">all_islands</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="s2">&quot;land&quot;</span><span class="p">),</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">xProperty</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;distance_km&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">yProperty</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;area_sq_km&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">seriesProperty</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;land&#39;</span>
+
+<span class="w">  </span><span class="p">})</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">setChartType</span><span class="p">(</span><span class="s1">&#39;ScatterChart&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">setOptions</span><span class="p">(</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Area vs Distance&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">hAxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;km&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">titleTextStyle</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">italic</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">bold</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">vAxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;square km&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">titleTextStyle</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">italic</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">bold</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">pointSize</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;#A8A422&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#D3D3D3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#227BA8&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bottom-left&#39;</span>
+
+<span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">)</span>
+
 <span class="p">;</span>
 
-<span class="c1">// Display result as a map layer. </span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">chart</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="make-a-highlighter-layer">Make a highlighter layer</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/Ck_jv4Rg6rQ?si=NQ2WVzOPGn213EfK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------</span>
+<span class="c1">//  3.5. Highlight Islands</span>
+<span class="c1">// --------------------------------------------------------------------</span>
+
+<span class="c1">//  Define target properties</span>
+
+<span class="c1">// var target_property = &quot;area_sq_km&quot;;</span>
+<span class="c1">// // var target_property = &quot;distance_km&quot;;</span>
+
+<span class="c1">//  Define target value</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">target_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ee</span><span class="p">.</span><span class="nb">Number</span><span class="p">(</span><span class="o">-</span><span class="mf">9999</span><span class="p">);</span>
+
+<span class="c1">//  Make target layer.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">target</span><span class="w"> </span>
+<span class="p">;</span>
+
+<span class="c1">//  Display as map layer. </span>
+<span class="c1">//  Use color &quot;Orchid&quot;.</span>
+<span class="c1">//  Name the layer &quot;3.5. Selected Feature&quot;</span>
 </code></pre></div>
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License</a>.</p>
@@ -1481,7 +1613,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../grassland_bird_habitat/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Grassland Bird Habitat" rel="prev">
+          <a href="../global-forest-loss/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Global Forest Change" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1490,20 +1622,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Grassland Bird Habitat
+                Global Forest Change
               </div>
             </div>
           </a>
         
         
           
-          <a href="../landsat-wipe-map/" class="md-footer__link md-footer__link--next" aria-label="Next: Landsat Wipe Map" rel="next">
+          <a href="../../glossary/anomalies/" class="md-footer__link md-footer__link--next" aria-label="Next: Anomalies" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Landsat Wipe Map
+                Anomalies
               </div>
             </div>
             <div class="md-footer__button md-icon">
