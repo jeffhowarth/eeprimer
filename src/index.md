@@ -1,4 +1,4 @@
-# A primer on cloud-based maps of landscape change           
+# A primer on cloud-based maps of the Earth's surface           
 
 Jeff Howarth  
 _Associate Professor of Geography_  

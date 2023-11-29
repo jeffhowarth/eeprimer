@@ -561,8 +561,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#panel-widget" class="md-nav__link">
-    Panel widget
+  <a href="#styling-a-label-widget" class="md-nav__link">
+    Styling a label widget
   </a>
   
 </li>
@@ -1107,8 +1107,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#panel-widget" class="md-nav__link">
-    Panel widget
+  <a href="#styling-a-label-widget" class="md-nav__link">
+    Styling a label widget
   </a>
   
 </li>
@@ -1138,11 +1138,57 @@
   <h1>Hello Widget</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>This tutorial introduces User Interface (UI) widgets in Earth Engine. By the end of the tutorial, you should understand how to create and style label and panel widgets, how the two widgets interact, and how to place these widgets onto a Map.    </p>
+<p>This short tutorial introduces User Interface (UI) widgets in Earth Engine. By the end of the tutorial, you should understand how to create and style a label widget and how to place the widget onto a Map.    </p>
+<p>To get started, please make a new file in your repository called &lsquo;wk11_hello_widget.js&rsquo;, copy the header below, and paste it into the new file. Then work through the videos below.  </p>
+<p><em>Please note that when I recorded the videos I had been thinking of including a third video on panel widgets, but subsequently decided to save the panel tutorial for the worked out example.</em>  </p>
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="c1">//  TITLE:   hello_widget.js</span>
+<span class="c1">//  AUTHOR:  Jeff Howarth</span>
+<span class="c1">//  DATE:    11/28/2023</span>
+<span class="c1">//  PURPOSE: Introduce label widget and how to style it. </span>
+
+<span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+</code></pre></div>
 <hr />
 <h2 id="label-widget">Label widget</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/V9Ku54mEAEg?si=WmJhtnX7kTviZVWm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// &gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;</span>
+
+<span class="c1">//  Introduction to Labels </span>
+
+<span class="c1">// &gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">test_label</span><span class="w"> </span>
+<span class="p">;</span>
+</code></pre></div>
 <hr />
-<h2 id="panel-widget">Panel widget</h2>
+<h2 id="styling-a-label-widget">Styling a label widget</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/nxQZgHwhreM?si=OyfI-RDNUzIaTs0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// Style dictionary for label widget. </span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">label_style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// color: &#39;red&#39;,</span>
+<span class="w">      </span><span class="c1">// backgroundColor: &#39;#cccccc&#39;,</span>
+<span class="w">      </span><span class="c1">// height: &#39;100px&#39;,</span>
+<span class="w">      </span><span class="c1">// width: &#39;100%&#39;,</span>
+<span class="w">      </span><span class="c1">// padding: &#39;10px&#39;,</span>
+<span class="w">      </span><span class="c1">// margin: &#39;20px&#39;,</span>
+<span class="w">      </span><span class="c1">// border:&#39;4px solid orange&#39;,</span>
+<span class="w">      </span><span class="c1">// fontSize: &#39;24px&#39;,</span>
+<span class="w">      </span><span class="c1">// fontWeight: &#39;bold&#39;,</span>
+<span class="w">      </span><span class="c1">// fontFamily: &#39;Helvetica&#39;,</span>
+<span class="w">      </span><span class="c1">// textAlign: &#39;left&#39;,</span>
+<span class="w">      </span><span class="c1">// textDecoration: &#39;underline&#39;,</span>
+<span class="w">      </span><span class="c1">// whiteSpace: &#39;wrap&#39;,</span>
+<span class="w">      </span><span class="c1">// shown: false,</span>
+<span class="w">      </span><span class="c1">// stretch: &#39;vertical&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">;</span>
+</code></pre></div>
 <hr />
 <h2 id="resources">Resources</h2>
 <ul>
