@@ -54,11 +54,12 @@ theme:
   features:
     # - tabs
     - navigation.instant
+    - navigation.instant.progress  
     # - navigation.sections
     - navigation.indexes 
     - navigation.footer 
 
-    - navigation.expand 
+    # - navigation.expand 
     - content.code.copy
 
   palette:
@@ -146,14 +147,15 @@ nav:
     - QGIS: toolbox/QGIS.md  
   - Introduction: 
     - Javascript 101: intro/js101.md  
-    - GEE User Interface: intro/gee_gui.md 
-    - QGIS User Interface: intro/qgis_gui.md   
+    - GEE User Interface: intro/gee-gui.md 
+    - QGIS User Interface: intro/qgis-gui.md   
   - Rudiments:
-    - Hello Vector: rudiments/hello_vector.md
-    - Hello Feature Collection: rudiments/hello_feature_collection.md  
-    - On Distance: rudiments/on_distance.md  
-    - In Additive Color: rudiments/additive_color.md  
-    - In Natural and False Color: rudiments/natural_and_false_color.md  
+    - Hello Vector: rudiments/hello-vector.md
+    - Hello Feature Collection: rudiments/hello-feature-collection.md  
+    - On Distance: rudiments/on-distance.md  
+    - In Additive Color: rudiments/additive-color.md  
+    - In Natural and False Color: rudiments/natural-and-false-color.md  
+    - Hello Widget: rudiments/hello-widget.md
   - Starters:  
     - Overview: starters/overview.md   
     - Landsat 5: starters/landsat5.md  
@@ -164,20 +166,22 @@ nav:
     - NAIP: starters/naip.md  
     - Sentinel 2: starters/sentinel2.md  
   - Worked out examples:  
-    - Basic Image Collections: workflows/image_collections.md  
-    - Grassland Bird Habitat: workflows/grassland_bird_habitat.md  
-    - Changes in the Night: workflows/changes_in_the_night.md  
+    - Basic Image Collections: workflows/image-collections.md  
+    - Grassland Bird Habitat: workflows/grassland-bird-habitat.md  
+    - Changes in the Night: workflows/changes-in-the-night.md  
     - Landsat Wipe Map: workflows/landsat-wipe-map.md  
     - CZU Fire Complex: workflows/CZU-fire-complex.md  
     - LST Anomalies in Regions: workflows/LST-anomalies-in-regions.md  
     - Global Forest Change: workflows/global-forest-loss.md  
     - Island Biogeography: workflows/island-biogeography.md
+    - App Design: workflows/app-design.md  
   - Glossary: 
     - Anomalies: glossary/anomalies.md
     - Fire scars: glossary/fire-scars.md  
     - History of Remote Sensing: intro/history-remote-sensing.md 
     - Landsat lexicon: glossary/landsat-lexicon.md  
     - Land surface temperature: glossary/lst.md  
+    - Nighttime light patterns: glossary/nighttime-light-patterns.md
 
 
  

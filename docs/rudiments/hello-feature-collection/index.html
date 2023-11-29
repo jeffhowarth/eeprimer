@@ -12,20 +12,20 @@
         <meta name="author" content="Jeff Howarth">
       
       
-        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/intro/js101/">
+        <link rel="canonical" href="https://github.com/jeffhowarth/eePrimer/rudiments/hello-feature-collection/">
       
       
-        <link rel="prev" href="../../toolbox/QGIS/">
+        <link rel="prev" href="../hello-vector/">
       
       
-        <link rel="next" href="../gee-gui/">
+        <link rel="next" href="../on-distance/">
       
       <link rel="icon" href="../../images/GG0150-icon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Javascript 101 - ee.Primer()</title>
+        <title>Hello Feature Collection - ee.Primer()</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Javascript 101
+              Hello Feature Collection
             
           </span>
         </div>
@@ -317,16 +317,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
         
@@ -343,12 +341,119 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Introduction
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/js101/" class="md-nav__link">
+        Javascript 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/gee-gui/" class="md-nav__link">
+        GEE User Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/qgis-gui/" class="md-nav__link">
+        QGIS User Interface
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Rudiments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Rudiments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hello-vector/" class="md-nav__link">
+        Hello Vector
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -364,12 +469,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Javascript 101
+          Hello Feature Collection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Javascript 101
+        Hello Feature Collection
       </a>
       
         
@@ -393,193 +498,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tutorial" class="md-nav__link">
-    Tutorial
-  </a>
-  
-    <nav class="md-nav" aria-label="Tutorial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#quick-tour" class="md-nav__link">
-    Quick tour
+  <a href="#start-a-new-script" class="md-nav__link">
+    Start a new script
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#new-repo-save-file" class="md-nav__link">
-    New Repo, Save File
+      
+        <li class="md-nav__item">
+  <a href="#import-a-table-as-an-asset" class="md-nav__link">
+    Import a table as an Asset
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-1" class="md-nav__link">
-    Data types (1)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (1)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#line-comment" class="md-nav__link">
-    Line Comment
+      
+        <li class="md-nav__item">
+  <a href="#load-feature-collection-from-string" class="md-nav__link">
+    Load Feature Collection from String
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
-    String
+      
+        <li class="md-nav__item">
+  <a href="#center-map-on-object" class="md-nav__link">
+    Center map on Object
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#variable" class="md-nav__link">
-    Variable
+      
+        <li class="md-nav__item">
+  <a href="#add-feature-collection-as-map-layer" class="md-nav__link">
+    Add Feature Collection as Map Layer
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#semi-colon" class="md-nav__link">
-    Semi-colon
+      
+        <li class="md-nav__item">
+  <a href="#create-a-geometry" class="md-nav__link">
+    Create a geometry
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#double-quotes" class="md-nav__link">
-    Double quotes
+      
+        <li class="md-nav__item">
+  <a href="#construct-a-feature" class="md-nav__link">
+    Construct a feature
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#parentheses" class="md-nav__link">
-    Parentheses
+      
+        <li class="md-nav__item">
+  <a href="#convert-feature-collection-into-an-image" class="md-nav__link">
+    Convert feature collection into an image
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comma" class="md-nav__link">
-    Comma
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-2" class="md-nav__link">
-    Data types (2)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (2)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#number" class="md-nav__link">
-    Number
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list" class="md-nav__link">
-    List
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    Index
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-3" class="md-nav__link">
-    Data types (3)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (3)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dictionary" class="md-nav__link">
-    Dictionary
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-values" class="md-nav__link">
-    Key values
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-4" class="md-nav__link">
-    Data types (4)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (4)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
-    Functions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    Modules
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mercator-distortion" class="md-nav__link">
-    Mercator distortion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -598,112 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gee-gui/" class="md-nav__link">
-        GEE User Interface
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../qgis-gui/" class="md-nav__link">
-        QGIS User Interface
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          Rudiments
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Rudiments
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../rudiments/hello-vector/" class="md-nav__link">
-        Hello Vector
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../rudiments/hello-feature-collection/" class="md-nav__link">
-        Hello Feature Collection
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../rudiments/on-distance/" class="md-nav__link">
+      <a href="../on-distance/" class="md-nav__link">
         On Distance
       </a>
     </li>
@@ -717,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rudiments/additive-color/" class="md-nav__link">
+      <a href="../additive-color/" class="md-nav__link">
         In Additive Color
       </a>
     </li>
@@ -731,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rudiments/natural-and-false-color/" class="md-nav__link">
+      <a href="../natural-and-false-color/" class="md-nav__link">
         In Natural and False Color
       </a>
     </li>
@@ -745,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rudiments/hello-widget/" class="md-nav__link">
+      <a href="../hello-widget/" class="md-nav__link">
         Hello Widget
       </a>
     </li>
@@ -1182,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../history-remote-sensing/" class="md-nav__link">
+      <a href="../../intro/history-remote-sensing/" class="md-nav__link">
         History of Remote Sensing
       </a>
     </li>
@@ -1270,193 +1135,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tutorial" class="md-nav__link">
-    Tutorial
-  </a>
-  
-    <nav class="md-nav" aria-label="Tutorial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#quick-tour" class="md-nav__link">
-    Quick tour
+  <a href="#start-a-new-script" class="md-nav__link">
+    Start a new script
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#new-repo-save-file" class="md-nav__link">
-    New Repo, Save File
+      
+        <li class="md-nav__item">
+  <a href="#import-a-table-as-an-asset" class="md-nav__link">
+    Import a table as an Asset
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-1" class="md-nav__link">
-    Data types (1)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (1)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#line-comment" class="md-nav__link">
-    Line Comment
+      
+        <li class="md-nav__item">
+  <a href="#load-feature-collection-from-string" class="md-nav__link">
+    Load Feature Collection from String
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
-    String
+      
+        <li class="md-nav__item">
+  <a href="#center-map-on-object" class="md-nav__link">
+    Center map on Object
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#variable" class="md-nav__link">
-    Variable
+      
+        <li class="md-nav__item">
+  <a href="#add-feature-collection-as-map-layer" class="md-nav__link">
+    Add Feature Collection as Map Layer
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#semi-colon" class="md-nav__link">
-    Semi-colon
+      
+        <li class="md-nav__item">
+  <a href="#create-a-geometry" class="md-nav__link">
+    Create a geometry
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#double-quotes" class="md-nav__link">
-    Double quotes
+      
+        <li class="md-nav__item">
+  <a href="#construct-a-feature" class="md-nav__link">
+    Construct a feature
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#parentheses" class="md-nav__link">
-    Parentheses
+      
+        <li class="md-nav__item">
+  <a href="#convert-feature-collection-into-an-image" class="md-nav__link">
+    Convert feature collection into an image
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comma" class="md-nav__link">
-    Comma
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-2" class="md-nav__link">
-    Data types (2)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (2)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#number" class="md-nav__link">
-    Number
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list" class="md-nav__link">
-    List
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    Index
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-3" class="md-nav__link">
-    Data types (3)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (3)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dictionary" class="md-nav__link">
-    Dictionary
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-values" class="md-nav__link">
-    Key values
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-types-4" class="md-nav__link">
-    Data types (4)
-  </a>
-  
-    <nav class="md-nav" aria-label="Data types (4)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
-    Functions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    Modules
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mercator-distortion" class="md-nav__link">
-    Mercator distortion
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1475,132 +1205,161 @@
                   
 
 
-  <h1>Javascript 101</h1>
+  <h1>Hello Feature Collection</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>To use GEE, you will need to write code.    </p>
-<p>In this course, we will use the GEE Code Editor, which means that we will be coding in JavaScript.    </p>
-<h2 id="tutorial">Tutorial</h2>
-<p>I made the videos below to help walk you through through some basic JavaScript syntax, data types, and methods. I broke the tutorial into a set of short videos, rather than recording one long one. You should work through all the videos in the set.     </p>
-<p>To follow along, you will need to open the GEE Code Editor in a web browser.  </p>
-<p>I recommend that you use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> when working with the GEE Code Editor.     </p>
-<p>This is the web address to the Code Editor: </p>
-<p><a href="https://code.earthengine.google.com/" target="_blank">https://code.earthengine.google.com/</a></p>
-<p>Honestly, you might as well bookmark that page and move the bookmark to the left corner of your toolbar. You will be visiting this site a lot over the semester.  </p>
-<p>Below the video, you should find snippets for the code shown in the video. If you hover your cursor over the upper-right corner of the snippet, you should see a little button that you can click to copy the code. You can then paste the code into the Code Editor while you watch the video. My intention is to save you some time and reduce errors that come from typos.  </p>
-<h3 id="quick-tour">Quick tour</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/GO1HMg5DpIg?si=gqwfC4gctYah2A7u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h3 id="new-repo-save-file">New Repo, Save File</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/VRqb4JqlexA?si=lGoOxrRDleGNiviZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h3 id="data-types-1">Data types (1)</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/VTU8z6gqGfk?si=36miYHrFsP37HCEu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h4 id="line-comment">Line Comment</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// This is a line comment. </span>
-</code></pre></div>
-<h4 id="string">String</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="s1">&#39;Hello, world&#39;</span><span class="w">  </span><span class="c1">// Single quotes defines a string. </span>
-</code></pre></div>
-<h4 id="variable">Variable</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use var keyword to define a variable to store data. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hello, world!&#39;</span><span class="w"> </span><span class="c1">// This variable stores a string. </span>
-</code></pre></div>
-<h4 id="semi-colon">Semi-colon</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// End statements with semi-colons so that the editor does not complain.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">hello_again</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hola Mundo&#39;</span><span class="p">;</span>
-</code></pre></div>
-<h4 id="double-quotes">Double quotes</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// You can also define strings with double quotes. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">who_dat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Who&#39;s there?&quot;</span><span class="p">;</span>
-</code></pre></div>
-<h4 id="parentheses">Parentheses</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// You can pass variables to functions within parentheses. </span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">hello_again</span><span class="p">);</span>
-</code></pre></div>
-<h4 id="comma">Comma</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// You can pass more than one variable separated by commas.</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">hello_again</span><span class="p">,</span><span class="w"> </span><span class="nx">who_dat</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="data-types-2">Data types (2)</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/YxzUmrtJlOM?si=bb-3J4GzcweYdJHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h4 id="number">Number</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// This variable stores a number. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2023</span><span class="p">;</span>
-</code></pre></div>
-<h4 id="list">List</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Square brackets defines a list. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">some_vt_towns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Middlebury&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;New Haven&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bristol&#39;</span><span class="p">];</span>
-</code></pre></div>
-<h4 id="index">Index</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use square brackets after list object to call index of items in list.</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">some_vt_towns</span><span class="p">,</span><span class="w"> </span><span class="nx">some_vt_towns</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
-</code></pre></div>
-<h4 id="methods">Methods</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use dot notation to call methods associated with the data type. </span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">some_vt_towns</span><span class="p">.</span><span class="nx">sort</span><span class="p">());</span>
-</code></pre></div>
-<h3 id="data-types-3">Data types (3)</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/LaLw-JNG1Rg?si=tAYelPOujzu3qHtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h4 id="dictionary">Dictionary</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use curly brackets (or braces) to define dictionaries. </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">midd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Middlebury&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Dictionaries are composed of key:value pairs.</span>
-<span class="w">  </span><span class="s2">&quot;pop_2010&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8496</span><span class="p">,</span>
-<span class="w">  </span><span class="s2">&quot;pop_2020&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9152</span>
-<span class="p">};</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Middlebury&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">midd</span><span class="p">);</span>
-</code></pre></div>
-<h4 id="key-values">Key values</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Use dot notation to call the value of object key.  </span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">midd</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Population change&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">midd</span><span class="p">.</span><span class="nx">pop_2020</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">midd</span><span class="p">.</span><span class="nx">pop_2010</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="data-types-4">Data types (4)</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/pseBwP-semM?si=q41ds01P5aNqKkpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<h4 id="functions">Functions</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Functions can be defined as a way to reuse code and make it easier to read.  </span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">i_love_function</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">some_string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;I love &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">some_string</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;!&#39;</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="nx">print</span><span class="p">(</span><span class="nx">i_love_function</span><span class="p">(</span><span class="s1">&#39;maps&#39;</span><span class="p">));</span>
-</code></pre></div>
-<h4 id="modules">Modules</h4>
-<div class="language-js highlight"><pre><span></span><code><span class="c1">// Modules can be used to share functions across multiple scripts by:</span>
-
-<span class="c1">// 1. storing the module as a variable,</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">tool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;users/jhowarth/eePrimer:modules/tissot.js&#39;</span><span class="p">);</span>
-
-<span class="c1">// 2. calling functions in the module as methods of this variable.</span>
-
-<span class="nx">tool</span><span class="p">.</span><span class="nx">drawTissot</span><span class="p">();</span>
-</code></pre></div>
-<h3 id="mercator-distortion">Mercator distortion</h3>
-<iframe width="720" height="405" src="https://www.youtube.com/embed/RYCvzdUvNQM?si=-G6yHlrOYjHim0A3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<p><a href="https://www.thetruesize.com/" target="_blank">The True Size of</a></p>
+<p>The videos below introduce geometry and feature objects in Google Earth Engine. They walk you through how to import a table as an asset, how to construct a feature from scratch in the Code Editor, and how to convert vector into raster in Earth Engine.  </p>
 <hr />
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<h2 id="start-a-new-script">Start a new script</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/-c-l-s1wnG8?si=9wS04bnlPLH1Ewht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="c1">//  Hello Feature Collection</span>
+<span class="c1">//</span>
+<span class="c1">//  Jeff Howarth </span>
+<span class="c1">//  Geography 251</span>
+<span class="c1">//</span>
+<span class="c1">//  Oct 1, 2023</span>
+<span class="c1">// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+</code></pre></div>
+<hr />
+<h2 id="import-a-table-as-an-asset">Import a table as an Asset</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/5Q0ll_qkPVs?si=4fH24him5ajy10ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<hr />
+<h2 id="load-feature-collection-from-string">Load Feature Collection from String</h2>
+<pre class="mermaid"><code>graph LR
+  method["ee.FeatureCollection.()"] --&gt; output&gt;output\n\nFEATURE COLLECTION];
+  arg_att([pathname\n\nSTRING]) --&gt; method
+
+  style method fill:#ADD8E6,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
+  style arg_att fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/BtC1QSO2-_I?si=WpHHLPzTmbhkfKeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Load Feature Collection from String (collection name). </span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">hello_pond</span><span class="w"> </span><span class="p">;</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;HELLO FEATURE COLLECTION:&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hello_pond</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hello_pond</span><span class="p">.</span><span class="nx">size</span><span class="p">(),</span>
+<span class="w">  </span><span class="nx">hello_pond</span><span class="p">.</span><span class="nx">first</span><span class="p">()</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="center-map-on-object">Center map on Object</h2>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/h3UvN4i9IDI?si=p1RbSh6ZZeOvCsav" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Center Map on Object.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// -------------------------------------------------------------------------- </span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">centerObject</span><span class="p">();</span>
+<span class="nb">Map</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="add-feature-collection-as-map-layer">Add Feature Collection as Map Layer</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4oq8vGiKmOk?si=wrMb7nwLbGVx6Q8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Add Feature Collection as Map Layer.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="create-a-geometry">Create a geometry</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/clBmMnhcfZU?si=KrY5AMQz3y3TBgSx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Create a Geometry.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w"> </span><span class="s1">&#39;Pond Geometry:&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">geometry</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="construct-a-feature">Construct a feature</h2>
+<pre class="mermaid"><code>graph LR
+  method["ee.Feature()"] --&gt; output&gt;output\n\nFEATURE];
+  arg_geom([GEOMETRY]) --&gt; method;
+  arg_att([attributes\n\nDICTIONARY]) --&gt; method;
+
+  style method fill:#ADD8E6,stroke-width:0px
+  style output fill:#E1C3E6,stroke-width:0px
+  style arg_geom fill:#E1C3E6,stroke-width:0px
+  style arg_att fill:#DCDCDC,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/W3035QKNPkw?si=Nue5AiaEI0IGrTiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// --------------------------------------------------------------------------</span>
+<span class="c1">//  Construct a Feature.</span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 9/30/23</span>
+<span class="c1">// --------------------------------------------------------------------------</span>
+
+<span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">pond_attributes</span><span class="w"> </span><span class="p">;</span>
+
+<span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">pond_feature</span><span class="w"> </span><span class="p">;</span>
+
+<span class="w"> </span><span class="nx">print</span><span class="p">(</span>
+<span class="w">   </span><span class="s2">&quot;HELLO POND FEATURE:&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;geometry:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">geometry</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;attributes:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pond_attributes</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;feature:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pond_feature</span>
+<span class="w">   </span><span class="p">)</span>
+<span class="w">  </span><span class="p">;</span>
+
+<span class="w"> </span><span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="convert-feature-collection-into-an-image">Convert feature collection into an image</h2>
+<pre class="mermaid"><code>graph LR
+  input[/input\n\nFEATURE COLLECTION/] --&gt; method[".reduceToImage()"]
+  method --&gt; output&gt;output\n\nIMAGE];
+  arg_att1([property key\n\nLIST]) --&gt; method;
+  arg_att2(["ee.Reducer()"]) --&gt; method;
+
+  style input fill:#E1C3E6,stroke-width:0px
+  style method fill:#ADD8E6,stroke-width:0px
+  style output fill:#C5E6A1,stroke-width:0px
+  style arg_att1 fill:#DCDCDC,stroke-width:0px
+  style arg_att2 fill:#ADD8E6,stroke-width:0px</code></pre>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/5As-FO7NfQ8?si=8qoRMY-VlkJPdx-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="language-js highlight"><pre><span></span><code><span class="c1">// ---------------------------------------------------------------------------</span>
+<span class="c1">//  Convert feature collection into an image. </span>
+<span class="c1">//</span>
+<span class="c1">//  Updated: 10/01/23</span>
+<span class="c1">// ---------------------------------------------------------------------------</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">pond_image</span><span class="w"> </span><span class="p">;</span>
+
+<span class="nx">print</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">&quot;HELLO POND IMAGE:&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">pond_image</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">;</span>
+
+<span class="nb">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License</a>.</p>
 
 
 
@@ -1622,7 +1381,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../toolbox/QGIS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: QGIS" rel="prev">
+          <a href="../hello-vector/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hello Vector" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1631,20 +1390,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                QGIS
+                Hello Vector
               </div>
             </div>
           </a>
         
         
           
-          <a href="../gee-gui/" class="md-footer__link md-footer__link--next" aria-label="Next: GEE User Interface" rel="next">
+          <a href="../on-distance/" class="md-footer__link md-footer__link--next" aria-label="Next: On Distance" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                GEE User Interface
+                On Distance
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -1,6 +1,6 @@
 ## Introduction  
 
-This tutorial walks you through how to construct an RGB composite that visualizes change in the DMSP/OLS dataset between 1993 and 2013 like the image shown in the [additive color](../rudiments/additive_color.md) chapter.  
+This tutorial walks you through how to construct an RGB composite that visualizes change in the DMSP/OLS dataset between 1993 and 2013 like the image shown in the [additive color](../rudiments/additive-color.md) chapter.  
 
 The diagram below illustrates the general workflow.  
 
